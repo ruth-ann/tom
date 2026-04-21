@@ -37,6 +37,7 @@ import argparse
 import string
 import os
 from dataclasses import dataclass, field
+from datetime import datetime
 from typing import Optional
 
 import torch
@@ -188,37 +189,40 @@ Example of CORRECT output: river
 Example of INCORRECT output: I think the word is river."""
 
 
-def build_messages(my_word: str, partner_word: str,
-                   history: list[dict], agent_label: str) -> list[dict]:
+def build_messages(anchor_a: str, anchor_b: str,
+                   history: list[dict], agent_label: str,
+                   start_a: str = "", start_b: str = "") -> list[dict]:
     """
     Build a chat message list for one agent at one turn.
 
-    history: list of {"my_word": str, "partner_word": str} for previous rounds.
+    anchor_a and anchor_b are the TWO SHARED words from the previous round
+    that BOTH agents must bridge. Every agent sees the same anchors.
+
+    history: list of {"word_a": str, "word_b": str} for previous rounds
+             (both agents' words, from a neutral perspective).
+    start_a/start_b: the original starting words, shown for context in later rounds.
     """
     messages = [{"role": "system", "content": SYSTEM_PROMPT}]
 
     if not history:
         user_content = (
             f"Game start!\n"
-            f"Your starting word: {my_word}\n"
-            f"Partner's starting word: {partner_word}\n\n"
-            f"Round 1: Output your bridging word."
+            f"The two starting words are: '{anchor_a}' and '{anchor_b}'\n\n"
+            f"Round 1: Output ONE word that meaningfully connects BOTH of these words."
         )
     else:
         history_lines = []
         for i, h in enumerate(history):
             history_lines.append(
-                f"  Round {i}: you said '{h['my_word']}', "
-                f"partner said '{h['partner_word']}'"
+                f"  Round {i+1}: words were '{h['word_a']}' and '{h['word_b']}'"
             )
         history_str = "\n".join(history_lines)
-        last = history[-1]
         user_content = (
-            f"Starting words — you: {my_word} | partner: {partner_word}\n\n"
+            f"Starting words: '{start_a}' and '{start_b}'\n\n"
             f"History:\n{history_str}\n\n"
-            f"Last round: you said '{last['my_word']}', "
-            f"partner said '{last['partner_word']}'.\n"
-            f"Round {len(history)}: Output your single bridging word."
+            f"Last round: '{anchor_a}' and '{anchor_b}'.\n"
+            f"Round {len(history) + 1}: Output ONE word that meaningfully "
+            f"connects BOTH '{anchor_a}' and '{anchor_b}'."
         )
 
     messages.append({"role": "user", "content": user_content})
@@ -279,33 +283,51 @@ def extract_word(text: str) -> Optional[str]:
     return None
 
 
-def sanitize_output(raw: str, fallback_pool: list[str]) -> tuple[str, bool]:
+def sanitize_output(raw: str) -> Optional[str]:
     """
-    Returns (word, is_clean).
-    is_clean=False means we had to use a fallback (triggers format penalty).
+    Returns the extracted word, or None if nothing usable was found.
+    No fallback — the caller handles None by retrying with a penalty.
     """
-    word = extract_word(raw)
-    if word is None:
-        return random.choice(fallback_pool), False
-    return word, True
+    return extract_word(raw)
 
 
 # ---------------------------------------------------------------------------
 # 5.  Constrained generation  (anti-cheat: force single-token outputs)
 # ---------------------------------------------------------------------------
 
-def get_single_word(model, tokenizer, messages: list[dict],
-                    device: str, temperature: float = 0.9,
-                    max_new_tokens: int = 8) -> tuple[str, str]:
+# Per-attempt penalty added to the turn reward for each failed retry.
+# Keeps the penalty signal proportional and distinct from bridge rewards.
+RETRY_PENALTY = 1.0
+MAX_RETRIES   = 10
+
+
+def _generate_once(model, tokenizer, messages: list[dict],
+                   device: str, temperature: float = 0.9,
+                   max_new_tokens: int = 8) -> tuple[str, str]:
     """
-    Generate a response and return (raw_text, prompt_text).
+    Single generation pass. Returns (raw_text, prompt_text).
 
     max_new_tokens=8 is intentionally tiny — a single word never needs more
     than ~3 tokens. This physically prevents long preamble generation.
+
+    Handles models that lack a chat template by falling back to a simple
+    system+user text concatenation, so any instruction-tuned model family
+    (Qwen, Llama, Mistral, Gemma, Phi, etc.) works without special-casing.
     """
-    prompt_text = tokenizer.apply_chat_template(
-        messages, tokenize=False, add_generation_prompt=True
-    )
+    try:
+        prompt_text = tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+    except Exception:
+        # Fallback for models without a registered chat template:
+        # concatenate system and user turns as plain text.
+        parts = []
+        for m in messages:
+            if m["role"] == "system":
+                parts.append(m["content"])
+            elif m["role"] == "user":
+                parts.append(f"\nUser: {m['content']}\nAssistant:")
+        prompt_text = "\n".join(parts)
     inputs = tokenizer(
         prompt_text, return_tensors="pt", truncation=True, max_length=768
     ).to(device)
@@ -329,20 +351,95 @@ def get_single_word(model, tokenizer, messages: list[dict],
     return raw, prompt_text
 
 
+def get_valid_word(model, tokenizer, messages: list[dict],
+                   device: str, temperature: float,
+                   prev_a: str, prev_b: str,
+                   used_words: set[str],
+                   used_stems: set[str],
+                   stem_fn,
+                   bridge_threshold: float) -> tuple[str, str, float, list[tuple[str,str]], bool]:
+    """
+    Retry loop: keep generating until a valid word is produced or MAX_RETRIES
+    is exhausted. A valid word must:
+      - Be extractable by sanitize_output (no format garbage)
+      - Exist as a noun in WordNet
+      - Not have been played already this episode (checked by stem to prevent
+        variants like 'forge'/'forges'/'forged' from bypassing the check)
+      - Pass the bridge threshold against BOTH shared anchors
+
+    Each failed attempt incurs RETRY_PENALTY subtracted from the turn reward.
+    All (prompt, raw) pairs are returned so GRPO can train on every attempt.
+
+    Returns:
+        word          — the accepted word (or last attempted word if all retries fail)
+        prompt_text   — prompt of the accepted/final attempt
+        penalty       — total penalty accrued (n_failed_attempts * RETRY_PENALTY)
+        all_attempts  — list of (prompt_text, raw_output) for every attempt,
+                        including the accepted one, for use in the GRPO loss
+        exhausted     — True if all MAX_RETRIES failed (episode should end)
+    """
+    all_attempts = []
+    penalty = 0.0
+
+    for attempt_idx in range(MAX_RETRIES):
+        raw, prompt_text = _generate_once(
+            model, tokenizer, messages, device, temperature
+        )
+        all_attempts.append((prompt_text, raw))
+
+        word = sanitize_output(raw)
+
+        # Check each failure mode in order; each adds a penalty and retries
+        if word is None:
+            # Format failure — model output was unparseable
+            penalty += RETRY_PENALTY
+            continue
+
+        if not is_in_wordnet(word):
+            # Not a real noun — penalise and retry
+            penalty += RETRY_PENALTY
+            continue
+
+        if word in used_words or stem_fn(word) in used_stems:
+            # Repeated word — stem check catches inflected variants like
+            # 'forge'/'forges'/'forged' to prevent the model from cheating
+            # by appending letters to reuse a word it already played
+            penalty += RETRY_PENALTY
+            continue
+
+        if not is_valid_bridge(word, prev_a, prev_b, bridge_threshold):
+            # Invalid bridge — model must keep trying
+            penalty += RETRY_PENALTY
+            continue
+
+        # Passed all checks — accept this word
+        return word, prompt_text, penalty, all_attempts, False
+
+    # All retries exhausted — return last attempted word and signal episode end
+    last_word = sanitize_output(all_attempts[-1][1]) or "unknown"
+    return last_word, all_attempts[-1][0], penalty, all_attempts, True
+
+
 # ---------------------------------------------------------------------------
 # 6.  Reward functions
 # ---------------------------------------------------------------------------
 
 def turn_reward(word: str, anchor_a: str, anchor_b: str,
-                is_clean: bool, threshold: float) -> float:
-    """Per-turn reward for one agent."""
+                retry_penalty: float, threshold: float) -> float:
+    """
+    Per-turn reward for one agent.
+
+    retry_penalty is the total accrued cost of failed attempts this turn
+    (n_failed * RETRY_PENALTY). It is subtracted directly so that cleaner
+    outputs that required no retries score strictly higher.
+    """
     r = 0.0
 
-    # Format penalty: model produced preamble / garbage
-    if not is_clean:
-        r -= 2.0
+    # Subtract the cost of any retries needed to reach this word
+    r -= retry_penalty
 
-    # Validity: must be in WordNet
+    # Validity: must be in WordNet (should always pass here since get_valid_word
+    # checks this, but guard defensively in case of retry exhaustion)
     if not is_in_wordnet(word):
         r -= 1.5
         return r
@@ -376,12 +473,13 @@ def episode_terminal_reward(won: bool, n_rounds: int, max_rounds: int) -> float:
 
 @dataclass
 class AgentTurn:
-    prompt_text: str
-    raw_output: str
-    word: str
-    is_clean: bool
+    # All (prompt, raw_output) pairs from this turn including retries.
+    # Every attempt enters the GRPO loss with the same final turn reward,
+    # giving the model dense signal about which outputs to avoid.
+    attempts: list[tuple[str, str]]
+    word: str               # the accepted word (or last attempt if exhausted)
     is_valid_bridge: bool
-    turn_reward: float
+    turn_reward: float      # final reward including retry penalty and terminal
 
 
 @dataclass
@@ -392,88 +490,97 @@ class Episode:
     turns_b: list[AgentTurn] = field(default_factory=list)
     won: bool = False
     n_rounds: int = 0
-    invalid_bridge: bool = False        # True if episode ended due to bad bridge
+    exhausted: bool = False     # True if an agent used up all MAX_RETRIES
 
 
 def run_episode(model_a, model_b, tokenizer_a, tokenizer_b,
                 start_a: str, start_b: str,
                 device: str, max_rounds: int = 10,
                 temperature: float = 0.9,
-                bridge_threshold: float = 0.10,
-                concrete_nouns: list[str] = None) -> Episode:
+                bridge_threshold: float = 0.10) -> Episode:
     """
     Roll out one full episode between model_a and model_b.
     Both models see the full history of both players' words.
-    """
-    ep = Episode(start_a=start_a, start_b=start_b)
-    fallback = concrete_nouns or ["tree", "rock", "water", "fire", "stone"]
 
-    # The "current anchors" are the words each model must bridge from
+    Rules (mirroring the human improv game):
+    - Each round both agents see the SAME two anchor words from the previous round.
+    - Both agents must output a word that bridges BOTH anchors together.
+    - A word already played by either agent (including stemmed variants) is not allowed.
+    - If a model cannot produce a valid word within MAX_RETRIES, the episode ends.
+    - The episode ends in a win when both agents say the same word in the same round.
+    - Reaching max_rounds without convergence is a timeout (no win).
+    """
+    try:
+        from nltk.stem import PorterStemmer
+        stemmer = PorterStemmer()
+        def _stem(w): return stemmer.stem(w)
+    except Exception:
+        # If stemmer unavailable, fall back to exact match only
+        def _stem(w): return w
+
+    ep = Episode(start_a=start_a, start_b=start_b)
+
+    # Both agents share the same two anchors each round
     prev_a = start_a
     prev_b = start_b
 
-    # History from each agent's perspective
-    hist_a: list[dict] = []  # {"my_word", "partner_word"}
-    hist_b: list[dict] = []
+    # Track every word played (and their stems) to prevent repetition/cheating.
+    # Storing stems means 'forge', 'forges', 'forged' all count as used.
+    used_words:  set[str] = {start_a, start_b}
+    used_stems:  set[str] = {_stem(start_a), _stem(start_b)}
+
+    # Shared history — both agents see the same record of what was said each round
+    history: list[dict] = []   # {"word_a": str, "word_b": str}
 
     for round_idx in range(max_rounds):
-        # --- Agent A generates ---
-        msgs_a = build_messages(start_a, start_b, hist_a, "A")
-        raw_a, prompt_a = get_single_word(
-            model_a, tokenizer_a, msgs_a, device, temperature
+        # --- Agent A generates (with retry loop) ---
+        # Both agents receive the same shared anchors
+        msgs_a = build_messages(prev_a, prev_b, history, "A", start_a, start_b)
+        word_a, _, penalty_a, attempts_a, exhausted_a = get_valid_word(
+            model_a, tokenizer_a, msgs_a, device, temperature,
+            prev_a, prev_b, used_words, used_stems, _stem, bridge_threshold
         )
-        word_a, clean_a = sanitize_output(raw_a, fallback)
 
-        # --- Agent B generates ---
-        msgs_b = build_messages(start_b, start_a, hist_b, "B")
-        raw_b, prompt_b = get_single_word(
-            model_b, tokenizer_b, msgs_b, device, temperature
+        # --- Agent B generates (with retry loop) ---
+        msgs_b = build_messages(prev_a, prev_b, history, "B", start_a, start_b)
+        word_b, _, penalty_b, attempts_b, exhausted_b = get_valid_word(
+            model_b, tokenizer_b, msgs_b, device, temperature,
+            prev_a, prev_b, used_words, used_stems, _stem, bridge_threshold
         )
-        word_b, clean_b = sanitize_output(raw_b, fallback)
 
-        # --- Validate bridges ---
+        # --- Per-turn rewards (retry penalty already baked in) ---
+        r_a = turn_reward(word_a, prev_a, prev_b, penalty_a, bridge_threshold)
+        r_b = turn_reward(word_b, prev_a, prev_b, penalty_b, bridge_threshold)
+
         valid_a = is_valid_bridge(word_a, prev_a, prev_b, bridge_threshold)
         valid_b = is_valid_bridge(word_b, prev_a, prev_b, bridge_threshold)
 
-        # --- Per-turn rewards ---
-        r_a = turn_reward(word_a, prev_a, prev_b, clean_a, bridge_threshold)
-        r_b = turn_reward(word_b, prev_a, prev_b, clean_b, bridge_threshold)
-
-        ep.turns_a.append(AgentTurn(prompt_a, raw_a, word_a, clean_a, valid_a, r_a))
-        ep.turns_b.append(AgentTurn(prompt_b, raw_b, word_b, clean_b, valid_b, r_b))
+        ep.turns_a.append(AgentTurn(attempts_a, word_a, valid_a, r_a))
+        ep.turns_b.append(AgentTurn(attempts_b, word_b, valid_b, r_b))
 
         ep.n_rounds = round_idx + 1
+
+        # --- Retry exhaustion ends the episode ---
+        if exhausted_a or exhausted_b:
+            ep.exhausted = True
+            break
 
         # --- Convergence check ---
         if word_a == word_b:
             ep.won = True
             break
 
-        # --- Invalid bridge ends the episode ---
-        # FIX: Don't bail in early rounds (0-2) — cold/untrained models need
-        # time to warm up. Instead, continue with a fallback word so the
-        # episode can keep running and produce useful training signal.
-        if not valid_a or not valid_b:
-            if round_idx >= 2:
-                ep.invalid_bridge = True
-                break
-            # Otherwise advance with fallback words so the episode continues
-            prev_a = word_a if valid_a else random.choice(fallback)
-            prev_b = word_b if valid_b else random.choice(fallback)
-            hist_a.append({"my_word": prev_a, "partner_word": prev_b})
-            hist_b.append({"my_word": prev_b, "partner_word": prev_a})
-            continue
-
-        # --- Advance anchors ---
+        # --- Advance shared anchors and record words as used ---
         prev_a = word_a
         prev_b = word_b
-        hist_a.append({"my_word": word_a, "partner_word": word_b})
-        hist_b.append({"my_word": word_b, "partner_word": word_a})
+        used_words.add(word_a);  used_stems.add(_stem(word_a))
+        used_words.add(word_b);  used_stems.add(_stem(word_b))
+        history.append({"word_a": word_a, "word_b": word_b})
 
     # --- Terminal rewards ---
     terminal = episode_terminal_reward(ep.won, ep.n_rounds, max_rounds)
-    if ep.invalid_bridge:
-        terminal -= 3.0   # extra penalty for breaking the chain
+    if ep.exhausted:
+        terminal -= 5.0   # extra penalty for failing to produce any valid word
 
     # Attach terminal reward to last turn of each agent
     if ep.turns_a:
@@ -490,40 +597,51 @@ def run_episode(model_a, model_b, tokenizer_a, tokenizer_b,
 
 def _get_completion_logprobs(model, tokenizer, prompt_texts: list[str],
                               completion_texts: list[str],
-                              device: str) -> torch.Tensor:
+                              device: str,
+                              chunk_size: int = 4) -> torch.Tensor:
     """
     Compute sum of log-probs over completion tokens for each (prompt, completion).
     Returns shape (B,).
+
+    chunk_size caps how many sequences are processed in one forward pass.
+    With retries, the effective batch can be up to MAX_RETRIES * episodes *
+    rounds — chunking keeps peak activation memory bounded regardless of
+    how many retries occurred in a given batch.
     """
-    full_texts = [p + c for p, c in zip(prompt_texts, completion_texts)]
-    enc_full = tokenizer(full_texts, return_tensors="pt", padding=True,
-                         truncation=True, max_length=800).to(device)
-    enc_prompt = tokenizer(prompt_texts, return_tensors="pt", padding=True,
-                           truncation=True, max_length=800).to(device)
-    prompt_lens = enc_prompt["attention_mask"].sum(dim=1)   # (B,)
+    all_results = []
 
-    # FIX: Wrap in torch.enable_grad() so policy logprobs have a grad_fn
-    # even when called from within a broader no_grad context (e.g. after
-    # the rollout phase which runs model.eval() + torch.no_grad()).
-    # The entire slice/gather/sum chain must stay inside this context —
-    # exiting it before torch.stack() would detach the tensors.
-    with torch.enable_grad():
-        logits = model(
-            input_ids=enc_full["input_ids"],
-            attention_mask=enc_full["attention_mask"],
-        ).logits                                                 # (B, T, V)
+    for start in range(0, len(prompt_texts), chunk_size):
+        p_chunk = prompt_texts[start: start + chunk_size]
+        c_chunk = completion_texts[start: start + chunk_size]
 
-        log_probs = F.log_softmax(logits, dim=-1)               # (B, T, V)
+        full_texts = [p + c for p, c in zip(p_chunk, c_chunk)]
+        enc_full = tokenizer(full_texts, return_tensors="pt", padding=True,
+                             truncation=True, max_length=800).to(device)
+        enc_prompt = tokenizer(p_chunk, return_tensors="pt", padding=True,
+                               truncation=True, max_length=800).to(device)
+        prompt_lens = enc_prompt["attention_mask"].sum(dim=1)   # (chunk,)
 
-        B = logits.shape[0]
-        result = []
-        for b in range(B):
-            pl = prompt_lens[b].item()
-            ids = enc_full["input_ids"][b, pl:]                 # completion token ids
-            lp  = log_probs[b, pl-1:pl-1+len(ids)]             # shifted logits
-            gathered = lp.gather(1, ids.unsqueeze(1)).squeeze(1)
-            result.append(gathered.sum())
-        return torch.stack(result)                              # (B,)
+        # FIX: Wrap in torch.enable_grad() so policy logprobs have a grad_fn
+        # even when called from within a broader no_grad context (e.g. after
+        # the rollout phase which runs model.eval() + torch.no_grad()).
+        # The entire slice/gather/sum chain must stay inside this context —
+        # exiting it before torch.stack() would detach the tensors.
+        with torch.enable_grad():
+            logits = model(
+                input_ids=enc_full["input_ids"],
+                attention_mask=enc_full["attention_mask"],
+            ).logits                                                 # (chunk, T, V)
+
+            log_probs = F.log_softmax(logits, dim=-1)               # (chunk, T, V)
+
+            for b in range(logits.shape[0]):
+                pl = prompt_lens[b].item()
+                ids = enc_full["input_ids"][b, pl:]                 # completion token ids
+                lp  = log_probs[b, pl-1:pl-1+len(ids)]             # shifted logits
+                gathered = lp.gather(1, ids.unsqueeze(1)).squeeze(1)
+                all_results.append(gathered.sum())
+
+    return torch.stack(all_results)                                 # (B,)
 
 
 def grpo_loss_for_agent(model, ref_model, tokenizer,
@@ -536,6 +654,11 @@ def grpo_loss_for_agent(model, ref_model, tokenizer,
     Each episode is one "group" — rewards are normalised within the episode
     across turns (since G=n_turns here, not multiple rollouts of same prompt).
 
+    Every attempt within a turn (including failed retries) enters the loss
+    with the same final turn reward. This gives the model dense signal:
+    retried outputs get the same (penalised) reward as the accepted word,
+    so the policy learns to avoid outputs that require retries.
+
     For true GRPO with G>1 rollouts per prompt, increase episodes_per_batch
     and group episodes by their starting word pair.
     """
@@ -544,10 +667,12 @@ def grpo_loss_for_agent(model, ref_model, tokenizer,
     for ep_id, ep in enumerate(episodes):
         turns = ep.turns_a if agent == "a" else ep.turns_b
         for turn in turns:
-            all_prompts.append(turn.prompt_text)
-            all_completions.append(turn.raw_output)
-            all_rewards.append(turn.turn_reward)
-            all_ep_ids.append(ep_id)
+            # Flatten all attempts (retries + accepted) into the loss
+            for prompt_text, raw_output in turn.attempts:
+                all_prompts.append(prompt_text)
+                all_completions.append(raw_output)
+                all_rewards.append(turn.turn_reward)
+                all_ep_ids.append(ep_id)
 
     if not all_prompts:
         return torch.tensor(0.0, requires_grad=True)
@@ -590,7 +715,7 @@ def make_model_and_ref(model_name: str, use_peft: bool,
                         dtype: torch.dtype):
     """Load a policy model (optionally with LoRA) and a frozen ref copy."""
     policy = AutoModelForCausalLM.from_pretrained(
-        model_name, torch_dtype=dtype, device_map="auto"
+        model_name, torch_dtype=dtype, device_map="auto", trust_remote_code=True
     )
     if use_peft:
         if not PEFT_AVAILABLE:
@@ -604,7 +729,7 @@ def make_model_and_ref(model_name: str, use_peft: bool,
         policy.print_trainable_parameters()
 
     ref = AutoModelForCausalLM.from_pretrained(
-        model_name, torch_dtype=dtype, device_map="auto"
+        model_name, torch_dtype=dtype, device_map="auto", trust_remote_code=True
     )
     ref.eval()
     for p in ref.parameters():
@@ -638,9 +763,14 @@ def train(args):
     model_a, ref_a = make_model_and_ref(
         args.model_a, args.use_peft, args.lora_r, args.lora_alpha, dtype
     )
-    tokenizer_a = AutoTokenizer.from_pretrained(args.model_a)
+    tokenizer_a = AutoTokenizer.from_pretrained(
+        args.model_a, trust_remote_code=True
+    )
+    # Ensure pad/eos tokens are set — different families use different conventions
     if tokenizer_a.pad_token is None:
         tokenizer_a.pad_token = tokenizer_a.eos_token
+    if tokenizer_a.eos_token is None:
+        tokenizer_a.eos_token = tokenizer_a.pad_token
     tokenizer_a.padding_side = "left"
 
     if args.model_b == args.model_a:
@@ -654,9 +784,13 @@ def train(args):
         model_b, ref_b = make_model_and_ref(
             args.model_b, args.use_peft, args.lora_r, args.lora_alpha, dtype
         )
-        tokenizer_b = AutoTokenizer.from_pretrained(args.model_b)
+        tokenizer_b = AutoTokenizer.from_pretrained(
+            args.model_b, trust_remote_code=True
+        )
         if tokenizer_b.pad_token is None:
             tokenizer_b.pad_token = tokenizer_b.eos_token
+        if tokenizer_b.eos_token is None:
+            tokenizer_b.eos_token = tokenizer_b.pad_token
         tokenizer_b.padding_side = "left"
 
     opt_a = torch.optim.AdamW(
@@ -700,23 +834,23 @@ def train(args):
                     max_rounds=args.max_rounds,
                     temperature=args.temperature,
                     bridge_threshold=args.bridge_threshold,
-                    concrete_nouns=concrete_nouns,
                 )
                 episodes.append(ep)
 
             # --- Stats -------------------------------------------------------
             wins       = sum(ep.won for ep in episodes)
             avg_rounds = sum(ep.n_rounds for ep in episodes) / len(episodes)
-            invalids   = sum(ep.invalid_bridge for ep in episodes)
+            exhausted  = sum(ep.exhausted for ep in episodes)
             win_rate   = wins / len(episodes)
             print(f"  step={global_step:4d} | "
                   f"wins={wins}/{len(episodes)} | "
                   f"avg_rounds={avg_rounds:.1f} | "
-                  f"invalid_bridge={invalids}")
+                  f"retry_exhausted={exhausted}")
 
             # --- Log all episodes to file ------------------------------------
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             for ep in episodes:
-                _log_episode_to_file(ep, global_step, game_log_path)
+                _log_episode_to_file(ep, global_step, game_log_path, timestamp)
 
             if args.eval_only:
                 for ep in episodes[:2]:
@@ -733,6 +867,12 @@ def train(args):
             loss_a.backward()
             torch.nn.utils.clip_grad_norm_(model_a.parameters(), 1.0)
             opt_a.step()
+            # Free the computation graph and clear the cache before computing
+            # loss_b — with retries, both graphs are large and holding both
+            # simultaneously is the main cause of OOM on 44GB GPUs.
+            loss_a_val = loss_a.item()
+            del loss_a
+            torch.cuda.empty_cache()
 
             # --- Update model B ----------------------------------------------
             model_b.train()
@@ -743,15 +883,18 @@ def train(args):
             loss_b.backward()
             torch.nn.utils.clip_grad_norm_(model_b.parameters(), 1.0)
             opt_b.step()
+            loss_b_val = loss_b.item()
+            del loss_b
+            torch.cuda.empty_cache()
 
-            print(f"           loss_a={loss_a.item():.4f} | "
-                  f"loss_b={loss_b.item():.4f}")
+            print(f"           loss_a={loss_a_val:.4f} | "
+                  f"loss_b={loss_b_val:.4f}")
 
             # --- Record losses and refresh the plot --------------------------
             loss_history.append({
                 "step":     global_step,
-                "loss_a":   loss_a.item(),
-                "loss_b":   loss_b.item(),
+                "loss_a":   loss_a_val,
+                "loss_b":   loss_b_val,
                 "win_rate": win_rate,
             })
             _save_loss_curve(loss_history, loss_plot_path)
@@ -779,27 +922,33 @@ def train(args):
 # 10. Evaluation helpers
 # ---------------------------------------------------------------------------
 
-def _log_episode_to_file(ep: Episode, global_step: int, log_path: str):
+def _log_episode_to_file(ep: Episode, global_step: int, log_path: str,
+                          timestamp: str):
     """
     Append a human-readable record of one episode to log_path.
-    Each entry shows the word chain for both agents, validity markers,
-    and the outcome, so you can read through and see what words were played.
+    timestamp is written once per batch (passed in from the training loop).
+    Each entry shows the word chain for both agents, retry counts, validity
+    markers, and the outcome.
     """
     with open(log_path, "a") as f:
         f.write(f"\n{'='*60}\n")
-        f.write(f"step={global_step}  '{ep.start_a}' ↔ '{ep.start_b}'\n")
+        f.write(f"[{timestamp}] step={global_step}  "
+                f"'{ep.start_a}' ↔ '{ep.start_b}'\n")
         f.write(f"{'='*60}\n")
-        f.write(f"  {'Round':<8} {'Agent A':<20} {'Agent B':<20}\n")
-        f.write(f"  {'-'*48}\n")
+        f.write(f"  {'Round':<8} {'Agent A':<24} {'Agent B':<24}\n")
+        f.write(f"  {'-'*56}\n")
         for i, (ta, tb) in enumerate(zip(ep.turns_a, ep.turns_b)):
-            bridge_a = "✓" if ta.is_valid_bridge else "✗"
-            bridge_b = "✓" if tb.is_valid_bridge else "✗"
-            clean_a  = "" if ta.is_clean else "[!]"
-            clean_b  = "" if tb.is_clean else "[!]"
-            col_a = f"{ta.word}{clean_a}({bridge_a})"
-            col_b = f"{tb.word}{clean_b}({bridge_b})"
-            f.write(f"  {i+1:<8} {col_a:<20} {col_b:<20}\n")
-        outcome = "WON" if ep.won else ("INVALID" if ep.invalid_bridge else "TIMEOUT")
+            bridge_a  = "✓" if ta.is_valid_bridge else "✗"
+            bridge_b  = "✓" if tb.is_valid_bridge else "✗"
+            retries_a = len(ta.attempts) - 1   # attempts minus the accepted one
+            retries_b = len(tb.attempts) - 1
+            retry_a   = f"[r{retries_a}]" if retries_a > 0 else ""
+            retry_b   = f"[r{retries_b}]" if retries_b > 0 else ""
+            col_a = f"{ta.word}{retry_a}({bridge_a})"
+            col_b = f"{tb.word}{retry_b}({bridge_b})"
+            f.write(f"  {i+1:<8} {col_a:<24} {col_b:<24}\n")
+        outcome = ("WON" if ep.won
+                   else ("EXHAUSTED" if ep.exhausted else "TIMEOUT"))
         f.write(f"  → {outcome} in {ep.n_rounds} round(s)\n")
 
 
@@ -851,18 +1000,20 @@ def _save_loss_curve(loss_history: list[dict], plot_path: str):
 def _print_episode(ep: Episode):
     print(f"\n  Episode: '{ep.start_a}' ↔ '{ep.start_b}'")
     for i, (ta, tb) in enumerate(zip(ep.turns_a, ep.turns_b)):
-        bridge_a = "✓" if ta.is_valid_bridge else "✗"
-        bridge_b = "✓" if tb.is_valid_bridge else "✗"
-        clean_a  = "" if ta.is_clean else "[!]"
-        clean_b  = "" if tb.is_clean else "[!]"
-        print(f"    Round {i+1}: A={ta.word}{clean_a}({bridge_a}) "
-              f"B={tb.word}{clean_b}({bridge_b})")
-    outcome = "WON" if ep.won else ("INVALID" if ep.invalid_bridge else "TIMEOUT")
+        bridge_a  = "✓" if ta.is_valid_bridge else "✗"
+        bridge_b  = "✓" if tb.is_valid_bridge else "✗"
+        retries_a = len(ta.attempts) - 1
+        retries_b = len(tb.attempts) - 1
+        retry_a   = f"[r{retries_a}]" if retries_a > 0 else ""
+        retry_b   = f"[r{retries_b}]" if retries_b > 0 else ""
+        print(f"    Round {i+1}: A={ta.word}{retry_a}({bridge_a}) "
+              f"B={tb.word}{retry_b}({bridge_b})")
+    outcome = "WON" if ep.won else ("EXHAUSTED" if ep.exhausted else "TIMEOUT")
     print(f"  → {outcome} in {ep.n_rounds} round(s)")
 
 
 def evaluate(model_a, model_b, tokenizer_a, tokenizer_b,
-             concrete_nouns, args, n_episodes: int = 20):
+             args, n_episodes: int = 20):
     device = next(model_a.parameters()).device
     model_a.eval(); model_b.eval()
 
@@ -876,7 +1027,6 @@ def evaluate(model_a, model_b, tokenizer_a, tokenizer_b,
             max_rounds=args.max_rounds,
             temperature=0.01,           # greedy at eval time
             bridge_threshold=args.bridge_threshold,
-            concrete_nouns=concrete_nouns,
         )
         wins += ep.won
         total_rounds += ep.n_rounds
