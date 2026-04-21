@@ -35,6 +35,7 @@ import re
 import random
 import argparse
 import string
+import os
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -114,10 +115,33 @@ def get_concrete_nouns(max_words: int = 3000) -> list[str]:
     """
     Pull concrete nouns from WordNet. Cached after first call.
     Returns single-token, lowercase, alpha-only words.
+
+    Filters to common English words only by cross-referencing NLTK's Brown
+    corpus word frequencies — this removes obscure taxonomic/scientific names
+    (e.g. 'chrysemys', 'pycnogonida') that models can't reason about, keeping
+    only words a fluent English speaker would recognise.
     """
     global _CONCRETE_NOUN_CACHE
     if _CONCRETE_NOUN_CACHE:
         return _CONCRETE_NOUN_CACHE
+
+    # Build a frequency map from the Brown corpus (general English text).
+    # Words appearing fewer than min_freq times are treated as uncommon.
+    min_freq = 2
+    try:
+        from nltk.corpus import brown
+        freq = {}
+        for w in brown.words():
+            w = w.lower()
+            freq[w] = freq.get(w, 0) + 1
+        common_words = {w for w, c in freq.items() if c >= min_freq}
+        print(f"[WordNet] Brown corpus loaded: {len(common_words)} common words.")
+    except Exception:
+        # If Brown corpus isn't downloaded, fall back to no frequency filter.
+        # Run: python -c "import nltk; nltk.download('brown')" to enable.
+        common_words = None
+        print("[WordNet] Brown corpus unavailable — no frequency filter applied. "
+              "Run: python -c \"import nltk; nltk.download('brown')\" to fix.")
 
     seen = set()
     words = []
@@ -127,7 +151,9 @@ def get_concrete_nouns(max_words: int = 3000) -> list[str]:
         for lemma in synset.lemmas():
             w = lemma.name().lower().replace("_", "")
             if (w.isalpha() and 3 <= len(w) <= 12
-                    and " " not in w and w not in seen):
+                    and " " not in w and w not in seen
+                    # Only keep words that appear in common English text
+                    and (common_words is None or w in common_words)):
                 seen.add(w)
                 words.append(w)
                 if len(words) >= max_words:
@@ -424,9 +450,19 @@ def run_episode(model_a, model_b, tokenizer_a, tokenizer_b,
             break
 
         # --- Invalid bridge ends the episode ---
+        # FIX: Don't bail in early rounds (0-2) — cold/untrained models need
+        # time to warm up. Instead, continue with a fallback word so the
+        # episode can keep running and produce useful training signal.
         if not valid_a or not valid_b:
-            ep.invalid_bridge = True
-            break
+            if round_idx >= 2:
+                ep.invalid_bridge = True
+                break
+            # Otherwise advance with fallback words so the episode continues
+            prev_a = word_a if valid_a else random.choice(fallback)
+            prev_b = word_b if valid_b else random.choice(fallback)
+            hist_a.append({"my_word": prev_a, "partner_word": prev_b})
+            hist_b.append({"my_word": prev_b, "partner_word": prev_a})
+            continue
 
         # --- Advance anchors ---
         prev_a = word_a
@@ -466,22 +502,28 @@ def _get_completion_logprobs(model, tokenizer, prompt_texts: list[str],
                            truncation=True, max_length=800).to(device)
     prompt_lens = enc_prompt["attention_mask"].sum(dim=1)   # (B,)
 
-    logits = model(
-        input_ids=enc_full["input_ids"],
-        attention_mask=enc_full["attention_mask"],
-    ).logits                                                 # (B, T, V)
+    # FIX: Wrap in torch.enable_grad() so policy logprobs have a grad_fn
+    # even when called from within a broader no_grad context (e.g. after
+    # the rollout phase which runs model.eval() + torch.no_grad()).
+    # The entire slice/gather/sum chain must stay inside this context —
+    # exiting it before torch.stack() would detach the tensors.
+    with torch.enable_grad():
+        logits = model(
+            input_ids=enc_full["input_ids"],
+            attention_mask=enc_full["attention_mask"],
+        ).logits                                                 # (B, T, V)
 
-    log_probs = F.log_softmax(logits, dim=-1)               # (B, T, V)
+        log_probs = F.log_softmax(logits, dim=-1)               # (B, T, V)
 
-    B = logits.shape[0]
-    result = []
-    for b in range(B):
-        pl = prompt_lens[b].item()
-        ids = enc_full["input_ids"][b, pl:]                 # completion token ids
-        lp  = log_probs[b, pl-1:pl-1+len(ids)]             # shifted logits
-        gathered = lp.gather(1, ids.unsqueeze(1)).squeeze(1)
-        result.append(gathered.sum())
-    return torch.stack(result)                              # (B,)
+        B = logits.shape[0]
+        result = []
+        for b in range(B):
+            pl = prompt_lens[b].item()
+            ids = enc_full["input_ids"][b, pl:]                 # completion token ids
+            lp  = log_probs[b, pl-1:pl-1+len(ids)]             # shifted logits
+            gathered = lp.gather(1, ids.unsqueeze(1)).squeeze(1)
+            result.append(gathered.sum())
+        return torch.stack(result)                              # (B,)
 
 
 def grpo_loss_for_agent(model, ref_model, tokenizer,
@@ -567,7 +609,15 @@ def make_model_and_ref(model_name: str, use_peft: bool,
     ref.eval()
     for p in ref.parameters():
         p.requires_grad_(False)
-
+    policy.gradient_checkpointing_enable()
+    # FIX: enable_input_require_grads() is required when using PEFT + gradient
+    # checkpointing. Without it, the frozen embedding layer produces inputs with
+    # requires_grad=False, which makes checkpointing silently produce detached
+    # outputs and triggers "None of the inputs have requires_grad=True" warnings.
+    policy.enable_input_require_grads()
+    # FIX: Do NOT call gradient_checkpointing_enable() on the ref model.
+    # The ref is fully frozen (no requires_grad), so checkpointing is
+    # wasteful and triggers "None of the inputs have requires_grad=True" warnings.
     return policy, ref
 
 
@@ -621,6 +671,12 @@ def train(args):
     # --- Training loop -------------------------------------------------------
     global_step = 0
 
+    # Paths for the game log and loss curve plot
+    os.makedirs(args.output_dir, exist_ok=True)
+    game_log_path  = os.path.join(args.output_dir, "game_log.txt")
+    loss_plot_path = os.path.join(args.output_dir, "loss_curve.png")
+    loss_history: list[dict] = []   # accumulates {"step", "loss_a", "loss_b", "win_rate"}
+
     for epoch in range(args.num_epochs):
         print(f"\n=== Epoch {epoch + 1}/{args.num_epochs} ===")
 
@@ -652,10 +708,15 @@ def train(args):
             wins       = sum(ep.won for ep in episodes)
             avg_rounds = sum(ep.n_rounds for ep in episodes) / len(episodes)
             invalids   = sum(ep.invalid_bridge for ep in episodes)
+            win_rate   = wins / len(episodes)
             print(f"  step={global_step:4d} | "
                   f"wins={wins}/{len(episodes)} | "
                   f"avg_rounds={avg_rounds:.1f} | "
                   f"invalid_bridge={invalids}")
+
+            # --- Log all episodes to file ------------------------------------
+            for ep in episodes:
+                _log_episode_to_file(ep, global_step, game_log_path)
 
             if args.eval_only:
                 for ep in episodes[:2]:
@@ -686,6 +747,15 @@ def train(args):
             print(f"           loss_a={loss_a.item():.4f} | "
                   f"loss_b={loss_b.item():.4f}")
 
+            # --- Record losses and refresh the plot --------------------------
+            loss_history.append({
+                "step":     global_step,
+                "loss_a":   loss_a.item(),
+                "loss_b":   loss_b.item(),
+                "win_rate": win_rate,
+            })
+            _save_loss_curve(loss_history, loss_plot_path)
+
             # --- Checkpoints -------------------------------------------------
             if global_step % args.save_steps == 0 and global_step > 0:
                 for label, m, tok in [("a", model_a, tokenizer_a),
@@ -708,6 +778,75 @@ def train(args):
 # ---------------------------------------------------------------------------
 # 10. Evaluation helpers
 # ---------------------------------------------------------------------------
+
+def _log_episode_to_file(ep: Episode, global_step: int, log_path: str):
+    """
+    Append a human-readable record of one episode to log_path.
+    Each entry shows the word chain for both agents, validity markers,
+    and the outcome, so you can read through and see what words were played.
+    """
+    with open(log_path, "a") as f:
+        f.write(f"\n{'='*60}\n")
+        f.write(f"step={global_step}  '{ep.start_a}' ↔ '{ep.start_b}'\n")
+        f.write(f"{'='*60}\n")
+        f.write(f"  {'Round':<8} {'Agent A':<20} {'Agent B':<20}\n")
+        f.write(f"  {'-'*48}\n")
+        for i, (ta, tb) in enumerate(zip(ep.turns_a, ep.turns_b)):
+            bridge_a = "✓" if ta.is_valid_bridge else "✗"
+            bridge_b = "✓" if tb.is_valid_bridge else "✗"
+            clean_a  = "" if ta.is_clean else "[!]"
+            clean_b  = "" if tb.is_clean else "[!]"
+            col_a = f"{ta.word}{clean_a}({bridge_a})"
+            col_b = f"{tb.word}{clean_b}({bridge_b})"
+            f.write(f"  {i+1:<8} {col_a:<20} {col_b:<20}\n")
+        outcome = "WON" if ep.won else ("INVALID" if ep.invalid_bridge else "TIMEOUT")
+        f.write(f"  → {outcome} in {ep.n_rounds} round(s)\n")
+
+
+def _save_loss_curve(loss_history: list[dict], plot_path: str):
+    """
+    Save a loss curve plot to plot_path (PNG).
+    loss_history is a list of {"step": int, "loss_a": float, "loss_b": float}.
+    Also plots win_rate on a twin y-axis if "win_rate" is present in entries.
+    Requires matplotlib — silently skips if not installed.
+    """
+    try:
+        import matplotlib
+        matplotlib.use("Agg")           # non-interactive backend, safe for servers
+        import matplotlib.pyplot as plt
+    except ImportError:
+        print("[plot] matplotlib not found — skipping loss curve. "
+              "pip install matplotlib to enable.")
+        return
+
+    steps    = [r["step"]   for r in loss_history]
+    loss_a   = [r["loss_a"] for r in loss_history]
+    loss_b   = [r["loss_b"] for r in loss_history]
+
+    fig, ax1 = plt.subplots(figsize=(10, 4))
+
+    ax1.plot(steps, loss_a, label="loss_a", color="steelblue",  linewidth=1.2)
+    ax1.plot(steps, loss_b, label="loss_b", color="darkorange", linewidth=1.2)
+    ax1.set_xlabel("step")
+    ax1.set_ylabel("GRPO loss")
+    ax1.legend(loc="upper left")
+
+    # Win rate on a second y-axis if recorded
+    if "win_rate" in loss_history[0]:
+        ax2 = ax1.twinx()
+        win_rates = [r["win_rate"] for r in loss_history]
+        ax2.plot(steps, win_rates, label="win_rate", color="green",
+                 linewidth=1.0, linestyle="--", alpha=0.7)
+        ax2.set_ylabel("win rate")
+        ax2.set_ylim(0, 1)
+        ax2.legend(loc="upper right")
+
+    plt.title("GRPO Converge — training curves")
+    plt.tight_layout()
+    plt.savefig(plot_path, dpi=120)
+    plt.close(fig)
+    print(f"  [plot] Loss curve saved → {plot_path}")
+
 
 def _print_episode(ep: Episode):
     print(f"\n  Episode: '{ep.start_a}' ↔ '{ep.start_b}'")
@@ -765,7 +904,7 @@ def parse_args():
     p.add_argument("--learning_rate",      type=float, default=5e-6)
     p.add_argument("--kl_coef",            type=float, default=0.04)
     p.add_argument("--temperature",        type=float, default=0.9)
-    p.add_argument("--bridge_threshold",   type=float, default=0.10,
+    p.add_argument("--bridge_threshold",   type=float, default=0.05,
                    help="Min WordNet path_similarity to count as valid bridge")
     p.add_argument("--save_steps",         type=int,   default=100)
     p.add_argument("--use_peft",           action="store_true")
