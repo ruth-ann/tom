@@ -1,0 +1,6744 @@
+[
+    {
+        "step": 0,
+        "seeds": [
+            "glitch",
+            "tactic"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "averse",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "averse",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ound",
+                        "B": "seam"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 1,
+        "seeds": [
+            "jungle",
+            "glitch"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "rift",
+                        "B": "rift"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "boundary",
+                        "B": "boundary"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "bifurcation",
+                        "B": "oundary"
+                    },
+                    {
+                        "t": 1,
+                        "A": "unction",
+                        "B": "unction"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "rift",
+                        "B": "rift"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 2,
+        "seeds": [
+            "motive",
+            "spirit"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "nexus",
+                        "B": "nexus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "nexus",
+                        "B": "nexus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "clue",
+                        "B": "nexus"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ertegyne",
+                        "B": "portend"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "eline",
+                        "B": "nexus"
+                    },
+                    {
+                        "t": 1,
+                        "A": "oundreay",
+                        "B": "ione"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 3,
+        "seeds": [
+            "sector",
+            "hybrid"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "phase",
+                        "B": "node"
+                    },
+                    {
+                        "t": 1,
+                        "A": "stage",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 2,
+                        "A": "hinge",
+                        "B": "threshold"
+                    },
+                    {
+                        "t": 3,
+                        "A": "ocard",
+                        "B": "breach"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "cross",
+                        "B": "node"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ize",
+                        "B": "span"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ween",
+                        "B": "ween"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "nexus",
+                        "B": "node"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ocard",
+                        "B": "ize"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "crossroads",
+                        "B": "node"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ize",
+                        "B": "ither"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ounday",
+                        "B": "ound"
+                    },
+                    {
+                        "t": 3,
+                        "A": "ountain",
+                        "B": "ight"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 4,
+        "seeds": [
+            "hazard",
+            "binary"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ute",
+                        "B": "fault"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isthmus",
+                        "B": "isthmus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isthmus",
+                        "B": "ute"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ledge",
+                        "B": "fault"
+                    },
+                    {
+                        "t": 1,
+                        "A": "breach",
+                        "B": "span"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 5,
+        "seeds": [
+            "buffer",
+            "legend"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "midpoint"
+                    },
+                    {
+                        "t": 1,
+                        "A": "shore",
+                        "B": "shore"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "orta",
+                        "B": "midpoint"
+                    },
+                    {
+                        "t": 1,
+                        "A": "itherne",
+                        "B": "erta"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ighta",
+                        "B": "irthennertoraa"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "equilibrium"
+                    },
+                    {
+                        "t": 1,
+                        "A": "romise",
+                        "B": "ute"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 6,
+        "seeds": [
+            "binary",
+            "spirit"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "uthal",
+                        "B": "continuum"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "uthrone",
+                        "B": "continuum"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "uthrace",
+                        "B": "continuum"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "utha",
+                        "B": "continuum"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 7,
+        "seeds": [
+            "pawn",
+            "portal"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "izeis",
+                        "B": "ize"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "isle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "uth",
+                        "B": "ize"
+                    },
+                    {
+                        "t": 1,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "izeis",
+                        "B": "icochos"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ousia",
+                        "B": "icosphere"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ousphera",
+                        "B": "ousphaeresis"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 8,
+        "seeds": [
+            "toggle",
+            "vacuum"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "heart"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "hinge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "portal",
+                        "B": "landmark"
+                    },
+                    {
+                        "t": 2,
+                        "A": "gateway",
+                        "B": "cul"
+                    },
+                    {
+                        "t": 3,
+                        "A": "outhold",
+                        "B": "breach"
+                    },
+                    {
+                        "t": 4,
+                        "A": "fault",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "cross",
+                        "B": "center"
+                    },
+                    {
+                        "t": 1,
+                        "A": "intersect",
+                        "B": "portal"
+                    },
+                    {
+                        "t": 2,
+                        "A": "span",
+                        "B": "gateway"
+                    },
+                    {
+                        "t": 3,
+                        "A": "crux",
+                        "B": "divide"
+                    },
+                    {
+                        "t": 4,
+                        "A": "hinge",
+                        "B": "nexus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "hinge",
+                        "B": "center"
+                    },
+                    {
+                        "t": 1,
+                        "A": "gateway",
+                        "B": "gate"
+                    },
+                    {
+                        "t": 2,
+                        "A": "breach",
+                        "B": "ocard"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 9,
+        "seeds": [
+            "portal",
+            "cipher"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "gateway"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "gateway"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "gateway"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "gateway"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 10,
+        "seeds": [
+            "hazard",
+            "legend"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ute",
+                        "B": "ute"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ute",
+                        "B": "ute"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "threshold",
+                        "B": "ither"
+                    },
+                    {
+                        "t": 1,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "orta",
+                        "B": "ute"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ither",
+                        "B": "itherne"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 11,
+        "seeds": [
+            "carbon",
+            "theory"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "line",
+                        "B": "nexus"
+                    },
+                    {
+                        "t": 1,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "nexus",
+                        "B": "nexus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "nexus",
+                        "B": "nexus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "hinge",
+                        "B": "nexus"
+                    },
+                    {
+                        "t": 1,
+                        "A": "portal",
+                        "B": "crossbar"
+                    },
+                    {
+                        "t": 2,
+                        "A": "loor",
+                        "B": "gateway"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 12,
+        "seeds": [
+            "sphere",
+            "motive"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ize",
+                        "B": "icosahedron"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 13,
+        "seeds": [
+            "tactic",
+            "sphere"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ize",
+                        "B": "midpoint"
+                    },
+                    {
+                        "t": 1,
+                        "A": "forge",
+                        "B": "forge"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ize",
+                        "B": "midpoint"
+                    },
+                    {
+                        "t": 1,
+                        "A": "divide",
+                        "B": "forge"
+                    },
+                    {
+                        "t": 2,
+                        "A": "crease",
+                        "B": "road"
+                    },
+                    {
+                        "t": 3,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 14,
+        "seeds": [
+            "sector",
+            "breeze"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "isthmus"
+                    },
+                    {
+                        "t": 1,
+                        "A": "strait",
+                        "B": "neck"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ize",
+                        "B": "chokechoke"
+                    },
+                    {
+                        "t": 3,
+                        "A": "ute",
+                        "B": "ute"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "stargate",
+                        "B": "gateway"
+                    },
+                    {
+                        "t": 1,
+                        "A": "uryx",
+                        "B": "urchin"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "gateway"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ford",
+                        "B": "strait"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "strait",
+                        "B": "isthmus"
+                    },
+                    {
+                        "t": 1,
+                        "A": "canal",
+                        "B": "neck"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ute",
+                        "B": "ute"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 15,
+        "seeds": [
+            "column",
+            "fossil"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 16,
+        "seeds": [
+            "buffer",
+            "rebel"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "stabilize"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ute",
+                        "B": "equilibrium"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "stabilize"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ute",
+                        "B": "romise"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ither",
+                        "B": "ound"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "equilibrium"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ute",
+                        "B": "ize"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ird",
+                        "B": "ound"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 17,
+        "seeds": [
+            "muscle",
+            "breeze"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ledge",
+                        "B": "loor"
+                    },
+                    {
+                        "t": 2,
+                        "A": "brink",
+                        "B": "spur"
+                    },
+                    {
+                        "t": 3,
+                        "A": "crux",
+                        "B": "crag"
+                    },
+                    {
+                        "t": 4,
+                        "A": "romise",
+                        "B": "breach"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 18,
+        "seeds": [
+            "enzyme",
+            "theory"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "nexus",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "irth",
+                        "B": "outhub"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "juncture",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "breach",
+                        "B": "breach"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "line",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "edge",
+                        "B": "edge"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 19,
+        "seeds": [
+            "torque",
+            "fossil"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "rift",
+                        "B": "hinge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "breach",
+                        "B": "breach"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "reef",
+                        "B": "hinge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "spur",
+                        "B": "port"
+                    },
+                    {
+                        "t": 2,
+                        "A": "choke",
+                        "B": "breach"
+                    },
+                    {
+                        "t": 3,
+                        "A": "isle",
+                        "B": "isle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "reef",
+                        "B": "hinge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "spur",
+                        "B": "spur"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "craton",
+                        "B": "hinge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "suture",
+                        "B": "orteiga"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 20,
+        "seeds": [
+            "carbon",
+            "fringe"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "nexus",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "outhouse",
+                        "B": "outhub"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 21,
+        "seeds": [
+            "statue",
+            "plasma"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "column",
+                        "B": "concreate"
+                    },
+                    {
+                        "t": 1,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": []
+            }
+        ]
+    },
+    {
+        "step": 22,
+        "seeds": [
+            "gasket",
+            "carbon"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": []
+            }
+        ]
+    },
+    {
+        "step": 23,
+        "seeds": [
+            "statue",
+            "quarry"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "portal",
+                        "B": "portal"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "portal",
+                        "B": "portal"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "portal",
+                        "B": "portal"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "portal",
+                        "B": "portal"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 24,
+        "seeds": [
+            "pawn",
+            "metric"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "eway",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ute",
+                        "B": "ight"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ocard",
+                        "B": "isle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "endpoint",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "shore",
+                        "B": "halfway"
+                    },
+                    {
+                        "t": 2,
+                        "A": "isthmus",
+                        "B": "transition"
+                    },
+                    {
+                        "t": 3,
+                        "A": "ictus",
+                        "B": "ictus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "isle"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 25,
+        "seeds": [
+            "ivory",
+            "quarry"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "spur",
+                        "B": "spur"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "spur",
+                        "B": "spur"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "spur",
+                        "B": "spur"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "spur",
+                        "B": "spur"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 26,
+        "seeds": [
+            "census",
+            "jungle"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "rossover",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "rome",
+                        "B": "rome"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 27,
+        "seeds": [
+            "census",
+            "toggle"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "boatload",
+                        "B": "midpoint"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ource",
+                        "B": "reef"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 28,
+        "seeds": [
+            "sector",
+            "oracle"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "hinge",
+                        "B": "nexus"
+                    },
+                    {
+                        "t": 1,
+                        "A": "portal",
+                        "B": "portal"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "gateway"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "archway",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "shore",
+                        "B": "shore"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "nexus"
+                    },
+                    {
+                        "t": 1,
+                        "A": "land",
+                        "B": "strand"
+                    },
+                    {
+                        "t": 2,
+                        "A": "shore",
+                        "B": "icoast"
+                    },
+                    {
+                        "t": 3,
+                        "A": "headland",
+                        "B": "isthmus"
+                    },
+                    {
+                        "t": 4,
+                        "A": "neck",
+                        "B": "neck"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 29,
+        "seeds": [
+            "binary",
+            "statue"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "lintel",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "portal",
+                        "B": "portal"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "ize"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ute",
+                        "B": "ute"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "isle"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 30,
+        "seeds": [
+            "buffer",
+            "flavor"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "isthmus"
+                    },
+                    {
+                        "t": 1,
+                        "A": "chokepoint",
+                        "B": "passageway"
+                    },
+                    {
+                        "t": 2,
+                        "A": "turnstile",
+                        "B": "turnstile"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "crossroads",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "oundroos",
+                        "B": "ute"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ouse",
+                        "B": "rome"
+                    },
+                    {
+                        "t": 3,
+                        "A": "orte",
+                        "B": "orte"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "spanner",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "crux",
+                        "B": "breach"
+                    },
+                    {
+                        "t": 2,
+                        "A": "hinge",
+                        "B": "hinge"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isthmus",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "strait",
+                        "B": "strait"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 31,
+        "seeds": [
+            "ivory",
+            "theory"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "axis",
+                        "B": "scaffold"
+                    },
+                    {
+                        "t": 1,
+                        "A": "road",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "aisle",
+                        "B": "axis"
+                    },
+                    {
+                        "t": 1,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "axis",
+                        "B": "axis"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "aisle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ford",
+                        "B": "ford"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 32,
+        "seeds": [
+            "sphere",
+            "statue"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "portal"
+                    },
+                    {
+                        "t": 1,
+                        "A": "irth",
+                        "B": "icheun"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "portal",
+                        "B": "portal"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "portal",
+                        "B": "icothen"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "portal"
+                    },
+                    {
+                        "t": 1,
+                        "A": "uthrance",
+                        "B": "ichean"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 33,
+        "seeds": [
+            "toggle",
+            "quarry"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 34,
+        "seeds": [
+            "ivory",
+            "column"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "aisle",
+                        "B": "aisle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "aisle",
+                        "B": "aisle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "aisle",
+                        "B": "aisle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "aisle",
+                        "B": "aisle"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 35,
+        "seeds": [
+            "ivory",
+            "vacuum"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "slate",
+                        "B": "slate"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "throne",
+                        "B": "plane"
+                    },
+                    {
+                        "t": 1,
+                        "A": "isthmus",
+                        "B": "summit"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ificeum",
+                        "B": "ridge"
+                    },
+                    {
+                        "t": 3,
+                        "A": "crag",
+                        "B": "spur"
+                    },
+                    {
+                        "t": 4,
+                        "A": "ledge",
+                        "B": "ledge"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ether",
+                        "B": "ether"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "plane",
+                        "B": "ether"
+                    },
+                    {
+                        "t": 1,
+                        "A": "void",
+                        "B": "void"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 36,
+        "seeds": [
+            "sector",
+            "syntax"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "midpoint"
+                    },
+                    {
+                        "t": 1,
+                        "A": "portal",
+                        "B": "portal"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "eway",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "midpoint"
+                    },
+                    {
+                        "t": 1,
+                        "A": "loor",
+                        "B": "portal"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 37,
+        "seeds": [
+            "motive",
+            "toggle"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ize",
+                        "B": "ize"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "ize"
+                    },
+                    {
+                        "t": 1,
+                        "A": "edge",
+                        "B": "edge"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ize",
+                        "B": "ize"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ize",
+                        "B": "ize"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 38,
+        "seeds": [
+            "motive",
+            "rhythm"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ocardio",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "icoastock",
+                        "B": "icoardio"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "itheridge",
+                        "B": "line"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 39,
+        "seeds": [
+            "column",
+            "cipher"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "archipelago",
+                        "B": "slate"
+                    },
+                    {
+                        "t": 1,
+                        "A": "iverie",
+                        "B": "uto"
+                    },
+                    {
+                        "t": 2,
+                        "A": "inglees",
+                        "B": "iltu"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "threshold",
+                        "B": "span"
+                    },
+                    {
+                        "t": 1,
+                        "A": "loor",
+                        "B": "line"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "slate"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ledge",
+                        "B": "ledge"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "threshold",
+                        "B": "slate"
+                    },
+                    {
+                        "t": 1,
+                        "A": "line",
+                        "B": "divide"
+                    },
+                    {
+                        "t": 2,
+                        "A": "axis",
+                        "B": "aisle"
+                    },
+                    {
+                        "t": 3,
+                        "A": "verge",
+                        "B": "span"
+                    },
+                    {
+                        "t": 4,
+                        "A": "breadth",
+                        "B": "breach"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 40,
+        "seeds": [
+            "sphere",
+            "glacier"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "osean",
+                        "B": "osean"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "osean",
+                        "B": "osean"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "osean",
+                        "B": "osean"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "osean",
+                        "B": "osean"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 41,
+        "seeds": [
+            "jungle",
+            "sphere"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icocephalous",
+                        "B": "icosahedron"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icoahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 42,
+        "seeds": [
+            "pollen",
+            "statue"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "obelisk",
+                        "B": "column"
+                    },
+                    {
+                        "t": 1,
+                        "A": "gateway",
+                        "B": "apex"
+                    },
+                    {
+                        "t": 2,
+                        "A": "portal",
+                        "B": "icocephalus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "obelisk",
+                        "B": "column"
+                    },
+                    {
+                        "t": 1,
+                        "A": "pinnacle",
+                        "B": "apex"
+                    },
+                    {
+                        "t": 2,
+                        "A": "summit",
+                        "B": "summit"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "obelisk",
+                        "B": "column"
+                    },
+                    {
+                        "t": 1,
+                        "A": "portal",
+                        "B": "apex"
+                    },
+                    {
+                        "t": 2,
+                        "A": "gateway",
+                        "B": "ize"
+                    },
+                    {
+                        "t": 3,
+                        "A": "apse",
+                        "B": "ichean"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "archery",
+                        "B": "column"
+                    },
+                    {
+                        "t": 1,
+                        "A": "pillar",
+                        "B": "portal"
+                    },
+                    {
+                        "t": 2,
+                        "A": "eway",
+                        "B": "gateway"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 43,
+        "seeds": [
+            "census",
+            "rhythm"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "boat",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "boa",
+                        "B": "span"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ute",
+                        "B": "ight"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 44,
+        "seeds": [
+            "enzyme",
+            "glitch"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "synapse",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "oundary",
+                        "B": "uralite"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "synapse",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "uralite",
+                        "B": "uralite"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "synapse",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "thread",
+                        "B": "uralite"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 45,
+        "seeds": [
+            "jungle",
+            "glacier"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "plateau",
+                        "B": "plateau"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icebox",
+                        "B": "plateau"
+                    },
+                    {
+                        "t": 1,
+                        "A": "divide",
+                        "B": "summit"
+                    },
+                    {
+                        "t": 2,
+                        "A": "fault",
+                        "B": "cross"
+                    },
+                    {
+                        "t": 3,
+                        "A": "crux",
+                        "B": "span"
+                    },
+                    {
+                        "t": 4,
+                        "A": "hinge",
+                        "B": "ize"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "plateau",
+                        "B": "plateau"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icewall",
+                        "B": "plateau"
+                    },
+                    {
+                        "t": 1,
+                        "A": "summit",
+                        "B": "summit"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 46,
+        "seeds": [
+            "pollen",
+            "magnet"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ionic",
+                        "B": "ionic"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ionicbond",
+                        "B": "ione"
+                    },
+                    {
+                        "t": 1,
+                        "A": "metal",
+                        "B": "link"
+                    },
+                    {
+                        "t": 2,
+                        "A": "steeltruss",
+                        "B": "wall"
+                    },
+                    {
+                        "t": 3,
+                        "A": "abutment",
+                        "B": "abutment"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ionic",
+                        "B": "ionic"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ione",
+                        "B": "ione"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 47,
+        "seeds": [
+            "niche",
+            "buffer"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isthmus",
+                        "B": "aisle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "neck",
+                        "B": "breach"
+                    },
+                    {
+                        "t": 2,
+                        "A": "gorge",
+                        "B": "flaw"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "aisle",
+                        "B": "aisle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "spur",
+                        "B": "aisle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "threshold"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ford",
+                        "B": "ford"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 48,
+        "seeds": [
+            "sphere",
+            "syntax"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 49,
+        "seeds": [
+            "fossil",
+            "enzyme"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ropy",
+                        "B": "nexus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "lace",
+                        "B": "scelarcticidan"
+                    },
+                    {
+                        "t": 1,
+                        "A": "urchin",
+                        "B": "ocardium"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "scytin",
+                        "B": "protein"
+                    },
+                    {
+                        "t": 1,
+                        "A": "link",
+                        "B": "peptide"
+                    },
+                    {
+                        "t": 2,
+                        "A": "strand",
+                        "B": "chain"
+                    },
+                    {
+                        "t": 3,
+                        "A": "ribosome",
+                        "B": "weave"
+                    },
+                    {
+                        "t": 4,
+                        "A": "ribbons",
+                        "B": "synapse"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": []
+            }
+        ]
+    },
+    {
+        "step": 50,
+        "seeds": [
+            "vacuum",
+            "syntax"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ledge",
+                        "B": "ledge"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "arena",
+                        "B": "ether"
+                    },
+                    {
+                        "t": 1,
+                        "A": "uthere",
+                        "B": "uthere"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ould",
+                        "B": "ether"
+                    },
+                    {
+                        "t": 1,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "uthruth",
+                        "B": "ether"
+                    },
+                    {
+                        "t": 1,
+                        "A": "urchasm",
+                        "B": "ither"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 51,
+        "seeds": [
+            "fossil",
+            "hybrid"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 52,
+        "seeds": [
+            "jungle",
+            "system"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "vergence",
+                        "B": "oundary"
+                    },
+                    {
+                        "t": 1,
+                        "A": "margin",
+                        "B": "binoculars"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ophthalamic",
+                        "B": "focus"
+                    },
+                    {
+                        "t": 3,
+                        "A": "isterne",
+                        "B": "itheral"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "oundary",
+                        "B": "vergence"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "oundary",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "oundary",
+                        "B": "midpoint"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 53,
+        "seeds": [
+            "ivory",
+            "system"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gate",
+                        "B": "gateway"
+                    },
+                    {
+                        "t": 1,
+                        "A": "crossroads",
+                        "B": "threshold"
+                    },
+                    {
+                        "t": 2,
+                        "A": "iverse",
+                        "B": "divide"
+                    },
+                    {
+                        "t": 3,
+                        "A": "ute",
+                        "B": "ube"
+                    },
+                    {
+                        "t": 4,
+                        "A": "and",
+                        "B": "rome"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "nexus"
+                    },
+                    {
+                        "t": 1,
+                        "A": "line",
+                        "B": "axis"
+                    },
+                    {
+                        "t": 2,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "gateway"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ford",
+                        "B": "ford"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "nexus",
+                        "B": "gateway"
+                    },
+                    {
+                        "t": 1,
+                        "A": "chokepoint",
+                        "B": "outhouse"
+                    },
+                    {
+                        "t": 2,
+                        "A": "entrance",
+                        "B": "portal"
+                    },
+                    {
+                        "t": 3,
+                        "A": "breach",
+                        "B": "breach"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 54,
+        "seeds": [
+            "rebel",
+            "buffer"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "rossover",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "rome",
+                        "B": "rome"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "isle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "isle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "rossover",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "rome",
+                        "B": "rome"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 55,
+        "seeds": [
+            "fossil",
+            "legend"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "tombstone",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "rift",
+                        "B": "fault"
+                    },
+                    {
+                        "t": 2,
+                        "A": "crease",
+                        "B": "breach"
+                    },
+                    {
+                        "t": 3,
+                        "A": "divide",
+                        "B": "divide"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "epoch",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "breach",
+                        "B": "rift"
+                    },
+                    {
+                        "t": 2,
+                        "A": "fault",
+                        "B": "fault"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "threshold",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "brink",
+                        "B": "breach"
+                    },
+                    {
+                        "t": 2,
+                        "A": "hinge",
+                        "B": "hinge"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 56,
+        "seeds": [
+            "ballad",
+            "niche"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 57,
+        "seeds": [
+            "jungle",
+            "column"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "aisle",
+                        "B": "ridge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "passageway",
+                        "B": "span"
+                    },
+                    {
+                        "t": 1,
+                        "A": "loor",
+                        "B": "iltisat"
+                    },
+                    {
+                        "t": 2,
+                        "A": "iltasit",
+                        "B": "iltasit"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ridge",
+                        "B": "ridge"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "ridge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "crevice",
+                        "B": "crest"
+                    },
+                    {
+                        "t": 2,
+                        "A": "pinnacle",
+                        "B": "pinnacle"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 58,
+        "seeds": [
+            "glitch",
+            "breeze"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 59,
+        "seeds": [
+            "oracle",
+            "vacuum"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "portal",
+                        "B": "horizon"
+                    },
+                    {
+                        "t": 1,
+                        "A": "breach",
+                        "B": "breach"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "nexus",
+                        "B": "horizon"
+                    },
+                    {
+                        "t": 1,
+                        "A": "crest",
+                        "B": "divide"
+                    },
+                    {
+                        "t": 2,
+                        "A": "threshold",
+                        "B": "fault"
+                    },
+                    {
+                        "t": 3,
+                        "A": "breach",
+                        "B": "breach"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "horizon"
+                    },
+                    {
+                        "t": 1,
+                        "A": "strait",
+                        "B": "strait"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "balance",
+                        "B": "horizon"
+                    },
+                    {
+                        "t": 1,
+                        "A": "span",
+                        "B": "line"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 60,
+        "seeds": [
+            "oracle",
+            "census"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "isle"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 61,
+        "seeds": [
+            "census",
+            "theory"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icheam",
+                        "B": "ute"
+                    },
+                    {
+                        "t": 1,
+                        "A": "itherne",
+                        "B": "ichtery"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "ute"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "meld",
+                        "B": "ute"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 62,
+        "seeds": [
+            "syntax",
+            "hazard"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "ereo"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ortex",
+                        "B": "ithero"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "etermine",
+                        "B": "ither"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "igrate",
+                        "B": "averse"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ould",
+                        "B": "averse"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 63,
+        "seeds": [
+            "ballad",
+            "jungle"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": []
+            }
+        ]
+    },
+    {
+        "step": 64,
+        "seeds": [
+            "census",
+            "system"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ute",
+                        "B": "ute"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ute",
+                        "B": "ute"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "ute"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ute",
+                        "B": "ute"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 65,
+        "seeds": [
+            "buffer",
+            "jungle"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "reshold"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "watershed",
+                        "B": "transition"
+                    },
+                    {
+                        "t": 1,
+                        "A": "divide",
+                        "B": "reshold"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "crossroads",
+                        "B": "crossroads"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "transition",
+                        "B": "crossroads"
+                    },
+                    {
+                        "t": 1,
+                        "A": "fork",
+                        "B": "fork"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 66,
+        "seeds": [
+            "cipher",
+            "sphere"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "key",
+                        "B": "gateway"
+                    },
+                    {
+                        "t": 1,
+                        "A": "node",
+                        "B": "nexus"
+                    },
+                    {
+                        "t": 2,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "key",
+                        "B": "gateway"
+                    },
+                    {
+                        "t": 1,
+                        "A": "road",
+                        "B": "hinge"
+                    },
+                    {
+                        "t": 2,
+                        "A": "portal",
+                        "B": "line"
+                    },
+                    {
+                        "t": 3,
+                        "A": "cross",
+                        "B": "crossroads"
+                    },
+                    {
+                        "t": 4,
+                        "A": "ingle",
+                        "B": "iverse"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "key",
+                        "B": "gateway"
+                    },
+                    {
+                        "t": 1,
+                        "A": "road",
+                        "B": "hinge"
+                    },
+                    {
+                        "t": 2,
+                        "A": "track",
+                        "B": "span"
+                    },
+                    {
+                        "t": 3,
+                        "A": "portal",
+                        "B": "axis"
+                    },
+                    {
+                        "t": 4,
+                        "A": "ize",
+                        "B": "icheam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "gate"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ford",
+                        "B": "ocard"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 67,
+        "seeds": [
+            "system",
+            "hazard"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "span",
+                        "B": "oundrover"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ute",
+                        "B": "oundrover"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "boat",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "shore",
+                        "B": "shore"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "uthill",
+                        "B": "midway"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 68,
+        "seeds": [
+            "enzyme",
+            "statue"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "column",
+                        "B": "column"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "pillar",
+                        "B": "column"
+                    },
+                    {
+                        "t": 1,
+                        "A": "bastion",
+                        "B": "loor"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "pillar",
+                        "B": "column"
+                    },
+                    {
+                        "t": 1,
+                        "A": "lintel",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "pillar",
+                        "B": "column"
+                    },
+                    {
+                        "t": 1,
+                        "A": "hall",
+                        "B": "hall"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 69,
+        "seeds": [
+            "gasket",
+            "hybrid"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "raft",
+                        "B": "hinge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": []
+            }
+        ]
+    },
+    {
+        "step": 70,
+        "seeds": [
+            "theory",
+            "enzyme"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ionic",
+                        "B": "crossover"
+                    },
+                    {
+                        "t": 1,
+                        "A": "road",
+                        "B": "ould"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ither",
+                        "B": "ound"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "nexus",
+                        "B": "ionic"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ould",
+                        "B": "itherneum"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "crossover",
+                        "B": "ionic"
+                    },
+                    {
+                        "t": 1,
+                        "A": "meld",
+                        "B": "unction"
+                    },
+                    {
+                        "t": 2,
+                        "A": "iltion",
+                        "B": "ither"
+                    },
+                    {
+                        "t": 3,
+                        "A": "ildom",
+                        "B": "ight"
+                    },
+                    {
+                        "t": 4,
+                        "A": "ildedom",
+                        "B": "iddle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "crux",
+                        "B": "ionic"
+                    },
+                    {
+                        "t": 1,
+                        "A": "itherneum",
+                        "B": "ize"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 71,
+        "seeds": [
+            "oracle",
+            "vertex"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "rossover",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "rome",
+                        "B": "rome"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "apse",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "passage",
+                        "B": "crux"
+                    },
+                    {
+                        "t": 2,
+                        "A": "uthanc",
+                        "B": "uthch"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "isle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "isle"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 72,
+        "seeds": [
+            "glitch",
+            "system"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "divide",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "cross",
+                        "B": "breach"
+                    },
+                    {
+                        "t": 2,
+                        "A": "portal",
+                        "B": "span"
+                    },
+                    {
+                        "t": 3,
+                        "A": "icheum",
+                        "B": "ichein"
+                    },
+                    {
+                        "t": 4,
+                        "A": "icket",
+                        "B": "icket"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ween",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "flaw",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "hinge",
+                        "B": "hinge"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 73,
+        "seeds": [
+            "magnet",
+            "statue"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "obelisk",
+                        "B": "portal"
+                    },
+                    {
+                        "t": 1,
+                        "A": "icothon",
+                        "B": "gateway"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "column",
+                        "B": "portal"
+                    },
+                    {
+                        "t": 1,
+                        "A": "span",
+                        "B": "gateway"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 74,
+        "seeds": [
+            "sphere",
+            "toggle"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "icosahedron"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "globe",
+                        "B": "icosahedron"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 75,
+        "seeds": [
+            "vertex",
+            "plasma"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ether",
+                        "B": "ionic"
+                    },
+                    {
+                        "t": 1,
+                        "A": "haunt",
+                        "B": "haze"
+                    },
+                    {
+                        "t": 2,
+                        "A": "oubliette",
+                        "B": "oubliette"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ize",
+                        "B": "ionic"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ound",
+                        "B": "ound"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ocardia",
+                        "B": "ionic"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ioneus",
+                        "B": "itherion"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ionic",
+                        "B": "ionic"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 76,
+        "seeds": [
+            "breeze",
+            "enzyme"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midair",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "orta",
+                        "B": "averse"
+                    },
+                    {
+                        "t": 2,
+                        "A": "frontier",
+                        "B": "venue"
+                    },
+                    {
+                        "t": 3,
+                        "A": "boundary",
+                        "B": "boundary"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "pierce",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isthmus",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ivermectin",
+                        "B": "icothyium"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 77,
+        "seeds": [
+            "syntax",
+            "column"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ither",
+                        "B": "midpoint"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "ither"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "transversal",
+                        "B": "ither"
+                    },
+                    {
+                        "t": 1,
+                        "A": "span",
+                        "B": "unction"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ute",
+                        "B": "ound"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "ither"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 78,
+        "seeds": [
+            "statue",
+            "plasma"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": []
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "column",
+                        "B": "concreate"
+                    },
+                    {
+                        "t": 1,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 79,
+        "seeds": [
+            "portal",
+            "vertex"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "outhub",
+                        "B": "outhub"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "eter",
+                        "B": "ize"
+                    },
+                    {
+                        "t": 1,
+                        "A": "gird",
+                        "B": "confluence"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ound",
+                        "B": "ound"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "isle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ize",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ound",
+                        "B": "ingle"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 80,
+        "seeds": [
+            "gasket",
+            "vertex"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "isthmus",
+                        "B": "isthmus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "isle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "find",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "isthmus",
+                        "B": "isthmus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "isle"
+                    },
+                    {
+                        "t": 1,
+                        "A": "midpoint",
+                        "B": "isthmus"
+                    },
+                    {
+                        "t": 2,
+                        "A": "uthmus",
+                        "B": "seam"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 81,
+        "seeds": [
+            "anchor",
+            "sphere"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "pivot",
+                        "B": "pivot"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "node",
+                        "B": "pivot"
+                    },
+                    {
+                        "t": 1,
+                        "A": "hinge",
+                        "B": "hinge"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "node",
+                        "B": "gateway"
+                    },
+                    {
+                        "t": 1,
+                        "A": "nexus",
+                        "B": "nexus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "gateway"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 82,
+        "seeds": [
+            "jungle",
+            "syntax"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icode",
+                        "B": "ereo"
+                    },
+                    {
+                        "t": 1,
+                        "A": "itheron",
+                        "B": "nexus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ereo",
+                        "B": "midpoint"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ero",
+                        "B": "uteo"
+                    },
+                    {
+                        "t": 2,
+                        "A": "uthority",
+                        "B": "shore"
+                    },
+                    {
+                        "t": 3,
+                        "A": "itherland",
+                        "B": "ertop"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "equilibrium"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ize",
+                        "B": "nexus"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ico",
+                        "B": "ute"
+                    },
+                    {
+                        "t": 3,
+                        "A": "ither",
+                        "B": "ight"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ould",
+                        "B": "milieu"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 83,
+        "seeds": [
+            "gasket",
+            "sphere"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "hubcap"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "hubcap"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "hub"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icosahedron",
+                        "B": "hinge"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 84,
+        "seeds": [
+            "theory",
+            "muscle"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "hinge",
+                        "B": "synapse"
+                    },
+                    {
+                        "t": 1,
+                        "A": "crosspin",
+                        "B": "node"
+                    },
+                    {
+                        "t": 2,
+                        "A": "midpoint",
+                        "B": "pivot"
+                    },
+                    {
+                        "t": 3,
+                        "A": "axis",
+                        "B": "axis"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "archimedes",
+                        "B": "synapse"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ize",
+                        "B": "shape"
+                    },
+                    {
+                        "t": 2,
+                        "A": "span",
+                        "B": "ute"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "synapse"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ize",
+                        "B": "ize"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "hinge",
+                        "B": "synapse"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ortex",
+                        "B": "node"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 85,
+        "seeds": [
+            "hybrid",
+            "portal"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "turnstile",
+                        "B": "turnstile"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "gateway"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ute",
+                        "B": "turnstile"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ingle",
+                        "B": "ingle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "oundrnmeant",
+                        "B": "istoric"
+                    },
+                    {
+                        "t": 1,
+                        "A": "nderland",
+                        "B": "nderland"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 86,
+        "seeds": [
+            "vacuum",
+            "census"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "airport",
+                        "B": "igrate"
+                    },
+                    {
+                        "t": 1,
+                        "A": "interchange",
+                        "B": "interchange"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icocephalus",
+                        "B": "iverse"
+                    },
+                    {
+                        "t": 1,
+                        "A": "icoverse",
+                        "B": "icoverse"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isthmus",
+                        "B": "iverse"
+                    },
+                    {
+                        "t": 1,
+                        "A": "itherverse",
+                        "B": "ither"
+                    },
+                    {
+                        "t": 2,
+                        "A": "egenday",
+                        "B": "unction"
+                    },
+                    {
+                        "t": 3,
+                        "A": "eway",
+                        "B": "eway"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "isthmus"
+                    },
+                    {
+                        "t": 1,
+                        "A": "reef",
+                        "B": "strait"
+                    },
+                    {
+                        "t": 2,
+                        "A": "passage",
+                        "B": "passage"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 87,
+        "seeds": [
+            "enzyme",
+            "motive"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seamline",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "edge",
+                        "B": "edge"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 88,
+        "seeds": [
+            "hazard",
+            "vacuum"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "breach",
+                        "B": "strait"
+                    },
+                    {
+                        "t": 1,
+                        "A": "isthmus",
+                        "B": "isthmus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "threshold",
+                        "B": "strait"
+                    },
+                    {
+                        "t": 1,
+                        "A": "isthmus",
+                        "B": "isthmus"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "fault",
+                        "B": "fault"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "crossroads",
+                        "B": "fault"
+                    },
+                    {
+                        "t": 1,
+                        "A": "rift",
+                        "B": "breach"
+                    },
+                    {
+                        "t": 2,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 89,
+        "seeds": [
+            "metric",
+            "torque"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "edium",
+                        "B": "imension"
+                    },
+                    {
+                        "t": 1,
+                        "A": "uthmos",
+                        "B": "uthemis"
+                    },
+                    {
+                        "t": 2,
+                        "A": "uthrus",
+                        "B": "uthridos"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "edium",
+                        "B": "gauge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ight",
+                        "B": "ight"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "izeanz",
+                        "B": "hinge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "galleria",
+                        "B": "span"
+                    },
+                    {
+                        "t": 2,
+                        "A": "icoisynth",
+                        "B": "icoast"
+                    },
+                    {
+                        "t": 3,
+                        "A": "icosphere",
+                        "B": "icosphere"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "midpoint",
+                        "B": "midpoint"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 90,
+        "seeds": [
+            "oracle",
+            "motive"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ither",
+                        "B": "ize"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isle",
+                        "B": "uthos"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "uthrux",
+                        "B": "uthrux"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "uthrone",
+                        "B": "uthrath"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 91,
+        "seeds": [
+            "theory",
+            "statue"
+        ],
+        "meld_rate": 0.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ute",
+                        "B": "obelisk"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ute",
+                        "B": "obelisk"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ute",
+                        "B": "obelisk"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": []
+            }
+        ]
+    },
+    {
+        "step": 92,
+        "seeds": [
+            "hazard",
+            "sector"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "breach"
+                    },
+                    {
+                        "t": 1,
+                        "A": "icoane",
+                        "B": "reshold"
+                    },
+                    {
+                        "t": 2,
+                        "A": "oubliette",
+                        "B": "ortalampesi"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "breach"
+                    },
+                    {
+                        "t": 1,
+                        "A": "threshold",
+                        "B": "threshold"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "frontier",
+                        "B": "breach"
+                    },
+                    {
+                        "t": 1,
+                        "A": "hinge",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 2,
+                        "A": "joint",
+                        "B": "threshold"
+                    },
+                    {
+                        "t": 3,
+                        "A": "brink",
+                        "B": "nexus"
+                    },
+                    {
+                        "t": 4,
+                        "A": "ource",
+                        "B": "ize"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "fault",
+                        "B": "fault"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 93,
+        "seeds": [
+            "pollen",
+            "fringe"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "verge",
+                        "B": "verge"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "verge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "reshold",
+                        "B": "threshold"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ould",
+                        "B": "ould"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "verge",
+                        "B": "verge"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "gateway",
+                        "B": "verge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "threshold",
+                        "B": "threshold"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 94,
+        "seeds": [
+            "carbon",
+            "fossil"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "shale",
+                        "B": "shale"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "shale",
+                        "B": "shale"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "shale",
+                        "B": "shale"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "shale",
+                        "B": "shale"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 95,
+        "seeds": [
+            "rebel",
+            "flavor"
+        ],
+        "meld_rate": 0.5,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "brink",
+                        "B": "seam"
+                    },
+                    {
+                        "t": 1,
+                        "A": "midpoint",
+                        "B": "breach"
+                    },
+                    {
+                        "t": 2,
+                        "A": "unction",
+                        "B": "span"
+                    },
+                    {
+                        "t": 3,
+                        "A": "ither",
+                        "B": "ither"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ute",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "egrity",
+                        "B": "edge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "continuum",
+                        "B": "ight"
+                    },
+                    {
+                        "t": 2,
+                        "A": "ither",
+                        "B": "ould"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "boundary",
+                        "B": "edge"
+                    },
+                    {
+                        "t": 1,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 96,
+        "seeds": [
+            "canvas",
+            "buffer"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "crossroads"
+                    },
+                    {
+                        "t": 1,
+                        "A": "gateway",
+                        "B": "divide"
+                    },
+                    {
+                        "t": 2,
+                        "A": "threshold",
+                        "B": "threshold"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "crossroads"
+                    },
+                    {
+                        "t": 1,
+                        "A": "hinge",
+                        "B": "hinge"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "isis",
+                        "B": "span"
+                    },
+                    {
+                        "t": 1,
+                        "A": "isthmus",
+                        "B": "ize"
+                    },
+                    {
+                        "t": 2,
+                        "A": "stoma",
+                        "B": "stoma"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 97,
+        "seeds": [
+            "fossil",
+            "binary"
+        ],
+        "meld_rate": 1.0,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "seam",
+                        "B": "seam"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 98,
+        "seeds": [
+            "glacier",
+            "hybrid"
+        ],
+        "meld_rate": 0.25,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "icheom",
+                        "B": "stein"
+                    },
+                    {
+                        "t": 1,
+                        "A": "ountain",
+                        "B": "ountain"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "orteis",
+                        "B": "isthmus"
+                    },
+                    {
+                        "t": 1,
+                        "A": "oundrium",
+                        "B": "ortal"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "ize",
+                        "B": "stein"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "iltisath",
+                        "B": "stein"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step": 99,
+        "seeds": [
+            "column",
+            "vacuum"
+        ],
+        "meld_rate": 0.75,
+        "games": [
+            {
+                "trajectory_id": 0,
+                "success": false,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "transom"
+                    },
+                    {
+                        "t": 1,
+                        "A": "lintel",
+                        "B": "girdle"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 1,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "horizon",
+                        "B": "span"
+                    },
+                    {
+                        "t": 1,
+                        "A": "divide",
+                        "B": "divide"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 2,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            },
+            {
+                "trajectory_id": 3,
+                "success": true,
+                "rounds": [
+                    {
+                        "t": 0,
+                        "A": "span",
+                        "B": "span"
+                    }
+                ]
+            }
+        ]
+    }
+]
