@@ -1,0 +1,1532 @@
+==========================================
+SLURM_JOB_ID = 3540741
+SLURM_JOB_NODELIST = a11-03
+TMPDIR = /tmp/SLURM_3540741
+==========================================
+4.18.0-553.22.1.el8_10.x86_64
+Device: cuda | dtype: torch.float16
+[WordNet] Brown corpus loaded: 27805 common words.
+[WordNet] Loaded 3000 concrete nouns.
+Loading model A: meta-llama/Llama-3.2-3B-Instruct
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/254 [00:00<?, ?it/s]Loading weights:   0%|          | 1/254 [00:01<05:22,  1.28s/it]Loading weights:  37%|███▋      | 94/254 [00:01<00:01, 93.57it/s]Loading weights:  57%|█████▋    | 145/254 [00:01<00:01, 96.77it/s]Loading weights:  70%|██████▉   | 177/254 [00:02<00:00, 90.93it/s]Loading weights:  79%|███████▊  | 200/254 [00:02<00:00, 93.75it/s]Loading weights:  86%|████████▌ | 219/254 [00:02<00:00, 85.67it/s]Loading weights:  92%|█████████▏| 234/254 [00:02<00:00, 92.29it/s]Loading weights:  98%|█████████▊| 249/254 [00:03<00:00, 88.12it/s]Loading weights: 100%|██████████| 254/254 [00:03<00:00, 81.54it/s]
+trainable params: 24,313,856 || all params: 3,237,063,680 || trainable%: 0.7511
+Loading weights:   0%|          | 0/254 [00:00<?, ?it/s]Loading weights:   0%|          | 1/254 [00:01<05:46,  1.37s/it]Loading weights:  37%|███▋      | 94/254 [00:01<00:01, 88.28it/s]Loading weights:  58%|█████▊    | 148/254 [00:02<00:01, 88.22it/s]Loading weights:  71%|███████▏  | 181/254 [00:02<00:00, 93.26it/s]Loading weights:  81%|████████  | 206/254 [00:02<00:00, 90.22it/s]Loading weights:  89%|████████▊ | 225/254 [00:02<00:00, 90.75it/s]Loading weights:  95%|█████████▍| 241/254 [00:03<00:00, 87.58it/s]Loading weights: 100%|██████████| 254/254 [00:03<00:00, 79.48it/s]
+Loading model B: Qwen/Qwen2.5-3B-Instruct
+Loading weights:   0%|          | 0/434 [00:00<?, ?it/s]Loading weights:   0%|          | 1/434 [00:01<07:28,  1.03s/it]Loading weights:  31%|███       | 135/434 [00:01<00:01, 159.64it/s]Loading weights:  47%|████▋     | 202/434 [00:01<00:01, 160.89it/s]Loading weights:  57%|█████▋    | 246/434 [00:01<00:01, 149.30it/s]Loading weights:  64%|██████▍   | 278/434 [00:02<00:00, 160.48it/s]Loading weights:  71%|███████   | 306/434 [00:02<00:00, 150.04it/s]Loading weights:  76%|███████▌  | 329/434 [00:02<00:00, 148.09it/s]Loading weights:  81%|████████  | 351/434 [00:02<00:00, 148.51it/s]Loading weights:  86%|████████▋ | 375/434 [00:02<00:00, 157.41it/s]Loading weights:  91%|█████████ | 394/434 [00:02<00:00, 162.88it/s]Loading weights:  95%|█████████▌| 413/434 [00:03<00:00, 138.68it/s]Loading weights: 100%|██████████| 434/434 [00:03<00:00, 142.01it/s]
+trainable params: 29,933,568 || all params: 3,115,872,256 || trainable%: 0.9607
+Loading weights:   0%|          | 0/434 [00:00<?, ?it/s]Loading weights:   0%|          | 1/434 [00:01<07:38,  1.06s/it]Loading weights:  31%|███       | 135/434 [00:01<00:01, 152.26it/s]Loading weights:  44%|████▍     | 191/434 [00:01<00:01, 155.81it/s]Loading weights:  53%|█████▎    | 229/434 [00:01<00:01, 153.44it/s]Loading weights:  59%|█████▉    | 258/434 [00:02<00:01, 148.76it/s]Loading weights:  65%|██████▍   | 282/434 [00:02<00:01, 147.13it/s]Loading weights:  70%|██████▉   | 303/434 [00:02<00:00, 149.44it/s]Loading weights:  74%|███████▍  | 322/434 [00:02<00:00, 153.05it/s]Loading weights:  79%|███████▊  | 341/434 [00:02<00:00, 146.43it/s]Loading weights:  84%|████████▎ | 363/434 [00:02<00:00, 151.93it/s]Loading weights:  88%|████████▊ | 380/434 [00:02<00:00, 150.51it/s]Loading weights:  92%|█████████▏| 399/434 [00:02<00:00, 148.99it/s]Loading weights:  96%|█████████▌| 415/434 [00:03<00:00, 150.01it/s]Loading weights: 100%|██████████| 434/434 [00:03<00:00, 139.53it/s]
+[GRPOLoop] Using 8-bit AdamW
+[GRPOLoop] Using 8-bit AdamW
+Run directory: ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+  step=   0 | wins=30/64 | avg_rounds=3.7 | retry_exhausted=31
+           loss_a=-0.3810 | loss_b=-0.5254
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=   1 | wins=32/64 | avg_rounds=4.3 | retry_exhausted=31
+           loss_a=-0.2405 | loss_b=-0.4267
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=   2 | wins=27/64 | avg_rounds=4.2 | retry_exhausted=36
+           loss_a=-0.0527 | loss_b=-0.0785
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=   3 | wins=25/64 | avg_rounds=4.6 | retry_exhausted=38
+           loss_a=-0.4874 | loss_b=-0.7674
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=   4 | wins=32/64 | avg_rounds=3.9 | retry_exhausted=29
+           loss_a=0.1453 | loss_b=-0.3778
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=   5 | wins=23/64 | avg_rounds=3.7 | retry_exhausted=37
+           loss_a=-0.4998 | loss_b=-0.1642
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=   6 | wins=34/64 | avg_rounds=3.1 | retry_exhausted=30
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=   7 | wins=24/64 | avg_rounds=4.3 | retry_exhausted=36
+           loss_a=0.4614 | loss_b=0.4537
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=   8 | wins=17/64 | avg_rounds=4.8 | retry_exhausted=43
+           loss_a=0.6814 | loss_b=0.6718
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=   9 | wins=25/64 | avg_rounds=4.5 | retry_exhausted=39
+           loss_a=0.0561 | loss_b=0.0344
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  10 | wins=24/64 | avg_rounds=4.3 | retry_exhausted=37
+           loss_a=-0.0141 | loss_b=0.0879
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  11 | wins=25/64 | avg_rounds=4.8 | retry_exhausted=38
+           loss_a=-0.1694 | loss_b=-0.2070
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  12 | wins=32/64 | avg_rounds=4.4 | retry_exhausted=31
+           loss_a=-0.0641 | loss_b=-0.5195
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  13 | wins=30/64 | avg_rounds=3.7 | retry_exhausted=33
+           loss_a=1.7071 | loss_b=1.9309
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  14 | wins=26/64 | avg_rounds=4.9 | retry_exhausted=34
+           loss_a=0.0874 | loss_b=0.0952
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  15 | wins=25/64 | avg_rounds=4.3 | retry_exhausted=39
+           loss_a=0.1047 | loss_b=0.0476
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  16 | wins=19/64 | avg_rounds=4.5 | retry_exhausted=42
+           loss_a=-0.1744 | loss_b=-0.1858
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  17 | wins=35/64 | avg_rounds=3.1 | retry_exhausted=29
+           loss_a=-0.3625 | loss_b=-0.4125
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  18 | wins=23/64 | avg_rounds=5.1 | retry_exhausted=37
+           loss_a=-0.2645 | loss_b=-0.2118
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  19 | wins=28/64 | avg_rounds=4.5 | retry_exhausted=36
+           loss_a=0.2813 | loss_b=0.3222
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  20 | wins=28/64 | avg_rounds=3.8 | retry_exhausted=35
+           loss_a=-0.0417 | loss_b=0.0999
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  21 | wins=23/64 | avg_rounds=4.6 | retry_exhausted=38
+           loss_a=-0.1200 | loss_b=-0.3421
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  22 | wins=23/64 | avg_rounds=5.0 | retry_exhausted=40
+           loss_a=0.2341 | loss_b=0.0541
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  23 | wins=22/64 | avg_rounds=2.9 | retry_exhausted=39
+           loss_a=-0.1362 | loss_b=-0.2516
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  24 | wins=32/64 | avg_rounds=3.6 | retry_exhausted=32
+           loss_a=-0.6011 | loss_b=-0.9884
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  25 | wins=36/64 | avg_rounds=3.3 | retry_exhausted=26
+           loss_a=-0.0692 | loss_b=0.2247
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  26 | wins=36/64 | avg_rounds=3.2 | retry_exhausted=27
+           loss_a=0.0656 | loss_b=0.1123
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  27 | wins=29/64 | avg_rounds=3.4 | retry_exhausted=35
+           loss_a=-0.3945 | loss_b=-0.4450
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  28 | wins=18/64 | avg_rounds=4.7 | retry_exhausted=44
+           loss_a=-0.0164 | loss_b=0.2349
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  29 | wins=19/64 | avg_rounds=3.9 | retry_exhausted=45
+           loss_a=0.1808 | loss_b=0.3144
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  30 | wins=22/64 | avg_rounds=4.0 | retry_exhausted=39
+           loss_a=-0.2099 | loss_b=-0.3696
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  31 | wins=20/64 | avg_rounds=3.8 | retry_exhausted=43
+           loss_a=0.0952 | loss_b=0.1113
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  32 | wins=35/64 | avg_rounds=3.6 | retry_exhausted=27
+           loss_a=0.2983 | loss_b=0.1919
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  33 | wins=23/64 | avg_rounds=3.9 | retry_exhausted=40
+           loss_a=0.2344 | loss_b=0.0970
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  34 | wins=31/64 | avg_rounds=4.1 | retry_exhausted=33
+           loss_a=-0.4055 | loss_b=-0.6613
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  35 | wins=19/64 | avg_rounds=3.9 | retry_exhausted=44
+           loss_a=0.2950 | loss_b=0.1516
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  36 | wins=36/64 | avg_rounds=2.7 | retry_exhausted=28
+           loss_a=-0.3963 | loss_b=-0.5957
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  37 | wins=20/64 | avg_rounds=4.1 | retry_exhausted=44
+           loss_a=-0.2018 | loss_b=-0.5781
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  38 | wins=18/64 | avg_rounds=4.9 | retry_exhausted=43
+           loss_a=-0.1458 | loss_b=0.0059
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  39 | wins=20/64 | avg_rounds=3.5 | retry_exhausted=44
+           loss_a=0.0979 | loss_b=0.1973
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  40 | wins=20/64 | avg_rounds=3.8 | retry_exhausted=44
+           loss_a=0.1429 | loss_b=0.0835
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  41 | wins=20/64 | avg_rounds=3.5 | retry_exhausted=43
+           loss_a=0.4704 | loss_b=1.1776
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  42 | wins=36/64 | avg_rounds=3.4 | retry_exhausted=27
+           loss_a=0.2815 | loss_b=-0.3548
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  43 | wins=34/64 | avg_rounds=3.7 | retry_exhausted=30
+           loss_a=0.2901 | loss_b=0.4386
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  44 | wins=26/64 | avg_rounds=4.2 | retry_exhausted=38
+           loss_a=-0.0811 | loss_b=-0.2980
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  45 | wins=23/64 | avg_rounds=3.7 | retry_exhausted=40
+           loss_a=-0.0576 | loss_b=0.0034
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  46 | wins=31/64 | avg_rounds=4.0 | retry_exhausted=31
+           loss_a=0.2117 | loss_b=0.0365
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  47 | wins=36/64 | avg_rounds=3.5 | retry_exhausted=27
+           loss_a=-0.3655 | loss_b=-0.5168
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  48 | wins=32/64 | avg_rounds=3.8 | retry_exhausted=32
+           loss_a=-0.0570 | loss_b=-0.2571
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  49 | wins=33/64 | avg_rounds=3.6 | retry_exhausted=30
+           loss_a=0.3327 | loss_b=0.5049
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  50 | wins=24/64 | avg_rounds=3.7 | retry_exhausted=40
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  51 | wins=37/64 | avg_rounds=3.4 | retry_exhausted=27
+           loss_a=-0.3462 | loss_b=-0.4880
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  52 | wins=27/64 | avg_rounds=3.1 | retry_exhausted=36
+           loss_a=0.3401 | loss_b=0.5586
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  53 | wins=34/64 | avg_rounds=3.8 | retry_exhausted=29
+           loss_a=-0.1634 | loss_b=0.1201
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  54 | wins=29/64 | avg_rounds=3.9 | retry_exhausted=35
+           loss_a=0.3188 | loss_b=0.8356
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  55 | wins=37/64 | avg_rounds=3.5 | retry_exhausted=27
+           loss_a=0.0558 | loss_b=0.0508
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  56 | wins=42/64 | avg_rounds=3.7 | retry_exhausted=22
+           loss_a=0.2859 | loss_b=0.4544
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  57 | wins=11/64 | avg_rounds=3.7 | retry_exhausted=53
+           loss_a=-0.0200 | loss_b=0.0442
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  58 | wins=34/64 | avg_rounds=2.6 | retry_exhausted=30
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  59 | wins=35/64 | avg_rounds=4.0 | retry_exhausted=29
+           loss_a=-0.2792 | loss_b=-0.5224
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  60 | wins=48/64 | avg_rounds=3.0 | retry_exhausted=15
+           loss_a=-0.1455 | loss_b=-0.3005
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  61 | wins=24/64 | avg_rounds=3.3 | retry_exhausted=39
+           loss_a=-0.0892 | loss_b=-0.0490
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  62 | wins=32/64 | avg_rounds=2.8 | retry_exhausted=32
+           loss_a=-0.3267 | loss_b=-0.4732
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  63 | wins=22/64 | avg_rounds=3.8 | retry_exhausted=41
+           loss_a=-0.0037 | loss_b=-0.0942
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  64 | wins=32/64 | avg_rounds=2.8 | retry_exhausted=32
+           loss_a=0.0269 | loss_b=-0.6056
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  65 | wins=30/64 | avg_rounds=3.3 | retry_exhausted=34
+           loss_a=-0.0213 | loss_b=-0.3033
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  66 | wins=35/64 | avg_rounds=2.9 | retry_exhausted=29
+           loss_a=-0.0494 | loss_b=0.4072
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  67 | wins=34/64 | avg_rounds=2.8 | retry_exhausted=30
+           loss_a=0.0323 | loss_b=0.2070
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  68 | wins=30/64 | avg_rounds=3.3 | retry_exhausted=33
+           loss_a=0.1094 | loss_b=0.2723
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  69 | wins=41/64 | avg_rounds=3.0 | retry_exhausted=22
+           loss_a=0.1113 | loss_b=0.1328
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  70 | wins=32/64 | avg_rounds=3.4 | retry_exhausted=32
+           loss_a=0.1005 | loss_b=-0.2509
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  71 | wins=24/64 | avg_rounds=3.5 | retry_exhausted=40
+           loss_a=0.5562 | loss_b=0.6141
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  72 | wins=33/64 | avg_rounds=2.9 | retry_exhausted=31
+           loss_a=1.2848 | loss_b=1.4509
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  73 | wins=40/64 | avg_rounds=2.5 | retry_exhausted=24
+           loss_a=-0.1071 | loss_b=-0.2829
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  74 | wins=29/64 | avg_rounds=3.3 | retry_exhausted=35
+           loss_a=-0.2822 | loss_b=-0.0283
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  75 | wins=35/64 | avg_rounds=3.1 | retry_exhausted=29
+           loss_a=-0.4859 | loss_b=-0.8998
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  76 | wins=38/64 | avg_rounds=2.8 | retry_exhausted=26
+           loss_a=-0.3684 | loss_b=0.2118
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  77 | wins=25/64 | avg_rounds=2.9 | retry_exhausted=39
+           loss_a=0.4190 | loss_b=0.5474
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  78 | wins=20/64 | avg_rounds=3.0 | retry_exhausted=44
+           loss_a=0.6917 | loss_b=0.5220
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  79 | wins=24/64 | avg_rounds=3.0 | retry_exhausted=40
+           loss_a=-0.0944 | loss_b=0.2361
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  80 | wins=24/64 | avg_rounds=3.2 | retry_exhausted=40
+           loss_a=0.1227 | loss_b=-0.1372
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  81 | wins=31/64 | avg_rounds=2.8 | retry_exhausted=33
+           loss_a=-0.2575 | loss_b=-0.1773
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  82 | wins=30/64 | avg_rounds=2.5 | retry_exhausted=34
+           loss_a=0.6418 | loss_b=1.0004
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  83 | wins=34/64 | avg_rounds=2.6 | retry_exhausted=30
+           loss_a=0.2458 | loss_b=0.2828
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  84 | wins=26/64 | avg_rounds=2.6 | retry_exhausted=38
+           loss_a=0.1016 | loss_b=-0.1284
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  85 | wins=42/64 | avg_rounds=2.7 | retry_exhausted=22
+           loss_a=-0.1541 | loss_b=-0.0220
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  86 | wins=25/64 | avg_rounds=3.2 | retry_exhausted=39
+           loss_a=0.5681 | loss_b=0.9777
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  87 | wins=32/64 | avg_rounds=2.4 | retry_exhausted=32
+           loss_a=-0.2116 | loss_b=-0.0004
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  88 | wins=28/64 | avg_rounds=2.5 | retry_exhausted=36
+           loss_a=-0.1054 | loss_b=0.0719
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  89 | wins=26/64 | avg_rounds=3.0 | retry_exhausted=38
+           loss_a=0.1525 | loss_b=0.1721
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  90 | wins=33/64 | avg_rounds=2.3 | retry_exhausted=31
+           loss_a=-0.3875 | loss_b=-0.3644
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  91 | wins=32/64 | avg_rounds=2.3 | retry_exhausted=32
+           loss_a=0.3885 | loss_b=0.3186
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  92 | wins=28/64 | avg_rounds=2.4 | retry_exhausted=36
+           loss_a=-0.1092 | loss_b=0.0168
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  93 | wins=33/64 | avg_rounds=2.3 | retry_exhausted=31
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  94 | wins=26/64 | avg_rounds=2.6 | retry_exhausted=38
+           loss_a=0.2679 | loss_b=0.4645
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  95 | wins=23/64 | avg_rounds=2.5 | retry_exhausted=41
+           loss_a=-0.3062 | loss_b=0.0968
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  96 | wins=28/64 | avg_rounds=2.7 | retry_exhausted=36
+           loss_a=0.0075 | loss_b=0.2254
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  97 | wins=23/64 | avg_rounds=2.5 | retry_exhausted=41
+           loss_a=-0.0579 | loss_b=-0.0358
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  98 | wins=32/64 | avg_rounds=2.3 | retry_exhausted=32
+           loss_a=0.2582 | loss_b=0.0842
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step=  99 | wins=26/64 | avg_rounds=2.4 | retry_exhausted=38
+           loss_a=0.1765 | loss_b=-0.3719
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 100 | wins=6/64 | avg_rounds=2.2 | retry_exhausted=58
+           loss_a=1.0017 | loss_b=1.4468
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  Saved model_a_latest → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/model_a_latest
+  Saved model_b_latest → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/model_b_latest
+  step= 101 | wins=22/64 | avg_rounds=2.3 | retry_exhausted=42
+           loss_a=-0.3174 | loss_b=-0.1710
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 102 | wins=25/64 | avg_rounds=2.1 | retry_exhausted=39
+           loss_a=-0.1774 | loss_b=0.0135
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 103 | wins=28/64 | avg_rounds=2.0 | retry_exhausted=36
+           loss_a=0.0923 | loss_b=1.7258
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 104 | wins=20/64 | avg_rounds=2.4 | retry_exhausted=44
+           loss_a=0.0015 | loss_b=0.6600
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 105 | wins=24/64 | avg_rounds=2.6 | retry_exhausted=40
+           loss_a=0.3597 | loss_b=0.0178
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 106 | wins=20/64 | avg_rounds=2.3 | retry_exhausted=44
+           loss_a=-0.0968 | loss_b=-0.0655
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 107 | wins=21/64 | avg_rounds=2.5 | retry_exhausted=43
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 108 | wins=18/64 | avg_rounds=1.9 | retry_exhausted=46
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 109 | wins=31/64 | avg_rounds=2.4 | retry_exhausted=33
+           loss_a=0.0996 | loss_b=-0.1557
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 110 | wins=25/64 | avg_rounds=2.6 | retry_exhausted=39
+           loss_a=0.3138 | loss_b=0.4758
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 111 | wins=32/64 | avg_rounds=2.0 | retry_exhausted=32
+           loss_a=0.0589 | loss_b=0.2642
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 112 | wins=22/64 | avg_rounds=2.5 | retry_exhausted=42
+           loss_a=0.1638 | loss_b=0.2774
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 113 | wins=20/64 | avg_rounds=2.4 | retry_exhausted=44
+           loss_a=0.0409 | loss_b=0.3598
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 114 | wins=33/64 | avg_rounds=2.3 | retry_exhausted=31
+           loss_a=0.1649 | loss_b=0.4982
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 115 | wins=23/64 | avg_rounds=2.2 | retry_exhausted=41
+           loss_a=0.2510 | loss_b=-0.5366
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 116 | wins=19/64 | avg_rounds=2.3 | retry_exhausted=45
+           loss_a=-0.6256 | loss_b=2.4981
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 117 | wins=34/64 | avg_rounds=1.8 | retry_exhausted=30
+           loss_a=0.0362 | loss_b=0.0126
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 118 | wins=17/64 | avg_rounds=2.6 | retry_exhausted=47
+           loss_a=0.2947 | loss_b=-0.4084
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 119 | wins=35/64 | avg_rounds=2.5 | retry_exhausted=29
+           loss_a=-0.0687 | loss_b=-0.1230
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 120 | wins=30/64 | avg_rounds=2.1 | retry_exhausted=34
+           loss_a=0.0454 | loss_b=-0.1806
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 121 | wins=22/64 | avg_rounds=2.5 | retry_exhausted=42
+           loss_a=-0.3715 | loss_b=-0.4877
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 122 | wins=18/64 | avg_rounds=2.3 | retry_exhausted=46
+           loss_a=0.0572 | loss_b=-0.0610
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 123 | wins=34/64 | avg_rounds=2.0 | retry_exhausted=30
+           loss_a=-0.0898 | loss_b=0.4281
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 124 | wins=20/64 | avg_rounds=2.7 | retry_exhausted=44
+           loss_a=-0.4725 | loss_b=-0.1919
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 125 | wins=24/64 | avg_rounds=2.2 | retry_exhausted=40
+           loss_a=-0.5882 | loss_b=-0.9952
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 126 | wins=26/64 | avg_rounds=2.8 | retry_exhausted=38
+           loss_a=-0.1721 | loss_b=-0.4411
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 127 | wins=35/64 | avg_rounds=2.1 | retry_exhausted=29
+           loss_a=0.2588 | loss_b=0.5426
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 128 | wins=23/64 | avg_rounds=2.5 | retry_exhausted=41
+           loss_a=0.0060 | loss_b=0.6910
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 129 | wins=28/64 | avg_rounds=2.2 | retry_exhausted=36
+           loss_a=-0.1327 | loss_b=-0.0826
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 130 | wins=23/64 | avg_rounds=2.4 | retry_exhausted=41
+           loss_a=-0.4227 | loss_b=-0.4548
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 131 | wins=15/64 | avg_rounds=2.3 | retry_exhausted=49
+           loss_a=0.5959 | loss_b=-0.1163
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 132 | wins=27/64 | avg_rounds=2.2 | retry_exhausted=37
+           loss_a=-0.4563 | loss_b=-0.6187
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 133 | wins=21/64 | avg_rounds=2.3 | retry_exhausted=43
+           loss_a=-0.0417 | loss_b=-0.0791
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 134 | wins=21/64 | avg_rounds=2.4 | retry_exhausted=43
+           loss_a=-0.1981 | loss_b=-0.1885
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 135 | wins=33/64 | avg_rounds=2.0 | retry_exhausted=31
+           loss_a=0.0407 | loss_b=0.0419
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 136 | wins=20/64 | avg_rounds=2.1 | retry_exhausted=44
+           loss_a=0.1080 | loss_b=0.1148
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 137 | wins=18/64 | avg_rounds=2.6 | retry_exhausted=46
+           loss_a=0.1252 | loss_b=0.0945
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 138 | wins=26/64 | avg_rounds=1.8 | retry_exhausted=38
+           loss_a=-0.4070 | loss_b=0.0419
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 139 | wins=39/64 | avg_rounds=2.0 | retry_exhausted=25
+           loss_a=0.1056 | loss_b=-0.1886
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 140 | wins=40/64 | avg_rounds=1.6 | retry_exhausted=24
+           loss_a=-0.0341 | loss_b=0.0004
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 141 | wins=29/64 | avg_rounds=2.2 | retry_exhausted=35
+           loss_a=0.1462 | loss_b=-0.6021
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 142 | wins=18/64 | avg_rounds=2.4 | retry_exhausted=46
+           loss_a=-0.4552 | loss_b=0.0174
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 143 | wins=15/64 | avg_rounds=2.0 | retry_exhausted=49
+           loss_a=0.5051 | loss_b=0.4919
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 144 | wins=18/64 | avg_rounds=2.1 | retry_exhausted=46
+           loss_a=0.1086 | loss_b=0.1181
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 145 | wins=5/64 | avg_rounds=2.1 | retry_exhausted=59
+           loss_a=-0.2320 | loss_b=0.5468
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 146 | wins=34/64 | avg_rounds=2.0 | retry_exhausted=30
+           loss_a=-0.1915 | loss_b=-0.0987
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 147 | wins=18/64 | avg_rounds=2.7 | retry_exhausted=46
+           loss_a=0.1322 | loss_b=-0.1198
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 148 | wins=32/64 | avg_rounds=2.1 | retry_exhausted=32
+           loss_a=0.0681 | loss_b=-0.0909
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 149 | wins=31/64 | avg_rounds=1.8 | retry_exhausted=33
+           loss_a=-0.1081 | loss_b=0.0634
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 150 | wins=31/64 | avg_rounds=1.9 | retry_exhausted=33
+           loss_a=-0.2270 | loss_b=-0.6392
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 151 | wins=30/64 | avg_rounds=1.8 | retry_exhausted=34
+           loss_a=-0.0482 | loss_b=-0.0679
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 152 | wins=15/64 | avg_rounds=1.8 | retry_exhausted=49
+           loss_a=0.0982 | loss_b=0.0589
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 153 | wins=23/64 | avg_rounds=1.9 | retry_exhausted=41
+           loss_a=-0.4497 | loss_b=-0.1288
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 154 | wins=27/64 | avg_rounds=1.9 | retry_exhausted=37
+           loss_a=0.2017 | loss_b=-0.5611
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 155 | wins=22/64 | avg_rounds=2.1 | retry_exhausted=42
+           loss_a=0.9685 | loss_b=-0.9061
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 156 | wins=25/64 | avg_rounds=2.3 | retry_exhausted=39
+           loss_a=0.1000 | loss_b=-0.0477
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 157 | wins=20/64 | avg_rounds=2.0 | retry_exhausted=44
+           loss_a=-0.0421 | loss_b=0.0480
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 158 | wins=18/64 | avg_rounds=2.0 | retry_exhausted=46
+           loss_a=0.0534 | loss_b=0.7220
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 159 | wins=21/64 | avg_rounds=2.4 | retry_exhausted=43
+           loss_a=-0.1556 | loss_b=-0.1457
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 160 | wins=27/64 | avg_rounds=2.1 | retry_exhausted=37
+           loss_a=-0.3332 | loss_b=0.0177
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 161 | wins=24/64 | avg_rounds=2.1 | retry_exhausted=40
+           loss_a=0.0296 | loss_b=0.3535
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 162 | wins=36/64 | avg_rounds=1.7 | retry_exhausted=28
+           loss_a=-0.3344 | loss_b=-1.0474
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 163 | wins=10/64 | avg_rounds=1.9 | retry_exhausted=54
+           loss_a=0.9261 | loss_b=1.7432
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 164 | wins=19/64 | avg_rounds=2.2 | retry_exhausted=45
+           loss_a=-0.0572 | loss_b=0.1818
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 165 | wins=26/64 | avg_rounds=2.0 | retry_exhausted=38
+           loss_a=-0.2360 | loss_b=0.0601
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 166 | wins=17/64 | avg_rounds=2.2 | retry_exhausted=47
+           loss_a=0.0822 | loss_b=0.1563
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 167 | wins=19/64 | avg_rounds=1.8 | retry_exhausted=45
+           loss_a=0.5611 | loss_b=0.8960
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 168 | wins=18/64 | avg_rounds=2.2 | retry_exhausted=46
+           loss_a=0.0597 | loss_b=0.1513
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 169 | wins=31/64 | avg_rounds=2.1 | retry_exhausted=33
+           loss_a=0.1828 | loss_b=0.3539
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 170 | wins=25/64 | avg_rounds=1.9 | retry_exhausted=39
+           loss_a=0.1795 | loss_b=0.0491
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 171 | wins=29/64 | avg_rounds=1.8 | retry_exhausted=35
+           loss_a=0.4222 | loss_b=1.1945
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 172 | wins=20/64 | avg_rounds=2.1 | retry_exhausted=44
+           loss_a=-0.0072 | loss_b=0.1853
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 173 | wins=21/64 | avg_rounds=2.6 | retry_exhausted=43
+           loss_a=0.2977 | loss_b=-0.0339
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 174 | wins=37/64 | avg_rounds=1.8 | retry_exhausted=27
+           loss_a=0.3810 | loss_b=0.0027
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 175 | wins=20/64 | avg_rounds=2.2 | retry_exhausted=44
+           loss_a=-0.7357 | loss_b=-0.7760
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 176 | wins=43/64 | avg_rounds=1.8 | retry_exhausted=21
+           loss_a=-0.3849 | loss_b=0.3286
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 177 | wins=30/64 | avg_rounds=2.0 | retry_exhausted=34
+           loss_a=0.0542 | loss_b=0.0978
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 178 | wins=29/64 | avg_rounds=1.7 | retry_exhausted=35
+           loss_a=0.2850 | loss_b=1.9936
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 179 | wins=33/64 | avg_rounds=1.9 | retry_exhausted=31
+           loss_a=0.4743 | loss_b=0.7296
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 180 | wins=18/64 | avg_rounds=2.5 | retry_exhausted=46
+           loss_a=-0.0143 | loss_b=-0.1984
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 181 | wins=31/64 | avg_rounds=2.3 | retry_exhausted=33
+           loss_a=0.2186 | loss_b=0.0306
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 182 | wins=35/64 | avg_rounds=1.7 | retry_exhausted=29
+           loss_a=-0.1020 | loss_b=-0.0184
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 183 | wins=32/64 | avg_rounds=2.1 | retry_exhausted=32
+           loss_a=0.0906 | loss_b=0.0008
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 184 | wins=32/64 | avg_rounds=2.0 | retry_exhausted=32
+           loss_a=-0.0397 | loss_b=0.0185
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 185 | wins=17/64 | avg_rounds=1.9 | retry_exhausted=47
+           loss_a=-0.0099 | loss_b=-0.0002
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 186 | wins=29/64 | avg_rounds=2.0 | retry_exhausted=35
+           loss_a=-0.2194 | loss_b=0.0103
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 187 | wins=36/64 | avg_rounds=2.1 | retry_exhausted=28
+           loss_a=0.1968 | loss_b=-0.1449
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 188 | wins=30/64 | avg_rounds=1.9 | retry_exhausted=34
+           loss_a=0.0813 | loss_b=-0.0672
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 189 | wins=39/64 | avg_rounds=1.6 | retry_exhausted=25
+           loss_a=0.0515 | loss_b=-0.3413
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 190 | wins=28/64 | avg_rounds=2.1 | retry_exhausted=36
+           loss_a=-0.0664 | loss_b=-0.4433
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 191 | wins=27/64 | avg_rounds=1.7 | retry_exhausted=37
+           loss_a=0.0635 | loss_b=-0.1849
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 192 | wins=22/64 | avg_rounds=2.1 | retry_exhausted=42
+           loss_a=0.0062 | loss_b=-0.1215
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 193 | wins=21/64 | avg_rounds=2.0 | retry_exhausted=43
+           loss_a=0.1793 | loss_b=0.1514
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 194 | wins=28/64 | avg_rounds=1.6 | retry_exhausted=36
+           loss_a=-1.0328 | loss_b=-0.9633
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 195 | wins=26/64 | avg_rounds=1.6 | retry_exhausted=38
+           loss_a=0.0551 | loss_b=0.0020
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 196 | wins=23/64 | avg_rounds=2.1 | retry_exhausted=41
+           loss_a=0.0070 | loss_b=-0.0005
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 197 | wins=27/64 | avg_rounds=2.3 | retry_exhausted=37
+           loss_a=-0.2906 | loss_b=-0.1743
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 198 | wins=26/64 | avg_rounds=1.7 | retry_exhausted=38
+           loss_a=0.1185 | loss_b=0.0030
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 199 | wins=25/64 | avg_rounds=2.4 | retry_exhausted=39
+           loss_a=0.1321 | loss_b=-0.0510
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 200 | wins=27/64 | avg_rounds=1.7 | retry_exhausted=37
+           loss_a=0.1054 | loss_b=0.0302
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  Saved model_a_latest → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/model_a_latest
+  Saved model_b_latest → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/model_b_latest
+  step= 201 | wins=31/64 | avg_rounds=1.8 | retry_exhausted=33
+           loss_a=0.5522 | loss_b=0.5445
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 202 | wins=23/64 | avg_rounds=2.4 | retry_exhausted=41
+           loss_a=0.1629 | loss_b=0.3036
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 203 | wins=26/64 | avg_rounds=1.8 | retry_exhausted=38
+           loss_a=-0.1587 | loss_b=-0.0864
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 204 | wins=35/64 | avg_rounds=1.9 | retry_exhausted=29
+           loss_a=-0.9424 | loss_b=-2.2048
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 205 | wins=45/64 | avg_rounds=1.6 | retry_exhausted=19
+           loss_a=0.2068 | loss_b=0.0020
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 206 | wins=36/64 | avg_rounds=1.8 | retry_exhausted=28
+           loss_a=0.4120 | loss_b=0.1670
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 207 | wins=28/64 | avg_rounds=1.7 | retry_exhausted=36
+           loss_a=0.2133 | loss_b=0.0123
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 208 | wins=27/64 | avg_rounds=2.2 | retry_exhausted=37
+           loss_a=-0.0078 | loss_b=-0.0086
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 209 | wins=31/64 | avg_rounds=1.8 | retry_exhausted=33
+           loss_a=-0.0062 | loss_b=-0.0553
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 210 | wins=36/64 | avg_rounds=1.9 | retry_exhausted=28
+           loss_a=0.2676 | loss_b=1.0026
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 211 | wins=30/64 | avg_rounds=1.5 | retry_exhausted=34
+           loss_a=-0.3479 | loss_b=0.1009
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 212 | wins=31/64 | avg_rounds=1.8 | retry_exhausted=33
+           loss_a=0.0402 | loss_b=-0.1282
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 213 | wins=32/64 | avg_rounds=2.1 | retry_exhausted=32
+           loss_a=-0.0363 | loss_b=-0.0444
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 214 | wins=34/64 | avg_rounds=1.9 | retry_exhausted=30
+           loss_a=0.0138 | loss_b=0.3938
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 215 | wins=25/64 | avg_rounds=2.3 | retry_exhausted=39
+           loss_a=0.2399 | loss_b=0.2369
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 216 | wins=22/64 | avg_rounds=2.2 | retry_exhausted=42
+           loss_a=-0.2822 | loss_b=0.0106
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 217 | wins=34/64 | avg_rounds=2.1 | retry_exhausted=30
+           loss_a=-0.3607 | loss_b=-0.1361
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 218 | wins=18/64 | avg_rounds=2.0 | retry_exhausted=46
+           loss_a=0.0468 | loss_b=0.1047
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 219 | wins=26/64 | avg_rounds=2.2 | retry_exhausted=38
+           loss_a=-0.9269 | loss_b=-1.6971
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 220 | wins=27/64 | avg_rounds=1.8 | retry_exhausted=37
+           loss_a=0.1863 | loss_b=-0.0452
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 221 | wins=25/64 | avg_rounds=1.9 | retry_exhausted=39
+           loss_a=0.2094 | loss_b=0.4146
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 222 | wins=37/64 | avg_rounds=1.9 | retry_exhausted=27
+           loss_a=0.9526 | loss_b=1.4615
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 223 | wins=29/64 | avg_rounds=2.0 | retry_exhausted=35
+           loss_a=-0.1769 | loss_b=-0.1962
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 224 | wins=29/64 | avg_rounds=2.0 | retry_exhausted=35
+           loss_a=-0.2601 | loss_b=-0.8340
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 225 | wins=29/64 | avg_rounds=1.9 | retry_exhausted=35
+           loss_a=0.1340 | loss_b=0.3193
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 226 | wins=39/64 | avg_rounds=1.7 | retry_exhausted=25
+           loss_a=0.2024 | loss_b=0.0011
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 227 | wins=41/64 | avg_rounds=2.1 | retry_exhausted=23
+           loss_a=-0.4118 | loss_b=-0.1800
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 228 | wins=44/64 | avg_rounds=1.7 | retry_exhausted=20
+           loss_a=-0.5037 | loss_b=-0.2336
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 229 | wins=28/64 | avg_rounds=1.9 | retry_exhausted=36
+           loss_a=0.3422 | loss_b=0.0176
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 230 | wins=39/64 | avg_rounds=1.8 | retry_exhausted=25
+           loss_a=0.8590 | loss_b=0.4450
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 231 | wins=31/64 | avg_rounds=1.8 | retry_exhausted=33
+           loss_a=-0.2691 | loss_b=-0.2544
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 232 | wins=31/64 | avg_rounds=2.3 | retry_exhausted=33
+           loss_a=0.0255 | loss_b=-0.1479
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 233 | wins=25/64 | avg_rounds=2.2 | retry_exhausted=39
+           loss_a=0.4933 | loss_b=0.7979
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 234 | wins=40/64 | avg_rounds=1.6 | retry_exhausted=24
+           loss_a=-0.0116 | loss_b=0.0702
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 235 | wins=19/64 | avg_rounds=1.8 | retry_exhausted=45
+           loss_a=-0.4835 | loss_b=-0.7723
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 236 | wins=39/64 | avg_rounds=2.1 | retry_exhausted=25
+           loss_a=-0.0119 | loss_b=-0.0172
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 237 | wins=26/64 | avg_rounds=2.0 | retry_exhausted=38
+           loss_a=0.1532 | loss_b=-0.0516
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 238 | wins=25/64 | avg_rounds=2.0 | retry_exhausted=39
+           loss_a=0.0828 | loss_b=0.1208
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 239 | wins=14/64 | avg_rounds=1.9 | retry_exhausted=50
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 240 | wins=29/64 | avg_rounds=2.0 | retry_exhausted=35
+           loss_a=-0.2787 | loss_b=-0.4323
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 241 | wins=23/64 | avg_rounds=1.6 | retry_exhausted=41
+           loss_a=1.6123 | loss_b=1.9980
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 242 | wins=23/64 | avg_rounds=1.8 | retry_exhausted=41
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 243 | wins=45/64 | avg_rounds=1.6 | retry_exhausted=19
+           loss_a=0.0021 | loss_b=0.0884
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 244 | wins=38/64 | avg_rounds=2.0 | retry_exhausted=26
+           loss_a=0.0171 | loss_b=0.0188
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 245 | wins=33/64 | avg_rounds=1.8 | retry_exhausted=31
+           loss_a=0.0024 | loss_b=-0.2744
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 246 | wins=41/64 | avg_rounds=1.7 | retry_exhausted=23
+           loss_a=0.1706 | loss_b=-0.0856
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 247 | wins=30/64 | avg_rounds=1.8 | retry_exhausted=34
+           loss_a=-0.0112 | loss_b=0.1794
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 248 | wins=31/64 | avg_rounds=2.0 | retry_exhausted=33
+           loss_a=-0.4532 | loss_b=0.0054
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 249 | wins=22/64 | avg_rounds=2.1 | retry_exhausted=42
+           loss_a=0.1963 | loss_b=-0.1119
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 250 | wins=31/64 | avg_rounds=1.9 | retry_exhausted=33
+           loss_a=0.2178 | loss_b=0.0634
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 251 | wins=33/64 | avg_rounds=1.9 | retry_exhausted=31
+           loss_a=-0.0402 | loss_b=0.4125
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 252 | wins=33/64 | avg_rounds=1.8 | retry_exhausted=31
+           loss_a=0.5152 | loss_b=1.3041
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 253 | wins=37/64 | avg_rounds=2.1 | retry_exhausted=27
+           loss_a=0.0391 | loss_b=-0.0010
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 254 | wins=32/64 | avg_rounds=2.4 | retry_exhausted=32
+           loss_a=-0.1146 | loss_b=-0.0829
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 255 | wins=33/64 | avg_rounds=1.7 | retry_exhausted=31
+           loss_a=-0.1201 | loss_b=-0.1327
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 256 | wins=34/64 | avg_rounds=2.2 | retry_exhausted=30
+           loss_a=-0.3501 | loss_b=-0.7486
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 257 | wins=19/64 | avg_rounds=2.2 | retry_exhausted=45
+           loss_a=0.8003 | loss_b=1.3465
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 258 | wins=33/64 | avg_rounds=1.9 | retry_exhausted=31
+           loss_a=0.0356 | loss_b=-0.0259
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 259 | wins=39/64 | avg_rounds=1.6 | retry_exhausted=25
+           loss_a=0.2064 | loss_b=-0.2033
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 260 | wins=31/64 | avg_rounds=1.9 | retry_exhausted=33
+           loss_a=-0.1664 | loss_b=-0.1422
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 261 | wins=33/64 | avg_rounds=2.1 | retry_exhausted=31
+           loss_a=0.2738 | loss_b=0.6159
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 262 | wins=34/64 | avg_rounds=2.2 | retry_exhausted=30
+           loss_a=-0.5024 | loss_b=0.1353
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 263 | wins=27/64 | avg_rounds=1.9 | retry_exhausted=37
+           loss_a=-0.5857 | loss_b=0.0172
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 264 | wins=25/64 | avg_rounds=2.0 | retry_exhausted=39
+           loss_a=-0.0350 | loss_b=0.5918
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 265 | wins=37/64 | avg_rounds=2.1 | retry_exhausted=27
+           loss_a=0.3129 | loss_b=0.0192
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 266 | wins=19/64 | avg_rounds=2.3 | retry_exhausted=45
+           loss_a=-0.1949 | loss_b=0.4682
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 267 | wins=19/64 | avg_rounds=1.9 | retry_exhausted=45
+           loss_a=0.5340 | loss_b=2.3994
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 268 | wins=28/64 | avg_rounds=1.9 | retry_exhausted=36
+           loss_a=0.0121 | loss_b=-0.2604
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 269 | wins=32/64 | avg_rounds=2.4 | retry_exhausted=32
+           loss_a=0.2775 | loss_b=0.2236
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 270 | wins=51/64 | avg_rounds=1.2 | retry_exhausted=13
+           loss_a=0.0642 | loss_b=-0.1329
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 271 | wins=32/64 | avg_rounds=1.7 | retry_exhausted=32
+           loss_a=0.1517 | loss_b=-0.0021
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 272 | wins=29/64 | avg_rounds=1.9 | retry_exhausted=35
+           loss_a=-0.8579 | loss_b=1.4578
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 273 | wins=37/64 | avg_rounds=2.0 | retry_exhausted=27
+           loss_a=0.4832 | loss_b=-0.0003
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 274 | wins=39/64 | avg_rounds=2.0 | retry_exhausted=25
+           loss_a=0.0055 | loss_b=-0.0002
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 275 | wins=19/64 | avg_rounds=1.9 | retry_exhausted=45
+           loss_a=0.0420 | loss_b=0.1299
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 276 | wins=37/64 | avg_rounds=1.4 | retry_exhausted=27
+           loss_a=-0.0110 | loss_b=0.0054
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 277 | wins=46/64 | avg_rounds=2.0 | retry_exhausted=18
+           loss_a=-0.2084 | loss_b=0.0492
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 278 | wins=37/64 | avg_rounds=1.9 | retry_exhausted=27
+           loss_a=0.0258 | loss_b=-0.4383
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 279 | wins=24/64 | avg_rounds=1.9 | retry_exhausted=40
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 280 | wins=34/64 | avg_rounds=2.1 | retry_exhausted=30
+           loss_a=1.0374 | loss_b=0.9860
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 281 | wins=37/64 | avg_rounds=2.0 | retry_exhausted=27
+           loss_a=0.1144 | loss_b=-0.0438
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 282 | wins=30/64 | avg_rounds=1.7 | retry_exhausted=34
+           loss_a=-0.5523 | loss_b=-0.5390
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 283 | wins=25/64 | avg_rounds=2.0 | retry_exhausted=39
+           loss_a=1.3257 | loss_b=1.8438
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 284 | wins=40/64 | avg_rounds=1.9 | retry_exhausted=24
+           loss_a=0.2219 | loss_b=0.0179
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 285 | wins=34/64 | avg_rounds=2.2 | retry_exhausted=30
+           loss_a=0.2630 | loss_b=0.4160
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 286 | wins=31/64 | avg_rounds=1.9 | retry_exhausted=33
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 287 | wins=38/64 | avg_rounds=2.2 | retry_exhausted=26
+           loss_a=0.0906 | loss_b=-0.1866
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 288 | wins=40/64 | avg_rounds=1.6 | retry_exhausted=24
+           loss_a=0.1449 | loss_b=0.0554
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 289 | wins=38/64 | avg_rounds=1.7 | retry_exhausted=26
+           loss_a=0.7333 | loss_b=0.8621
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 290 | wins=30/64 | avg_rounds=2.5 | retry_exhausted=34
+           loss_a=-0.3140 | loss_b=0.1904
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 291 | wins=34/64 | avg_rounds=2.0 | retry_exhausted=30
+           loss_a=-0.2346 | loss_b=-0.2220
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 292 | wins=53/64 | avg_rounds=1.5 | retry_exhausted=11
+           loss_a=0.1550 | loss_b=0.8962
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 293 | wins=29/64 | avg_rounds=2.2 | retry_exhausted=35
+           loss_a=0.0039 | loss_b=-0.0638
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 294 | wins=41/64 | avg_rounds=1.9 | retry_exhausted=23
+           loss_a=0.0491 | loss_b=0.0601
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 295 | wins=22/64 | avg_rounds=2.2 | retry_exhausted=42
+           loss_a=-0.0071 | loss_b=-0.1288
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 296 | wins=38/64 | avg_rounds=1.6 | retry_exhausted=26
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 297 | wins=40/64 | avg_rounds=1.7 | retry_exhausted=24
+           loss_a=-0.0982 | loss_b=0.2944
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 298 | wins=26/64 | avg_rounds=2.0 | retry_exhausted=38
+           loss_a=0.9707 | loss_b=1.3792
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 299 | wins=39/64 | avg_rounds=1.9 | retry_exhausted=25
+           loss_a=0.0416 | loss_b=0.1285
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 300 | wins=36/64 | avg_rounds=1.9 | retry_exhausted=28
+           loss_a=-0.1649 | loss_b=-0.1444
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  Saved model_a_latest → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/model_a_latest
+  Saved model_b_latest → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/model_b_latest
+  step= 301 | wins=29/64 | avg_rounds=1.9 | retry_exhausted=35
+           loss_a=0.7068 | loss_b=1.2156
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 302 | wins=48/64 | avg_rounds=1.9 | retry_exhausted=16
+           loss_a=0.1040 | loss_b=-0.0114
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 303 | wins=32/64 | avg_rounds=2.0 | retry_exhausted=32
+           loss_a=-0.3616 | loss_b=-0.2738
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 304 | wins=36/64 | avg_rounds=1.7 | retry_exhausted=28
+           loss_a=0.0613 | loss_b=-0.0270
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 305 | wins=45/64 | avg_rounds=1.4 | retry_exhausted=19
+           loss_a=0.0334 | loss_b=0.0009
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 306 | wins=42/64 | avg_rounds=1.8 | retry_exhausted=22
+           loss_a=0.2745 | loss_b=1.3576
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 307 | wins=51/64 | avg_rounds=1.6 | retry_exhausted=13
+           loss_a=-1.1693 | loss_b=-1.4964
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 308 | wins=28/64 | avg_rounds=1.9 | retry_exhausted=36
+           loss_a=0.0439 | loss_b=0.0578
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 309 | wins=39/64 | avg_rounds=1.7 | retry_exhausted=25
+           loss_a=0.1404 | loss_b=-0.1267
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 310 | wins=38/64 | avg_rounds=1.6 | retry_exhausted=26
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 311 | wins=28/64 | avg_rounds=2.2 | retry_exhausted=36
+           loss_a=0.2830 | loss_b=0.1195
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 312 | wins=43/64 | avg_rounds=1.7 | retry_exhausted=21
+           loss_a=0.0468 | loss_b=0.0737
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 313 | wins=36/64 | avg_rounds=1.7 | retry_exhausted=28
+           loss_a=0.1362 | loss_b=0.0214
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 314 | wins=34/64 | avg_rounds=1.9 | retry_exhausted=30
+           loss_a=0.0677 | loss_b=-0.1377
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 315 | wins=40/64 | avg_rounds=1.9 | retry_exhausted=24
+           loss_a=0.0896 | loss_b=3.4668
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 316 | wins=25/64 | avg_rounds=2.0 | retry_exhausted=39
+           loss_a=-0.0285 | loss_b=-0.1156
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 317 | wins=33/64 | avg_rounds=1.9 | retry_exhausted=31
+           loss_a=0.1828 | loss_b=0.0972
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 318 | wins=37/64 | avg_rounds=1.8 | retry_exhausted=27
+           loss_a=-0.7761 | loss_b=0.0125
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 319 | wins=11/64 | avg_rounds=2.2 | retry_exhausted=53
+           loss_a=-0.0044 | loss_b=0.0155
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 320 | wins=32/64 | avg_rounds=1.9 | retry_exhausted=32
+           loss_a=0.0209 | loss_b=-0.0489
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 321 | wins=41/64 | avg_rounds=1.5 | retry_exhausted=23
+           loss_a=0.3080 | loss_b=0.5958
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 322 | wins=33/64 | avg_rounds=1.7 | retry_exhausted=31
+           loss_a=-0.4845 | loss_b=0.0705
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 323 | wins=34/64 | avg_rounds=2.2 | retry_exhausted=30
+           loss_a=-0.2055 | loss_b=-0.2181
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 324 | wins=40/64 | avg_rounds=1.6 | retry_exhausted=24
+           loss_a=0.1840 | loss_b=0.2738
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 325 | wins=41/64 | avg_rounds=1.6 | retry_exhausted=23
+           loss_a=0.1642 | loss_b=0.2335
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 326 | wins=41/64 | avg_rounds=1.4 | retry_exhausted=23
+           loss_a=0.0807 | loss_b=0.0552
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 327 | wins=30/64 | avg_rounds=1.7 | retry_exhausted=34
+           loss_a=0.4095 | loss_b=0.3659
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 328 | wins=43/64 | avg_rounds=1.9 | retry_exhausted=21
+           loss_a=0.0908 | loss_b=-0.1794
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 329 | wins=25/64 | avg_rounds=1.7 | retry_exhausted=39
+           loss_a=-0.3848 | loss_b=0.6258
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 330 | wins=33/64 | avg_rounds=1.8 | retry_exhausted=31
+           loss_a=0.0531 | loss_b=0.0029
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 331 | wins=30/64 | avg_rounds=1.6 | retry_exhausted=34
+           loss_a=0.1234 | loss_b=0.1181
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 332 | wins=46/64 | avg_rounds=1.5 | retry_exhausted=18
+           loss_a=0.1960 | loss_b=0.2001
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 333 | wins=39/64 | avg_rounds=1.7 | retry_exhausted=25
+           loss_a=-0.1638 | loss_b=0.0348
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 334 | wins=28/64 | avg_rounds=2.1 | retry_exhausted=36
+           loss_a=0.1346 | loss_b=-0.0909
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 335 | wins=37/64 | avg_rounds=1.5 | retry_exhausted=27
+           loss_a=0.0599 | loss_b=0.1423
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 336 | wins=47/64 | avg_rounds=1.7 | retry_exhausted=17
+           loss_a=0.1432 | loss_b=-0.0138
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 337 | wins=47/64 | avg_rounds=1.6 | retry_exhausted=17
+           loss_a=-0.0537 | loss_b=0.0016
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 338 | wins=39/64 | avg_rounds=1.8 | retry_exhausted=25
+           loss_a=1.1656 | loss_b=1.6424
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 339 | wins=37/64 | avg_rounds=1.7 | retry_exhausted=27
+           loss_a=0.0332 | loss_b=-0.0030
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 340 | wins=38/64 | avg_rounds=1.6 | retry_exhausted=26
+           loss_a=-0.6881 | loss_b=-1.7068
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 341 | wins=30/64 | avg_rounds=2.1 | retry_exhausted=34
+           loss_a=0.7387 | loss_b=0.8074
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 342 | wins=40/64 | avg_rounds=1.5 | retry_exhausted=24
+           loss_a=0.1203 | loss_b=0.0459
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 343 | wins=32/64 | avg_rounds=1.7 | retry_exhausted=32
+           loss_a=0.0545 | loss_b=-0.0096
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 344 | wins=35/64 | avg_rounds=2.0 | retry_exhausted=29
+           loss_a=-0.0982 | loss_b=-0.0360
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 345 | wins=49/64 | avg_rounds=1.6 | retry_exhausted=15
+           loss_a=-0.0003 | loss_b=-0.0004
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 346 | wins=33/64 | avg_rounds=1.9 | retry_exhausted=31
+           loss_a=0.0756 | loss_b=0.2693
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 347 | wins=38/64 | avg_rounds=1.4 | retry_exhausted=26
+           loss_a=0.0659 | loss_b=0.0333
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 348 | wins=43/64 | avg_rounds=1.7 | retry_exhausted=21
+           loss_a=0.1001 | loss_b=0.1681
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 349 | wins=48/64 | avg_rounds=2.1 | retry_exhausted=16
+           loss_a=0.2332 | loss_b=0.4032
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 350 | wins=36/64 | avg_rounds=2.0 | retry_exhausted=28
+           loss_a=-0.2888 | loss_b=-0.1786
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 351 | wins=33/64 | avg_rounds=1.9 | retry_exhausted=31
+           loss_a=-0.1055 | loss_b=-0.0607
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 352 | wins=54/64 | avg_rounds=1.3 | retry_exhausted=10
+           loss_a=0.2850 | loss_b=0.0718
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 353 | wins=45/64 | avg_rounds=1.6 | retry_exhausted=19
+           loss_a=-0.3012 | loss_b=0.0134
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 354 | wins=28/64 | avg_rounds=2.0 | retry_exhausted=36
+           loss_a=0.5216 | loss_b=0.7720
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 355 | wins=44/64 | avg_rounds=1.5 | retry_exhausted=20
+           loss_a=-0.4126 | loss_b=-1.0714
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 356 | wins=35/64 | avg_rounds=1.8 | retry_exhausted=29
+           loss_a=0.7756 | loss_b=1.8906
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 357 | wins=35/64 | avg_rounds=1.6 | retry_exhausted=29
+           loss_a=0.1580 | loss_b=0.3204
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 358 | wins=37/64 | avg_rounds=1.7 | retry_exhausted=27
+           loss_a=0.2505 | loss_b=-0.0779
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 359 | wins=39/64 | avg_rounds=1.6 | retry_exhausted=25
+           loss_a=0.7204 | loss_b=1.6407
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 360 | wins=52/64 | avg_rounds=1.7 | retry_exhausted=12
+           loss_a=-1.0040 | loss_b=0.0010
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 361 | wins=40/64 | avg_rounds=1.8 | retry_exhausted=24
+           loss_a=0.4738 | loss_b=0.4407
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 362 | wins=39/64 | avg_rounds=1.5 | retry_exhausted=25
+           loss_a=0.4246 | loss_b=0.0116
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 363 | wins=50/64 | avg_rounds=1.6 | retry_exhausted=14
+           loss_a=0.1777 | loss_b=0.0303
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 364 | wins=37/64 | avg_rounds=1.5 | retry_exhausted=27
+           loss_a=-0.0576 | loss_b=0.0073
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 365 | wins=23/64 | avg_rounds=1.9 | retry_exhausted=41
+           loss_a=0.1125 | loss_b=0.8173
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 366 | wins=47/64 | avg_rounds=1.5 | retry_exhausted=17
+           loss_a=-0.1691 | loss_b=0.0214
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 367 | wins=39/64 | avg_rounds=2.0 | retry_exhausted=25
+           loss_a=0.2070 | loss_b=0.0443
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 368 | wins=42/64 | avg_rounds=1.9 | retry_exhausted=22
+           loss_a=-0.3617 | loss_b=-0.3884
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 369 | wins=43/64 | avg_rounds=1.5 | retry_exhausted=21
+           loss_a=-0.1304 | loss_b=0.0836
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 370 | wins=25/64 | avg_rounds=1.9 | retry_exhausted=39
+           loss_a=-0.3199 | loss_b=-0.1072
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 371 | wins=28/64 | avg_rounds=1.7 | retry_exhausted=36
+           loss_a=0.0997 | loss_b=0.0880
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 372 | wins=48/64 | avg_rounds=1.5 | retry_exhausted=16
+           loss_a=-0.3897 | loss_b=-0.1943
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 373 | wins=30/64 | avg_rounds=1.8 | retry_exhausted=34
+           loss_a=-0.0919 | loss_b=0.0230
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 374 | wins=32/64 | avg_rounds=1.5 | retry_exhausted=32
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 375 | wins=38/64 | avg_rounds=1.7 | retry_exhausted=26
+           loss_a=0.1281 | loss_b=0.1063
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 376 | wins=38/64 | avg_rounds=1.7 | retry_exhausted=26
+           loss_a=0.2505 | loss_b=0.0991
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 377 | wins=47/64 | avg_rounds=1.7 | retry_exhausted=17
+           loss_a=0.4462 | loss_b=0.1751
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 378 | wins=28/64 | avg_rounds=2.0 | retry_exhausted=36
+           loss_a=0.1386 | loss_b=0.1274
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 379 | wins=46/64 | avg_rounds=1.7 | retry_exhausted=18
+           loss_a=-0.1907 | loss_b=-0.1401
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 380 | wins=47/64 | avg_rounds=1.8 | retry_exhausted=17
+           loss_a=0.2156 | loss_b=0.2314
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 381 | wins=27/64 | avg_rounds=1.6 | retry_exhausted=37
+           loss_a=0.8219 | loss_b=0.0197
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 382 | wins=35/64 | avg_rounds=1.6 | retry_exhausted=29
+           loss_a=0.1837 | loss_b=-0.1136
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 383 | wins=34/64 | avg_rounds=1.8 | retry_exhausted=30
+           loss_a=0.0047 | loss_b=0.0062
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 384 | wins=30/64 | avg_rounds=2.2 | retry_exhausted=34
+           loss_a=-0.1445 | loss_b=-0.0423
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 385 | wins=38/64 | avg_rounds=1.5 | retry_exhausted=26
+           loss_a=0.0772 | loss_b=0.1718
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 386 | wins=31/64 | avg_rounds=1.7 | retry_exhausted=33
+           loss_a=0.3336 | loss_b=0.4657
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 387 | wins=42/64 | avg_rounds=1.7 | retry_exhausted=22
+           loss_a=-0.2235 | loss_b=-0.1681
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 388 | wins=36/64 | avg_rounds=1.7 | retry_exhausted=28
+           loss_a=0.2046 | loss_b=0.1840
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 389 | wins=24/64 | avg_rounds=1.9 | retry_exhausted=40
+           loss_a=0.1190 | loss_b=0.1903
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 390 | wins=31/64 | avg_rounds=2.0 | retry_exhausted=33
+           loss_a=0.7995 | loss_b=0.3397
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 391 | wins=37/64 | avg_rounds=1.9 | retry_exhausted=27
+           loss_a=0.3273 | loss_b=0.3075
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 392 | wins=39/64 | avg_rounds=1.7 | retry_exhausted=25
+           loss_a=-0.0501 | loss_b=-0.1203
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 393 | wins=25/64 | avg_rounds=1.9 | retry_exhausted=39
+           loss_a=0.5946 | loss_b=0.3323
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 394 | wins=44/64 | avg_rounds=1.7 | retry_exhausted=20
+           loss_a=0.1152 | loss_b=0.0019
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 395 | wins=35/64 | avg_rounds=1.7 | retry_exhausted=29
+           loss_a=0.4775 | loss_b=0.1122
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 396 | wins=29/64 | avg_rounds=2.4 | retry_exhausted=35
+           loss_a=-0.1465 | loss_b=-0.2907
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 397 | wins=37/64 | avg_rounds=1.7 | retry_exhausted=27
+           loss_a=-0.2262 | loss_b=1.2473
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 398 | wins=24/64 | avg_rounds=2.0 | retry_exhausted=40
+           loss_a=0.2246 | loss_b=0.2242
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 399 | wins=40/64 | avg_rounds=1.5 | retry_exhausted=24
+           loss_a=3.4393 | loss_b=4.1050
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 400 | wins=34/64 | avg_rounds=1.9 | retry_exhausted=30
+           loss_a=-0.1951 | loss_b=-0.3430
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  Saved model_a_latest → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/model_a_latest
+  Saved model_b_latest → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/model_b_latest
+  step= 401 | wins=25/64 | avg_rounds=1.6 | retry_exhausted=39
+           loss_a=0.3500 | loss_b=1.3246
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 402 | wins=35/64 | avg_rounds=2.1 | retry_exhausted=29
+           loss_a=0.5830 | loss_b=0.6919
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 403 | wins=45/64 | avg_rounds=1.5 | retry_exhausted=19
+           loss_a=0.5013 | loss_b=-0.1559
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 404 | wins=40/64 | avg_rounds=1.9 | retry_exhausted=24
+           loss_a=0.0759 | loss_b=0.0148
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 405 | wins=31/64 | avg_rounds=2.0 | retry_exhausted=33
+           loss_a=-0.0629 | loss_b=0.1985
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 406 | wins=34/64 | avg_rounds=1.3 | retry_exhausted=30
+           loss_a=0.1929 | loss_b=0.0353
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 407 | wins=42/64 | avg_rounds=1.6 | retry_exhausted=22
+           loss_a=-1.0153 | loss_b=-2.0323
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 408 | wins=33/64 | avg_rounds=1.9 | retry_exhausted=31
+           loss_a=-0.1317 | loss_b=0.0015
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 409 | wins=31/64 | avg_rounds=1.8 | retry_exhausted=33
+           loss_a=-1.6592 | loss_b=-2.4587
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 410 | wins=40/64 | avg_rounds=1.9 | retry_exhausted=24
+           loss_a=-0.1146 | loss_b=-0.0522
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 411 | wins=39/64 | avg_rounds=2.0 | retry_exhausted=25
+           loss_a=0.0002 | loss_b=-0.0017
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 412 | wins=38/64 | avg_rounds=1.5 | retry_exhausted=26
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 413 | wins=35/64 | avg_rounds=2.1 | retry_exhausted=29
+           loss_a=0.4785 | loss_b=-0.0002
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 414 | wins=37/64 | avg_rounds=1.6 | retry_exhausted=27
+           loss_a=-0.6321 | loss_b=-1.2905
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 415 | wins=46/64 | avg_rounds=1.6 | retry_exhausted=18
+           loss_a=-0.4216 | loss_b=0.2362
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 416 | wins=33/64 | avg_rounds=1.6 | retry_exhausted=31
+           loss_a=-0.0700 | loss_b=-0.3598
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 417 | wins=32/64 | avg_rounds=1.5 | retry_exhausted=32
+           loss_a=0.0242 | loss_b=-0.0175
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 418 | wins=42/64 | avg_rounds=1.6 | retry_exhausted=22
+           loss_a=0.5516 | loss_b=0.4523
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 419 | wins=39/64 | avg_rounds=1.7 | retry_exhausted=25
+           loss_a=-0.0192 | loss_b=-0.0580
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 420 | wins=45/64 | avg_rounds=1.6 | retry_exhausted=19
+           loss_a=0.3214 | loss_b=0.3326
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 421 | wins=40/64 | avg_rounds=2.0 | retry_exhausted=24
+           loss_a=0.4124 | loss_b=0.9503
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 422 | wins=44/64 | avg_rounds=1.5 | retry_exhausted=20
+           loss_a=-0.2161 | loss_b=-0.2109
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 423 | wins=32/64 | avg_rounds=1.9 | retry_exhausted=32
+           loss_a=-0.1301 | loss_b=-0.0142
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 424 | wins=31/64 | avg_rounds=1.7 | retry_exhausted=33
+           loss_a=0.6281 | loss_b=1.0970
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 425 | wins=49/64 | avg_rounds=1.6 | retry_exhausted=15
+           loss_a=0.7874 | loss_b=0.9356
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 426 | wins=25/64 | avg_rounds=1.6 | retry_exhausted=39
+           loss_a=-0.1842 | loss_b=-0.0078
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 427 | wins=41/64 | avg_rounds=1.7 | retry_exhausted=23
+           loss_a=-0.0417 | loss_b=-0.0237
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 428 | wins=40/64 | avg_rounds=1.6 | retry_exhausted=24
+           loss_a=-0.1850 | loss_b=0.0168
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 429 | wins=41/64 | avg_rounds=1.5 | retry_exhausted=23
+           loss_a=-0.0176 | loss_b=-0.2698
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 430 | wins=39/64 | avg_rounds=1.6 | retry_exhausted=25
+           loss_a=0.0445 | loss_b=0.0490
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 431 | wins=37/64 | avg_rounds=1.8 | retry_exhausted=27
+           loss_a=-0.9103 | loss_b=0.2491
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 432 | wins=36/64 | avg_rounds=1.7 | retry_exhausted=28
+           loss_a=-0.0103 | loss_b=-0.1519
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 433 | wins=54/64 | avg_rounds=1.7 | retry_exhausted=10
+           loss_a=0.2273 | loss_b=-0.1775
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 434 | wins=48/64 | avg_rounds=1.8 | retry_exhausted=16
+           loss_a=0.2654 | loss_b=0.1758
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 435 | wins=50/64 | avg_rounds=1.7 | retry_exhausted=14
+           loss_a=0.1622 | loss_b=0.1191
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 436 | wins=37/64 | avg_rounds=2.0 | retry_exhausted=27
+           loss_a=-0.1494 | loss_b=-0.2114
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 437 | wins=37/64 | avg_rounds=1.7 | retry_exhausted=27
+           loss_a=0.0337 | loss_b=-0.0089
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 438 | wins=41/64 | avg_rounds=1.5 | retry_exhausted=23
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 439 | wins=41/64 | avg_rounds=1.7 | retry_exhausted=23
+           loss_a=0.1911 | loss_b=-0.0008
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 440 | wins=40/64 | avg_rounds=2.1 | retry_exhausted=24
+           loss_a=0.2169 | loss_b=0.4031
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 441 | wins=52/64 | avg_rounds=1.6 | retry_exhausted=12
+           loss_a=0.0089 | loss_b=0.3152
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 442 | wins=42/64 | avg_rounds=1.6 | retry_exhausted=22
+           loss_a=0.0645 | loss_b=-0.3253
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 443 | wins=30/64 | avg_rounds=1.5 | retry_exhausted=34
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 444 | wins=35/64 | avg_rounds=1.8 | retry_exhausted=29
+           loss_a=0.0120 | loss_b=0.0482
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 445 | wins=42/64 | avg_rounds=1.9 | retry_exhausted=22
+           loss_a=0.0658 | loss_b=0.1056
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 446 | wins=52/64 | avg_rounds=1.5 | retry_exhausted=12
+           loss_a=0.0205 | loss_b=-0.0683
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 447 | wins=35/64 | avg_rounds=2.0 | retry_exhausted=29
+           loss_a=-0.0861 | loss_b=0.0296
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 448 | wins=54/64 | avg_rounds=1.3 | retry_exhausted=10
+           loss_a=0.2096 | loss_b=0.0148
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 449 | wins=64/64 | avg_rounds=1.4 | retry_exhausted=0
+           loss_a=0.2175 | loss_b=0.1881
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 450 | wins=49/64 | avg_rounds=1.5 | retry_exhausted=15
+           loss_a=0.0218 | loss_b=-0.0093
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 451 | wins=44/64 | avg_rounds=1.7 | retry_exhausted=20
+           loss_a=-0.0742 | loss_b=-0.0597
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 452 | wins=35/64 | avg_rounds=1.6 | retry_exhausted=29
+           loss_a=-0.0070 | loss_b=0.0132
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 453 | wins=38/64 | avg_rounds=1.8 | retry_exhausted=26
+           loss_a=0.0317 | loss_b=0.0069
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 454 | wins=37/64 | avg_rounds=1.7 | retry_exhausted=27
+           loss_a=-0.1582 | loss_b=-0.2336
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 455 | wins=38/64 | avg_rounds=1.7 | retry_exhausted=26
+           loss_a=0.1220 | loss_b=0.3047
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 456 | wins=43/64 | avg_rounds=1.8 | retry_exhausted=21
+           loss_a=0.1019 | loss_b=-0.0253
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 457 | wins=49/64 | avg_rounds=1.6 | retry_exhausted=15
+           loss_a=-0.3061 | loss_b=0.1550
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 458 | wins=45/64 | avg_rounds=1.7 | retry_exhausted=19
+           loss_a=0.3231 | loss_b=0.9139
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 459 | wins=43/64 | avg_rounds=1.8 | retry_exhausted=21
+           loss_a=0.1019 | loss_b=0.0075
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 460 | wins=50/64 | avg_rounds=1.8 | retry_exhausted=14
+           loss_a=-0.2389 | loss_b=-0.3096
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 461 | wins=44/64 | avg_rounds=1.4 | retry_exhausted=20
+           loss_a=-0.0942 | loss_b=-0.0469
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 462 | wins=42/64 | avg_rounds=1.9 | retry_exhausted=22
+           loss_a=0.6443 | loss_b=0.0834
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 463 | wins=43/64 | avg_rounds=1.4 | retry_exhausted=21
+           loss_a=0.1222 | loss_b=0.0895
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 464 | wins=46/64 | avg_rounds=1.8 | retry_exhausted=18
+           loss_a=0.2642 | loss_b=0.2939
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 465 | wins=43/64 | avg_rounds=1.5 | retry_exhausted=21
+           loss_a=-0.0588 | loss_b=0.0968
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 466 | wins=50/64 | avg_rounds=1.6 | retry_exhausted=14
+           loss_a=0.0983 | loss_b=0.0948
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 467 | wins=31/64 | avg_rounds=1.5 | retry_exhausted=33
+           loss_a=0.0221 | loss_b=0.0041
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 468 | wins=52/64 | avg_rounds=1.5 | retry_exhausted=12
+           loss_a=1.0297 | loss_b=-1.0947
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 469 | wins=46/64 | avg_rounds=1.8 | retry_exhausted=18
+           loss_a=0.0239 | loss_b=0.0124
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 470 | wins=52/64 | avg_rounds=1.7 | retry_exhausted=12
+           loss_a=0.0477 | loss_b=0.0151
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 471 | wins=57/64 | avg_rounds=1.5 | retry_exhausted=7
+           loss_a=0.0481 | loss_b=0.0255
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 472 | wins=40/64 | avg_rounds=2.0 | retry_exhausted=24
+           loss_a=-0.1680 | loss_b=-0.5679
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 473 | wins=35/64 | avg_rounds=1.6 | retry_exhausted=29
+           loss_a=0.4730 | loss_b=0.0034
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 474 | wins=39/64 | avg_rounds=1.9 | retry_exhausted=25
+           loss_a=0.0994 | loss_b=-0.0365
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 475 | wins=45/64 | avg_rounds=1.9 | retry_exhausted=19
+           loss_a=0.1456 | loss_b=0.1086
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 476 | wins=49/64 | avg_rounds=1.4 | retry_exhausted=15
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 477 | wins=38/64 | avg_rounds=1.7 | retry_exhausted=26
+           loss_a=-0.8237 | loss_b=-1.0775
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 478 | wins=44/64 | avg_rounds=1.8 | retry_exhausted=20
+           loss_a=0.2158 | loss_b=0.0264
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 479 | wins=46/64 | avg_rounds=1.4 | retry_exhausted=18
+           loss_a=0.0612 | loss_b=0.0095
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 480 | wins=54/64 | avg_rounds=1.7 | retry_exhausted=10
+           loss_a=-0.0716 | loss_b=-0.1445
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 481 | wins=60/64 | avg_rounds=1.3 | retry_exhausted=4
+           loss_a=0.0670 | loss_b=-0.0310
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 482 | wins=42/64 | avg_rounds=1.6 | retry_exhausted=22
+           loss_a=0.3252 | loss_b=0.2225
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 483 | wins=49/64 | avg_rounds=1.8 | retry_exhausted=15
+           loss_a=0.1884 | loss_b=0.1147
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 484 | wins=47/64 | avg_rounds=1.7 | retry_exhausted=17
+           loss_a=-0.4829 | loss_b=-0.0051
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 485 | wins=37/64 | avg_rounds=1.7 | retry_exhausted=27
+           loss_a=0.0093 | loss_b=0.0855
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 486 | wins=39/64 | avg_rounds=2.0 | retry_exhausted=25
+           loss_a=0.0250 | loss_b=0.0065
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 487 | wins=39/64 | avg_rounds=2.2 | retry_exhausted=25
+           loss_a=0.1007 | loss_b=-0.1138
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 488 | wins=54/64 | avg_rounds=2.2 | retry_exhausted=10
+           loss_a=-0.0281 | loss_b=0.3074
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 489 | wins=42/64 | avg_rounds=1.6 | retry_exhausted=22
+           loss_a=0.2119 | loss_b=0.2909
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 490 | wins=52/64 | avg_rounds=1.6 | retry_exhausted=12
+           loss_a=-0.0129 | loss_b=-0.0710
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 491 | wins=46/64 | avg_rounds=1.4 | retry_exhausted=18
+           loss_a=0.0360 | loss_b=0.0276
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 492 | wins=38/64 | avg_rounds=1.8 | retry_exhausted=26
+           loss_a=-0.0555 | loss_b=-0.3339
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 493 | wins=50/64 | avg_rounds=1.6 | retry_exhausted=14
+           loss_a=0.2815 | loss_b=0.3323
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 494 | wins=58/64 | avg_rounds=1.7 | retry_exhausted=6
+           loss_a=-0.0075 | loss_b=-0.0191
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 495 | wins=51/64 | avg_rounds=1.1 | retry_exhausted=13
+           loss_a=0.0000 | loss_b=0.0000
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 496 | wins=54/64 | avg_rounds=2.0 | retry_exhausted=10
+           loss_a=0.3357 | loss_b=-0.0151
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 497 | wins=54/64 | avg_rounds=1.7 | retry_exhausted=10
+           loss_a=0.0886 | loss_b=0.0027
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 498 | wins=55/64 | avg_rounds=1.8 | retry_exhausted=9
+           loss_a=0.5525 | loss_b=0.7842
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  step= 499 | wins=44/64 | avg_rounds=1.6 | retry_exhausted=20
+           loss_a=-0.2437 | loss_b=0.4285
+  [plot] Loss curve saved → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/loss_curve.png
+  Saved model_a_final → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/model_a_final
+  Saved model_b_final → ./grpo_converge_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_B8G8_steps500_20260519-132402/model_b_final

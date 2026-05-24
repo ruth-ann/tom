@@ -47,10 +47,7 @@ try:
 except ImportError:
     WORDNET_AVAILABLE = False
 
-
-# ---------------------------------------------------------------------------
-# 1.  WordNet verifier
-# ---------------------------------------------------------------------------
+# Checking bridge validity
 
 def _best_path_sim(w1: str, w2: str) -> float:
     syns1 = wn.synsets(w1, pos=wn.NOUN)
@@ -65,7 +62,6 @@ def _best_path_sim(w1: str, w2: str) -> float:
                 best = sim
     return best
 
-
 def _best_wup_sim(w1: str, w2: str) -> float:
     syns1 = wn.synsets(w1, pos=wn.NOUN)
     syns2 = wn.synsets(w2, pos=wn.NOUN)
@@ -79,10 +75,8 @@ def _best_wup_sim(w1: str, w2: str) -> float:
                 best = sim
     return best
 
-
 def _best_sim(w1: str, w2: str) -> float:
     return _best_wup_sim(w1, w2)
-
 
 def is_valid_bridge(word: str, anchor_a: str, anchor_b: str,
                     threshold: float = 0.10) -> bool:
@@ -90,22 +84,16 @@ def is_valid_bridge(word: str, anchor_a: str, anchor_b: str,
     sim_b = _best_sim(word, anchor_b)
     return sim_a >= threshold and sim_b >= threshold
 
-
 def is_in_wordnet(word: str) -> bool:
     return bool(wn.synsets(word, pos=wn.NOUN))
 
-
-# ---------------------------------------------------------------------------
-# 2.  Concrete noun pool
-# ---------------------------------------------------------------------------
-
+# Make sure words are concrete
 CONCRETE_LEXNAMES = {
     "noun.animal", "noun.plant", "noun.food", "noun.artifact",
     "noun.body", "noun.object", "noun.substance",
 }
 
 _CONCRETE_NOUN_CACHE: list[str] = []
-
 
 def get_concrete_nouns(max_words: int = 3000) -> list[str]:
     global _CONCRETE_NOUN_CACHE
@@ -146,10 +134,7 @@ def get_concrete_nouns(max_words: int = 3000) -> list[str]:
     print(f"[WordNet] Loaded {len(words)} concrete nouns.")
     return words
 
-
-# ---------------------------------------------------------------------------
-# 3.  Prompt builder
-# ---------------------------------------------------------------------------
+# Prompt
 
 SYSTEM_PROMPT = """You are playing a word convergence game with a partner.
 
@@ -167,7 +152,6 @@ Rules:
 Output format: a single lowercase word and nothing else.
 Example of CORRECT output: river
 Example of INCORRECT output: I think the word is river."""
-
 
 def build_messages(anchor_a: str, anchor_b: str,
                    history: list[dict], agent_label: str,
@@ -197,7 +181,6 @@ def build_messages(anchor_a: str, anchor_b: str,
 
     messages.append({"role": "user", "content": user_content})
     return messages
-
 
 # ---------------------------------------------------------------------------
 # 4.  Single-word extraction & cleaning
@@ -614,7 +597,7 @@ def train(args):
     # --- Output paths --------------------------------------------------------
     os.makedirs(args.output_dir, exist_ok=True)
     run_dir, run_name = _make_run_dir(args)
-    game_log_path  = os.path.join(args.output_dir, "game_log.txt")   # shared across runs
+    game_log_path  = os.path.join(run_dir, "game_log.txt")
     loss_plot_path = os.path.join(run_dir, "loss_curve.png")
     loss_history: list[dict] = []
 
@@ -759,7 +742,6 @@ def _log_episode_to_file(ep: Episode, global_step: int, log_path: str,
                    else ("EXHAUSTED" if ep.exhausted else "TIMEOUT"))
         f.write(f"  → {outcome} in {ep.n_rounds} round(s)\n")
 
-
 def _save_loss_curve(loss_history: list[dict], plot_path: str):
     try:
         import matplotlib
@@ -811,7 +793,6 @@ def _save_loss_curve(loss_history: list[dict], plot_path: str):
     plt.close(fig)
     print(f"  [plot] Loss curve saved → {plot_path}")
 
-
 def _print_episode(ep: Episode):
     print(f"\n  Episode: '{ep.start_a}' ↔ '{ep.start_b}'")
     for i, (ta, tb) in enumerate(zip(ep.turns_a, ep.turns_b)):
@@ -825,7 +806,6 @@ def _print_episode(ep: Episode):
               f"B={tb.word}{retry_b}({bridge_b})")
     outcome = "WON" if ep.won else ("EXHAUSTED" if ep.exhausted else "TIMEOUT")
     print(f"  → {outcome} in {ep.n_rounds} round(s)")
-
 
 def evaluate(model_a, model_b, tokenizer_a, tokenizer_b,
              args, n_episodes: int = 20):
@@ -851,10 +831,7 @@ def evaluate(model_a, model_b, tokenizer_a, tokenizer_b,
     print(f"\nWin rate : {wins}/{n_episodes} = {wins/n_episodes:.1%}")
     print(f"Avg rounds: {total_rounds/n_episodes:.2f}")
 
-
-# ---------------------------------------------------------------------------
-# 11. Args & main
-# ---------------------------------------------------------------------------
+# Args
 
 def parse_args():
     p = argparse.ArgumentParser()
