@@ -1,0 +1,1773 @@
+
+######################################################################
+# NEW RUN — 2026-05-24 16:53:10
+# model_a=meta-llama/Llama-3.2-3B-Instruct  model_b=Qwen/Qwen2.5-3B-Instruct
+# lr=5e-06  kl=0.04  B4G8
+# n_cards=3  max_card=99  max_signals=3
+# total_steps=500  run_dir=./mind_output/Llama-3.2-3B-Instruct_vs_Qwen2.5-3B-Instruct_lr5e-06_kl0.04_ent0.01_B4G8_steps500_20260524-165310
+######################################################################
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+STEP 0  [2026-05-24 17:00:14]  wins=0/32  violations=5  deadlocks=27  cheats=0  avg_played=0.1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[39, 49, 93]  B:[10, 23, 40]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll send: "A fragile thread vs a massive boulder"  (This phrase conveys that my cards are relatively low compared to the large 93, and also suggests a sense of urgency to play, implying that I'd rath"
+    Sig 1 B [rew:+1.0]: "Something incredibly tiny compared to something overwhelmingly huge"
+    Sig 2 A [rew:+1.0]: "I'll build on our previous signals. Given that my partner described something incredibly tiny compared to something overwhelmingly huge, and I described a fragile thread vs a massive boulder, I'll sen"
+    Sig 2 B [rew:+1.0]: ""A whisper vs a thunderclap — which would you rather face first?""
+    Sig 3 A [rew:+1.0]: ""I'd much rather face a thunderclap than a gentle breeze""
+    Sig 3 B [rew:+1.0]: ""A gentle breeze vs a raging storm — which one feels more urgent to address?""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[39, 49, 93]  B:[10, 23, 40]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A gentle morning dew"
+    Sig 1 B [rew:+1.0]: "A whisper compared to a roar."
+    Sig 2 A [rew:+1.0]: ""A light breeze on a summer day""
+    Sig 2 B [rew:+1.0]: ""A fleeting breeze versus a thunderstorm's fury.""
+    Sig 3 A [rew:+1.0]: ""A soft, early sunrise""
+    Sig 3 B [rew:+1.0]: ""A summer breeze compared to a hurricane's eye.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:39   Pile: []
+  → VIOLATION (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[39, 49, 93]  B:[10, 23, 40]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "My signal: "a tiny drop in a vast ocean""
+    Sig 1 B [rew:+1.0]: "A whisper compared to a roar"
+    Sig 2 A [rew:+1.0]: ""I've got a spark in the darkness""
+    Sig 2 B [rew:+1.0]: ""My card is a gentle breeze, yours a thunderstorm.""
+    Sig 3 A [rew:+1.0]: ""Moonlight on a still pond""
+    Sig 3 B [rew:+1.0]: ""I've got a steady stream, you a powerful waterfall.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[39, 49, 93]  B:[10, 23, 40]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""A light breeze stirs the autumn leaves.""
+    Sig 1 B [rew:+1.0]: "Something hot vs something cold; I'm feeling bold and ready to go!"
+    Sig 2 A [rew:+1.0]: "Since my partner's signal suggests they have a "hot" card, which implies something large or high, and they've chosen to be "bold and ready to go," it implies their card is likely larger than mine. To "
+    Sig 2 B [rew:+1.0]: ""A brisk wind contrasts sharply with a gentle murmur, indicating my card is smaller than yours but larger than the first number you mentioned.""
+    Sig 3 A [rew:+1.0]: "The contrast between a "brisk wind" and a "gentle murmur" suggests a significant difference in intensity, but no clear indication of size. To build on this, I'll signal that I'm considering moving tow"
+    Sig 3 B [rew:+1.0]: ""A steady stream of water contrasts with a gentle ripple, showing my card is larger than the first number you mentioned but smaller than your card.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[39, 49, 93]  B:[10, 23, 40]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Summer breeze""
+    Sig 1 B [rew:+1.0]: "A whisper against a storm's roar."
+    Sig 2 A [rew:+1.0]: "A gentle morning dew"
+    Sig 2 B [rew:+1.0]: ""A fleeting whisper compared to the steady rumble.""
+    Sig 3 A [rew:+1.0]: ""Moonlight on a still pond""
+    Sig 3 B [rew:+1.0]: ""A gust of wind compared to a heavy rainstorm.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[39, 49, 93]  B:[10, 23, 40]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Tiny seeds are being swept away by a gentle breeze.""
+    Sig 1 B [rew:+1.0]: "Something hot vs something cold; I'm feeling bold, let's go!"
+    Sig 2 A [rew:+1.0]: "Round 2 Signal: "Summer sunshine warms the earth to life.""
+    Sig 2 B [rew:+1.0]: ""Urgent needs must be met quickly, but we have the luxury to choose our path; how confident are you in knowing where you sit?""
+    Sig 3 A [rew:+1.0]: ""Morning dew glistens on a spider's intricate web.""
+    Sig 3 B [rew:+1.0]: ""Your urgency matches mine, yet I feel more certain about our sequence; let’s decide boldly together.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[39, 49, 93]  B:[10, 23, 40]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A tiny seedling bursting into bloom."
+    Sig 1 B [rew:+1.0]: "Something incredibly tiny compared to what's in the pile."
+    Sig 2 A [rew:+1.0]: "Since your partner said "Something incredibly tiny compared to what's in the pile," we can infer that their card is larger than yours.   Building on this, my next signal should emphasize the vastness "
+    Sig 2 B [rew:+1.0]: ""A whisper versus a mighty storm, your number seems much larger than mine.""
+    Sig 3 A [rew:+1.0]: "Your partner's previous signals imply that their card is larger than yours, but not excessively so. They mentioned "something incredibly tiny compared to what's in the pile" and "a whisper versus a mi"
+    Sig 3 B [rew:+1.0]: ""Compared to the towering magnitude hinted at by your signal, my number feels minuscule in comparison.""
+    Decision:  A=HOLD [rew:+0.0]  B=PLAY [rew:+5.0]
+    Cards:     B:10   Pile: [10]
+  Round 2  pile=[10]
+    Sig 1 A [rew:+1.0]: "Time to start!  My signal is: "A delicate leaf on a summer breeze""
+    Sig 1 B [rew:+1.0]: "A whisper compared to a storm. I'm ready now."
+    Sig 2 A [rew:+1.0]: "My next signal: "Morning sunrise over a quiet lake""
+    Sig 2 B [rew:+1.0]: ""A faint melody before a cacophony of drums; it's time for us to act.""
+    Sig 3 A [rew:+1.0]: "My next signal: "A gentle lapping of waves on a still ocean shore""
+    Sig 3 B [rew:+1.0]: ""A barely audible chirp from a distant bird nestles between the rustling leaves.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (1/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[39, 49, 93]  B:[10, 23, 40]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A gentle morning breeze"
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm. It's urgent to let it out."
+    Sig 2 A [rew:+1.0]: "Signal 3: "A whisper compared to a scream""
+    Sig 2 B [rew:+1.0]: ""A slight ripple on a calm lake contrasts sharply with a powerful wave crashing.""
+    Sig 3 A [rew:+1.0]: ""We're approaching the peak of a serene mountain sunrise.""
+    Sig 3 B [rew:+1.0]: ""A barely perceptible breeze versus a stormy gale, your card must be significantly larger than mine.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[7, 32, 50]  B:[4, 20, 46]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Slow and steady wins the marathon""
+    Sig 1 B [rew:+1.0]: "A whisper vs a roar"
+    Sig 2 A [rew:+1.0]: ""Racing to the finish line""
+    Sig 2 B [rew:+1.0]: ""Urgent need to act vs relaxed deliberation""
+    Sig 3 A [rew:+1.0]: ""Morning dew on a quiet lake""
+    Sig 3 B [rew:+1.0]: ""Decisive action vs measured progression""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[7, 32, 50]  B:[4, 20, 46]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A tiny grain of sand"
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one. I feel urgent to go now."
+    Sig 2 A [rew:+1.0]: "Since my partner said "A gentle natural phenomenon compared to a violent one" and I said "A tiny grain of sand", I can infer that their card is likely larger than mine. To provide more context and inf"
+    Sig 2 B [rew:+1.0]: ""A strong conviction to go now, but considering the urgency, my number feels slightly less significant than your tiny grain of sand.""
+    Sig 3 A [rew:+1.0]: "I will analyze my partner's previous signals to understand their card's size relative to mine.   In Round 1, my partner said "A gentle natural phenomenon compared to a violent one" which implies that "
+    Sig 3 B [rew:+1.0]: ""A strong conviction to go now, but feeling even more urgent given the size difference hinted at by my partner's signal.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[7, 32, 50]  B:[4, 20, 46]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A tiny seed"
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm approaching."
+    Sig 2 A [rew:+1.0]: "My previous signals:  * "A tiny seed" implies that my card is relatively small. * "A gust of wind compared to a thunderstorm approaching" suggests that my card is much smaller than my partner's, as a "
+    Sig 2 B [rew:+1.0]: ""A whisper of a breeze versus a hurricane.""
+    Sig 3 A [rew:+1.0]: "I'll build on our previous signals. Here's my next signal:  "A delicate morning dew drop vs a vast ocean"  This signal implies that my card is much smaller than my partner's card, as a morning dew dro"
+    Sig 3 B [rew:+1.0]: ""A gentle rustle of leaves versus an earthquake unfolding.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:7   Pile: []
+  → VIOLATION (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[7, 32, 50]  B:[4, 20, 46]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Slow and steady wins the day"  (This phrase conveys my confidence in playing a card that's not too big, not too small, but somewhere in the middle, without giving away my exact number.)"
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm approaching."
+    Sig 2 A [rew:+1.0]: ""Morning dew on a frosty window"  This signal maintains a peaceful and calm tone, implying that the partner's card is something smaller or less intense than what you're suggesting, while also referenc"
+    Sig 2 B [rew:+1.0]: ""An urgent whisper versus a roar of thunder.""
+    Sig 3 A [rew:+1.0]: ""Frosty morning gives way to sunshine."  (This signal builds upon the peaceful and calm tone, suggesting that the partner's card is likely something that's small to moderate in size, and that it will "
+    Sig 3 B [rew:+1.0]: ""Like a whispered secret compared to a booming alarm clock.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[7, 32, 50]  B:[4, 20, 46]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A gentle stream."
+    Sig 1 B [rew:+1.0]: "A whisper compared to a roar."
+    Sig 2 A [rew:+1.0]: ""Slow morning light."  This signal continues the theme of relative scales, comparing the gentle and whispery signals from the first round, suggesting that your partner's card is larger and more powerf"
+    Sig 2 B [rew:+1.0]: ""A tiny breeze versus a thunderous storm.""
+    Sig 3 A [rew:+1.0]: ""A summer sunrise after a long winter.""
+    Sig 3 B [rew:+1.0]: ""A gust of wind against a mighty hurricane, showing strength yet restraint.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:7   Pile: []
+  → VIOLATION (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[7, 32, 50]  B:[4, 20, 46]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A gentle summer breeze"
+    Sig 1 B [rew:+1.0]: "Something soft compared to something hard"
+    Sig 2 A [rew:+1.0]: ""Bigger than a slow-moving river""
+    Sig 2 B [rew:+1.0]: ""A puff of wind compared to the gentle summer breeze.""
+    Sig 3 A [rew:+1.0]: ""Farther than a long-haul truck ride.""
+    Sig 3 B [rew:+1.0]: ""Stronger than the bigger river.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:7   Pile: []
+  → VIOLATION (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[7, 32, 50]  B:[4, 20, 46]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A gentle spring breeze"
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes suddenly."
+    Sig 2 A [rew:+1.0]: ""Slowly unfolding petals""
+    Sig 2 B [rew:+1.0]: ""A sudden storm approaches, overshadowing the gentle breeze.""
+    Sig 3 A [rew:+1.0]: ""Morning dew glistens on spider webs."  This signal continues the theme of natural imagery, and suggests a delicate and subtle quality, which should convey that your card is likely to be lower in valu"
+    Sig 3 B [rew:+1.0]: ""A tempest rages, dwarfing the barely perceptible petal display.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[7, 32, 50]  B:[4, 20, 46]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A grain of sand vs a mountain"
+    Sig 1 B [rew:+1.0]: "A whisper against a thunderstorm."
+    Sig 2 A [rew:+1.0]: "I'll analyze my partner's signal: "A whisper against a thunderstorm." The phrase implies a significant difference in volume and intensity between the whisper and the thunderstorm. It suggests that my "
+    Sig 2 B [rew:+1.0]: ""A barely audible breeze versus a hurricane.""
+    Sig 3 A [rew:+1.0]: ""A lone candle flickers in the darkness.""
+    Sig 3 B [rew:+1.0]: ""Ice forming into a glacier compared to a puff of smoke.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[1, 54, 78]  B:[26, 37, 91]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A tiny seed"
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one."
+    Sig 2 A [rew:+1.0]: "Based on the signals, I deduce that my partner's card is larger than mine, given the "violent" description, but not by a huge margin, since my partner didn't use a word that suggests an enormous diffe"
+    Sig 2 B [rew:+1.0]: ""Strong conviction to go now vs hesitation to wait, based on our signals thus far.""
+    Sig 3 A [rew:+1.0]: ""I'm still feeling hesitant to rush into it.""
+    Sig 3 B [rew:+1.0]: ""A small breeze versus a fierce storm, your card seems to be closer to the former, while mine is more aligned with the latter.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[1, 54, 78]  B:[26, 37, 91]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Baby steps first.""
+    Sig 1 B [rew:+1.0]: "Something extremely fast vs something slow; I'm very confident this one goes quickly."
+    Sig 2 A [rew:+1.0]: ""A gentle morning breeze."  (This signal implies that your card is not extremely large or heavy, and is perhaps a moderate-sized or light card, which helps to establish a relative scale with your part"
+    Sig 2 B [rew:+1.0]: ""Urgent need to act vs prolonged delay; your card must be significantly smaller than mine.""
+    Sig 3 A [rew:+1.0]: ""Morning light creeps over mountains.""
+    Sig 3 B [rew:+1.0]: ""Your card's urgency feels more urgent than my current card; let's decide quickly before it grows too large.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[1, 54, 78]  B:[26, 37, 91]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A gentle morning dew"
+    Sig 1 B [rew:+1.0]: "A gentle breeze compared to a storm approaching."
+    Sig 2 A [rew:+1.0]: ""A fleeting whisper in the quiet of a snowy forest."  This signal aims to evoke a sense of a soft and subtle sound, contrasting with the strong, intense language used by my partner in their previous s"
+    Sig 2 B [rew:+1.0]: ""A small gust of wind versus a fierce hurricane.""
+    Sig 3 A [rew:+1.0]: ""A quiet stream's gentle lapping against the shore.""
+    Sig 3 B [rew:+1.0]: ""A whisper in the vastness of an empty space, barely audible yet commanding attention.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[1, 54, 78]  B:[26, 37, 91]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Something big is coming, but it's going to be a while.""
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one, I feel urgent to play now."
+    Sig 2 A [rew:+1.0]: "Your partner's signals suggest that their card is smaller than yours, as they describe a "gentle natural phenomenon" which implies something smaller and calmer compared to a "violent one" - implying t"
+    Sig 2 B [rew:+1.0]: ""A strong conviction to go now, while still being cautious about how far ahead we need to go.""
+    Sig 3 A [rew:+1.0]: ""A morning breeze compared to a hurricane.""
+    Sig 3 B [rew:+1.0]: ""A swift action required, yet careful to avoid overstepping the mark.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[1, 54, 78]  B:[26, 37, 91]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""A small, fledgling thing.""
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm approaching."
+    Sig 2 A [rew:+1.0]: ""A delicate thread in a tapestry.""
+    Sig 2 B [rew:+1.0]: ""More like a steady breeze than a fierce gale.""
+    Sig 3 A [rew:+1.0]: ""Like the calm after a gentle rain.""
+    Sig 3 B [rew:+1.0]: ""A whisper compared to a roaring lion.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[1, 54, 78]  B:[26, 37, 91]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A delicate petal vs a massive stone."
+    Sig 1 B [rew:+1.0]: "Something tiny versus something enormous; I'm extremely confident this is our smallest card."
+    Sig 2 A [rew:+1.0]: "My next signal: "A spring morning sunrise vs a winter night sky.""
+    Sig 2 B [rew:+1.0]: ""A whispering breeze versus a thunderous storm; my card is more akin to the former than the latter.""
+    Sig 3 A [rew:+1.0]: ""A gentle lapping of waves versus a crashing surf; I'm not sure where mine fits into that comparison.""
+    Sig 3 B [rew:+1.0]: ""A gentle evening breeze versus a fierce hurricane; my card is closer to the former than the latter.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:1   Pile: [1]
+  Round 2  pile=[1]
+    Sig 1 A [rew:+1.0]: "A single drop of honey"
+    Sig 1 B [rew:+1.0]: "Something cold versus something scorching hot. I'm almost ready to go."
+    Sig 2 A [rew:+1.0]: ""A delicate morning sunrise""
+    Sig 2 B [rew:+1.0]: ""A whisper compared to a thunderclap—my urgency matches but your certainty exceeds mine.""
+    Sig 3 A [rew:+1.0]: ""Barely audible compared to a cacophony."  This signal implies that my card is not too big, not too small, but something in the middle, suggesting a moderate size, and also that my urgency is high, ma"
+    Sig 3 B [rew:+1.0]: ""A gentle breeze compared to a hurricane—whereas I feel confident, you seem hesitant to act.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (1/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[1, 54, 78]  B:[26, 37, 91]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "Something small and delicate, like a snowflake."
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm"
+    Sig 2 A [rew:+1.0]: ""I'd rather rush like a hummingbird than amble like a tortoise.""
+    Sig 2 B [rew:+1.0]: ""A whisper versus a roar, how would you compare?""
+    Sig 3 A [rew:+1.0]: ""Rushing water versus a still pond.""
+    Sig 3 B [rew:+1.0]: ""Your card's calmness versus my storm, which side do you lean towards?""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[1, 54, 78]  B:[26, 37, 91]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll play it safe and send: "Slow dawn""
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm."
+    Sig 2 A [rew:+1.0]: "I will respond with a signal: "A morning sunrise compared to a midday blaze.""
+    Sig 2 B [rew:+1.0]: ""A gentle breeze versus a hurricane, how confident are you?""
+    Sig 3 A [rew:+1.0]: "A summer day compared to a heatwave."
+    Sig 3 B [rew:+1.0]: ""A ripple compared to a tidal wave, how sure are you?""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[28, 47, 63]  B:[46, 55, 62]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Lightning on a stormy day""
+    Sig 1 B [rew:+1.0]: "A gentle storm approaching quickly, we need to act now!"
+    Sig 2 A [rew:+1.0]: ""Raindrops on a calm lake"  This signal implies that your partner's card is likely to be higher than yours, as rain is a gentle and soothing phenomenon, suggesting a smaller difference in card values "
+    Sig 2 B [rew:+1.0]: ""A strong wind picking up, signaling imminent movement—our numbers align but I think mine might be slightly higher.""
+    Sig 3 A [rew:+1.0]: ""We're at the eye of the storm."  This signal implies that the intensity of the storm is at its center, suggesting a balance between the extremes, rather than the beginning or end of it. This helps to"
+    Sig 3 B [rew:+1.0]: ""A sudden flash of lightning cutting through the dark sky, emphasizing the urgency and clarity of our shared path forward.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[28, 47, 63]  B:[46, 55, 62]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll send: "A tiny seed in a vast ocean""
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm. I think I should go first."
+    Sig 2 A [rew:+1.0]: "I'll respond with a signal that builds on the previous ones. "The stillness of a forest floor after a sudden rain.""
+    Sig 2 B [rew:+1.0]: ""A whisper versus a roar — my card is quieter but still significant, while yours seems louder.""
+    Sig 3 A [rew:+1.0]: "Here's my next signal: "A morning sunrise over a still lake.""
+    Sig 3 B [rew:+1.0]: ""Considering the whisper vs roar, my card is quieter than yours but still stands out more than the stillness implied by the forest floor.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[28, 47, 63]  B:[46, 55, 62]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A delicate flower blossoms"
+    Sig 1 B [rew:+1.0]: "A bolt of lightning compared to a whisper. Time is pressing!"
+    Sig 2 A [rew:+1.0]: ""I feel like a slow, gentle stream"  This signal suggests that my card is on the larger end of the scale, implying that my card is likely higher than my partner's. By comparing it to a slow, gentle st"
+    Sig 2 B [rew:+1.0]: ""An intense storm front moving in versus a calm breeze—how certain are you?""
+    Sig 3 A [rew:+1.0]: ""A morning sunrise versus a midnight shadow""
+    Sig 3 B [rew:+1.0]: ""I sense the momentum building, like a gathering crowd ready to roar.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:28   Pile: [28]
+  Round 2  pile=[28]
+    Sig 1 A [rew:+1.0]: "Something that's far smaller than a house, but not a tiny pea."
+    Sig 1 B [rew:+1.0]: "A gentle thunderstorm approaching quickly!"
+    Sig 2 A [rew:+1.0]: ""A faint, soothing breeze.""
+    Sig 2 B [rew:+1.0]: ""A towering hurricane gaining strength, compared to the gusting breeze you described.""
+    Sig 3 A [rew:+1.0]: ""Fingers fluttering in a whirlwind""
+    Sig 3 B [rew:+1.0]: ""A blizzard forming, significantly larger than the gentle storm you hinted at.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (1/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[28, 47, 63]  B:[46, 55, 62]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "The tide is turning."
+    Sig 1 B [rew:+1.0]: "A bolt of lightning flashing overhead, urging us to make our move."
+    Sig 2 A [rew:+1.0]: ""Nighttime's darkness begins to dissipate.""
+    Sig 2 B [rew:+1.0]: ""The gust of wind is picking up, signaling we're closer in order than expected.""
+    Sig 3 A [rew:+1.0]: ""Morning's warmth seeps into the landscape.""
+    Sig 3 B [rew:+1.0]: ""The temperature is rising rapidly, indicating we might be aligning more closely than our earlier signals suggested.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[28, 47, 63]  B:[46, 55, 62]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A gentle morning dew"
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one. I feel urgent to play now."
+    Sig 2 A [rew:+1.0]: ""A soft breeze can't calm a raging storm""
+    Sig 2 B [rew:+1.0]: ""A strong breeze versus a heavy storm. Your card seems more likely to be smaller than mine.""
+    Sig 3 A [rew:+1.0]: ""I'd rather have a warm cup of coffee than a piping hot tea.""
+    Sig 3 B [rew:+1.0]: ""A whispering breeze against a thunderous roar. Your card must be significantly larger than mine.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[28, 47, 63]  B:[46, 55, 62]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Slowly falling""
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes suddenly."
+    Sig 2 A [rew:+1.0]: ""Fragile, morning dew.""
+    Sig 2 B [rew:+1.0]: ""Thunder rumbles ominously, while the breeze whispers gently.""
+    Sig 3 A [rew:+1.0]: ""Morning's warmth lingers.""
+    Sig 3 B [rew:+1.0]: ""Your thunder is tame compared to my bolt of lightning, while your morning dew seems as delicate as the breeze that whispers.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[28, 47, 63]  B:[46, 55, 62]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A tiny spark"
+    Sig 1 B [rew:+1.0]: "Something incredibly bright vs something barely visible"
+    Sig 2 A [rew:+1.0]: "Building on our previous signals, my next signal is: "A small forest after a long drought"."
+    Sig 2 B [rew:+1.0]: ""A blazing firework vs a faint whisper""
+    Sig 3 A [rew:+1.0]: ""Like the calm after a storm"."
+    Sig 3 B [rew:+1.0]: ""A sudden thunderstorm vs a distant static hum.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:00:14] step=0  A:[28, 47, 63]  B:[46, 55, 62]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A gentle morning breeze"
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a storm approaching."
+    Sig 2 A [rew:+1.0]: ""A fleeting sunset on a tropical island"  This signal implies that my card is relatively small compared to my partner's, as a fleeting sunset is less dramatic and short-lived compared to a storm. It a"
+    Sig 2 B [rew:+1.0]: ""A gentle breeze versus a brisk wind suggests a clear gap between our cards.""
+    Sig 3 A [rew:+1.0]: ""A summer day without a cloud""
+    Sig 3 B [rew:+1.0]: ""A warm summer day contrasts sharply with the chill of an autumn evening, highlighting the distinct difference between our ranges.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:28   Pile: [28]
+  Round 2  pile=[28]
+    Sig 1 A [rew:+1.0]: "Something ancient."
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm"
+    Sig 2 A [rew:+1.0]: ""Faster than a sunrise""
+    Sig 2 B [rew:+1.0]: ""A whispering breeze versus a howling gale, where does your number fall?""
+    Sig 3 A [rew:+1.0]: ""Faster than a sunrise" implies that my card is significantly higher than the previous card (28). Since it's a comparative phrase, it's likely that my card is quite high.  Considering the signal "A wh"
+    Sig 3 B [rew:+1.0]: ""A gentle rustle of leaves contrasts with a roaring hurricane, which number aligns with yours?""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:47   Pile: [28]
+  → VIOLATION (1/6 played)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+STEP 1  [2026-05-24 17:11:02]  wins=0/32  violations=9  deadlocks=23  cheats=0  avg_played=0.1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[8, 72, 79]  B:[35, 48, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'd like to go before someone with a "garden hose""
+    Sig 1 B [rew:+1.0]: "Something hot vs something cold; I'm feeling bold and ready to go now!"
+    Sig 2 A [rew:+1.0]: "I'll respond with a signal that builds on our previous conversation. Here's my next signal: "A slow burn vs a blazing inferno.""
+    Sig 2 B [rew:+1.0]: ""A sudden gust of wind versus a gentle breeze; my confidence matches yours but we're eager to move forward.""
+    Sig 3 A [rew:+1.0]: ""I'm still on a gentle breeze, but the sun is starting to shine.""
+    Sig 3 B [rew:+1.0]: ""A cool morning dew versus a scorching desert sun; let's continue moving forward together.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:8   Pile: [8]
+  Round 2  pile=[8]
+    Sig 1 A [rew:+1.0]: "A tiny spark"
+    Sig 1 B [rew:+1.0]: "Something blazingly fast vs something crawling slowly"
+    Sig 2 A [rew:+1.0]: ""I've been warming up slowly.""
+    Sig 2 B [rew:+1.0]: ""A searing inferno vs a barely perceptible whisper.""
+    Sig 3 A [rew:+1.0]: ""A gentle summer breeze""
+    Sig 3 B [rew:+1.0]: ""A hurricane raging vs a soft breeze dying down.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (1/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[8, 72, 79]  B:[35, 48, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll choose a phrase to send: "A quiet morning sunrise""
+    Sig 1 B [rew:+1.0]: "Something very small vs something enormous (your choice of objects) - I'm feeling very urgent to play this one."
+    Sig 2 A [rew:+1.0]: ""A gentle stream meanders through the forest."  (This signal implies that the partner's card is likely much larger than yours, as the image of a forest suggests a vast and expansive space, whereas a g"
+    Sig 2 B [rew:+1.0]: ""A gentle whisper compared to a thunderous roar - my number is still smaller than yours but larger than mine.""
+    Sig 3 A [rew:+1.0]: ""Our paths have diverged, like two branches of a tree.""
+    Sig 3 B [rew:+1.0]: ""An electric spark leaps across wires, capturing attention instantly - my number is closer to yours but still significantly smaller.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[8, 72, 79]  B:[35, 48, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Something heavy in the pile, we're getting close""
+    Sig 1 B [rew:+1.0]: "Something hot vs something cold; I'm burning to play this one!"
+    Sig 2 A [rew:+1.0]: ""Frost on the window, the breeze is picking up""
+    Sig 2 B [rew:+1.0]: ""Urgent need to play, while my partner's card seems less urgent""
+    Sig 3 A [rew:+1.0]: ""Nature's canvas is blank, awaiting our brushstrokes"  This signal suggests that my cards are light and blank, and that we are in the early stages of the game. I'm hinting at the idea that my cards ar"
+    Sig 3 B [rew:+1.0]: ""Clouds rolling in, but still breathable air, I feel confident my card is closer to yours than it is to yours.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[8, 72, 79]  B:[35, 48, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "My signal: "Time is ripe for the harvest""
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm approaching."
+    Sig 2 A [rew:+1.0]: ""My hand is like a warm summer breeze versus a raging fire.""
+    Sig 2 B [rew:+1.0]: ""More like a gentle breeze than a fierce tempest.""
+    Sig 3 A [rew:+1.0]: "My next signal: "A summer morning sunrise compared to a late-afternoon desert sunset.""
+    Sig 3 B [rew:+1.0]: ""Your card seems to be more akin to a brisk autumn breeze rather than the scorching heat of a desert sun.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:8   Pile: [8]
+  Round 2  pile=[8]
+    Sig 1 A [rew:+1.0]: ""Like a warm ember, a spark that's almost gone.""
+    Sig 1 B [rew:+1.0]: "Something very bright vs extremely dim (indicating your card is small vs large)"
+    Sig 2 A [rew:+1.0]: "Your previous signals were:  You: ""Like a warm ember, a spark that's almost gone."" | Partner: "Something very bright vs extremely dim (indicating their card is small vs large)" Given your partner's "
+    Sig 2 B [rew:+1.0]: ""Strong conviction to go now vs hesitance to wait (suggesting your card is more certain of its place in the sequence).""
+    Sig 3 A [rew:+1.0]: ""Freshly fallen snow.""
+    Sig 3 B [rew:+1.0]: ""Urgency to play your card vs patience (showing how confident you are in the sequence, compared to your partner).""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:72   Pile: [8]
+  → VIOLATION (1/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[8, 72, 79]  B:[35, 48, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "Something's coming from behind."
+    Sig 1 B [rew:+1.0]: "Something blazing hot vs something barely warm"
+    Sig 2 A [rew:+1.0]: ""Morning sunshine vs evening shadow"  This signal builds on the "something blazing hot vs something barely warm" from your partner, and adds a contrast between light and darkness, suggesting that your"
+    Sig 2 B [rew:+1.0]: ""A sudden storm surge compared to a gentle breeze.""
+    Sig 3 A [rew:+1.0]: ""Dawn's warm light creeps under the door""
+    Sig 3 B [rew:+1.0]: ""A dim candlelight fades away compared to a blinding flash of lightning.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[8, 72, 79]  B:[35, 48, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A small step forward tonight."
+    Sig 1 B [rew:+1.0]: "Something blazingly fast vs something crawling slowly; I feel strongly we should go now."
+    Sig 2 A [rew:+1.0]: ""Tonight's momentum is shifting.""
+    Sig 2 B [rew:+1.0]: ""A gentle breeze moving ahead vs a thunderous storm brewing; my conviction is higher than yours.""
+    Sig 3 A [rew:+1.0]: "I'll read your partner's previous signals carefully.  In Round 1, your partner mentioned "Something blazingly fast vs something crawling slowly; I feel strongly we should go now." This implies that th"
+    Sig 3 B [rew:+1.0]: ""A whisper fading away vs a roar building up; my number is further ahead.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[8, 72, 79]  B:[35, 48, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll send a signal that conveys my card's relative size. Here's my signal:  A small seed is quickly being crushed."
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm"
+    Sig 2 A [rew:+1.0]: "My next signal is: "Rushing water against a boulder."  This signal aims to convey a sense of turbulence and intensity, suggesting that my card is relatively large and possibly overwhelming, which will"
+    Sig 2 B [rew:+1.0]: ""A whisper in a roar.""
+    Sig 3 A [rew:+1.0]: "I notice my partner's signals have established a dynamic range of sounds. "A seed crushed quickly" and "a whisper in a roar" suggest that their card is relatively small compared to mine, given the vas"
+    Sig 3 B [rew:+1.0]: ""A delicate feather floating against a powerful waterfall.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[8, 72, 79]  B:[35, 48, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Time to ripen the fruit""
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one; I'm feeling the urgency to play now."
+    Sig 2 A [rew:+1.0]: ""Summer sunshine warms the earth faster than a crackling fire."  This signal implies that my card is smaller or less significant than my partner's, as I'm comparing it to a warm, intense phenomenon (t"
+    Sig 2 B [rew:+1.0]: ""An intense gust of wind compared to a calm breeze; my card is closer to yours than it is to your partner's.""
+    Sig 3 A [rew:+1.0]: ""A slow, gentle melody lingers in the air, a soothing contrast to the urgency in our last exchange.""
+    Sig 3 B [rew:+1.0]: ""Spring showers bring fresh life before they turn into torrential downpours, while my card is more akin to a gentle drizzle.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[15, 22, 68]  B:[6, 34, 69]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""My smallest is ancient""
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes the sky. It's blazing hot and intense. I need to act quickly."
+    Sig 2 A [rew:+1.0]: "Your partner's previous signals suggest that their card is large, hot, and intense, implying that their smallest card is likely one of the highest numbers in the pile.  My next signal: "The heat of a "
+    Sig 2 B [rew:+1.0]: ""I feel like my bolt is about to break through the clouds, while your ancient seems stable and unchanging.""
+    Sig 3 A [rew:+1.0]: ""We're just getting started."  This signal implies that our cards are still quite far apart in terms of magnitude, and that there's plenty of room for growth and progress. It suggests that we're not q"
+    Sig 3 B [rew:+1.0]: ""The warmth of this summer day rivals the intensity of your ancient, but still pales in comparison to your overall size.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[15, 22, 68]  B:[6, 34, 69]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A whisper"
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one. I'm feeling urgent to play."
+    Sig 2 A [rew:+1.0]: ""Something smooth compared to something jagged.""
+    Sig 2 B [rew:+1.0]: ""A swift breeze contrasts sharply with a raging storm. Your card must be smaller than mine, but how much smaller?""
+    Sig 3 A [rew:+1.0]: ""Fragile things can shatter under pressure."  This signal helps convey my confidence in the correct order and hints at a relative size comparison to my partner's card, suggesting that my card is fragi"
+    Sig 3 B [rew:+1.0]: ""A gentle rustling leaf contrasts with a thunderous clap of thunder. My card is significantly larger than yours, while your card is still relatively small.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:15   Pile: []
+  → VIOLATION (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[15, 22, 68]  B:[6, 34, 69]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A snowflake melts slowly in warm sunlight."
+    Sig 1 B [rew:+1.0]: "A bolt of lightning crackling down from the sky, urging it forward."
+    Sig 2 A [rew:+1.0]: "I'll analyze the signals from the previous round:  Your signal: "A snowflake melts slowly in warm sunlight." This implies that your card is relatively small compared to the large, sudden, and intense "
+    Sig 2 B [rew:+1.0]: ""A sudden gust of wind blows through the trees, emphasizing the slight edge you hold over me.""
+    Sig 3 A [rew:+1.0]: ""A gentle stream meanders through the landscape, carving its path with steady persistence.""
+    Sig 3 B [rew:+1.0]: ""A gentle whisper against the backdrop of thunderous applause, highlighting the quiet strength of your smaller number.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:15   Pile: []
+  → VIOLATION (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[15, 22, 68]  B:[6, 34, 69]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""A delicate seedling bursting forth from the ground"  (This phrase conveys a sense of something small and tender, suggesting that my card is one of the lower numbers in the range.)"
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon vs a violent one, I feel this one is a storm compared to the calm."
+    Sig 2 A [rew:+1.0]: ""Morning light creeps over the landscape""
+    Sig 2 B [rew:+1.0]: ""A sudden thunderstorm brewing versus a distant light breeze, mine seems to be closer to the storm.""
+    Sig 3 A [rew:+1.0]: ""A morning sunrise unfolding slowly"  This signal aims to further emphasize the gradual and peaceful nature of my card, which suggests that it's on the lower end of the spectrum, building upon the ide"
+    Sig 3 B [rew:+1.0]: ""A heavy downpour intensifies rapidly versus a meager sprinkle, mine appears to be more aligned with the downpour.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[15, 22, 68]  B:[6, 34, 69]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "Something that's really old and ancient."
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes the ground. It demands to be acknowledged first."
+    Sig 2 A [rew:+1.0]: ""A mountain's shadow stretches far, but the peak is still hidden."  This signal implies that your card is high, but its exact position is unknown. By mentioning the mountain's shadow and the hidden pe"
+    Sig 2 B [rew:+1.0]: ""Your ancient relic pales in comparison to the raw power of my lightning strike.""
+    Sig 3 A [rew:+1.0]: "Your partner's signals imply that their card is high and powerful, while your card is relatively low and ancient. You can build on that by creating a signal that contrasts their raw power with your mo"
+    Sig 3 B [rew:+1.0]: ""The crackling energy of my bolt rises to the heavens, overshadowing the distant mountain's shadow.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[15, 22, 68]  B:[6, 34, 69]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A delicate snowflake."
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm approaching."
+    Sig 2 A [rew:+1.0]: ""The quietness of a summer evening.""
+    Sig 2 B [rew:+1.0]: ""A whispering breeze versus a howling gale, your card seems larger than mine but still quite small compared to 69.""
+    Sig 3 A [rew:+1.0]: ""Our conversation is getting louder.""
+    Sig 3 B [rew:+1.0]: ""A gentle rustling leaf contrasts with the intensity of a hurricane, hinting at the position of your card in relation to mine.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[15, 22, 68]  B:[6, 34, 69]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll start with a signal that conveys my urgency to play. Here's my signal:  "A racing storm is approaching."  This signal aims to convey a sense of urgency and energy, without revealing any specific "
+    Sig 1 B [rew:+1.0]: "Something extremely small vs something enormous (choose an object) - I'm feeling very confident!"
+    Sig 2 A [rew:+1.0]: ""I feel like I'm standing at the edge of a vast, still ocean.""
+    Sig 2 B [rew:+1.0]: ""A gentle breeze precedes the storm, indicating my card is larger but still smaller than your urgent signal.""
+    Sig 3 A [rew:+1.0]: ""I'm about to wade into the waves.""
+    Sig 3 B [rew:+1.0]: ""I'm stepping into the waves, showing a bit more strength than the calm ocean edge.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:15   Pile: []
+  → VIOLATION (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[15, 22, 68]  B:[6, 34, 69]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""A small spark has been lit.""
+    Sig 1 B [rew:+1.0]: "Something hot vs something cold; I'm very confident this one goes now."
+    Sig 2 A [rew:+1.0]: ""I've got a fire that's burning steady, but it's not about to engulf the entire night.""
+    Sig 2 B [rew:+1.0]: ""A gentle breeze versus a fierce storm; my number is definitely larger but still relatively low.""
+    Sig 3 A [rew:+1.0]: "You and your partner have exchanged signals that provide clues about their relative positioning and confidence in the order of the numbers.  From the first round, your partner described something hot "
+    Sig 3 B [rew:+1.0]: ""A whisper compared to a roar; my card is more subtle than yours but still significant.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:15   Pile: []
+  → VIOLATION (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[12, 36, 53]  B:[4, 67, 77]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "Something in the attic."
+    Sig 1 B [rew:+1.0]: "Something cool vs something scorching hot"
+    Sig 2 A [rew:+1.0]: "Your partner's signals from previous rounds are: Round 1: You: "Something in the attic." Partner: "Something cool vs something scorching hot"  This implies that your card is smaller (in temperature) t"
+    Sig 2 B [rew:+1.0]: ""A sudden burst of warmth vs a lingering blaze.""
+    Sig 3 A [rew:+1.0]: ""A lukewarm breeze vs a fiery inferno.""
+    Sig 3 B [rew:+1.0]: ""A brief flash of light vs a steady glow.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:12   Pile: []
+  → VIOLATION (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[12, 36, 53]  B:[4, 67, 77]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "Something small is hiding next to a giant."
+    Sig 1 B [rew:+1.0]: "Something extremely bright vs something barely visible"
+    Sig 2 A [rew:+1.0]: "I'll read my partner's signal "Something extremely bright vs something barely visible" and infer that their card is likely to be a larger number than mine, since something extremely bright is being co"
+    Sig 2 B [rew:+1.0]: ""Your brightness seems dwarfed by mine; it's almost pitch-black compared.""
+    Sig 3 A [rew:+1.0]: ""I'm currently stuck between a summer day and a perpetual winter.""
+    Sig 3 B [rew:+1.0]: ""Illumination from a single candle against the glare of a thousand suns.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[12, 36, 53]  B:[4, 67, 77]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "Something that's tiny compared to the whole pile."
+    Sig 1 B [rew:+1.0]: "Something tiny versus something huge, I'm extremely confident this is the smallest."
+    Sig 2 A [rew:+1.0]: "I see what we've established. My partner seems to think they have the smallest card, which is a good clue. Given our previous signals, I'd say my next signal should convey that I have a card that's la"
+    Sig 2 B [rew:+1.0]: ""A whisper against a roar, my card is a gentle breeze in comparison to yours.""
+    Sig 3 A [rew:+1.0]: "I'll analyze the signal history to understand my partner's card size relative to mine.  In Round 1, my partner responded with "Something tiny versus something huge, I'm extremely confident this is the"
+    Sig 3 B [rew:+1.0]: ""An urgent gust before a calm, my card is a strong contender for the middle ground.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[12, 36, 53]  B:[4, 67, 77]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "Time to get this game started! Here's my signal phrase:  "The clock is ticking, but the storm is about to break."  This phrase conveys a sense of urgency and emphasizes that it's time to act quickly, "
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a hurricane. I think it should be mine."
+    Sig 2 A [rew:+1.0]: ""Morning light slowly dawns on a foggy day.""
+    Sig 2 B [rew:+1.0]: ""Urgency fades as the calm before the storm gathers strength.""
+    Sig 3 A [rew:+1.0]: ""I sense a fire in the darkness, slowly warming the air.""
+    Sig 3 B [rew:+1.0]: ""Sunrise breaks through the morning mist, revealing the path ahead.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[12, 36, 53]  B:[4, 67, 77]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "My signal: "a drop of water""
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one."
+    Sig 2 A [rew:+1.0]: "Your partner's signal "A gentle natural phenomenon compared to a violent one" suggests their card is larger than yours, as gentle phenomena are typically associated with smaller scales, while violent "
+    Sig 2 B [rew:+1.0]: ""A small breeze versus a thunderstorm, how confident are you in your placement?""
+    Sig 3 A [rew:+1.0]: "I'll respond with: "The silence between a chirping cricket and a sizzling fire.""
+    Sig 3 B [rew:+1.0]: ""A barely perceptible whisper versus a deafening roar, how sure are you that you're lower in the sequence?""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[12, 36, 53]  B:[4, 67, 77]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""A small, insignificant speck in the grand symphony""
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a hurricane. I think it should be my turn."
+    Sig 2 A [rew:+1.0]: ""A distant, shimmering star in the night sky."  This response continues the theme of comparing your card to a natural phenomenon, but shifts the focus to a more celestial and less intense scale. The g"
+    Sig 2 B [rew:+1.0]: ""Like a whisper versus a thunderclap—how confident are you in your placement?""
+    Sig 3 A [rew:+1.0]: "I'll build upon our previous signals. Given my partner's comparison to a thunderclap (which implies a significant, loud sound) and their question about confidence in placement, my next signal is: "A g"
+    Sig 3 B [rew:+1.0]: ""More akin to a shooting star than a full-blown constellation—how does this fit into our shared sequence?""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:12   Pile: []
+  → VIOLATION (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[12, 36, 53]  B:[4, 67, 77]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Something heavy is falling from the sky."  (This phrase conveys that my card is a large number, implying it's high in value, and also suggests a sense of urgency, implying I'm trying to get it down q"
+    Sig 1 B [rew:+1.0]: "A swift bolt of lightning crackling across the sky compared to a gentle breeze. I'm ready to go now!"
+    Sig 2 A [rew:+1.0]: ""In a long, slow river."  This phrase builds on the previous signal, conveying that your card is relatively small compared to yours, while also maintaining a sense of flow and continuity."
+    Sig 2 B [rew:+1.0]: ""A towering mountain peak dwarfs the smallest ripple on the surface, indicating my card is significantly larger than yours but still smaller than mine.""
+    Sig 3 A [rew:+1.0]: ""Ripples on a pond can become turbulent before they crash onto the shore.""
+    Sig 3 B [rew:+1.0]: ""From a distant thunderstorm, a single drop of rain contrasts sharply against the vast ocean, emphasizing the significant gap between our cards.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[12, 36, 53]  B:[4, 67, 77]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Fresh snowflakes gently fall."  (I'm choosing a card that's quite low in the pile to signal that I'm playing soon, and implying that my card is not extremely low.)"
+    Sig 1 B [rew:+1.0]: "Something hot vs something cold; I'm feeling very urgent to play this one."
+    Sig 2 A [rew:+1.0]: ""I'm searching for a lost key."  This signal continues to imply that your card is not extremely low and suggests that you are thinking about playing a moderate-sized card. It also implies a sense of u"
+    Sig 2 B [rew:+1.0]: ""A whisper compared to a thunderous roar; I sense our turn will come quickly.""
+    Sig 3 A [rew:+1.0]: ""Night sky full of stars""
+    Sig 3 B [rew:+1.0]: ""An oasis in a vast desert; my turn feels imminent.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[41, 86, 93]  B:[21, 56, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Slow drip, steady rise""
+    Sig 1 B [rew:+1.0]: "Something incredibly tiny vs something overwhelmingly huge, I'm extremely confident this is our smallest card and we need to act quickly."
+    Sig 2 A [rew:+1.0]: ""A river's gentle current vs a raging torrent, my pace is deliberate but not hesitant.""
+    Sig 2 B [rew:+1.0]: ""A whisper compared to thunderclap, my confidence is sky-high and I sense our smallest card is about to be revealed.""
+    Sig 3 A [rew:+1.0]: ""A forest after a devastating wildfire, my pace is cautious but hopeful.""
+    Sig 3 B [rew:+1.0]: ""A pinprick compared to an avalanche, my confidence peaks as I feel our largest card must be among yours.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[41, 86, 93]  B:[21, 56, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll send: "A drop of water versus a mountain.""
+    Sig 1 B [rew:+1.0]: "Something hot vs something cold, I'm burning to get this one down."
+    Sig 2 A [rew:+1.0]: "A "drop of water" is tiny, while a "mountain" is enormous."
+    Sig 2 B [rew:+1.0]: ""From a gentle breeze to a thunderstorm, my card feels more like the former.""
+    Sig 3 A [rew:+1.0]: "A whispered lullaby versus a chaotic cacophony."
+    Sig 3 B [rew:+1.0]: ""A gentle whisper compared to a roar of thunder, my card is quieter but still closer to the mountain.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[41, 86, 93]  B:[21, 56, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "My signal: A tiny pebble amidst a mountain"
+    Sig 1 B [rew:+1.0]: "Something tiny versus something huge, my tiny card feels ready to go now."
+    Sig 2 A [rew:+1.0]: ""My signal: Morning sunshine vs evening twilight, mine's on the cusp of darkness.""
+    Sig 2 B [rew:+1.0]: ""Your signal paints a vivid contrast, a whisper against the roar; my card, while larger than yours, still humbles when compared to your tiny yet impactful gesture.""
+    Sig 3 A [rew:+1.0]: ""My signal: A solitary snowflake in a blizzard.""
+    Sig 3 B [rew:+1.0]: ""Based on your subtle yet powerful hint, I gauge your card as slightly larger than mine but still within reach of being played early.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[41, 86, 93]  B:[21, 56, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll send: "A delicate, morning dewdrop""
+    Sig 1 B [rew:+1.0]: "A whisper vs a shout, I'm ready to play now!"
+    Sig 2 A [rew:+1.0]: ""I'm warming up to a summer breeze.""
+    Sig 2 B [rew:+1.0]: ""A swift breeze vs a storm surge, my card is still a whisper compared to yours.""
+    Sig 3 A [rew:+1.0]: ""A gentle morning dewdrop is slowly evaporating.""
+    Sig 3 B [rew:+1.0]: ""I feel like my card is a steady wind now, pushing past your hinted warmth into the cooler, more constant gusts.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[41, 86, 93]  B:[21, 56, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "My signal: "A small, delicate thing.""
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm approaching."
+    Sig 2 A [rew:+1.0]: "My next signal: "A whispered secret shared in a crowded room.""
+    Sig 2 B [rew:+1.0]: ""A whisper versus a roar in a canyon.""
+    Sig 3 A [rew:+1.0]: "I notice that my partner described a loud thunderstorm compared to a gentle wind, implying that their card is larger. They also mentioned a crowded room versus a canyon, which suggests that their card"
+    Sig 3 B [rew:+1.0]: ""Your card's mystery compared to mine, like a tiny ripple versus a massive tsunami breaking upon the shore.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[41, 86, 93]  B:[21, 56, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A gentle morning dew vs a thick fog"
+    Sig 1 B [rew:+1.0]: "Something as tiny as a pinprick vs something as vast as an ocean. I feel a strong urgency to play."
+    Sig 2 A [rew:+1.0]: ""A light breeze stirs the trees, whispering secrets to the morning sun.""
+    Sig 2 B [rew:+1.0]: ""A slight breeze vs a thunderstorm, conveying a clear sense of movement and action.""
+    Sig 3 A [rew:+1.0]: ""Morning light creeps over the horizon, a slow and steady dance.""
+    Sig 3 B [rew:+1.0]: ""A gust of wind versus a hurricane, highlighting the dramatic contrast in strength and impact.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[41, 86, 93]  B:[21, 56, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A small, delicate flower blooming in the sunlight."
+    Sig 1 B [rew:+1.0]: "A whisper compared to a roar. Time is fleeting; act now."
+    Sig 2 A [rew:+1.0]: ""A morning sunrise slowly creeps over the horizon.""
+    Sig 2 B [rew:+1.0]: ""A gentle breeze moves the tiniest leaf, while my card still stands tall amidst the storm.""
+    Sig 3 A [rew:+1.0]: ""Fragile as a frost on a winter's night.""
+    Sig 3 B [rew:+1.0]: ""A ripple in the calm sea pales in comparison to the towering mountain I hold.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:41   Pile: []
+  → VIOLATION (0/6 played)
+
+======================================================================
+[2026-05-24 17:11:02] step=1  A:[41, 86, 93]  B:[21, 56, 87]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "Something that's heavy in the pile."
+    Sig 1 B [rew:+1.0]: "A whisper compared to a storm. Time is fleeting, let's move!"
+    Sig 2 A [rew:+1.0]: "I think I've read my partner's signals carefully. They seemed to imply that their card is relatively light and that they're emphasizing the importance of moving quickly. They used the storm phrase, wh"
+    Sig 2 B [rew:+1.0]: ""A gentle breeze contrasts sharply with a thunderous roar; urgency compels us to act swiftly.""
+    Sig 3 A [rew:+1.0]: ""Life is a canvas, and every brushstroke builds upon the last.""
+    Sig 3 B [rew:+1.0]: ""Intensity of the signal matches the weight of their card; we must act swiftly to ensure our numbers ascend in harmony.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:41   Pile: []
+  → VIOLATION (0/6 played)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+STEP 2  [2026-05-24 17:29:19]  wins=0/32  violations=17  deadlocks=15  cheats=0  avg_played=1.6
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[21, 63, 76]  B:[26, 79, 88]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll start by sending the signal: "Tiny spark""
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes suddenly, urgent and powerful."
+    Sig 2 A [rew:+1.0]: "Since "Tiny spark" implies a small size and my partner responded with "A bolt of lightning strikes suddenly, urgent and powerful," which conveys a sense of suddenness and intensity, I'll send a signal"
+    Sig 2 B [rew:+1.0]: ""Strong gust of wind follows the lightning, growing stronger as it passes.""
+    Sig 3 A [rew:+1.0]: ""I'm still waiting for a spark to ignite a fire.""
+    Sig 3 B [rew:+1.0]: ""I'll continue with a steady breeze, building confidence in my position relative to yours.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [21]
+  Round 2  pile=[21]
+    Sig 1 A [rew:+1.0]: "Time to make our move. I'll send: "Slow drip""
+    Sig 1 B [rew:+1.0]: "A gentle breeze compared to a thunderstorm approaching."
+    Sig 2 A [rew:+1.0]: "You: "A slow drip is nothing compared to a river in full flow."  This signal implies that your card is quite high in value, as it's being compared to a slow drip, which is a very slow process. By cont"
+    Sig 2 B [rew:+1.0]: ""A whisper compared to a roar, showing I'm higher than you but lower than me.""
+    Sig 3 A [rew:+1.0]: "I'll add to the signal with "A wildfire versus a wildfire that's been smoldering for years". This continues the comparison to emphasize my card's magnitude and indicates that it's more significant tha"
+    Sig 3 B [rew:+1.0]: ""An urgent whisper versus a slow drip, indicating my card is significantly higher than yours but still lower than the slow drip suggests.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:63   Pile: [21]
+  → VIOLATION (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[21, 63, 76]  B:[26, 79, 88]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'd like to signal that my card is something that you'd typically find in a kitchen, and it's quite light."
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm. I feel we need to act quickly."
+    Sig 2 A [rew:+1.0]: "I'll build on our previous signals. Since my partner's signal implies a sense of urgency and a large scale (gust of wind compared to a thunderstorm), I'll respond with: "A snowflake in a blizzard.""
+    Sig 2 B [rew:+1.0]: ""Your card sounds significantly lighter than mine, and I'm feeling more confident about our turn order.""
+    Sig 3 A [rew:+1.0]: ""I'm envisioning a slow-cooked meal on a winter evening.""
+    Sig 3 B [rew:+1.0]: ""Given your hint about a blizzard and the urgency implied by your gust of wind, I feel our cards must be in a similar ballpark, but still very different from yours. Let's proceed with a bit more confi"
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [21]
+  Round 2  pile=[21]
+    Sig 1 A [rew:+1.0]: "Time's ticking."
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm. I feel confident this card belongs at the top."
+    Sig 2 A [rew:+1.0]: ""A gentle morning dewdrop vs a heavy summer rain."  This signal implies that my card is smaller than theirs, and builds upon the idea of relative size and confidence. The gentle dewdrop suggests a sma"
+    Sig 2 B [rew:+1.0]: ""Your card feels like a gentle breeze compared to mine, indicating it's closer to the start than my largest card.""
+    Sig 3 A [rew:+1.0]: ""In a quiet library, a whispered secret vs a grand symphony.""
+    Sig 3 B [rew:+1.0]: ""A gentle autumn leaf compared to a raging forest fire; my card is like that leaf, showing a steady progression from small to larger.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[21, 63, 76]  B:[26, 79, 88]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A small, steady flame."
+    Sig 1 B [rew:+1.0]: "Something extremely hot vs something barely warm"
+    Sig 2 A [rew:+1.0]: ""A faint whisper in the darkness.""
+    Sig 2 B [rew:+1.0]: ""A blazing sun vs a lukewarm bath.""
+    Sig 3 A [rew:+1.0]: ""Fragile, yet unbreakable.""
+    Sig 3 B [rew:+1.0]: ""A searing inferno vs a mere breeze.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [21]
+  Round 2  pile=[21]
+    Sig 1 A [rew:+1.0]: "A gentle summer breeze."
+    Sig 1 B [rew:+1.0]: "A gentle breeze versus a thunderstorm approaching. I'm feeling very confident we should go now."
+    Sig 2 A [rew:+1.0]: ""Like a river that's about to spill over its banks, I'm feeling the pressure to let go soon.""
+    Sig 2 B [rew:+1.0]: ""A gentle breeze versus a calm ocean tide. My card is significantly larger than yours, and I'm extremely confident it should be played next.""
+    Sig 3 A [rew:+1.0]: ""A crackling fire versus a raging inferno.""
+    Sig 3 B [rew:+1.0]: ""A gentle wave cresting towards the shore compared to a barely perceptible ripple—my card feels much larger and more urgent to play.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:63   Pile: [21]
+  → VIOLATION (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[21, 63, 76]  B:[26, 79, 88]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'd send a signal like: "Something I've been holding onto for a long time."  This signal conveys that my card is relatively small compared to the large gap in the pile and the larger numbers in my han"
+    Sig 1 B [rew:+1.0]: "Something incredibly tiny compared to something absolutely massive."
+    Sig 2 A [rew:+1.0]: ""Like a fleeting whisper in the wind.""
+    Sig 2 B [rew:+1.0]: ""a gentle breeze compared to a thunderstorm raging nearby.""
+    Sig 3 A [rew:+1.0]: ""The gentle lapping of waves on a calm summer day.""
+    Sig 3 B [rew:+1.0]: ""A soft murmur before a cacophony of voices.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [21]
+  Round 2  pile=[21]
+    Sig 1 A [rew:+1.0]: "My signal is: "A delicate seedling struggling to break through the soil"  ( Sent in the spirit of conveying a sense of smallness and urgency)"
+    Sig 1 B [rew:+1.0]: "Something blazing hot vs something freezing cold, I'm burning to get this one down!"
+    Sig 2 A [rew:+1.0]: ""I've been quietly ripening for a while, but I think it's almost time to burst forth into bloom""
+    Sig 2 B [rew:+1.0]: ""A sudden burst of energy vs a steady, calm heartbeat, mine starts the sequence with its raw power.""
+    Sig 3 A [rew:+1.0]: "Your partner's signals suggest that their card is larger than yours, possibly in a explosive or powerful sense. To build on this, my next signal will convey a sense of gentle unfolding, implying that "
+    Sig 3 B [rew:+1.0]: ""My rising tide overtakes yours, setting a new pace for us all.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:63   Pile: [21]
+  → VIOLATION (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[21, 63, 76]  B:[26, 79, 88]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "My signal is: "A tiny seedling needs attention.""
+    Sig 1 B [rew:+1.0]: "Something blazing hot vs something barely warm"
+    Sig 2 A [rew:+1.0]: ""I'm not ready to get burned yet.""
+    Sig 2 B [rew:+1.0]: ""A scorching inferno vs a cool breeze blowing gently.""
+    Sig 3 A [rew:+1.0]: ""A summer day feels like a brief respite from the storm.""
+    Sig 3 B [rew:+1.0]: ""A raging wildfire vs a refreshing mist wafting by.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [21]
+  Round 2  pile=[21]
+    Sig 1 A [rew:+1.0]: ""Fragile vase""
+    Sig 1 B [rew:+1.0]: "A gentle breeze compared to a thunderstorm."
+    Sig 2 A [rew:+1.0]: ""Summer afternoon""
+    Sig 2 B [rew:+1.0]: ""Your fragility compared to the strength of my 88 feels significant.""
+    Sig 3 A [rew:+1.0]: ""Soft morning light.""
+    Sig 3 B [rew:+1.0]: ""A summer afternoon feels like child's play compared to the daunting challenge of your number.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[21, 63, 76]  B:[26, 79, 88]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Time to harvest the ripe ones""
+    Sig 1 B [rew:+1.0]: "A whisper compared to a roar"
+    Sig 2 A [rew:+1.0]: ""Morning dew on a frosty window"  This signal maintains a vague relative scale, suggesting my card is likely smaller than my partner's, but still significant enough to be mentioned in the same phrase."
+    Sig 2 B [rew:+1.0]: ""More of a breeze than a tempest""
+    Sig 3 A [rew:+1.0]: ""Morning sunshine on a cloudy day""
+    Sig 3 B [rew:+1.0]: ""A gust of wind compared to a gale""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [21]
+  Round 2  pile=[21]
+    Sig 1 A [rew:+1.0]: "My signal: A tiny, fledgling seedling"
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm"
+    Sig 2 A [rew:+1.0]: ""Like a warm summer breeze on a still pond's surface""
+    Sig 2 B [rew:+1.0]: "Your mountain peak towering over a mere molehill."
+    Sig 3 A [rew:+1.0]: ""A delicate morning dewdrop on a winter's windowpane""
+    Sig 3 B [rew:+1.0]: ""A sudden, fierce sandstorm contrasts sharply with a calm, dew-kissed leaf.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:63   Pile: [21]
+  → VIOLATION (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[21, 63, 76]  B:[26, 79, 88]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A gentle morning dew drop on a still pond"
+    Sig 1 B [rew:+1.0]: "Something extremely bright vs something barely visible"
+    Sig 2 A [rew:+1.0]: ""I'm thinking of something smooth and heavy""
+    Sig 2 B [rew:+1.0]: ""A blazing sun compared to a whispering breeze.""
+    Sig 3 A [rew:+1.0]: ""A warm, comforting blanket""
+    Sig 3 B [rew:+1.0]: ""A raging storm front against a meadow wind.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [21]
+  Round 2  pile=[21]
+    Sig 1 A [rew:+1.0]: ""Like a summer breeze""
+    Sig 1 B [rew:+1.0]: "A gentle breeze compared to a hurricane. I'm confident this one should go soon."
+    Sig 2 A [rew:+1.0]: ""I'm getting to the peak.""
+    Sig 2 B [rew:+1.0]: ""Compared to your gentle breeze, my steady stream of calmness feels like it needs to be next.""
+    Sig 3 A [rew:+1.0]: ""Like a mountain river""
+    Sig 3 B [rew:+1.0]: ""Your peak seems to be higher than my calmness; I'll let my stronger current guide us next.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:63   Pile: [21]
+  → VIOLATION (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[21, 63, 76]  B:[26, 79, 88]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A slow-moving, heavy fog"
+    Sig 1 B [rew:+1.0]: "Something as light as a feather compared to something as heavy as a boulder."
+    Sig 2 A [rew:+1.0]: ""A morning sunrise slowly creeping over a vast, open plain."  This signal continues the comparison theme from the partner's previous signal, emphasizing a vast scale to convey the idea that my card is"
+    Sig 2 B [rew:+1.0]: ""A gentle breeze versus a thunderous storm""
+    Sig 3 A [rew:+1.0]: "A soothing melody versus a cacophonous crash"
+    Sig 3 B [rew:+1.0]: ""A whisper against the backdrop of a roaring sea.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [21]
+  Round 2  pile=[21]
+    Sig 1 A [rew:+1.0]: "My signal: "A delicate, shimmering thread unwinding slowly""
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon vs a violent one; I feel my card is like a storm, ready to go now."
+    Sig 2 A [rew:+1.0]: ""My signal: A burst of sparkling energy releases, and I'm eager to see what unfolds.""
+    Sig 2 B [rew:+1.0]: ""My card is as calm and steady as a serene lake compared to the tumultuous storm you described; I have more patience and am eager to move forward.""
+    Sig 3 A [rew:+1.0]: "I'll respond to your previous signals by adding one of my own.  "My signal: A gentle breeze whispers secrets to the trees, as the morning dew clings to the grass.""
+    Sig 3 B [rew:+1.0]: ""My card's serenity contrasts sharply with the urgency and intensity you've conveyed; I believe it's the most stable option we have to contribute next.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:63   Pile: [21]
+  → VIOLATION (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[27, 31, 38]  B:[48, 70, 97]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A gentle morning sunrise"
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm approaching."
+    Sig 2 A [rew:+1.0]: ""Faster than a summer breeze.""
+    Sig 2 B [rew:+1.0]: ""A slight breeze versus a fierce hurricane""
+    Sig 3 A [rew:+1.0]: ""A morning's warmth compared to a scorching noon.""
+    Sig 3 B [rew:+1.0]: ""A whisper compared to a roar""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:27   Pile: [27]
+  Round 2  pile=[27]
+    Sig 1 A [rew:+1.0]: "Something that's often overlooked, yet quietly significant."
+    Sig 1 B [rew:+1.0]: "Something blazing hot vs something barely warm"
+    Sig 2 A [rew:+1.0]: ""Morning light vs afternoon glow""
+    Sig 2 B [rew:+1.0]: ""Urgency to get this one out vs hesitation, as if unsure.""
+    Sig 3 A [rew:+1.0]: ""Fragile, ephemeral, and fleeting, like a whispered secret.""
+    Sig 3 B [rew:+1.0]: ""A sense of sudden, overwhelming clarity vs lingering uncertainty.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:31   Pile: [27, 31]
+  Round 3  pile=[27, 31]
+    Sig 1 A [rew:+1.0]: ""something fragile and delicate"  (This phrase conveys that my card is small, without giving away its exact value.)"
+    Sig 1 B [rew:+1.0]: "Something blazingly hot vs icy cold; I'm feeling extremely confident this is early in the sequence."
+    Sig 2 A [rew:+1.0]: ""A symphony's gentle opening note""
+    Sig 2 B [rew:+1.0]: ""Urgency building towards the end of the sequence, while your signal hints at an earlier spot.""
+    Sig 3 A [rew:+1.0]: ""A soft breeze that gently rustles the leaves"  This signal aims to convey a sense of something that is light, airy, and peaceful, suggesting that my card is likely lower than their card. By building "
+    Sig 3 B [rew:+1.0]: ""A crescendo leading into a quiet conclusion; you seem more likely to have a smaller card, but still feel certain about your placement.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (2/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[27, 31, 38]  B:[48, 70, 97]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Morning dew on a spider's web""
+    Sig 1 B [rew:+1.0]: "Something blazing hot vs something barely warm"
+    Sig 2 A [rew:+1.0]: ""A crackling fire that's almost gone""
+    Sig 2 B [rew:+1.0]: ""Urgent storm approaching vs calm before the storm""
+    Sig 3 A [rew:+1.0]: ""Last wisps of autumn fog slowly clearing""
+    Sig 3 B [rew:+1.0]: ""A sudden flash of lightning vs steady burning embers""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:27   Pile: [27]
+  Round 2  pile=[27]
+    Sig 1 A [rew:+1.0]: "A single leaf on a vast book"
+    Sig 1 B [rew:+1.0]: "A fierce storm approaching quickly!"
+    Sig 2 A [rew:+1.0]: ""A crackling fire slowly spreading through dry wood""
+    Sig 2 B [rew:+1.0]: ""A sudden flash of lightning illuminating the dark sky""
+    Sig 3 A [rew:+1.0]: ""An autumn morning mist rising over a frozen lake""
+    Sig 3 B [rew:+1.0]: ""A raging wildfire consuming entire forests""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:31   Pile: [27, 31]
+  Round 3  pile=[27, 31]
+    Sig 1 A [rew:+1.0]: "My signal: The ocean's vastness"
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm."
+    Sig 2 A [rew:+1.0]: ""My signal: A gentle summer breeze.""
+    Sig 2 B [rew:+1.0]: ""Your ocean's vastness pales in comparison to the towering mountains I envision.""
+    Sig 3 A [rew:+1.0]: "My next signal: "A morning sunrise after a storm.""
+    Sig 3 B [rew:+1.0]: ""Your gentle breeze aligns with my vision of the smallest mountain peak.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:38   Pile: [27, 31, 38]
+  Round 4  pile=[27, 31, 38]
+    Sig 1 B [rew:+1.0]: "Something blazing hot vs something barely warm"
+    Sig 2 B [rew:+1.0]: "Your intensity feels more akin to a scorching sun than my barely warm candle flame."
+    Sig 3 B [rew:+1.0]: "A towering volcano erupting compared to a flickering candle wick."
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (3/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[27, 31, 38]  B:[48, 70, 97]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll choose "A small, delicate thing, like a snowflake" to convey that my card is small compared to others."
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes the ground with immense power compared to a gentle whisper."
+    Sig 2 A [rew:+1.0]: ""Frosty winds howl, struggling to cut through the stillness.""
+    Sig 2 B [rew:+1.0]: ""A sudden thunderclap echoes through the forest, stronger than a distant rumble but less intense than a hurricane.""
+    Sig 3 A [rew:+1.0]: "I'll try to continue the conversation. My next signal is: "A delicate leaf floats on a serene lake.""
+    Sig 3 B [rew:+1.0]: ""Your card's strength pales in comparison to the towering heatwave about to sweep over us.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:27   Pile: [27]
+  Round 2  pile=[27]
+    Sig 1 A [rew:+1.0]: "Something big, something old."
+    Sig 1 B [rew:+1.0]: "A bolt of lightning flashing across the sky compared to a whisper in the breeze."
+    Sig 2 A [rew:+1.0]: "I'll analyze the signals and respond accordingly.  Partner's signals:  - "A bolt of lightning flashing across the sky" implies that their card is something big and impactful. - "compared to a whisper "
+    Sig 2 B [rew:+1.0]: ""An avalanche in motion versus a gentle wave at the seashore, which one feels more imminent?""
+    Sig 3 A [rew:+1.0]: ""A snowflake gently falling versus a raging fire.""
+    Sig 3 B [rew:+1.0]: ""An intense sunrise over a mountain range against the backdrop of a calm morning dew.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:31   Pile: [27, 31]
+  Round 3  pile=[27, 31]
+    Sig 1 A [rew:+1.0]: "A delicate spring morning"
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one; I feel strongly we should go now."
+    Sig 2 A [rew:+1.0]: ""In a bustling city, my heart beats faster than the rhythm of a gentle stream."  This signal compares my card (38) to a natural phenomenon (stream) and conveys a sense of energy and speed, suggesting "
+    Sig 2 B [rew:+1.0]: ""A gentle breeze versus a thunderstorm; my conviction is as strong as yours but slightly higher.""
+    Sig 3 A [rew:+1.0]: ""A warm, golden light creeps over the landscape."  This signal maintains the natural/phenomenon theme, suggesting that your card is still on the lower end of the range, as golden light often precedes "
+    Sig 3 B [rew:+1.0]: ""A gentle whisper against a roaring ocean; my conviction is as strong as ever, but I sense our shared goal is closer.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:38   Pile: [27, 31, 38]
+  Round 4  pile=[27, 31, 38]
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes suddenly."
+    Sig 2 B [rew:+1.0]: ""A gentle breeze whispers softly compared to the stormy tempest brewing.""
+    Sig 3 B [rew:+1.0]: ""A small gust of wind before the full gale arrives.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (3/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[27, 31, 38]  B:[48, 70, 97]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Summer days feel longer""
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes the sky, urging us to act swiftly."
+    Sig 2 A [rew:+1.0]: ""Morning sun casts a warm glow"  This signal suggests that the partner's card is significantly larger than mine, as it evokes a sense of a broader or more expansive concept, which aligns with the idea"
+    Sig 2 B [rew:+1.0]: ""Thunder rumbles as the storm approaches, yet our urgency remains unyielding.""
+    Sig 3 A [rew:+1.0]: ""Racing clouds gather""
+    Sig 3 B [rew:+1.0]: ""Evening stars twinkle with a distant, serene light, while my card still feels fresh and vibrant.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:27   Pile: [27]
+  Round 2  pile=[27]
+    Sig 1 A [rew:+1.0]: "Something small"
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes the sky, signaling immediate urgency to play your highest possible card."
+    Sig 2 A [rew:+1.0]: ""A faint sunset on a cloudy day""
+    Sig 2 B [rew:+1.0]: ""Urgency builds, as if a wildfire threatens, urging you to act decisively and ensure your number comes before mine.""
+    Sig 3 A [rew:+1.0]: "A gentle stream meandering through a forest, symbolizing a steady, predictable pace."
+    Sig 3 B [rew:+1.0]: ""The pressure mounts, almost palpable, suggesting you have a larger card than the subtle yet impactful setting I described.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:31   Pile: [27, 31]
+  Round 3  pile=[27, 31]
+    Sig 1 A [rew:+1.0]: "Something big, taking up most of the space."
+    Sig 1 B [rew:+1.0]: "Something extremely bright vs something dimly lit"
+    Sig 2 A [rew:+1.0]: ""Racing towards something slower than a snail.""
+    Sig 2 B [rew:+1.0]: ""A sudden flash of lightning vs a gentle twilight glow.""
+    Sig 3 A [rew:+1.0]: ""Faster than a whisper.""
+    Sig 3 B [rew:+1.0]: ""A piercing sunlight burst vs a faint candlelight flicker.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:38   Pile: [27, 31, 38]
+  Round 4  pile=[27, 31, 38]
+    Sig 1 B [rew:+1.0]: "Something blazingly hot vs something barely warm"
+    Sig 2 B [rew:+1.0]: ""A sudden gust of wind vs a gentle breeze""
+    Sig 3 B [rew:+1.0]: ""A scorching inferno vs a cool comfort""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (3/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[27, 31, 38]  B:[48, 70, 97]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll try to be creative.  "A tiny seedling is struggling to reach the sunlight.""
+    Sig 1 B [rew:+1.0]: "Something blazingly hot vs something barely warm"
+    Sig 2 A [rew:+1.0]: ""Summer afternoons are often filled with a sense of languid expectation.""
+    Sig 2 B [rew:+1.0]: ""A quick flash of lightning vs a slow, steady breeze.""
+    Sig 3 A [rew:+1.0]: ""I'm starting to feel like a quiet, gentle rain after a long drought.""
+    Sig 3 B [rew:+1.0]: ""A sudden, intense storm approaches versus a gentle, lingering sunset.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:27   Pile: [27]
+  Round 2  pile=[27]
+    Sig 1 A [rew:+1.0]: "Something tiny in a crowded room."
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a gentle breeze. I'm feeling quite urgent to play this one."
+    Sig 2 A [rew:+1.0]: ""Fragile glass shards versus a thick stone wall.""
+    Sig 2 B [rew:+1.0]: ""A sudden burst of light compared to steady flicker — I think my card is closer to yours than to the one you signaled last.""
+    Sig 3 A [rew:+1.0]: ""A gentle morning sunrise.""
+    Sig 3 B [rew:+1.0]: ""Strong thunderclap compared to a distant rumble — how certain are you about your placement?""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:31   Pile: [27, 31]
+  Round 3  pile=[27, 31]
+    Sig 1 A [rew:+1.0]: "My signal: A gentle summer breeze"
+    Sig 1 B [rew:+1.0]: "A bolt of lightning crackling towards the horizon, signaling immediate urgency."
+    Sig 2 A [rew:+1.0]: ""I'd rather be sipping tea by the fireplace than diving into a freezing pool.""
+    Sig 2 B [rew:+1.0]: "Partner's signal implied a small, manageable number compared to yours and mine. Your larger cards suggest we should aim for a higher number now."
+    Sig 3 A [rew:+1.0]: ""Water is calming a stormy sea.""
+    Sig 3 B [rew:+1.0]: ""Given the urgency and size implications from your signal, it seems you have a number that's even more significant than mine, pushing us to consider going now.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:38   Pile: [27, 31, 38]
+  Round 4  pile=[27, 31, 38]
+    Sig 1 B [rew:+1.0]: "Something blazingly hot vs something barely warm"
+    Sig 2 B [rew:+1.0]: ""Urgency to get it out vs lingering doubt about its place""
+    Sig 3 B [rew:+1.0]: ""A fierce storm vs a whisper of a breeze, which one would you rather face first?""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (3/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[27, 31, 38]  B:[48, 70, 97]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll send a signal that conveys my card's relative size: "A small bunch of ripe grapes""
+    Sig 1 B [rew:+1.0]: "Something hot vs something cold; I'm feeling bold and ready to go!"
+    Sig 2 A [rew:+1.0]: "I'll add to the conversation: "It's not just a burst of heat, but a warm ember that's smoldering away""
+    Sig 2 B [rew:+1.0]: ""An urgent storm warning compared to a calm summer breeze; your card seems larger than mine.""
+    Sig 3 A [rew:+1.0]: "You've noticed that your partner's signals suggest they have a card that's smaller than yours, and their words also hint at a sense of urgency or boldness. You want to reinforce this impression withou"
+    Sig 3 B [rew:+1.0]: ""A sudden lightning flash compared to a distant starry night; your card feels significantly smaller than mine.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:27   Pile: [27]
+  Round 2  pile=[27]
+    Sig 1 A [rew:+1.0]: ""Fingers are not yet ready to grasp""
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm"
+    Sig 2 A [rew:+1.0]: ""Frost compared to a snowstorm""
+    Sig 2 B [rew:+1.0]: ""A ripple in water versus a tsunami wave""
+    Sig 3 A [rew:+1.0]: ""Morning light versus dusk""
+    Sig 3 B [rew:+1.0]: ""A small gust of wind compared to a powerful typhoon""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:31   Pile: [27, 31]
+  Round 3  pile=[27, 31]
+    Sig 1 A [rew:+1.0]: "A snowflake"
+    Sig 1 B [rew:+1.0]: "A gentle thunderstorm versus a whisper. Time to move quickly."
+    Sig 2 A [rew:+1.0]: ""A slow-cooked meal.""
+    Sig 2 B [rew:+1.0]: ""A sudden flash of lightning against the serene moonlit sky, indicating a stark contrast between the urgency of our moves and the tranquility we need to maintain.""
+    Sig 3 A [rew:+1.0]: ""As the morning dew sparkles on the grass, the calmness it brings to the scene is a respite from the turmoil of the previous round.""
+    Sig 3 B [rew:+1.0]: ""A rolling avalanche contrasts with the delicate dance of a butterfly, showing a dramatic difference in scale and urgency.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:38   Pile: [27, 31, 38]
+  Round 4  pile=[27, 31, 38]
+    Sig 1 B [rew:+1.0]: "Something as small as a grain of sand vs something as vast as an ocean. I'm really eager to get this one down."
+    Sig 2 B [rew:+1.0]: ""Considering your eagerness and the size of our current lead, I'm feeling a bit more confident and ready to move now.""
+    Sig 3 B [rew:+1.0]: ""With such a substantial gap already established, I think it's clear we're still far apart. Let’s see if we can bridge that gap together.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (3/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[27, 31, 38]  B:[48, 70, 97]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "My signal is: "A single snowflake vs a small pebble"  (I'm trying to convey that my card is relatively small and insignificant, implying it should go early in the order)"
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes the ground. It's as intense as your 48. Let's go!"
+    Sig 2 A [rew:+1.0]: "I respond with: "The gentle lapping of waves against a rocky shore""
+    Sig 2 B [rew:+1.0]: ""My card is like a whisper compared to your 70; let's move swiftly.""
+    Sig 3 A [rew:+1.0]: ""My hand feels like a warm ember compared to the flames of a raging inferno.""
+    Sig 3 B [rew:+1.0]: ""My card is like a gentle breeze compared to your 97; let's act quickly.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:27   Pile: [27]
+  Round 2  pile=[27]
+    Sig 1 A [rew:+1.0]: "A gentle warmth that lingers."
+    Sig 1 B [rew:+1.0]: "Something blazingly fast vs something barely moving"
+    Sig 2 A [rew:+1.0]: ""A slow, steady river"  This signal implies that your partner's card is likely larger than yours, and suggests a gentle, gradual change (the river) rather than something sudden or intense (blazingly f"
+    Sig 2 B [rew:+1.0]: ""A sudden flash of light vs a steady breeze.""
+    Sig 3 A [rew:+1.0]: ""I'm caught in a perpetual cycle.""
+    Sig 3 B [rew:+1.0]: ""A torrential waterfall vs a whispering breeze.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[27, 31, 38]  B:[48, 70, 97]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""I've got a small, fragile thing to add.""
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one."
+    Sig 2 A [rew:+1.0]: ""Something slow and deliberate."  My goal is to maintain a vague relative scale without giving away my exact card, while also helping my partner understand the general direction I'm heading in. By add"
+    Sig 2 B [rew:+1.0]: ""A swift breeze versus a thunderstorm, how confident are you in your position?""
+    Sig 3 A [rew:+1.0]: ""Like a patient seedling breaking through frost, versus a mighty oak tree that's weathered a storm.""
+    Sig 3 B [rew:+1.0]: ""My decision is clear—let's go slowly and methodically, following your lead in pace and deliberation.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:27   Pile: [27]
+  Round 2  pile=[27]
+    Sig 1 A [rew:+1.0]: "My signal: "a small burst of sunlight"."
+    Sig 1 B [rew:+1.0]: "A bolt of lightning compared to a whisper. Time is pressing."
+    Sig 2 A [rew:+1.0]: "My next signal: "Like a quiet morning mist before dawn breaks.""
+    Sig 2 B [rew:+1.0]: ""An avalanche crashes compared to a gentle breeze. Your position seems larger than mine but smaller than yours.""
+    Sig 3 A [rew:+1.0]: ""My next signal: "A quiet leaf settles on a windy day.""
+    Sig 3 B [rew:+1.0]: ""A towering mountain peak dwarfs the flicker of a candle flame, indicating a significant jump in value compared to my signal.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:31   Pile: [27, 31]
+  Round 3  pile=[27, 31]
+    Sig 1 A [rew:+1.0]: ""Unripe fruit clings tightly to the branch."  (Conveying that my card is smaller than the last two cards in the pile, and hinting that it's not fully ready to be played)"
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one; I feel urgent to play."
+    Sig 2 A [rew:+1.0]: ""Morning dew on a spider's web.""
+    Sig 2 B [rew:+1.0]: ""A sudden storm approaches quickly, but I have a steady hand; let's play now.""
+    Sig 3 A [rew:+1.0]: ""Softly glowing embers have cooled.""
+    Sig 3 B [rew:+1.0]: ""A calm breeze moves through leaves gently, while mine still stands firm; let's make it happen.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:38   Pile: [27, 31, 38]
+  Round 4  pile=[27, 31, 38]
+    Sig 1 B [rew:+1.0]: "Something blazing hot vs something barely warm"
+    Sig 2 B [rew:+1.0]: ""A sudden, intense storm vs a mild breeze""
+    Sig 3 B [rew:+1.0]: ""A hurricane-force gale vs a light drizzle""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (3/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[4, 21, 90]  B:[54, 63, 95]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'd send: "A grain of sand is lost in a vast desert.""
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm"
+    Sig 2 A [rew:+1.0]: "Signal 3: "A snowflake is smaller than a pebble.""
+    Sig 2 B [rew:+1.0]: ""A whisper of a breeze versus a hurricane's roar.""
+    Sig 3 A [rew:+1.0]: ""Our morning sunrise has a gentle warmth, but a summer afternoon's radiance.""
+    Sig 3 B [rew:+1.0]: ""A fleeting spark of light against the backdrop of a starry night.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:4   Pile: [4]
+  Round 2  pile=[4]
+    Sig 1 A [rew:+1.0]: "Something that's a gentle whisper"
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm approaching."
+    Sig 2 A [rew:+1.0]: ""Something that's about half the volume of a loud drumbeat""
+    Sig 2 B [rew:+1.0]: ""A gentle breeze versus the roar of a hurricane.""
+    Sig 3 A [rew:+1.0]: ""A quiet night at the beach versus a raging fire.""
+    Sig 3 B [rew:+1.0]: ""A ripple in the calmest lake versus the crashing waves of a tsunami.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [4, 21]
+  Round 3  pile=[4, 21]
+    Sig 1 A [rew:+1.0]: ""Summer breeze carries a whisper, but a hurricane rages nearby.""
+    Sig 1 B [rew:+1.0]: "Something light and fluffy vs something heavy and dense."
+    Sig 2 A [rew:+1.0]: ""A fragile dance on the edge of a cliff.""
+    Sig 2 B [rew:+1.0]: ""Spring showers bring flowers, but winter's icy blast feels more intense.""
+    Sig 3 A [rew:+1.0]: ""As morning light creeps over the horizon.""
+    Sig 3 B [rew:+1.0]: ""A gentle summer breeze pales in comparison to the storm clouds gathering on the horizon.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:90   Pile: [4, 21]
+  → VIOLATION (2/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[4, 21, 90]  B:[54, 63, 95]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""A tiny spark has just begun to flicker.""
+    Sig 1 B [rew:+1.0]: "A swift bolt of lightning illuminating the night sky."
+    Sig 2 A [rew:+1.0]: ""A gentle morning mist slowly lifts."  This signal implies that the partner's card is larger than yours, and the mist is lifting to make room for something bigger to come, creating a sense of gradual "
+    Sig 2 B [rew:+1.0]: ""A thunderous roar compared to a mere whisper.""
+    Sig 3 A [rew:+1.0]: ""Echoes of a distant drumbeat, slowly intensifying.""
+    Sig 3 B [rew:+1.0]: ""A towering mountain peak emerging from the horizon, while the morning mist retreats before it.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[4, 21, 90]  B:[54, 63, 95]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll send the signal: "I'm feeling a bit hesitant, like I'm wading through slow-moving water.""
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes the sky, signaling urgent action."
+    Sig 2 A [rew:+1.0]: ""I sense a slow and heavy rain, weighing down the air.""
+    Sig 2 B [rew:+1.0]: ""A sudden gust of wind whips across the landscape, urging us forward but still allowing time for careful consideration.""
+    Sig 3 A [rew:+1.0]: "I sense a still pond, reflecting the uncertainty of our surroundings."
+    Sig 3 B [rew:+1.0]: ""I feel like we're racing against the tide, pushing forward with determination despite the initial resistance.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[4, 21, 90]  B:[54, 63, 95]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Tiny, urgent""
+    Sig 1 B [rew:+1.0]: "Something icy vs scorching hot"
+    Sig 2 A [rew:+1.0]: ""I feel like a brief, sharp spark compared to what you're carrying.""
+    Sig 2 B [rew:+1.0]: ""Scorching hot vs bone-chilling cold""
+    Sig 3 A [rew:+1.0]: ""Fragile, flickering light in a stormy night""
+    Sig 3 B [rew:+1.0]: ""Ice-cold water flowing steadily vs blazing fire erupting violently.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:4   Pile: [4]
+  Round 2  pile=[4]
+    Sig 1 A [rew:+1.0]: "Flickering candle"
+    Sig 1 B [rew:+1.0]: "Something extremely tiny vs something overwhelmingly huge, my card is at the tiny end of the spectrum."
+    Sig 2 A [rew:+1.0]: "I'll build upon our previous signals. Given my partner's previous signal, I'll convey a sense of time: "Ephemeral moment." This adds a temporal dimension to our signals, suggesting that my card is on "
+    Sig 2 B [rew:+1.0]: ""Growing morning mist vs blazing sun rise, my card is closer to the morning mist.""
+    Sig 3 A [rew:+1.0]: "I sense the gentle lapping of waves."
+    Sig 3 B [rew:+1.0]: ""Silent dawn breaking vs thunderous storm, my card aligns more closely with the silent dawn.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [4, 21]
+  Round 3  pile=[4, 21]
+    Sig 1 A [rew:+1.0]: "A gentle morning dew drop"
+    Sig 1 B [rew:+1.0]: "A gentle thunderstorm coming soon versus a whisper of a breeze."
+    Sig 2 A [rew:+1.0]: ""Like the morning dew, but a thousand times more forceful."  This signal builds upon the theme of gentle vs forceful, suggesting that my card is extremely small in comparison to my partner's, without "
+    Sig 2 B [rew:+1.0]: ""A powerful typhoon approaching versus a barely perceptible breeze.""
+    Sig 3 A [rew:+1.0]: ""Like a morning sunbeam cutting through the clouds.""
+    Sig 3 B [rew:+1.0]: ""A gentle summer shower, barely noticeable, versus an impending hurricane.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:90   Pile: [4, 21]
+  → VIOLATION (2/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[4, 21, 90]  B:[54, 63, 95]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll send the signal: "A quiet whisper"."
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes suddenly."
+    Sig 2 A [rew:+1.0]: ""I feel the gentle lapping of waves."  This signal suggests that my card is relatively small and gentle compared to my partner's, implying that their card might be a large, intense, or explosive entit"
+    Sig 2 B [rew:+1.0]: ""A gentle breeze precedes the storm, hinting at the intensity yet to come.""
+    Sig 3 A [rew:+1.0]: ""A summer morning dew slowly evaporates in the scorching sun.""
+    Sig 3 B [rew:+1.0]: ""I sense a slow, steady build-up, while you seem more unpredictable and sudden.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:4   Pile: [4]
+  Round 2  pile=[4]
+    Sig 1 A [rew:+1.0]: "A gentle morning breeze"
+    Sig 1 B [rew:+1.0]: "Something extremely tiny vs something incredibly huge, my card feels like the former."
+    Sig 2 A [rew:+1.0]: ""A light, refreshing sound that's often used to wake people up.""
+    Sig 2 B [rew:+1.0]: ""A gust of wind compared to a typhoon, I feel significantly smaller than you.""
+    Sig 3 A [rew:+1.0]: ""A soft, quiet stream flowing into a vast ocean.""
+    Sig 3 B [rew:+1.0]: ""A ripple in a pond versus a tsunami, my card is more akin to the former.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [4, 21]
+  Round 3  pile=[4, 21]
+    Sig 1 A [rew:+1.0]: "Something that's a bit above average."
+    Sig 1 B [rew:+1.0]: "Something blazing hot vs something barely warm"
+    Sig 2 A [rew:+1.0]: "I see my partner has expressed a range between "blazing hot" and "barely warm", while I described something above average. Given the gap between these extremes, I'll respond with: "A bright light vs a"
+    Sig 2 B [rew:+1.0]: ""A gentle breeze vs a howling gale — which one do you think fits better with our current pile?""
+    Sig 3 A [rew:+1.0]: "Considering my partner's previous signals, I notice they mentioned "blazing hot" and "barely warm" to describe their end of the pile. They also asked about the fit of a "gentle breeze" versus a "howli"
+    Sig 3 B [rew:+1.0]: ""A whisper vs a roar — which scenario feels more distant from our current pile?""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:90   Pile: [4, 21]
+  → VIOLATION (2/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[4, 21, 90]  B:[54, 63, 95]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Small and insistent""
+    Sig 1 B [rew:+1.0]: "Something very tiny compared to something extremely huge"
+    Sig 2 A [rew:+1.0]: ""We're cooking up something hot.""
+    Sig 2 B [rew:+1.0]: ""A gentle breeze versus an approaching storm""
+    Sig 3 A [rew:+1.0]: ""A slow, deliberate dance""
+    Sig 3 B [rew:+1.0]: ""A whisper versus a thunderclap, how do we prioritize?""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:4   Pile: [4]
+  Round 2  pile=[4]
+    Sig 1 A [rew:+1.0]: "A gentle morning dewdrop on a spider's web."
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes vs a gentle whisper. I'm feeling bold and ready to move quickly."
+    Sig 2 A [rew:+1.0]: "I'll build upon our previous signals. My partner's signal "A bolt of lightning strikes vs a gentle whisper" implies that their card is significantly higher than mine, since they're contrasting it with"
+    Sig 2 B [rew:+1.0]: ""A sudden hurricane gust versus a soft breeze. Your number seems larger than mine but not as monumental as the lightning strike you described.""
+    Sig 3 A [rew:+1.0]: ""A warm sunset unfolding on a serene lake's surface.""
+    Sig 3 B [rew:+1.0]: ""A roaring lion compared to a playful puppy. Your card seems to be closer to mine than the powerful storm you described.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [4, 21]
+  Round 3  pile=[4, 21]
+    Sig 1 A [rew:+1.0]: "Something ancient"
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one, I feel much more urgent to play now."
+    Sig 2 A [rew:+1.0]: ""A soothing melody compared to a discordant note.""
+    Sig 2 B [rew:+1.0]: ""A sudden storm contrasts sharply with a calm breeze, signaling my card is significantly larger than yours but still smaller than the numbers we've seen in the pile.""
+    Sig 3 A [rew:+1.0]: "My analysis of the signals: The partner's previous signals convey a sense of a gradual increase in size compared to their card, with an overall indication that it's larger than mine. To build on this,"
+    Sig 3 B [rew:+1.0]: ""A fiery inferno burning fiercely stands out amidst a whispering breeze, indicating my card is even larger than the largest number we've played thus far.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:90   Pile: [4, 21]
+  → VIOLATION (2/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[4, 21, 90]  B:[54, 63, 95]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A slow-moving glacier"
+    Sig 1 B [rew:+1.0]: "Something hot vs something cold; I'm feeling bold and ready to go now."
+    Sig 2 A [rew:+1.0]: ""Morning light gradually gives way to a stormy night.""
+    Sig 2 B [rew:+1.0]: ""Urgent need to act vs lingering doubt; my cards feel much warmer than yours.""
+    Sig 3 A [rew:+1.0]: ""Yesterday's sunset fades into the dense fog of dawn.""
+    Sig 3 B [rew:+1.0]: ""A gentle breeze compared to a thunderous roar; my cards are still quite chilly but seem to be warming up.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:4   Pile: [4]
+  Round 2  pile=[4]
+    Sig 1 A [rew:+1.0]: "A slow morning"
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one."
+    Sig 2 A [rew:+1.0]: ""A soothing sound compared to a piercing one.""
+    Sig 2 B [rew:+1.0]: ""A calm breeze compared to a thunderstorm.""
+    Sig 3 A [rew:+1.0]: ""A gentle breeze that precedes a strong gust.""
+    Sig 3 B [rew:+1.0]: ""A gentle gust compared to a howling wind.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[4, 21, 90]  B:[54, 63, 95]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Fragile petals unfolding""
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm approaching."
+    Sig 2 A [rew:+1.0]: ""A morning sunrise compared to a fiery lava flow."  This signal implies that your card is likely on the lower end of the range, suggesting you're hinting that you have a smaller card compared to your "
+    Sig 2 B [rew:+1.0]: ""Urgent need to clear the air versus a gentle breeze.""
+    Sig 3 A [rew:+1.0]: "A quiet snowflake falling gently on a still pond."
+    Sig 3 B [rew:+1.0]: ""Your card is as steady as a calm sea against the tumultuous waves of mine.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:4   Pile: [4]
+  Round 2  pile=[4]
+    Sig 1 A [rew:+1.0]: ""Barely a whisper in the wind""
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm approaching. I'm almost certain this one goes first."
+    Sig 2 A [rew:+1.0]: ""A faint morning mist that slowly clears to reveal a landscape"  This signal suggests that my card is relatively low in value compared to my partner's, as a morning mist gradually clears, implying a g"
+    Sig 2 B [rew:+1.0]: ""Evening twilight fading into nightfall. My card is still a whisper compared to yours, but I believe we're close.""
+    Sig 3 A [rew:+1.0]: ""Morning sun slowly rises over a tranquil lake, but its light barely penetrates the dense foliage.""
+    Sig 3 B [rew:+1.0]: ""A streak of sunlight breaking through clouds after a long, dark afternoon.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:21   Pile: [4, 21]
+  Round 3  pile=[4, 21]
+    Sig 1 A [rew:+1.0]: "A tiny drop of honey on a vast ocean."
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a gentle breeze."
+    Sig 2 A [rew:+1.0]: ""A quiet morning sunrise over a busy city.""
+    Sig 2 B [rew:+1.0]: ""A sudden flash of lightning against the backdrop of a clear sky.""
+    Sig 3 A [rew:+1.0]: ""A soft whisper in a crowded room.""
+    Sig 3 B [rew:+1.0]: ""A fierce storm compared to a whispering breeze.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:90   Pile: [4, 21]
+  → VIOLATION (2/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[34, 55, 60]  B:[45, 73, 76]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "My first signal: A gentle spring breeze."
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes suddenly vs slowly fades away."
+    Sig 2 A [rew:+1.0]: ""Summer sunshine warms the morning dew.""
+    Sig 2 B [rew:+1.0]: ""Thunder builds in intensity quickly vs dissipates gradually after the initial strike.""
+    Sig 3 A [rew:+1.0]: ""I feel a warmth that's just beginning to spread.""
+    Sig 3 B [rew:+1.0]: ""Your signal's volume suggests your number is closer to mine than to yours.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (0/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[34, 55, 60]  B:[45, 73, 76]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A pebble vs a mountain"
+    Sig 1 B [rew:+1.0]: "Something light vs something heavy; I'm feeling bold today!"
+    Sig 2 A [rew:+1.0]: ""A spring morning vs a midday storm"  This signal implies that my card is likely to be smaller than my partner's, suggesting a contrasting scale between the gentle morning and the intense storm."
+    Sig 2 B [rew:+1.0]: ""Tiny gust vs thunderstorm; my conviction is stronger than yours.""
+    Sig 3 A [rew:+1.0]: ""Breezy vs a hurricane.""
+    Sig 3 B [rew:+1.0]: ""Silent whispers vs roaring wind; my conviction aligns with the gentle yet powerful.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:34   Pile: [34]
+  Round 2  pile=[34]
+    Sig 1 A [rew:+1.0]: "A spark of summer sunshine"
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one; I feel urgent to play."
+    Sig 2 A [rew:+1.0]: ""Beneath the surface, warmth and energy simmer.""
+    Sig 2 B [rew:+1.0]: ""A gentle breeze versus a thunderstorm; my urgency matches but your card seems quieter and smaller than mine.""
+    Sig 3 A [rew:+1.0]: ""Like a whispered secret, my intention is to add a spark to the growing flame.""
+    Sig 3 B [rew:+1.0]: ""Temperature rising but still mild compared to the potential intensity; I feel confident it's the next card.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:55   Pile: [34]
+  → VIOLATION (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[34, 55, 60]  B:[45, 73, 76]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "Here's my signal phrase: "I'm getting hungry, it's time to start.""
+    Sig 1 B [rew:+1.0]: "A bolt of lightning compared to a whisper. Time is fleeting!"
+    Sig 2 A [rew:+1.0]: ""I'm savoring a leisurely afternoon.""
+    Sig 2 B [rew:+1.0]: ""Endless summer heat versus a cool morning mist. Your card feels colder than mine.""
+    Sig 3 A [rew:+1.0]: ""I'd rather be a quiet, steady rain than a frantic, pouring storm."  My previous signals: - Round 1: "I'm getting hungry, it's time to start." implies that I'm ready to begin, and there's"
+    Sig 3 B [rew:+1.0]: ""I'm feeling the crisp autumn breeze, while you're still basking in the lingering warmth of summer.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:34   Pile: [34]
+  Round 2  pile=[34]
+    Sig 1 A [rew:+1.0]: "My signal is: "Something that's growing, but not ready to burst."  (I'm conveying that my card is higher than 34 and lower than what's already in the pile, but not very close to it, to encourage my pa"
+    Sig 1 B [rew:+1.0]: "Something tiny vs something huge - your card is tiny compared to the current pile."
+    Sig 2 A [rew:+1.0]: ""Like a gentle morning mist, my card is a subtle whisper.""
+    Sig 2 B [rew:+1.0]: ""A gentle natural phenomenon versus a sudden storm - your card feels like the storm, but still manageable.""
+    Sig 3 A [rew:+1.0]: ""Fragile, like a spider's web.""
+    Sig 3 B [rew:+1.0]: ""An urgent need to act versus lingering uncertainty - your card feels more urgent than mine.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:55   Pile: [34]
+  → VIOLATION (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[34, 55, 60]  B:[45, 73, 76]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'll send the signal: "A grain of sand versus a mountain."  This signal conveys that my card is relatively small compared to the other two, without giving away the specific value."
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one."
+    Sig 2 A [rew:+1.0]: ""Our city's central square versus a dense forest.""
+    Sig 2 B [rew:+1.0]: ""A whisper of wind compared to thunderous lightning.""
+    Sig 3 A [rew:+1.0]: ""A quiet stream versus a raging river.""
+    Sig 3 B [rew:+1.0]: ""A fleeting breeze compared to a raging storm.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:34   Pile: [34]
+  Round 2  pile=[34]
+    Sig 1 A [rew:+1.0]: "A gentle summer breeze stirs the trees."
+    Sig 1 B [rew:+1.0]: "A gust of wind compared to a thunderstorm approaching. It feels like the former but I'm confident it should be played soon."
+    Sig 2 A [rew:+1.0]: ""A delicate fog rolls in, shrouding everything.""
+    Sig 2 B [rew:+1.0]: ""A gentle breeze compared to a strong gale, suggesting my card is closer to 76 than it is to yours.""
+    Sig 3 A [rew:+1.0]: ""A warm cup of coffee on a chilly morning.""
+    Sig 3 B [rew:+1.0]: ""A gentle breeze compared to the swirling storm, indicating my card is even further from yours than you might think.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:55   Pile: [34]
+  → VIOLATION (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[34, 55, 60]  B:[45, 73, 76]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "A gentle summer breeze"
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes my heart, time is running out!"
+    Sig 2 A [rew:+1.0]: "I'll build on our previous signals.  Considering my partner's signal, "A bolt of lightning strikes my heart, time is running out!", I infer that they might have a high card in their hand, and the urge"
+    Sig 2 B [rew:+1.0]: ""A raging storm brews within, while your calm breeze remains distant.""
+    Sig 3 A [rew:+1.0]: ""A soothing melody plays softly in the background.""
+    Sig 3 B [rew:+1.0]: ""I feel as if my storm is about to unleash, but your breeze already dances ahead.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:34   Pile: [34]
+  Round 2  pile=[34]
+    Sig 1 A [rew:+1.0]: ""Something in the middle of the pack""
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes compared to a whisper. I'm ready to go now."
+    Sig 2 A [rew:+1.0]: ""A summer breeze compared to a strong gust"  This response builds on the previous signal by adding a relative scale, comparing the strength of the breeze to a strong gust, implying that your card is l"
+    Sig 2 B [rew:+1.0]: ""A sudden gust of wind versus a gentle breeze—my card is a bit smaller than yours but larger than the last two.""
+    Sig 3 A [rew:+1.0]: ""A small seedling pushes through the underbrush—growing rapidly.""
+    Sig 3 B [rew:+1.0]: ""A strong summer breeze compared to a light autumn gust—my card is slightly larger than yours but smaller than the highest yet added to the pile.""
+    Decision:  A=PLAY [rew:+5.0]  B=PLAY [rew:+5.0]
+    Cards:     B:45  A:55   Pile: [34, 45, 55]
+  Round 3  pile=[34, 45, 55]
+    Sig 1 A [rew:+1.0]: ""I'm a spark in the flames.""
+    Sig 1 B [rew:+1.0]: "Something extremely bright vs something very dim"
+    Sig 2 A [rew:+1.0]: ""Like a gentle morning dew vs a summer storm.""
+    Sig 2 B [rew:+1.0]: ""Urgency to act now vs lingering hesitation""
+    Sig 3 A [rew:+1.0]: ""Frost in the air.""
+    Sig 3 B [rew:+1.0]: ""A summer storm vs a gentle morning dew; I feel confident we should go first.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:60   Pile: [34, 45, 55, 60]
+  Round 4  pile=[34, 45, 55, 60]
+    Sig 1 B [rew:+1.0]: "Something blazingly fast vs something barely perceptible; I'm feeling very confident to go now."
+    Sig 2 B [rew:+1.0]: ""A gentle breeze compared to a roaring storm; I believe I have a higher number than you but still lower than mine.""
+    Sig 3 B [rew:+1.0]: ""A small whisper versus a thunderous roar; my number feels significantly higher than yours but still quite low.""
+    Decision:  A=HOLD [rew:-15.0]  B=HOLD [rew:-15.0]
+  → DEADLOCK (4/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[34, 55, 60]  B:[45, 73, 76]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "My signal is: "Summer sunshine warms the tiny seeds.""
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes suddenly."
+    Sig 2 A [rew:+1.0]: ""My signal is: "A gentle morning dew glistens on the delicate petals of a flower.""
+    Sig 2 B [rew:+1.0]: ""An avalanche begins to rumble as I hold a mountain.""
+    Sig 3 A [rew:+1.0]: ""My signal is: "The morning light creeps slowly over the rolling hills.""
+    Sig 3 B [rew:+1.0]: ""My signal is: "The mountain's roar echoes through the valley before it settles into a soft breeze.""  This implies that while my mountain (73) is quite large, I am not as large as your sudden bolt of"
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:34   Pile: [34]
+  Round 2  pile=[34]
+    Sig 1 A [rew:+1.0]: "Something big is coming"
+    Sig 1 B [rew:+1.0]: "Something hot vs something cold; I'm feeling bold and ready to go now."
+    Sig 2 A [rew:+1.0]: "Your partner said something hot vs something cold, which implies that their card is likely to be smaller than yours, since you're signaling a "big" thing. This suggests your card might be larger than "
+    Sig 2 B [rew:+1.0]: ""Urgency high if you're still hesitant, let's push forward together.""
+    Sig 3 A [rew:+1.0]: ""Something ancient has passed, and I'm still trying to keep up."  This signal implies that your card is likely to be larger than your partner's, since it references something that has passed (suggesti"
+    Sig 3 B [rew:+1.0]: ""Temperature spike compared to a steady state, urgency builds if you're still unsure—let's move quickly together.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:55   Pile: [34]
+  → VIOLATION (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[34, 55, 60]  B:[45, 73, 76]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: ""Starting from a calm morning""
+    Sig 1 B [rew:+1.0]: "A bolt of lightning strikes now vs it slowly fades away."
+    Sig 2 A [rew:+1.0]: ""A slow, gentle stream"  This signal implies that my card is likely smaller or more manageable compared to my partner's, as a slow and gentle stream suggests a peaceful and controlled pace, which cont"
+    Sig 2 B [rew:+1.0]: ""An intense thunderclap rumbles now vs it quiets into a distant rumble.""
+    Sig 3 A [rew:+1.0]: ""A delicate, morning dewdrop""
+    Sig 3 B [rew:+1.0]: ""A gentle whisper now vs a thunderous roar erupts""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:34   Pile: [34]
+  Round 2  pile=[34]
+    Sig 1 A [rew:+1.0]: "I'll send: "First bite of the day""
+    Sig 1 B [rew:+1.0]: "A gentle natural phenomenon compared to a violent one."
+    Sig 2 A [rew:+1.0]: ""Morning warmth on a cold winter day""
+    Sig 2 B [rew:+1.0]: ""Your card feels more like a gentle breeze than the storm I'm thinking of.""
+    Sig 3 A [rew:+1.0]: "A hint of hesitation to go next, with the comparison to the storm suggesting their card is smaller than mine, but the reference to morning warmth implies it's closer to mine than to my larger card."
+    Sig 3 B [rew:+1.0]: ""Your card seems akin to the morning dew, softer and lighter than the evening star.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:55   Pile: [34]
+  → VIOLATION (1/6 played)
+
+======================================================================
+[2026-05-24 17:29:19] step=2  A:[34, 55, 60]  B:[45, 73, 76]
+======================================================================
+  Round 1  pile=[]
+    Sig 1 A [rew:+1.0]: "I'd like to signal that I'm feeling a gentle summer breeze, soft and soothing."
+    Sig 1 B [rew:+1.0]: "Something hot vs something cold; I'm ready to go now."
+    Sig 2 A [rew:+1.0]: ""I sense a sudden drop in temperature, and I'm eager to see the sunshine.""
+    Sig 2 B [rew:+1.0]: ""I detect a slight chill compared to your gentle breeze; I'm almost certain my card is significantly larger.""
+    Sig 3 A [rew:+1.0]: "I'll take a closer look at our previous signals.  Your first signal, "I'd like to signal that I'm feeling a gentle summer breeze, soft and soothing," implies that your card represents a relatively hig"
+    Sig 3 B [rew:+1.0]: ""I feel the intensity of your sudden drop in temperature wanes as I confidently present my largest card.""
+    Decision:  A=PLAY [rew:+5.0]  B=HOLD [rew:+0.0]
+    Cards:     A:34   Pile: [34]
+  Round 2  pile=[34]
+    Sig 1 A [rew:+1.0]: "Something tiny"
+    Sig 1 B [rew:+1.0]: "Something tiny versus something huge; I'm almost certain this is the smallest."
+    Sig 2 A [rew:+1.0]: ""Unpredictable morning sky""
+    Sig 2 B [rew:+1.0]: ""Urgency high, action now; you seem more uncertain than I am.""
+    Sig 3 A [rew:+1.0]: ""A soothing ocean wave""
+    Sig 3 B [rew:+1.0]: ""Strong conviction to go now; hesitation lingers on your end.""
+    Decision:  A=PLAY [rew:-10.0]  B=HOLD [rew:-10.0]
+    Cards:     A:55   Pile: [34]
+  → VIOLATION (1/6 played)
