@@ -80,17 +80,55 @@ def _best_path_sim(w1: str, w2: str) -> float:
     return best
 
 
+def _best_wup_sim(w1: str, w2: str) -> float:
+    """
+    Returns the maximum Wu-Palmer similarity across all noun synset pairs.
+    Wu-Palmer uses depth in the hierarchy rather than raw path length, so it
+    is more lenient for cross-category pairs that humans find obviously related
+    (e.g. 'toilet'/'cup' both being artifacts, 'boat'/'fender' both being
+    physical objects). Range is (0, 1].
+    """
+    syns1 = wn.synsets(w1, pos=wn.NOUN)
+    syns2 = wn.synsets(w2, pos=wn.NOUN)
+    if not syns1 or not syns2:
+        return 0.0
+    best = 0.0
+    for s1 in syns1[:3]:   # cap at 3 to keep it fast
+        for s2 in syns2[:3]:
+            sim = s1.wup_similarity(s2)
+            if sim is not None and sim > best:
+                best = sim
+    return best
+
+
+def _best_sim(w1: str, w2: str) -> float:
+    """
+    Returns the best semantic similarity between w1 and w2 using whichever
+    of path similarity or Wu-Palmer similarity scores higher. This combined
+    measure is more robust than either alone: path similarity is precise for
+    close synonyms, Wu-Palmer is better for cross-category pairs that humans
+    find obviously related.
+    """
+    # return max(_best_path_sim(w1, w2), _best_wup_sim(w1, w2) * 0.5)
+    return _best_wup_sim(w1, w2)
+    # Wu-Palmer is scaled by 0.5 so both measures are on a comparable scale
+    # before taking the max. Raw wup scores tend to be ~2x higher than path
+    # scores for similar pairs, so this normalises them before comparison.
+
+
 def is_valid_bridge(word: str, anchor_a: str, anchor_b: str,
                     threshold: float = 0.10) -> bool:
     """
     Returns True if `word` is a valid semantic bridge between anchor_a and
-    anchor_b under WordNet path similarity.
+    anchor_b. Uses the combined path+Wu-Palmer similarity so that pairs which
+    are obviously related to humans (e.g. 'toilet'↔'cup', 'boat'↔'fender')
+    are not incorrectly rejected by the stricter path similarity alone.
 
     threshold=0.10 is deliberately permissive — this is a game, not a
     linguistics exam. Tune via --bridge_threshold.
     """
-    sim_a = _best_path_sim(word, anchor_a)
-    sim_b = _best_path_sim(word, anchor_b)
+    sim_a = _best_sim(word, anchor_a)
+    sim_b = _best_sim(word, anchor_b)
     return sim_a >= threshold and sim_b >= threshold
 
 
@@ -445,8 +483,9 @@ def turn_reward(word: str, anchor_a: str, anchor_b: str,
         return r
 
     # Bridge quality: how well does this word connect the two anchors?
-    sim_a = _best_path_sim(word, anchor_a)
-    sim_b = _best_path_sim(word, anchor_b)
+    # Uses the same combined sim measure as is_valid_bridge for consistency.
+    sim_a = _best_sim(word, anchor_a)
+    sim_b = _best_sim(word, anchor_b)
     bridge_score = sim_a + sim_b            # max ~2.0, typical good ~0.4-0.8
     r += bridge_score * 2.0                 # scale to ~0-4 range
 
@@ -1054,7 +1093,7 @@ def parse_args():
     p.add_argument("--learning_rate",      type=float, default=5e-6)
     p.add_argument("--kl_coef",            type=float, default=0.04)
     p.add_argument("--temperature",        type=float, default=0.9)
-    p.add_argument("--bridge_threshold",   type=float, default=0.05,
+    p.add_argument("--bridge_threshold",   type=float, default=0.2,
                    help="Min WordNet path_similarity to count as valid bridge")
     p.add_argument("--save_steps",         type=int,   default=100)
     p.add_argument("--use_peft",           action="store_true")

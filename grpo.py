@@ -59,10 +59,15 @@ def compute_completion_logprobs(
     completion_texts: list[str],
     device:           str,
     chunk_size:       int = 4,
-) -> torch.Tensor:
+    return_entropy:   bool = False,
+) -> "torch.Tensor | tuple[torch.Tensor, torch.Tensor]":
     """
     Compute the mean log-prob over completion tokens for each
     (prompt, completion) pair. Returns shape (B,).
+
+    If return_entropy=True, also returns mean token-level entropy (B,):
+      H = -sum_v π(v) log π(v) averaged over completion positions.
+    Used to add an entropy bonus to the GRPO loss to prevent collapse.
 
     Mean (not sum) keeps the scale constant across completions of different
     lengths, so kl_coef=0.04 is correctly sized relative to the policy
@@ -72,7 +77,8 @@ def compute_completion_logprobs(
     torch.enable_grad() ensures policy log-probs retain a grad_fn even when
     called from inside a no_grad context (e.g. the rollout phase).
     """
-    all_results = []
+    all_logprobs  = []
+    all_entropies = [] if return_entropy else None
 
     for start in range(0, len(prompt_texts), chunk_size):
         p_chunk = prompt_texts[start: start + chunk_size]
@@ -99,12 +105,21 @@ def compute_completion_logprobs(
             for b in range(logits.shape[0]):
                 pl  = prompt_lens[b].item()
                 ids = enc_full["input_ids"][b, pl:]               # completion token ids
-                lp  = log_probs[b, pl - 1: pl - 1 + len(ids)]    # shifted logits
+                lp  = log_probs[b, pl - 1: pl - 1 + len(ids)]    # (len, V)
                 gathered = lp.gather(1, ids.unsqueeze(1)).squeeze(1)
-                num_completion_tokens = max(len(ids), 1)
-                all_results.append(gathered.sum() / num_completion_tokens)
+                n = max(len(ids), 1)
+                all_logprobs.append(gathered.sum() / n)
 
-    return torch.stack(all_results)                               # (B,)
+                if return_entropy:
+                    # Mean entropy over completion positions: H = -sum_v p*log_p
+                    p = torch.exp(lp)                             # (len, V)
+                    H = -(p * lp).sum(dim=-1).mean()              # scalar
+                    all_entropies.append(H)
+
+    logprobs = torch.stack(all_logprobs)                          # (B,)
+    if return_entropy:
+        return logprobs, torch.stack(all_entropies)               # (B,), (B,)
+    return logprobs
 
 
 # ---------------------------------------------------------------------------
@@ -116,6 +131,7 @@ def grpo_loss(
     rollouts: list[Rollout],
     device:   str,
     kl_coef:  float = 0.04,
+    entropy_coef: float = 0.0,
     precomputed_advantages: bool = False,
 ) -> torch.Tensor:
     """
@@ -156,16 +172,37 @@ def grpo_loss(
             else:
                 normed[mask] = g - g.mean()
 
-    policy_lp = compute_completion_logprobs(
-        model, tokenizer, all_prompts, all_completions, device,
-    )
+    # Policy log-probs are computed with grad enabled (see compute_completion_logprobs).
+    # When entropy_coef > 0, entropy H = -Σ_v π(v)·log π(v) is computed in the same
+    # forward pass at no extra cost (logits are already materialised).
+    if entropy_coef > 0:
+        policy_lp, policy_entropy = compute_completion_logprobs(
+            model, tokenizer, all_prompts, all_completions, device,
+            return_entropy=True,
+        )
+    else:
+        policy_lp = compute_completion_logprobs(
+            model, tokenizer, all_prompts, all_completions, device,
+        )
+
     with torch.no_grad():
         ref_lp = compute_completion_logprobs(
             ref_model, tokenizer, all_prompts, all_completions, device,
         )
 
+    # KL divergence from reference: penalises drifting too far from the base model.
+    # Approximated as log π - log π_ref (first-order approximation of true KL).
     kl   = policy_lp - ref_lp
+
+    # GRPO loss = policy gradient + KL penalty - entropy bonus.
+    # Policy gradient: maximise log π weighted by advantage (negative because we minimise).
+    # KL penalty: keeps the policy close to the frozen reference.
+    # Entropy bonus: subtracting H from the loss maximises H, preventing the policy
+    #   from collapsing to a single repeated output — critical early in training when
+    #   all episodes in a group may share the same outcome (zero advantage variance).
     loss = -(normed * policy_lp).mean() + kl_coef * kl.mean()
+    if entropy_coef > 0:
+        loss = loss - entropy_coef * policy_entropy.mean()
     return loss
 
 
@@ -197,6 +234,7 @@ class GRPOLoop:
         device:                      str,
         learning_rate:               float = 5e-6,
         kl_coef:                     float = 0.04,
+        entropy_coef:                float = 0.0,
         gradient_accumulation_steps: int   = 1,
         max_grad_norm:               float = 1.0,
         use_8bit_adam:               bool  = True,
@@ -208,6 +246,7 @@ class GRPOLoop:
         self.tokenizer    = tokenizer
         self.device       = device
         self.kl_coef      = kl_coef
+        self.entropy_coef = entropy_coef
         self.grad_accum   = gradient_accumulation_steps
         self.max_grad_norm = max_grad_norm
         self._accum_count  = 0
@@ -255,6 +294,7 @@ class GRPOLoop:
         loss   = grpo_loss(
             self.model, self.ref_model, self.tokenizer,
             rollouts, self.device, self.kl_coef,
+            entropy_coef=self.entropy_coef,
             precomputed_advantages=self.precomputed_advantages,
         )
         scaled = loss / self.grad_accum
