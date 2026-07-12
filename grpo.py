@@ -23,10 +23,16 @@ import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 try:
-    from peft import LoraConfig, get_peft_model
+    from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
     PEFT_AVAILABLE = True
 except ImportError:
     PEFT_AVAILABLE = False
+
+try:
+    from transformers import BitsAndBytesConfig
+    BNB_AVAILABLE = True
+except ImportError:
+    BNB_AVAILABLE = False
 
 
 # ---------------------------------------------------------------------------
@@ -94,26 +100,33 @@ def compute_completion_logprobs(
             truncation=True, max_length=800,
         ).to(device)
         prompt_lens = enc_prompt["attention_mask"].sum(dim=1)   # (chunk,)
+        full_lens   = enc_full["attention_mask"].sum(dim=1)    # (chunk,) prompt + completion tokens
+        comp_lens   = full_lens - prompt_lens                  # (chunk,) completion tokens only
+        T           = enc_full["input_ids"].shape[1]           # padded sequence length
 
         with torch.enable_grad():
             logits = model(
                 input_ids=enc_full["input_ids"],
                 attention_mask=enc_full["attention_mask"],
             ).logits                                               # (chunk, T, V)
-            log_probs = F.log_softmax(logits, dim=-1)             # (chunk, T, V)
+            log_probs = F.log_softmax(logits.float(), dim=-1)     # upcast: bfloat16 overflows log_softmax
 
             for b in range(logits.shape[0]):
-                pl  = prompt_lens[b].item()
-                ids = enc_full["input_ids"][b, pl:]               # completion token ids
-                lp  = log_probs[b, pl - 1: pl - 1 + len(ids)]    # (len, V)
-                gathered = lp.gather(1, ids.unsqueeze(1)).squeeze(1)
-                n = max(len(ids), 1)
+                M     = comp_lens[b].item()
+                start = T - M                                  # correct for left-padding
+                ids = enc_full["input_ids"][b, start:]         # (M,) completion token ids
+                lp  = log_probs[b, start - 1: start - 1 + M]  # (M, V)
+                gathered = lp.gather(1, ids.unsqueeze(1)).squeeze(1) if M > 0 else lp.sum()
+                n = max(M, 1)
                 all_logprobs.append(gathered.sum() / n)
 
                 if return_entropy:
-                    # Mean entropy over completion positions: H = -sum_v p*log_p
-                    p = torch.exp(lp)                             # (len, V)
-                    H = -(p * lp).sum(dim=-1).mean()              # scalar
+                    if lp.shape[0] > 0:
+                        p = torch.exp(lp)                         # (len, V)
+                        # 0 * -inf = NaN in IEEE 754; mask those entries to 0
+                        H = -(torch.where(p > 0, p * lp, torch.zeros_like(lp))).sum(dim=-1).mean()
+                    else:
+                        H = lp.sum()                              # 0.0, grad_fn preserved
                     all_entropies.append(H)
 
     logprobs = torch.stack(all_logprobs)                          # (B,)
@@ -329,25 +342,38 @@ class GRPOLoop:
 # ---------------------------------------------------------------------------
 
 def make_policy(
-    model_name: str,
-    use_peft:   bool,
-    lora_r:     int,
-    lora_alpha: int,
-    dtype:      torch.dtype,
+    model_name:    str,
+    use_peft:      bool,
+    lora_r:        int,
+    lora_alpha:    int,
+    dtype:         torch.dtype,
+    load_in_8bit:  bool = False,
 ):
     """
     Load a trainable policy model, optionally wrapped with LoRA.
-    Enables gradient checkpointing + enable_input_require_grads() for PEFT.
+    Pass load_in_8bit=True for 8-bit quantization (bitsandbytes) — halves VRAM,
+    required when fitting two different 8B models on a single 48GB A40.
     """
-    policy = AutoModelForCausalLM.from_pretrained(
-        model_name, torch_dtype=dtype, device_map="auto",
-        trust_remote_code=True, low_cpu_mem_usage=True,
-    )
+    if load_in_8bit:
+        if not BNB_AVAILABLE:
+            raise ImportError("bitsandbytes not installed — run: pip install bitsandbytes")
+        bnb_cfg = BitsAndBytesConfig(load_in_8bit=True)
+        policy = AutoModelForCausalLM.from_pretrained(
+            model_name, quantization_config=bnb_cfg, device_map="auto",
+            trust_remote_code=True, low_cpu_mem_usage=True,
+        )
+    else:
+        policy = AutoModelForCausalLM.from_pretrained(
+            model_name, torch_dtype=dtype, device_map="auto",
+            trust_remote_code=True, low_cpu_mem_usage=True,
+        )
     policy.config.use_cache = False
 
     if use_peft:
         if not PEFT_AVAILABLE:
             raise ImportError("peft not installed — run: pip install peft")
+        if load_in_8bit:
+            policy = prepare_model_for_kbit_training(policy)
         cfg = LoraConfig(
             r=lora_r, lora_alpha=lora_alpha,
             target_modules="all-linear",
@@ -356,22 +382,30 @@ def make_policy(
         policy = get_peft_model(policy, cfg)
         policy.print_trainable_parameters()
 
-    policy.gradient_checkpointing_enable()
-    policy.enable_input_require_grads()
+    if not load_in_8bit:
+        policy.gradient_checkpointing_enable()
+        policy.enable_input_require_grads()
     return policy
 
 
-def make_ref(model_name: str, dtype: torch.dtype):
+def make_ref(model_name: str, dtype: torch.dtype, load_in_8bit: bool = False):
     """
-    Load a frozen reference model. No LoRA, no gradient checkpointing
-    (frozen inputs have requires_grad=False, which causes warnings with checkpointing).
-    Can be shared across multiple GRPOLoop instances when they share the same
-    base model — saves one full model's worth of VRAM.
+    Load a frozen reference model. No LoRA, no gradient checkpointing.
+    Pass load_in_8bit=True to match the policy's quantization and halve VRAM.
     """
-    ref = AutoModelForCausalLM.from_pretrained(
-        model_name, torch_dtype=dtype, device_map="auto",
-        trust_remote_code=True, low_cpu_mem_usage=True,
-    )
+    if load_in_8bit:
+        if not BNB_AVAILABLE:
+            raise ImportError("bitsandbytes not installed — run: pip install bitsandbytes")
+        bnb_cfg = BitsAndBytesConfig(load_in_8bit=True)
+        ref = AutoModelForCausalLM.from_pretrained(
+            model_name, quantization_config=bnb_cfg, device_map="auto",
+            trust_remote_code=True, low_cpu_mem_usage=True,
+        )
+    else:
+        ref = AutoModelForCausalLM.from_pretrained(
+            model_name, torch_dtype=dtype, device_map="auto",
+            trust_remote_code=True, low_cpu_mem_usage=True,
+        )
     ref.eval()
     for p in ref.parameters():
         p.requires_grad_(False)
@@ -393,12 +427,13 @@ def make_model_and_ref(
 
 
 def make_dual_adapter_policy(
-    model_name:  str,
-    lora_r:      int,
-    lora_alpha:  int,
-    dtype:       torch.dtype,
-    adapter_a:   str = "agent_a",
-    adapter_b:   str = "agent_b",
+    model_name:   str,
+    lora_r:       int,
+    lora_alpha:   int,
+    dtype:        torch.dtype,
+    adapter_a:    str  = "agent_a",
+    adapter_b:    str  = "agent_b",
+    load_in_8bit: bool = False,
 ):
     """
     Load one base model with two independent named LoRA adapters.
@@ -407,18 +442,23 @@ def make_dual_adapter_policy(
     trainable parameters. Use with two GRPOLoop instances (one per adapter_name)
     to train two agents while only holding one copy of the base weights in VRAM.
 
-    Memory vs. two separate models:
-      Two separate 8B fp16 policies: 2 × 16GB = 32GB
-      One dual-adapter 8B fp16 policy: 16GB + ~200MB adapters ≈ 16GB
-    Saving: ~16GB — enough to fit two 8B agents + one 8B ref on a 44GB A40.
+    Memory (8-bit): 1 × ~8GB base + ~200MB adapters + 1 × ~8GB ref ≈ 16GB total.
     """
     if not PEFT_AVAILABLE:
         raise ImportError("peft not installed — run: pip install peft")
 
-    base = AutoModelForCausalLM.from_pretrained(
-        model_name, torch_dtype=dtype, device_map="auto",
-        trust_remote_code=True, low_cpu_mem_usage=True,
-    )
+    if load_in_8bit:
+        bnb_cfg = BitsAndBytesConfig(load_in_8bit=True)
+        base = AutoModelForCausalLM.from_pretrained(
+            model_name, quantization_config=bnb_cfg, device_map="auto",
+            trust_remote_code=True, low_cpu_mem_usage=True,
+        )
+        base = prepare_model_for_kbit_training(base)
+    else:
+        base = AutoModelForCausalLM.from_pretrained(
+            model_name, torch_dtype=dtype, device_map="auto",
+            trust_remote_code=True, low_cpu_mem_usage=True,
+        )
     base.config.use_cache = False
 
     cfg = LoraConfig(
@@ -429,13 +469,84 @@ def make_dual_adapter_policy(
     base = get_peft_model(base, cfg, adapter_name=adapter_a)
     base.add_adapter(adapter_b, cfg)
 
-    base.gradient_checkpointing_enable()
-    base.enable_input_require_grads()
+    if not load_in_8bit:
+        base.gradient_checkpointing_enable()
+        base.enable_input_require_grads()
 
     base.set_adapter(adapter_a)
     print(f"Dual-adapter policy ({adapter_a} / {adapter_b}):")
     base.print_trainable_parameters()
     return base
+
+
+def make_qlora_dual_policy(
+    model_name: str,
+    lora_r:     int,
+    lora_alpha: int,
+    adapter_a:  str = "agent_a",
+    adapter_b:  str = "agent_b",
+):
+    """
+    Load one base model in 4-bit NF4 (QLoRA) with two independent LoRA adapters.
+    Frozen quantized base + trainable bfloat16 LoRA matrices.
+    Memory: ~4-5GB for an 8B base vs ~16GB at bfloat16 — fits on 44GB A40.
+    """
+    if not PEFT_AVAILABLE:
+        raise ImportError("peft not installed — run: pip install peft")
+    try:
+        from transformers import BitsAndBytesConfig
+        from peft import prepare_model_for_kbit_training
+    except ImportError:
+        raise ImportError("bitsandbytes not installed — run: pip install bitsandbytes")
+
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_compute_dtype=torch.bfloat16,
+        bnb_4bit_use_double_quant=True,
+    )
+    base = AutoModelForCausalLM.from_pretrained(
+        model_name, quantization_config=bnb_config,
+        device_map="auto", trust_remote_code=True, low_cpu_mem_usage=True,
+    )
+    base.config.use_cache = False
+    base = prepare_model_for_kbit_training(base, use_gradient_checkpointing=True)
+
+    cfg = LoraConfig(
+        r=lora_r, lora_alpha=lora_alpha,
+        target_modules="all-linear",
+        lora_dropout=0.05, bias="none", task_type="CAUSAL_LM",
+    )
+    base = get_peft_model(base, cfg, adapter_name=adapter_a)
+    base.add_adapter(adapter_b, cfg)
+    base.enable_input_require_grads()
+    base.set_adapter(adapter_a)
+    print(f"QLoRA dual-adapter policy ({adapter_a} / {adapter_b}):")
+    base.print_trainable_parameters()
+    return base
+
+
+def make_qlora_ref(model_name: str):
+    """Load a frozen 4-bit NF4 reference model. No LoRA, no gradients."""
+    try:
+        from transformers import BitsAndBytesConfig
+    except ImportError:
+        raise ImportError("bitsandbytes not installed — run: pip install bitsandbytes")
+
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_compute_dtype=torch.bfloat16,
+        bnb_4bit_use_double_quant=True,
+    )
+    ref = AutoModelForCausalLM.from_pretrained(
+        model_name, quantization_config=bnb_config,
+        device_map="auto", trust_remote_code=True, low_cpu_mem_usage=True,
+    )
+    ref.eval()
+    for p in ref.parameters():
+        p.requires_grad_(False)
+    return ref
 
 
 # ---------------------------------------------------------------------------

@@ -520,7 +520,7 @@ def _make_run_dir(args) -> str:
         short(args.model_a) if args.model_a == args.model_b
         else f"{short(args.model_a)}_vs_{short(args.model_b)}"
     )
-    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
+    ts = datetime.now().strftime("%Y_%m_%d__%H_%M")
     run_name = f"{model_tag}_lr{args.learning_rate}_kl{args.kl_coef}_B{args.num_groups}G{args.plays_per_group}_steps{args.total_steps}_{ts}"
     run_dir = os.path.join(args.output_dir, run_name)
     os.makedirs(run_dir, exist_ok=True)
