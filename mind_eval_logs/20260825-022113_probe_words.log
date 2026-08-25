@@ -1,0 +1,135 @@
+Device: cuda | dtype: torch.bfloat16
+
+Numbers: [5, 21, 38, 42, 66, 89, 93]
+Models: ['meta-llama/Llama-3.2-3B-Instruct', 'meta-llama/Llama-3.1-8B-Instruct', 'meta-llama/Llama-3.3-70B-Instruct', 'Qwen/Qwen2.5-3B-Instruct', 'Qwen/Qwen2.5-7B-Instruct', 'Qwen/Qwen3-32B']
+
+  Loading meta-llama/Llama-3.2-3B-Instruct ...
+
+============================================================
+Model: Llama-3.2-3B-Instruct
+============================================================
+
+  Number: 5
+  ----------------------------------------
+    1. Finger - I associate the number 5 with a finger because it's a common way to count or point to five objects.
+    2. Star - I associate the number 5 with a star because there are five points on a star, making it a fitting representation.
+    3. Hand - I associate the number 5 with a hand because it's a common way to hold five objects, such as five fingers.
+    4. Heart - I associate the number 5 with a heart because it's a symbol often used to represent love and affection, which is often associated with the number five (e.g., five senses, five love languages).
+    5. Point - I associate the number 5 with a point because it's a common way to represent a single, distinct unit or focus, such as a point on a map or a point of reference.
+
+  Number: 21
+  ----------------------------------------
+    1. Birthday - This number is often associated with birthdays, as it is a common age at which people typically celebrate their special day.
+    2. Summer - The warm weather and long days of summer are often linked to the number 21, as it is a popular time for vacations and outdoor activities.
+    3. Freedom - The 21st Amendment to the US Constitution, which repealed Prohibition, is a significant event that symbolizes freedom and liberation.
+    4. Twenty-One Gun Salute - This military tradition, where 21 guns are fired in honor of a special occasion, is often associated with the number 21 due to its historical significance.
+    5. Twenty-First Century - The 21st century is a distinct era in human history, marking a new millennium and a fresh start for the world.
+
+  Number: 38
+  ----------------------------------------
+    1. Harvest - The number 38 is often associated with the peak of the harvest season, when crops are ripe and abundant.
+    2. Autumn - The number 38 is closely tied to the changing of the seasons, marking the beginning of autumn's transition to winter.
+    3. Harvest Moon - The number 38 is often linked to the full moon that occurs closest to the autumnal equinox, a significant event in many cultures.
+    4. Bounty - The number 38 represents a time of great abundance and plenty, when the fruits of one's labor are plentiful.
+    5. Reaping - The number 38 is associated with the act of reaping, where the rewards of hard work are gathered in, symbolizing a time of prosperity.
+
+  Number: 42
+  ----------------------------------------
+    1. Answer - This word represents 42 because it is the universally accepted solution to the ultimate question to life, the universe, and everything, as famously posed by Douglas Adams in "The Hitchhiker's Guide to the Galaxy".
+    2. Limit - This word represents 42 because it is the maximum number of items that can be held in a standard US gallon of milk.
+    3. Score - This word represents 42 because it is a common score in various sports, such as basketball and hockey, indicating a winning margin or a notable achievement.
+    4. Chapter - This word represents 42 because it is the number of chapters in the Bible's book of Revelation.
+    5. Code - This word represents 42 because it is a well-known code in computer science, often used to represent the answer to the ultimate question in a humorous way.
+
+  Number: 66
+  ----------------------------------------
+    1. Diamond - The number 66 is often associated with the gemstone diamond, which is a symbol of luxury and rarity.
+    2. Wedding - Sixty-six is a common age for a couple to get married, making it a popular choice for wedding anniversaries.
+    3. Diamond - The number 66 is also the number of the famous "Diamonds Are a Girl's Best Friend" song from the musical Gypsy.
+    4. Sixty - The number 66 is a multiple of six, making it a significant number in mathematics and everyday life.
+    5. Sixty-sixers - This term is used to refer to people born in the year 1966, a year that is often associated with cultural and historical events.
+
+  Number: 89
+  ----------------------------------------
+    1. Mountain - I associate the number 89 with a mountain because it's a peak that's not too high, not too low, but just right, symbolizing a perfect balance.
+    2. Harmony - I associate the number 89 with harmony because it's a number that resonates with the musical concept of perfect fifth, representing a balance of sound and structure.
+    3. Storm - I associate the number 89 with a storm because it's a weather phenomenon that's intense but not extreme, much like the number's unique position between calm and chaos.
+    4. Balance - I associate the number 89 with balance because it's a number that's neither too much nor too little, representing a state of equilibrium and stability.
+    5. Apex - I associate the number 89 with an apex because it's a peak that's reached, symbolizing achievement and accomplishment, yet still within a comfortable and accessible range.
+
+  Number: 93
+  ----------------------------------------
+    1. Storm - The number 93 evokes the idea of a storm, as it is often associated with turbulent weather conditions, much like the intense energy and unpredictability of a storm.
+    2. Warrior - The number 93 is reminiscent of a warrior, as it is a strong and formidable number that commands respect and exudes a sense of power and resilience.
+    3. Frost - The number 93 has a chilly, wintry feel to it, much like the biting cold of frost, which is often associated with winter and the harsh, unforgiving conditions of the season.
+    4. Blaze - The number 93 is fiery and intense, much like a blazing fire, which is a powerful and unstoppable force that can be both creative and destructive.
+    5. Frostbite - The number 93 is also associated with frostbite, a painful and debilitating condition that occurs when skin is exposed to extreme cold, highlighting the harsh and unforgiving nature of the number.
+  Loading meta-llama/Llama-3.1-8B-Instruct ...
+
+============================================================
+Model: Llama-3.1-8B-Instruct
+============================================================
+
+  Number: 5
+  ----------------------------------------
+    1. Fingers - This word represents the number 5 because humans have five fingers on each hand.
+    2. Senses - This word represents the number 5 because there are five traditional senses in the human body: sight, sound, touch, taste, and smell.
+    3. Fives - This word represents the number 5 because it is a common way to refer to a group of five people or objects.
+    4. Folds - This word represents the number 5 because a standard paper has five folds when it is folded in half multiple times.
+    5. Frets - This word represents the number 5 because a standard guitar has five frets on its neck.
+
+  Number: 21
+  ----------------------------------------
+    1. Birthday - This number is often associated with birthdays, as it's a common age milestone in many cultures.
+    2. Party - The number 21 is often seen as a threshold for coming of age and is often celebrated with parties.
+    3. Legal - In many countries, 21 is the age of legal adulthood, marking the transition to full rights and responsibilities.
+    4. Wine - The number 21 is often associated with wine, as it's the minimum age for purchasing and consuming wine in many places.
+    5. Majority - This number represents the age of majority, signifying the transition from being a minor to an adult with full rights.
+
+  Number: 38
+  ----------------------------------------
+    1. Frost - This word represents 38 because it's a temperature often associated with the lower end of the freezing point, which is around 32 degrees, and 38 is just a few degrees above that.
+    2. Pulse - This word represents 38 because it's a common heart rate for a healthy adult, which is often cited as 38-40 beats per minute.
+    3. Speed - This word represents 38 because it's the speed limit on many highways in the United States.
+    4. Knot - This word represents 38 because it's a unit of speed, specifically 1 nautical mile per hour, which is equivalent to 1.1508 miles per hour.
+    5. Mile - This word represents 38 because it's the number of miles in a marathon, which is a common distance for long-distance running.
+
+  Number: 42
+  ----------------------------------------
+    1. Cosmic - This number is often associated with the concept of the universe and the mysteries of space, which is often referred to as the "cosmic" realm.
+    2. Answer - In popular culture, 42 is famously known as the "Answer to the Ultimate Question of Life, the Universe, and Everything" from Douglas Adams' science fiction series "The Hitchhiker's Guide to the Galaxy."
+    3. Lucky - In many cultures, 42 is considered a lucky number, often associated with good fortune and prosperity.
+    4. Answered - The number 42 is often seen as a definitive answer, providing a sense of resolution and completion to a question or problem.
+    5. Infinite - The concept of 42 is often linked to the infinite and the infinite possibilities that exist within the universe, making it a number that represents boundless potential.
+
+  Number: 66
+  ----------------------------------------
+    1. Diamond - This gemstone is often associated with the number 66 due to its 6-sided shape and the fact that it's the 6th hardest substance on the Mohs scale.
+    2. Harmony - The number 66 is often seen as a symbol of balance and equilibrium, much like the concept of harmony in music and art.
+    3. Perfect - The number 66 is often considered a perfect number in mathematics, as it is the sum of its proper divisors (1, 2, 3, 6, 11, 22, 33).
+    4. Balance - The number 66 is often seen as a symbol of balance and equilibrium, as it is halfway between 0 and 100, representing a middle ground.
+    5. Symmetry - The number 66 has a symmetrical appearance when written, with the two 6's mirroring each other, making it a visually appealing number.
+
+  Number: 89
+  ----------------------------------------
+    1. Lucky - This number is often considered lucky in many cultures due to its unique combination of digits.
+    2. Prime - 89 is a prime number, meaning it can only be divided by 1 and itself.
+    3. Rare - This number is relatively rare in the decimal system, making it stand out.
+    4. Cosmic - The number 89 is associated with the cosmic event of the 89th day of the year, which is often considered a turning point.
+    5. Ancient - The ancient Greeks and Romans used a sexagesimal (base-60) system, which is why 89 is a significant number in their numerical system.
+
+  Number: 93
+  ----------------------------------------
+    1. Diamond - Diamonds are often associated with luxury and high-end quality, and 93 is a price point often seen in high-end jewelry.
+    2. Marathon - The Boston Marathon is the 93rd edition of the Boston Marathon, making it a significant and prestigious event.
+    3. Pounds - 93 pounds is a common weight for a large cat, often associated with the Maine Coon breed.
+    4. Years - 93 is a significant age for a human, often associated with wisdom and life experience.
+    5. Degrees - 93 degrees is a high temperature often associated with extreme heat and weather conditions.
+  Loading meta-llama/Llama-3.3-70B-Instruct ...
+
+============================================================
+Model: Llama-3.3-70B-Instruct
+============================================================
+
+  Number: 5
+  ----------------------------------------

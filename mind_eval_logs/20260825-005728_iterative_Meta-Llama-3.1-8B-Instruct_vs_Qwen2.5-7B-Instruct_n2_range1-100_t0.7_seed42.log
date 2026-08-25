@@ -1,0 +1,370 @@
+=== mind eval run ===
+timestamp : 20260825-005728
+model_a   : meta-llama/Meta-Llama-3.1-8B-Instruct
+model_b   : Qwen/Qwen2.5-7B-Instruct
+game      : iterative
+n_evals   : 2
+conditions: ['standard']
+num_range : 1–100
+temperature: 0.7
+seed      : 42
+log       : mind_eval_logs/20260825-005728_iterative_Meta-Llama-3.1-8B-Instruct_vs_Qwen2.5-7B-Instruct_n2_range1-100_t0.7_seed42.log
+========================================
+
+Device: cuda | dtype: torch.bfloat16
+Loading meta-llama/Meta-Llama-3.1-8B-Instruct
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   1%|          | 2/291 [00:00<00:30,  9.59it/s]Loading weights:   8%|7         | 22/291 [00:00<00:03, 84.28it/s]Loading weights:  14%|#4        | 41/291 [00:00<00:02, 122.03it/s]Loading weights:  21%|##        | 60/291 [00:00<00:01, 143.76it/s]Loading weights:  29%|##9       | 85/291 [00:00<00:01, 167.49it/s]Loading weights:  35%|###5      | 103/291 [00:00<00:01, 161.20it/s]Loading weights:  42%|####1     | 122/291 [00:00<00:01, 163.51it/s]Loading weights:  48%|####8     | 141/291 [00:00<00:00, 168.16it/s]Loading weights:  57%|#####7    | 166/291 [00:01<00:00, 185.61it/s]Loading weights:  64%|######3   | 185/291 [00:01<00:00, 163.88it/s]Loading weights:  70%|######9   | 203/291 [00:01<00:00, 163.43it/s]Loading weights:  76%|#######6  | 222/291 [00:01<00:00, 165.72it/s]Loading weights:  85%|########4 | 247/291 [00:01<00:00, 183.91it/s]Loading weights:  91%|#########1| 266/291 [00:01<00:00, 183.64it/s]Loading weights:  98%|#########7| 285/291 [00:01<00:00, 184.17it/s]Loading weights: 100%|##########| 291/291 [00:01<00:00, 162.90it/s]
+Loading Qwen/Qwen2.5-7B-Instruct
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<00:49,  6.87it/s]Loading weights:   1%|          | 2/339 [00:00<00:53,  6.35it/s]Loading weights:   9%|8         | 29/339 [00:00<00:03, 92.29it/s]Loading weights:  15%|#5        | 52/339 [00:00<00:02, 132.52it/s]Loading weights:  20%|#9        | 67/339 [00:00<00:01, 137.62it/s]Loading weights:  26%|##6       | 89/339 [00:00<00:01, 149.24it/s]Loading weights:  33%|###3      | 113/339 [00:00<00:01, 169.73it/s]Loading weights:  40%|####      | 136/339 [00:01<00:01, 173.00it/s]Loading weights:  46%|####6     | 156/339 [00:01<00:01, 180.08it/s]Loading weights:  52%|#####1    | 175/339 [00:01<00:00, 175.41it/s]Loading weights:  58%|#####8    | 197/339 [00:01<00:00, 179.08it/s]Loading weights:  64%|######3   | 216/339 [00:01<00:00, 179.33it/s]Loading weights:  69%|######9   | 235/339 [00:01<00:00, 170.04it/s]Loading weights:  76%|#######5  | 257/339 [00:01<00:00, 176.86it/s]Loading weights:  83%|########2 | 280/339 [00:01<00:00, 172.77it/s]Loading weights:  90%|########9 | 304/339 [00:01<00:00, 181.96it/s]Loading weights:  95%|#########5| 323/339 [00:02<00:00, 178.59it/s]Loading weights: 100%|##########| 339/339 [00:02<00:00, 159.88it/s]
+A=Meta-Llama-3.1-8B-Instruct  B=Qwen2.5-7B-Instruct
+
+
+── condition: standard ──
+
+──────────────────────────────────────────────────────────────────────
+  STANDARD  |  eval 0  |  mean_final_error=32.4  mean_turns=3.0
+──────────────────────────────────────────────────────────────────────
+
+  Game 1  |  n=82  |  turns=3  |  final_error=54
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number 82 is the number of days in the month of February in a leap year.
+      2. Word: February
+    → clue: February
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: February is the second month of the year, which directly points to the number 2.
+      2. Number: 2
+    → guess: 2
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number of years since the death of Albert Einstein in 1955.
+      2. Word: Death
+    → clue: Death
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "Death" might be associated with the number 666, which is often referred to as the "number of the beast" in religious texts and is strongly linked with death and evil.
+      2. Number: 666
+    → guess: 100
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The number of days in the month of February is a specific quantity that links to the word "February" from the previous clue, and the number 82 is also the number of days in the month of February in a leap year, but that is not a unique connection, however  the number 82 is the number of days in the month of February in the year 2024 is not correct but the number 82 is also the number of days in the month of February in the year 1900, 
+      2. Days
+    → clue: Days
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "Days" likely refers to a specific day of the month, and given the previous clues "February" (which has 28 or 29 days) and "Death" (possibly referring to the number 100 in some contexts), the number 28 stands out as a logical connection.
+      2. Number: 28
+    → guess: 28
+
+  Game 2  |  n=15  |  turns=3  |  final_error=8
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: This number is the average number of days in a month, excluding months with 31 days.
+      2. Word: Leap
+    → clue: Leap
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The word "Leap" can be associated with the number 50 because it's in the middle of the range 1 to 100, symbolizing a midpoint or a significant jump.
+      2. Number: 50
+    → guess: 50
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: This number is the number of days in the month of July.
+      2. Word: July
+    → clue: July
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "Leap" and "July" might be associated with the number 7, as it's the 7th month of the year and also relates to leaping in various contexts like leaping over something or leaping in sports.
+      2. Number: 7
+    → guess: 7
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number 15 appears as a score in a common card game.
+      2. Word: Heart
+    → clue: Heart
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "Leap," "July," and "Heart" might be associated with the number 7 because "leap" can refer to leaping on July 7th, which is a common date for special events or holidays, and "heart" can symbolize love or affection often linked with significant dates like Valentine's Day, which falls around mid-February but could be associated with July 7th in a creative way.
+      2. Number: 7
+    → guess: 7
+
+  Game 3  |  n=4  |  turns=3  |  final_error=3
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: This number is the maximum number of weeks in a month with five full weeks.
+      2. Word: Weeks
+    → clue: Weeks
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The word "Weeks" can be associated with the number 7, as a week consists of 7 days.
+      2. Number: 7
+    → guess: 7
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number of weeks in a month can vary, but April is a month with 4 weeks.
+      2. Word: April
+    → clue: April
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "April" might be associated with the 4th month of the year, and "Weeks" could refer to the 7-day cycle, but since we need a single number between 1 and 100 that both clues could point to, a common number that fits both contexts is 30, as it's a common length for a month (like April) and can also represent days.
+      2. Number: 30
+    → guess: 30
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The number 4 is the number of weeks in a month of April that has 30 days.
+      2. Days
+    → clue: Days
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "Weeks," "April," and "Days" all point to the number 7 because there are 7 days in a week, April has approximately 30 days but the clue "Weeks" more specifically points to 7, and 7 is also considered a lucky number often associated with significant events.
+      2. Number: 7
+    → guess: 7
+
+  Game 4  |  n=95  |  turns=3  |  final_error=93
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: September is a month with 30 days and has one less day than the month that comes before it.
+      2. Word: August
+    → clue: August
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: August is the 8th month of the year, which directly corresponds to the number 8.
+      2. Number: 8
+    → guess: 8
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: September, October, November, and December have 31 days, but August has 31 days in common with this number.
+      2. Word: months
+    → clue: months
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "months" suggests we should think about the number of months in a year, which is 12.
+      2. Number: 12
+    → guess: 2
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: May is a month with 31 days, but some months have fewer days, and the average number of days in a month is close to 30.95, which is the average number of days in a month.
+      2. Word: Average
+    → clue 'Average' BLOCKED
+
+  Game 5  |  n=36  |  turns=3  |  final_error=4
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number 36 is the number of degrees in the Celsius scale that is the freezing point of water.
+      2. Word: Freezing
+    → clue: Freezing
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The word "Freezing" typically refers to a very low temperature, which can be associated with the number 32 since that is the freezing point of water in Fahrenheit.
+      2. Number: 32
+    → guess: 32
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: There are 36 holes in a standard golf course.
+      2. Word: Links
+    → clue: Links
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "Links" might be referring to the number 3, as it can be associated with trinity or three-legged links in a chain.
+      2. Number: 3
+    → guess: 3
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number 36 is the number of points in a game of 36, a popular French card game.
+      2. Word: Piquet
+    → clue: Piquet
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The word "Piquet" might be associated with a card game, and the number 32 could be a common number of cards in a deck or a specific rule in the game.
+      2. Number: 32
+    → guess: 32
+
+──────────────────────────────────────────────────────────────────────
+  STANDARD  |  eval 1  |  mean_final_error=16.6  mean_turns=2.8
+──────────────────────────────────────────────────────────────────────
+
+  Game 1  |  n=32  |  turns=3  |  final_error=8
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: Thirty-two is the number of days in the month of April.
+      2. Word: April
+    → clue: April
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: April is the fourth month of the year, which directly corresponds to the number 4.
+      2. Number: 4
+    → guess: 4
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: Thirty-two is the number of teeth in the average adult human mouth.
+      2. Word: teeth
+    → clue: teeth
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "teeth" might be associated with the number 30 because there are typically 30 days in April, and an adult has 32 teeth, so 30 could be a close approximation.
+      2. Number: 30
+    → guess: 30
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The number 32 is the number of degrees Fahrenheit at the freezing point of water.
+      2. Freeze
+    → clue: Freeze
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "April" (4th month), "teeth" (typically 32 in a full set), and "Freeze" (which could be associated with the temperature scale of -40 degrees being the same in both Celsius and Fahrenheit) all point to the number 40.
+      2. Number: 40
+    → guess: 40
+
+  Game 2  |  n=29  |  turns=2  |  final_error=0
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: February is the only month with exactly 29 days in a non-leap year.
+      2. Word: February
+    → clue: February
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: February is the second month of the year, which directly points to the number 2.
+      2. Number: 2
+    → guess: 2
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. February has 29 days in a leap year.
+      2. Leap
+    → clue: Leap
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "Leap" suggests a leap year, which occurs every 4 years, and February has 29 days in a leap year. Considering the previous clue "February," the number might be related to the frequency of leap years or a significant date in a leap year, such as February 29. The number 29 fits both clues well.
+      2. Number: 29
+    → guess: 29
+
+  Game 3  |  n=18  |  turns=3  |  final_error=15
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: This number represents the number of days in the month of February in non-leap years.
+      2. Word: February
+    → clue: February
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: February is the second month of the year, which directly points to the number 2.
+      2. Number: 2
+    → guess: 2
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The number 18 is the number of holes on a standard golf ball.
+      2. Holes
+    → clue: Holes
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "Holes" might be referring to the number 7, as it is often associated with the phrase "seven holes," which could relate to a golf course.
+      2. Number: 7
+    → guess: 7
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number 18 is the age at which a person is considered a young adult in many jurisdictions.
+      2. Word: Legal
+    → clue: Legal
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "February" (2nd month), "Holes" (number of holes in a standard American golf course, which is 18), and "Legal" (often associated with the number 3 in legal contexts like three branches of government) point to the number 3.
+      2. Number: 3
+    → guess: 3
+
+  Game 4  |  n=95  |  turns=3  |  final_error=45
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: May is a month that has 31 days, and one of those days is the 95th day of the year.
+      2. Word: May
+    → clue: May
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The word "May" can be associated with the month May, which is the fifth month of the year, hence the number 5.
+      2. Number: 5
+    → guess: 5
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: Ninety-five is the number of mph in a Formula One racing car's speed limit.
+      2. Speed
+    → clue: Speed
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The word "Speed" might be associated with the number 90 because it's a common speed limit on highways in many places.
+      2. Number: 90
+    → guess: 90
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: May is the fifth month of the year and has 31 days, but May is not the correct answer here, however, another month, May's neighbor, May's predecessor, April, has 30 days, but May's successor, June has 30 days, and May's predecessor, May's neighbor, April is not 95 days, but the months have a neighbor, May has a neighbor, June and May's neighbor has 31 days, and May has another neighbor, April has 30 days, and a month that has 95 days is May's neighbor April is not 95 days, but the months have a neighbor that has 31 days, May has a neighbor, April has 30 days, but May has another neighbor, May's neighbor has 31 days, May's predecessor, April has 30 days, and the month that has 95 days is May's neighbor that has 31 days and May's predecessor has 30 days, but May has a neighbor that has 31 days, May's successor has 30 days, May's neighbor has 31 days, and the month with 95 days is May's predecessor's neighbor that has 31 days.
+      2. Word: Month
+    → clue: Month
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "May," "Speed," and "Month" might be pointing to the month of May, which is the 5th month of the year, and the speed limit of 50 km/h in many places could be a reference to the number 50.
+      2. Number: 50
+    → guess: 50
+
+  Game 5  |  n=14  |  turns=3  |  final_error=15
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number 14 is the number of days in the second month of the year.
+      2. Word: February
+    → clue: February
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: February is the second month of the year, which directly points to the number 2.
+      2. Number: 2
+    → guess: 2
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: February is the month with the shortest number of days in the Gregorian calendar that is divisible by 7.
+      2. Word: Leap
+    → clue: Leap
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "Leap" suggests a leap year, which occurs every 4 years, and February has 29 days in a leap year. Considering the previous clue "February," the number might be related to the frequency of leap years or a significant date in a leap year, such as February 29. The number 29 fits both clues well.
+      2. Number: 29
+    → guess: 29
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: This number represents the number of days in a month that is the month of love, often associated with Valentine's Day.
+      2. Word: February isn't an option since that's already given, so I'll use a different month - Valentine
+    → clue: February
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "Leap" in the context of February points to February 29th, which occurs every four years during a leap year. Since the guesses so far are 2 and 29, it's likely that the number being associated with these clues is 29.
+      2. Number: 29
+    → guess: 29
+
+=================================================================
+Condition              mean_final_error   mean_turns    games
+-----------------------------------------------------------------
+  standard                         24.5          2.9       10
+=================================================================

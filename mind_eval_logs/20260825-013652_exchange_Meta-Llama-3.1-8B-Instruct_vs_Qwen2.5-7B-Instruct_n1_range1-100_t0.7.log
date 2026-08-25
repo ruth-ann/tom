@@ -1,0 +1,211 @@
+=== mind eval run ===
+timestamp : 20260825-013652
+model_a   : meta-llama/Meta-Llama-3.1-8B-Instruct
+model_b   : Qwen/Qwen2.5-7B-Instruct
+game      : exchange
+n_evals   : 1
+conditions: ['standard']
+num_range : 1–100
+temperature: 0.7
+seed      : None
+log       : mind_eval_logs/20260825-013652_exchange_Meta-Llama-3.1-8B-Instruct_vs_Qwen2.5-7B-Instruct_n1_range1-100_t0.7.log
+========================================
+
+Device: cuda | dtype: torch.bfloat16
+Loading meta-llama/Meta-Llama-3.1-8B-Instruct
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   1%|          | 2/291 [00:00<00:32,  8.78it/s]Loading weights:   8%|7         | 23/291 [00:00<00:03, 84.03it/s]Loading weights:  14%|#4        | 42/291 [00:00<00:02, 120.84it/s]Loading weights:  23%|##3       | 67/291 [00:00<00:01, 157.81it/s]Loading weights:  30%|##9       | 86/291 [00:00<00:01, 157.96it/s]Loading weights:  36%|###5      | 104/291 [00:00<00:01, 159.17it/s]Loading weights:  42%|####2     | 123/291 [00:00<00:01, 162.08it/s]Loading weights:  50%|####9     | 145/291 [00:00<00:00, 177.91it/s]Loading weights:  57%|#####7    | 166/291 [00:01<00:00, 185.76it/s]Loading weights:  64%|######3   | 186/291 [00:01<00:00, 160.31it/s]Loading weights:  70%|#######   | 204/291 [00:01<00:00, 161.08it/s]Loading weights:  77%|#######7  | 225/291 [00:01<00:00, 173.53it/s]Loading weights:  85%|########4 | 247/291 [00:01<00:00, 184.06it/s]Loading weights:  91%|#########1| 266/291 [00:01<00:00, 183.79it/s]Loading weights:  98%|#########7| 285/291 [00:01<00:00, 184.37it/s]Loading weights: 100%|##########| 291/291 [00:01<00:00, 162.60it/s]
+Loading Qwen/Qwen2.5-7B-Instruct
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<00:58,  5.80it/s]Loading weights:   1%|          | 2/339 [00:00<00:54,  6.21it/s]Loading weights:   8%|8         | 28/339 [00:00<00:03, 87.72it/s]Loading weights:  15%|#5        | 51/339 [00:00<00:02, 116.21it/s]Loading weights:  23%|##2       | 77/339 [00:00<00:01, 144.15it/s]Loading weights:  30%|##9       | 101/339 [00:00<00:01, 165.32it/s]Loading weights:  37%|###6      | 124/339 [00:00<00:01, 163.54it/s]Loading weights:  44%|####3     | 148/339 [00:01<00:01, 182.70it/s]Loading weights:  50%|####9     | 168/339 [00:01<00:00, 178.77it/s]Loading weights:  55%|#####5    | 187/339 [00:01<00:00, 174.35it/s]Loading weights:  61%|######1   | 208/339 [00:01<00:00, 183.05it/s]Loading weights:  67%|######6   | 227/339 [00:01<00:00, 175.37it/s]Loading weights:  72%|#######2  | 245/339 [00:01<00:00, 174.82it/s]Loading weights:  78%|#######7  | 264/339 [00:01<00:00, 178.80it/s]Loading weights:  83%|########3 | 283/339 [00:01<00:00, 168.77it/s]Loading weights:  90%|########9 | 304/339 [00:01<00:00, 164.13it/s]Loading weights:  97%|#########7| 329/339 [00:02<00:00, 181.84it/s]Loading weights: 100%|##########| 339/339 [00:02<00:00, 158.70it/s]
+A=Meta-Llama-3.1-8B-Instruct  B=Qwen2.5-7B-Instruct
+
+
+── condition: standard ──
+
+─────────────────────────────────────────────────────────────────
+  standard  |  eval 0  |  score=0/5  agree=1/5
+─────────────────────────────────────────────────────────────────
+
+  Game 1  ✗  |  Meta-Llama-3.1-8B-Instruct=27  Qwen2.5-7B-Instruct=65
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (27) → "Higher"
+      1. Their number: ~50 because their clues suggest a moderate number, possibly a middle ground, but I'm not entirely sure.
+2. Higher
+    Qwen2.5-7B-Instruct (65) → "Lower"
+      1. Their number: ~50 because... their clue was "Higher," indicating their number is above the midpoint of 50.
+2. Word: Lower
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (27) → "Bigger"
+      1. Their number: ~50 because their clue 'Lower' suggests their number is below the midpoint of the range, and 'Higher' in response implies their number is not very high.
+2. Bigger
+    Qwen2.5-7B-Instruct (65) → "Top"
+      1. Their number: ~80 because... their clue 'Bigger' suggests a number closer to the upper end of the range, and 'Higher' indicates it's more than mine.
+2. Word: Top
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (27) → "Bigger"
+      1. Their number: ~70 because their clue 'Lower' in the first turn and 'Top' in the second turn suggests a high number, but 'Lower' implies it's not the highest. Combining these, a reasonable estimate is a number near the top but not the top.
+2. Bigger
+    Qwen2.5-7B-Instruct (65) → "Peak"
+      1. Their number: ~80 because... their clues 'Top' and 'Bigger' suggest a high value, and they haven't received a clue indicating a lower range yet.
+2. Word: Peak
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (27) → YOURS
+      1. Reasoning: Their words suggest 50 because 'Top' and 'Peak' both imply the highest point or the maximum value. Since 'Top' is a more general term, it could refer to the highest point in a list or a ranking, but 'Peak' specifically refers to a mountain peak, which is often the highest point. This implies their number might be the highest value possible, which is 100.
+      2. Decision: YOURS
+    Qwen2.5-7B-Instruct (65) → YOURS
+      1. Reasoning: [their words suggest ~80 because "Top" implies near the maximum of the range (100), "Bigger" confirms it's higher than 50; my number is 65; so it's lower than their suggested number]
+      2. Decision: YOURS
+
+  Game 2  ✗  |  Meta-Llama-3.1-8B-Instruct=28  Qwen2.5-7B-Instruct=11
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (28) → "Higher"
+      1. Their number: ~40 because their clues mentioned "halfway" and "medium-sized," implying a moderate or central value.
+2. Higher
+    Qwen2.5-7B-Instruct (11) → "Lower"
+      1. Their number: ~5 because... their clue was "Higher," indicating it's not a low number.
+2. Word: Lower
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (28) → "Bigger"
+      1. Their number: ~60 because their clue "Lower" implies they have a relatively small number, and my number is in the middle range, so I'm guessing it's slightly higher.
+2. Bigger
+    Qwen2.5-7B-Instruct (11) → "Giant"
+      1. Their number: ~50 because... their clues suggest a significant difference between "Lower" and "Bigger," indicating a number closer to the upper end of the range.
+2. Word: Giant
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (28) → "Higher"
+      1. Their number: ~50 because their clue 'Giant' implies they have a very large number, likely near the upper end of the range.
+2. Higher
+    Qwen2.5-7B-Instruct (11) → "Majestic"
+      1. Their number: ~50 because... their clues suggest a large, significant difference, not just size but also importance or magnitude.
+2. Word: Majestic
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (28) → MINE
+      1. Reasoning: 'Lower' suggests ~1 because it implies the smallest possible value in a comparison; my number is 28; so their number is likely 1.
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (11) → MINE
+      1. Reasoning: [their words suggest ~50 because "Giant" implies a large number, and "Majestic" further emphasizes a high value; my number is 11; so my number is lower than what they are suggesting.]
+      2. Decision: MINE
+
+  Game 3  ≈  |  Meta-Llama-3.1-8B-Instruct=24  Qwen2.5-7B-Instruct=47
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (24) → "Larger"
+      1. Their number: ~50 because their clues so far have been vague but not extremely low, suggesting a middle-to-high value.
+2. Larger
+    Qwen2.5-7B-Instruct (47) → "Higher"
+      1. Their number: ~50 because... their clue was 'Larger', indicating it's not close to the lower end.
+2. Word: Higher
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (24) → "Bigger"
+      1. Their number: ~50 because 'Higher' suggests their number is higher than a neutral point, possibly around the midpoint of the range.
+2. Bigger
+    Qwen2.5-7B-Instruct (47) → "Giant"
+      1. Their number: ~50 because... their clues suggest a number that feels large but not extremely high.
+2. Word: Giant
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (24) → "Bigger"
+      1. Their number: ~30 because their clue "Giant" implies a large number, and "Higher" suggests a relatively high value, but not extremely high, so I estimate around 30.
+2. Bigger
+    Qwen2.5-7B-Instruct (47) → "Majestic"
+      1. Their number: ~60 because... their clues suggest a large number, moving from 'Giant' to 'Bigger' consistently indicates a high value.
+2. Word: Majestic
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (24) → MINE
+      1. Reasoning: Their words suggest ~50 because 'Higher' and 'Higher' and 'Majestic' imply a high value, but 'Giant' also suggests a large, but not necessarily high value. Considering their usage, 'Higher' and 'Majestic' are more likely to point to a high value, but 'Giant' could suggest a larger, more general size. However, in the context of a range from 1 to 100, a 'Majestic' number might imply something grand or exceptional, which could be higher than 50. 
+      my number is M
+      so theirs is MINE
+      
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (47) → YOURS
+      1. Reasoning: [their words suggest ~50 because "Giant" and "Majestic" imply a number closer to the upper end of the range; my number is 47; so it is YOURS]
+      2. Decision: YOURS
+
+  Game 4  ✗  |  Meta-Llama-3.1-8B-Instruct=73  Qwen2.5-7B-Instruct=78
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (73) → "Larger"
+      1. Their number: ~50 because their clues suggest a relatively balanced, middle-range number.
+2. Larger
+    Qwen2.5-7B-Instruct (78) → "Bigger"
+      1. Their number: ~50 because... their clue was "Larger," indicating it's not a small number.
+2. Word: Bigger
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (73) → "Larger"
+      1. Their number: ~30 because their clue 'Bigger' suggests a larger magnitude, but without any specific range, it's hard to pinpoint an exact number, so I'll assume a mid-range number like 30.
+2. Larger
+    Qwen2.5-7B-Instruct (78) → "Green"
+      1. Their number: ~50 because... their clue 'Larger' suggests a number greater than 50, and they repeated 'Larger' indicating it's significantly more than just a few units above 50.
+2. Word: Green
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (73) → "Bigger"
+      1. Their number: ~50 because their clue 'Green' implies their number might be at a middle or low end of the spectrum, but since they responded with 'Bigger' after my 'Larger', it suggests their number is not extremely small, so I'm leaning towards a moderate number.
+2. Bigger
+    Qwen2.5-7B-Instruct (78) → "Leaf"
+      1. Their number: ~50 because... their clues 'Larger' and 'Bigger' suggest a number greater than 50, but not extremely high.
+2. Word: Leaf
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (73) → MINE
+      1. Reasoning: Their words 'Bigger' suggests ~80 because "bigger" is often associated with larger sizes or quantities, and 80 is a common round number that is often considered "big" in everyday conversations; their words 'Green' suggests ~20 because "green" can imply a smaller or more youthful aspect, and 20 is a relatively small number that might be considered "green" in a figurative sense; their words 'Leaf' suggests ~10 because a leaf is a small part of a larger plant, and 10 is a small number that fits this metaphor.
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (78) → MINE
+      1. Reasoning: [their words suggest ~75 because "Larger" and "Bigger" imply a number closer to the upper end of the range; my number is 78; so my number is higher than what they might be thinking.]
+      
+      2. Decision: MINE
+
+  Game 5  ✗  |  Meta-Llama-3.1-8B-Instruct=35  Qwen2.5-7B-Instruct=30
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (35) → "Higher"
+      1. Their number: ~50 because their clue "big" implies a relatively high number, and their clue "above average" suggests that it's not extremely high.
+2. Higher
+    Qwen2.5-7B-Instruct (30) → "Lower"
+      1. Their number: ~50 because they said 'Higher', indicating it's not a low number.
+2. Word: Lower
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (35) → "Higher"
+      1. Their number: ~50 because their clue 'Lower' implies their number is below the midpoint, so it's likely around the middle of the range.
+2. Higher
+    Qwen2.5-7B-Instruct (30) → "Abstract"
+      1. Their number: ~50 because... their clue was abstract and suggested a higher midpoint.
+2. Word: Abstract
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (35) → "Bigger"
+      1. Their number: ~30 because their clue 'Abstract' suggests they might be thinking of a concept or idea rather than a concrete object, which might lead to a smaller number, and 'Lower' indicates their number is smaller than mine.
+2. Bigger
+    Qwen2.5-7B-Instruct (30) → "Concrete"
+      1. Their number: ~50 because... their clues suggest abstract concepts and size, indicating a number towards the upper end of the range.
+2. Word: Concrete
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (35) → YOURS
+      1. Reasoning: Their words suggest ~50 because 'Lower' implies a smaller number, and 'Abstract' followed by 'Concrete' suggests a number that is more grounded in reality, which could be a smaller, more 'concrete' number like 50; my number is 35; so theirs is likely to be lower.
+      2. Decision: YOURS
+    Qwen2.5-7B-Instruct (30) → YOURS
+      1. Reasoning: "Higher" suggests a number greater than average, possibly around the upper half of the range (50-100). "Abstract" could refer to concepts like size, importance, or value, which might imply a larger number. "Bigger" directly indicates a larger quantity. Given these clues, their number is likely around 75-90. My number is 30, which is much lower. So, my number is lower than theirs.
+      2. Decision: YOURS
+
+============================================================
+Condition               correct      agree  correct|agree
+------------------------------------------------------------
+  standard              0/5 ( 0.0%)     1/5 (20.0%)    0.0%
+============================================================

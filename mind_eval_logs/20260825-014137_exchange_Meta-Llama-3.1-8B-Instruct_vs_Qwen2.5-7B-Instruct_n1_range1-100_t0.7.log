@@ -1,0 +1,203 @@
+=== mind eval run ===
+timestamp : 20260825-014137
+model_a   : meta-llama/Meta-Llama-3.1-8B-Instruct
+model_b   : Qwen/Qwen2.5-7B-Instruct
+game      : exchange
+n_evals   : 1
+conditions: ['standard']
+num_range : 1–100
+temperature: 0.7
+seed      : None
+log       : mind_eval_logs/20260825-014137_exchange_Meta-Llama-3.1-8B-Instruct_vs_Qwen2.5-7B-Instruct_n1_range1-100_t0.7.log
+========================================
+
+Device: cuda | dtype: torch.bfloat16
+Loading meta-llama/Meta-Llama-3.1-8B-Instruct
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:00,  4.76it/s]Loading weights:   8%|7         | 22/291 [00:00<00:03, 85.10it/s]Loading weights:  14%|#4        | 41/291 [00:00<00:02, 122.34it/s]Loading weights:  21%|##        | 60/291 [00:00<00:01, 144.00it/s]Loading weights:  29%|##9       | 85/291 [00:00<00:01, 167.72it/s]Loading weights:  35%|###5      | 103/291 [00:00<00:01, 161.56it/s]Loading weights:  42%|####1     | 122/291 [00:00<00:01, 163.85it/s]Loading weights:  48%|####8     | 141/291 [00:00<00:00, 168.29it/s]Loading weights:  57%|#####7    | 166/291 [00:01<00:00, 185.57it/s]Loading weights:  64%|######3   | 185/291 [00:01<00:00, 163.80it/s]Loading weights:  70%|######9   | 203/291 [00:01<00:00, 163.42it/s]Loading weights:  76%|#######6  | 222/291 [00:01<00:00, 165.55it/s]Loading weights:  85%|########4 | 247/291 [00:01<00:00, 183.81it/s]Loading weights:  91%|#########1| 266/291 [00:01<00:00, 183.53it/s]Loading weights:  98%|#########7| 285/291 [00:01<00:00, 184.00it/s]Loading weights: 100%|##########| 291/291 [00:01<00:00, 162.73it/s]
+Loading Qwen/Qwen2.5-7B-Instruct
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<01:41,  3.34it/s]Loading weights:   8%|8         | 28/339 [00:00<00:03, 85.86it/s]Loading weights:  14%|#3        | 46/339 [00:00<00:02, 112.60it/s]Loading weights:  19%|#9        | 65/339 [00:00<00:02, 127.58it/s]Loading weights:  26%|##6       | 89/339 [00:00<00:01, 154.99it/s]Loading weights:  33%|###3      | 112/339 [00:00<00:01, 162.65it/s]Loading weights:  40%|###9      | 135/339 [00:00<00:01, 176.93it/s]Loading weights:  45%|####5     | 154/339 [00:01<00:01, 170.34it/s]Loading weights:  51%|#####     | 172/339 [00:01<00:01, 166.01it/s]Loading weights:  58%|#####8    | 197/339 [00:01<00:00, 180.23it/s]Loading weights:  64%|######3   | 216/339 [00:01<00:00, 179.65it/s]Loading weights:  69%|######9   | 235/339 [00:01<00:00, 170.81it/s]Loading weights:  76%|#######5  | 257/339 [00:01<00:00, 167.39it/s]Loading weights:  83%|########2 | 281/339 [00:01<00:00, 178.97it/s]Loading weights:  90%|########9 | 304/339 [00:01<00:00, 175.65it/s]Loading weights:  97%|#########6| 328/339 [00:02<00:00, 178.52it/s]Loading weights: 100%|##########| 339/339 [00:02<00:00, 159.75it/s]
+A=Meta-Llama-3.1-8B-Instruct  B=Qwen2.5-7B-Instruct
+
+
+── condition: standard ──
+
+─────────────────────────────────────────────────────────────────
+  standard  |  eval 0  |  score=2/5  agree=3/5
+─────────────────────────────────────────────────────────────────
+
+  Game 1  ✓  |  Meta-Llama-3.1-8B-Instruct=97  Qwen2.5-7B-Instruct=11
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (97) → "Middle"
+      I'm choosing a word that is commonly associated with a number that is neither very high nor very low in a typical range.
+    Qwen2.5-7B-Instruct (11) → "Lower"
+      1. Their number: ~50 because... the word "Middle" suggests their number is around the midpoint of 1-100.
+2. Word: Lower
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (97) → "Bigger"
+      1. Their number: ~60 because their clue "Lower" implies a number below the midpoint, and "Middle" from my previous clue suggests a central position, which is consistent with a number around 50, but their clue suggests it's below that, so a number around 60 is a reasonable estimate.
+2. Bigger
+    Qwen2.5-7B-Instruct (11) → "Sunny"
+      1. Their number: ~50 because... their clue 'Bigger' suggests a number beyond the middle range.
+2. Word: Sunny
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (97) → "Bigger"
+      1. Their number: ~50 because their clue 'Lower' implies a position or a ranking, and 'Sunny' suggests a pleasant or positive aspect, which could be associated with a higher number in a scale, but 'Lower' is more direct.
+2. Bigger
+    Qwen2.5-7B-Instruct (11) → "Vibrant"
+      1. Their number: ~50 because... their clues 'Bigger' and 'Bigger' suggest a number greater than middle, which is around 50.
+2. Word: Vibrant
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (97) → MINE
+      1. Reasoning: Their word 'Lower' suggests ~50 because 'lower' implies a value that is below the middle or average, which is 50 in the range 1-100; my number is MINE; so their number is likely below 50.
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (11) → YOURS
+      1. Reasoning: [their words suggest ~50 because "Middle" implies around the midpoint of 1-100, which is 50; my number is 11; so my number is lower than theirs]
+      2. Decision: YOURS
+
+  Game 2  ✗  |  Meta-Llama-3.1-8B-Instruct=64  Qwen2.5-7B-Instruct=45
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (64) → "Higher"
+      I'm thinking of a word that describes a number that is in the upper half of the given range, indicating my number is not among the smallest options.
+    Qwen2.5-7B-Instruct (45) → "Lower"
+      1. Their number: ~25 because... their clue was "Higher," indicating their number is greater than mine.
+2. Word: Lower
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (64) → "Bigger"
+      1. Their number: ~50 because their clue 'Lower' indicates that they have a number below 50, and their clue 'Higher' suggests they think their number is greater than yours, which is 64, implying their number might be around the middle or higher end of the range.
+2. Bigger
+    Qwen2.5-7B-Instruct (45) → "Top"
+      1. Their number: ~70 because... their clue 'Bigger' suggests a number further towards the upper end of the range after my 'Lower' response.
+2. Word: Top
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (64) → "Bigger"
+      1. Their number: ~40 because 'Lower' and 'Top' suggest their number might be on the lower end, but 'Top' implies it's near the maximum, so I'm estimating a moderate value.
+2. Bigger
+    Qwen2.5-7B-Instruct (45) → "Majestic"
+      1. Their number: ~70 because... their clues suggest a larger, more significant value.
+2. Word: Majestic
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (64) → YOURS
+      1. Reasoning: Their words suggest ~50 because 'Lower' and 'Lower' and 'Top' imply a number near the top end of the range, and 'Lower' suggests a number below the midpoint, which would be around 50.
+      2. Decision: YOURS
+    Qwen2.5-7B-Instruct (45) → YOURS
+      1. Reasoning: [their words suggest ~50 because "Top" implies a high number near the upper limit of the range, and "Bigger" confirms it's higher than 45; my number is 45; so it is YOURS]
+      2. Decision: YOURS
+
+  Game 3  ✓  |  Meta-Llama-3.1-8B-Instruct=49  Qwen2.5-7B-Instruct=32
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (49) → "Middle"
+      I'm choosing a word that is associated with a mid-range value, indicating that my number is not the highest or lowest in the given range.
+    Qwen2.5-7B-Instruct (32) → "Lower"
+      1. Their number: ~50 because... their clue was "Middle," suggesting a number around the middle of the range.
+2. Word: Lower
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (49) → "Larger"
+      1. Their number: ~50 because their clue "Lower" suggests their number is on the lower end of the range, and "Middle" suggests your number is not the lowest, but not the highest either.
+2. Larger
+    Qwen2.5-7B-Instruct (32) → "Sky"
+      1. Their number: ~50 because... their clue was "Larger" after you said "Lower," indicating their number is in the upper half of the range.
+2. Word: Sky
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (49) → "Bigger"
+      1. Their number: ~70 because their clue 'Lower' suggests a number below the midpoint, and 'Sky' implies a large, expansive value, which might be around the higher end of the scale.
+2. Bigger
+    Qwen2.5-7B-Instruct (32) → "Ground"
+      1. Their number: ~50 because... their clues 'Middle', 'Larger', and 'Bigger' suggest a number towards the upper half of the range.
+2. Word: Ground
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (49) → MINE
+      1. Reasoning: Their word 'Lower' suggests ~0 because it implies a position at the bottom or a minimal value; my number is 49; so theirs is likely much lower than 49.
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (32) → YOURS
+      1. Reasoning: [their words suggest ~50 because "Sky" could imply a high number, "Larger" suggests more than 50, and "Bigger" also points to a high value; my number is 32; so my number is LOWER than what they might be thinking.]
+      
+      2. Decision: YOURS
+
+  Game 4  ✗  |  Meta-Llama-3.1-8B-Instruct=36  Qwen2.5-7B-Instruct=4
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (36) → "Medium"
+      The word 'medium' represents my number because it's a number that is in the middle of the range.
+    Qwen2.5-7B-Instruct (4) → "Low"
+      1. Their number: ~50 because their clue was "Medium" which suggests it's not too low or too high.
+2. Word: Low
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (36) → "Bigger"
+      1. Their number: ~40 because their clue "Low" implies a relatively low starting point, and they might have a small number. Their clue "Medium" from your turn suggests a moderate size, which, combined with "Low," could point to a mid-range number.
+2. Bigger
+    Qwen2.5-7B-Instruct (4) → "Upper"
+      1. Their number: ~7 because their 'Bigger' clue suggests it's not 'Low' or 'Medium', leaning towards the middle to upper range.
+2. Word: Upper
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (36) → "Bigger"
+      1. Their number: ~60 because 'Low' in turn 1 suggests a lower number, but 'Upper' in turn 2 indicates it's above the midpoint, and 'Bigger' implies it's significantly larger than mine. Putting these together, I estimate their number is around 60.
+2. Bigger
+    Qwen2.5-7B-Instruct (4) → "Top"
+      1. Their number: ~75 because... their clues suggest a high end of the scale.
+2. Word: Top
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (36) → MINE
+      1. Reasoning: Their words suggest ~50 because 'Low' and 'Upper' and 'Top' imply a position or ranking, and 'Low' typically refers to a lower end, while 'Upper' and 'Top' refer to higher ends. Given the range of 1-100, these words likely point to numbers close to the ends of the range. Considering 'Low' as a starting point, a middle ground between 'Low' and 'Upper/Top' would be around 50.
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (4) → MINE
+      1. Reasoning: "Low" suggests a number around 1-30, "Medium" suggests a number around 31-60, and "Bigger" implies a number higher than the last suggestion. Given my number is 4, it is much lower than "Low," which suggests a number closer to 1-30. Therefore, "Low" points to a number like 25, "Medium" points to a number like 50, and "Bigger" implies a number higher than 50. Since my number is 4, it is significantly lower than their range.
+      2. Decision: MINE
+
+  Game 5  ≈  |  Meta-Llama-3.1-8B-Instruct=4  Qwen2.5-7B-Instruct=62
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (4) → "Small"
+      The word "small" represents my number because it is a relatively low value compared to the upper limit of 100.
+    Qwen2.5-7B-Instruct (62) → "Low"
+      1. Their number: ~5 because...
+2. Word: Low
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (4) → "Bigger"
+      1. Their number: ~20 because their clue 'Low' suggests a relatively small number, and when combined with your 'Small', it implies a number in the lower range.
+2. Bigger
+    Qwen2.5-7B-Instruct (62) → "Middle"
+      1. Their number: ~50 because... their clue 'Bigger' suggests their number is not 'Small', which is likely around 10-20, so it must be in the middle range.
+2. Word: Middle
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (4) → "Larger"
+      1. Their number: ~50 because their previous clues ("Low" and "Middle") suggest their number is not extremely low, but not extremely high either, placing it somewhere in the middle range.
+2. Larger
+    Qwen2.5-7B-Instruct (62) → "Giant"
+      1. Their number: ~80 because... their clues indicate a progression from 'Small' to 'Bigger' to 'Larger', suggesting a number closer to the upper end of the range.
+2. Word: Giant
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (4) → MINE
+      1. Reasoning: Their words ('Low', 'Middle', 'Giant') suggest ~50 because 'Low' is often used to describe numbers below average, 'Middle' is a neutral term, but in the context of this game, it implies a smaller number than 'Giant'; my number is 4; so theirs is likely lower than 4, since 4 is below average.
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (62) → YOURS
+      1. Reasoning: "Low" suggests a number around 1-30, "Middle" suggests a number around 31-60, and "Giant" suggests a number around 76-100. Their last clue "Larger" implies their number is higher than "Middle," which points to a number in the 61-75 range. My number is 62, so it falls within this range.
+      2. Decision: YOURS
+
+============================================================
+Condition               correct      agree  correct|agree
+------------------------------------------------------------
+  standard              2/5 (40.0%)     3/5 (60.0%)   66.7%
+============================================================

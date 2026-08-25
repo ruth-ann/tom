@@ -1,0 +1,23 @@
+=== mind eval run ===
+timestamp : 20260825-012307
+model_a   : meta-llama/Meta-Llama-3.1-8B-Instruct
+model_b   : Qwen/Qwen2.5-7B-Instruct
+game      : exchange
+n_evals   : 2
+conditions: ['standard']
+num_range : 1–100
+temperature: 0.7
+seed      : None
+log       : mind_eval_logs/20260825-012307_exchange_Meta-Llama-3.1-8B-Instruct_vs_Qwen2.5-7B-Instruct_n2_range1-100_t0.7.log
+========================================
+
+Traceback (most recent call last):
+  File "/home1/rharmstr/tom/grpo_mind_eval_tests.py", line 1139, in <module>
+    main()
+  File "/home1/rharmstr/tom/grpo_mind_eval_tests.py", line 1047, in main
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home1/rharmstr/tom/tom/lib/python3.11/site-packages/torch/cuda/__init__.py", line 180, in is_available
+    return torch._C._cuda_getDeviceCount() > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

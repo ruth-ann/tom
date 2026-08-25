@@ -1,0 +1,82 @@
+=== mind eval run ===
+timestamp : 20260825-001404
+model_a   : meta-llama/Meta-Llama-3.1-8B-Instruct
+model_b   : Qwen/Qwen2.5-7B-Instruct
+game      : exchange
+n_evals   : 2
+conditions: ['standard']
+num_range : 1–100
+temperature: 0.7
+seed      : None
+log       : mind_eval_logs/20260825-001404_exchange_Meta-Llama-3.1-8B-Instruct_vs_Qwen2.5-7B-Instruct_n2_range1-100_t0.7.log
+========================================
+
+Device: cuda | dtype: torch.bfloat16
+Loading meta-llama/Meta-Llama-3.1-8B-Instruct
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:02,  4.62it/s]Loading weights:   8%|7         | 22/291 [00:00<00:03, 83.71it/s]Loading weights:  14%|#4        | 41/291 [00:00<00:02, 121.24it/s]Loading weights:  21%|##        | 60/291 [00:00<00:01, 143.20it/s]Loading weights:  29%|##9       | 85/291 [00:00<00:01, 166.92it/s]Loading weights:  35%|###5      | 103/291 [00:00<00:01, 160.99it/s]Loading weights:  42%|####1     | 122/291 [00:00<00:01, 163.33it/s]Loading weights:  48%|####8     | 141/291 [00:00<00:00, 168.03it/s]Loading weights:  57%|#####7    | 166/291 [00:01<00:00, 185.36it/s]Loading weights:  64%|######3   | 185/291 [00:01<00:00, 163.92it/s]Loading weights:  70%|######9   | 203/291 [00:01<00:00, 163.47it/s]Loading weights:  76%|#######6  | 222/291 [00:01<00:00, 165.58it/s]Loading weights:  85%|########4 | 247/291 [00:01<00:00, 183.83it/s]Loading weights:  91%|#########1| 266/291 [00:01<00:00, 183.55it/s]Loading weights:  98%|#########7| 285/291 [00:01<00:00, 184.00it/s]Loading weights: 100%|##########| 291/291 [00:01<00:00, 162.20it/s]
+Loading Qwen/Qwen2.5-7B-Instruct
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<01:40,  3.35it/s]Loading weights:   8%|8         | 28/339 [00:00<00:03, 85.70it/s]Loading weights:  14%|#3        | 46/339 [00:00<00:02, 113.56it/s]Loading weights:  19%|#9        | 65/339 [00:00<00:02, 134.00it/s]Loading weights:  26%|##5       | 87/339 [00:00<00:01, 154.71it/s]Loading weights:  31%|###       | 105/339 [00:00<00:01, 160.57it/s]Loading weights:  37%|###6      | 125/339 [00:00<00:01, 170.09it/s]Loading weights:  44%|####3     | 148/339 [00:01<00:01, 166.94it/s]Loading weights:  51%|#####     | 172/339 [00:01<00:01, 166.96it/s]Loading weights:  58%|#####7    | 196/339 [00:01<00:00, 177.69it/s]Loading weights:  63%|######3   | 215/339 [00:01<00:00, 179.64it/s]Loading weights:  69%|######9   | 234/339 [00:01<00:00, 169.13it/s]Loading weights:  76%|#######5  | 257/339 [00:01<00:00, 178.22it/s]Loading weights:  83%|########2 | 280/339 [00:01<00:00, 182.88it/s]Loading weights:  88%|########8 | 299/339 [00:01<00:00, 176.20it/s]Loading weights:  94%|#########3| 317/339 [00:02<00:00, 174.20it/s]Loading weights: 100%|##########| 339/339 [00:02<00:00, 159.47it/s]
+A=Meta-Llama-3.1-8B-Instruct  B=Qwen2.5-7B-Instruct
+
+
+── condition: standard ──
+
+  standard     eval   0  score=0/5  agree=0/5
+    game 1: A= 60 B= 28  exchange: [School/Pregnancy]  [Year/Pregnancy]  [Teen/Era]  → A:MINE B:MINE  ✗
+      A: 1. Reasoning: Based on the given word exchange, the words seem to be related to education, life stages, and a historical period, with the progression from 'School' to 'Year' to 'Teen' and 'Pregnancy' to 'Era', suggesting a comparison of stages of life, with 'Year' being a broader concept that encompasses the stage of life associated with 'Teen' and 'Pregnancy' and 'Era'.
+      A: 2. Decision: MINE
+      B: 1. Reasoning: The word exchanges do not provide a direct numerical comparison, but based on the given secret number of 28, it is a middle value in the range of 1-100.
+      B: 2. Decision: MINE
+    game 2: A=  8 B= 34  exchange: [School/Midsummer]  [Flood/Boiling]  [Celsius/Centennial]  → A:MINE B:MINE  ✗
+      A: 1. Reasoning: The words seem to be related to the concept of "seasons," and I notice that "Midsummer" is typically around June or July, while "Boiling" is associated with extremely hot temperatures, and "School" is usually during the fall and winter months, but it's not directly related to temperature. However, when I look at "Flood" and "Celsius," "Flood" can be caused by heavy rainfall, which is more common during the warmer months, so this is a possible connection. In that case, the next word "Celsius" is a unit of temperature, which suggests a connection to "Boiling" and the warmer months.
+      A: 2. Decision: MINE
+      B: 1. Reasoning: The words provided seem to follow a pattern where each word's length increases, and the numerical value given is in the middle of the specified range.
+      B: 2. Decision: MINE
+    game 3: A= 97 B= 15  exchange: [Century/Fifteen_days]  [Decade/Quarantine]  [Century/Fahrenheit]  → A:MINE B:MINE  ✗
+      A: 1. Reasoning: Since the words exchanged are related to time units, and 'Fifteen_days' is longer than 'Decade' but 'Fahrenheit' is not directly comparable, but given the pattern of "Century" being exchanged with "Fifteen_days" and then again with "Fahrenheit" it seems that the pattern is that a shorter time unit is being matched with a longer time unit.
+      A: 2. Decision: MINE
+      B: 1. Reasoning: The pattern suggests that "you" refers to a shorter time period, while "them" refers to a longer time period. Since 15 days is a shorter period than a century, and 15 is less than a decade or a century, my number is shorter.
+      B: 2. Decision: MINE
+    game 4: A= 46 B= 40  exchange: [Decade/Summer]  [Century/[blocked]]  [Ages/Fahrenheit]  → A:MINE B:MINE  ✗
+      A: 1. Reasoning: Based on the word exchange, I will compare the word lengths and the alphabetical order of the words to infer the secret number range, but the information given doesn't directly relate to the number itself.
+      A: 2. Decision: MINE
+      B: 1. Reasoning: The words are being exchanged in a pattern that seems to relate to time periods, with 'you=' referring to shorter periods and 'them=' to longer ones. My number 40 falls within the range of a decade but not a century, so it's closer to a decade.
+      B: 2. Decision: MINE
+    game 5: A= 40 B= 59  exchange: [Decade/Fahrenheit]  [Summer/Boiling]  [[blocked]/Boiling]  → A:MINE B:MINE  ✗
+      A: 1. Reasoning: Based on the word exchange, "Decade" and "Summer" are lower temperature ranges compared to "Boiling," which implies that your number is higher.
+      A: 2. Decision: MINE
+      B: 1. Reasoning: The words "Fahrenheit" and "Decade" suggest a temperature scale and a period of time, while "Boiling" and "Summer" indicate a high temperature and a season. Since the secret number is 59, which is below the boiling point of water (212°F) but could be considered warm for a summer day, it's likely lower than the midpoint of the range.
+      B: 2. Decision: MINE
+
+  standard     eval   1  score=0/5  agree=1/5
+    game 1: A= 35 B= 43  exchange: [[blocked]/Midsummer]  [Novena/Boiling]  [Celsius/Boiling点]  → A:MINE B:MINE  ✗
+      A: 1. Reasoning: The word "Midsummer" suggests a temperature around 20-25 degrees Celsius, which is relatively mild, and "Boiling" implies a temperature around 100 degrees Celsius, which is extreme. Since "Novena" and "Boiling" are used in the next turns, and "Boiling" is more extreme than "Novena", it suggests that the temperature is increasing, so my number is higher.
+      A: 2. Decision: MINE
+      B: 1. Reasoning: The words seem to be progressively moving towards more specific temperature-related terms, with "Celsius" being a unit of measurement for temperature.
+      B: 2. Decision: MINE
+    game 2: A= 91 B= 50  exchange: [Winter/Fahrenheit]  [September/Boiling]  [October/Boiling点]  → A:MINE B:MINE  ✗
+      A: 1. Reasoning: Since the word "Boiling" represents a temperature, and "Boiling点" (which is Japanese for "boiling point") is a more specific and precise term for a temperature, and considering that "Fahrenheit" is a temperature scale, I can infer that the exchange is related to temperatures.
+      A: 2. Decision: MINE
+      B: 1. Reasoning: The pattern seems to be based on temperature terms and months, but "Boiling点" suggests a non-English character which might indicate a different rule or a hint towards a specific number.
+      B: 2. Decision: MINE
+    game 3: A= 77 B= 50  exchange: [Quadrant/Fahrenheit]  [Century/Boiling]  [Olympics/BoilingPoint]  → A:YOURS B:MINE  ≈
+      A: 1. Reasoning: In the word exchange, the word "Fahrenheit" is associated with a lower temperature than "Quadrant", and "Boiling" is associated with an even lower temperature than "Fahrenheit", while "BoilingPoint" is associated with the highest temperature among the three. Since the secret number is 77, which falls in the range of "Fahrenheit", the secret number is associated with "Fahrenheit", and hence their number is higher.
+      A: 2. Decision: YOURS
+      B: 1. Reasoning: The pattern seems to be about temperature and significant events/units, with "BoilingPoint" being a direct term related to temperature, suggesting my number is likely higher.
+      B: 2. Decision: MINE
+    game 4: A= 26 B=  8  exchange: [Decade/Olympic]  [Meteorite/Summer]  [Century/Eon]  → A:MINE B:MINE  ✗
+      A: 1. Reasoning: Based on the word exchange, the words seem to be related to long periods of time, with "Decade" being a 10-year period, "Meteorite" having a duration of around 10 seconds to several years, and "Century" being a 100-year period. 
+      A: 2. Decision: MINE
+      B: 1. Reasoning: The pattern seems to be exchanging words that represent units of time, and my number is 8, which is lower than their numbers in each turn.
+      B: 2. Decision: MINE
+    game 5: A= 11 B= 20  exchange: [Teenage/Spring]  [Months/Summer]  [Semester/Boiling]  → A:MINE B:MINE  ✗
+      A: 1. Reasoning: Based on the word exchange pattern, "Boiling" is associated with "Semester", which is a period of time, and "Semester" is associated with "Months", which implies a time frame, so it can be inferred that the word exchange is related to seasons, with "Semester" corresponding to a season like Spring or Summer, and "Boiling" likely being associated with a season like Summer.
+      A: 2. Decision: MINE
+      B: 1. Reasoning: The pattern seems to be about seasons and time periods, but there's no direct correlation with the number 20. Without additional context, it's not clear how to determine if the number is higher or lower based on the given exchanges.
+      B: 2. Decision: MINE
+
+============================================================
+Condition               correct      agree  correct|agree
+------------------------------------------------------------
+  standard              0/10 ( 0.0%)     1/10 (10.0%)    0.0%
+============================================================

@@ -1,0 +1,180 @@
+=== mind eval run ===
+timestamp : 20260825-012315
+model_a   : meta-llama/Meta-Llama-3.1-8B-Instruct
+model_b   : Qwen/Qwen2.5-7B-Instruct
+game      : exchange
+n_evals   : 1
+conditions: ['standard']
+num_range : 1–100
+temperature: 0.7
+seed      : None
+log       : mind_eval_logs/20260825-012315_exchange_Meta-Llama-3.1-8B-Instruct_vs_Qwen2.5-7B-Instruct_n1_range1-100_t0.7.log
+========================================
+
+Device: cuda | dtype: torch.bfloat16
+Loading meta-llama/Meta-Llama-3.1-8B-Instruct
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:04,  4.50it/s]Loading weights:   8%|7         | 23/291 [00:00<00:03, 86.56it/s]Loading weights:  14%|#4        | 42/291 [00:00<00:02, 122.87it/s]Loading weights:  23%|##3       | 67/291 [00:00<00:01, 159.46it/s]Loading weights:  30%|##9       | 86/291 [00:00<00:01, 159.11it/s]Loading weights:  36%|###5      | 104/291 [00:00<00:01, 159.77it/s]Loading weights:  42%|####2     | 123/291 [00:00<00:01, 162.75it/s]Loading weights:  49%|####9     | 144/291 [00:00<00:00, 176.20it/s]Loading weights:  57%|#####7    | 166/291 [00:01<00:00, 187.15it/s]Loading weights:  64%|######3   | 186/291 [00:01<00:00, 161.25it/s]Loading weights:  70%|#######   | 204/291 [00:01<00:00, 161.76it/s]Loading weights:  77%|#######7  | 225/291 [00:01<00:00, 172.50it/s]Loading weights:  85%|########4 | 247/291 [00:01<00:00, 185.04it/s]Loading weights:  92%|#########1| 267/291 [00:01<00:00, 181.29it/s]Loading weights: 100%|##########| 291/291 [00:01<00:00, 163.33it/s]
+Loading Qwen/Qwen2.5-7B-Instruct
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<01:40,  3.36it/s]Loading weights:   8%|7         | 27/339 [00:00<00:03, 82.90it/s]Loading weights:  14%|#3        | 46/339 [00:00<00:02, 114.75it/s]Loading weights:  19%|#9        | 65/339 [00:00<00:02, 134.83it/s]Loading weights:  26%|##5       | 88/339 [00:00<00:01, 157.83it/s]Loading weights:  32%|###1      | 107/339 [00:00<00:01, 164.18it/s]Loading weights:  37%|###6      | 125/339 [00:00<00:01, 168.60it/s]Loading weights:  43%|####3     | 146/339 [00:01<00:01, 180.70it/s]Loading weights:  49%|####8     | 165/339 [00:01<00:01, 167.64it/s]Loading weights:  54%|#####4    | 184/339 [00:01<00:00, 172.54it/s]Loading weights:  61%|######1   | 208/339 [00:01<00:00, 170.24it/s]Loading weights:  68%|######8   | 232/339 [00:01<00:00, 171.70it/s]Loading weights:  76%|#######5  | 256/339 [00:01<00:00, 165.76it/s]Loading weights:  83%|########2 | 280/339 [00:01<00:00, 177.10it/s]Loading weights:  90%|########9 | 304/339 [00:01<00:00, 177.13it/s]Loading weights:  97%|#########6| 328/339 [00:02<00:00, 171.89it/s]Loading weights: 100%|##########| 339/339 [00:02<00:00, 159.96it/s]
+A=Meta-Llama-3.1-8B-Instruct  B=Qwen2.5-7B-Instruct
+
+
+── condition: standard ──
+
+─────────────────────────────────────────────────────────────────
+  standard  |  eval 0  |  score=1/5  agree=3/5
+─────────────────────────────────────────────────────────────────
+
+  Game 1  ≈  |  Meta-Llama-3.1-8B-Instruct=29  Qwen2.5-7B-Instruct=55
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (29) → "[blocked]"
+      The word 'small' represents my number because it implies a relatively low value within the given range.
+    Qwen2.5-7B-Instruct (55) → "[blocked]"
+      The word represents a number in the fifties range.
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (29) → "Spring"
+      My number is associated with a month of the year.
+    Qwen2.5-7B-Instruct (55) → "Midway"
+      The word "Spring" suggests something new or beginning, which contrasts with my number being in the middle of the range.
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (29) → "Month"
+      The word 'month' represents my number because it's the number of days in the month of April, which is close to the month associated with spring.
+    Qwen2.5-7B-Instruct (55) → "[blocked]"
+      The word "Midway" suggests a point in the middle, which can be applied to dividing the range into two equal parts.
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (29) → MINE
+      1. Reasoning: 'Midway' suggests ~50 because 'midway' implies a middle position, and since the range is 1-100, the middle number is 50; my number is 29; so MINE
+      
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (55) → YOURS
+      1. Reasoning: [their words suggest ~26 because "Midway" refers to the middle point, which for a range of 1-100 is approximately 50; their number is 55; so their number is slightly higher than the midpoint]
+         [their words suggest ~3 because "Spring" often corresponds to March, which is the third month of the year; their number is 55; so their number is much higher than 3]
+         [their words suggest ~3 because "Month" could refer to any month, but given the context, it likely points to a small number like 3; their number is 55; so their number is significantly higher than 3]
+      2. Decision: YOURS
+
+  Game 2  ✗  |  Meta-Llama-3.1-8B-Instruct=16  Qwen2.5-7B-Instruct=66
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (16) → "teens"
+      The word "teens" represents my number because it falls within the range of numbers that are considered to be in the teens.
+    Qwen2.5-7B-Instruct (66) → "Even"
+      The number is above 10 and below 20, which matches their clue of 'teens', and it's an even number.
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (16) → "[blocked]"
+      My number is associated with a word that describes the position of a number in a sequence, and it's a characteristic of a specific range of numbers.
+    Qwen2.5-7B-Instruct (66) → "[blocked]"
+      The word "even" indicates that the number is not odd, and "teens" suggests a number between 13 and 19, so we need a higher even number outside that range.
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (16) → "Even"
+      Since 16 is a multiple of 8 and has a remainder of 0 when divided by 8, I can associate it with a word that has a similar property.
+    Qwen2.5-7B-Instruct (66) → "Double"
+      The word "Even" indicates that my number is not odd, and "teens" suggests it's not in the range of 10-19. My number is even and falls outside the teens.
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (16) → MINE
+      1. Reasoning: Their word 'Even' suggests ~50 because even numbers are abundant in the range; my number is 16; so my number is likely even.
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (66) → MINE
+      1. Reasoning: [their words suggest ~14 because 'teens' points to numbers 10-19 and 'Even' narrows it down to even numbers in that range, making 14 the most likely; my number is 66; so my number is clearly higher.]
+      2. Decision: MINE
+
+  Game 3  ✓  |  Meta-Llama-3.1-8B-Instruct=79  Qwen2.5-7B-Instruct=25
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (79) → "[blocked]"
+      The word "seventy" is blocked, so I need to think of a word that relates to the concept or idea associated with my number.
+    Qwen2.5-7B-Instruct (25) → "[blocked]"
+      The word represents a prime number just below half of 50.
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (79) → "[blocked]"
+      My number is a two-digit number that is often associated with a small, four-legged animal.
+    Qwen2.5-7B-Instruct (25) → "[blocked]"
+      The word represents a common multiple that is not too high or too low, fitting well within the range of 1-100.
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (79) → "Evening"
+      My number is associated with a time period in a day when people often start to wind down and relax.
+    Qwen2.5-7B-Instruct (25) → "Midpoint"
+      The word "Evening" suggests a time close to 6 PM, which is around the midpoint of the day, similar to the midpoint of the number range 1-100.
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (79) → MINE
+      1. Reasoning: Their words suggest 50 because 'Midpoint' implies a middle value, likely a round or notable number in the middle of the range, and 50 fits this description; my number is 79; so their number might be lower.
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (25) → YOURS
+      1. Reasoning: [their words suggest ~25 because "Midpoint" refers to the middle value in a range, and for the range 1-100, the midpoint is 50; my number is 25; so my number is lower than the suggested midpoint, indicating their number is higher.]
+      2. Decision: YOURS
+
+  Game 4  ≈  |  Meta-Llama-3.1-8B-Instruct=45  Qwen2.5-7B-Instruct=16
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (45) → "Fingers"
+      I'm thinking of a word that describes the quantity of fingers on a typical hand, as this is roughly equivalent to the number of my secret number.
+    Qwen2.5-7B-Instruct (16) → "[blocked]"
+      Fingers typically refer to a countable body part, and 16 is a specific count that fits within the allowed range.
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (45) → "Hands"
+      My number is in the range of numbers that can be represented by the number of items on a standard hand.
+    Qwen2.5-7B-Instruct (16) → "Chest"
+      Since their last clue was "Hands," I'll use a body part associated with a higher numerical value but not directly related to counting.
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (45) → "[blocked]"
+      The word "Middle" represents my number because it is roughly the middle point between the smallest and largest possible numbers in the given range.
+    Qwen2.5-7B-Instruct (16) → "[blocked]"
+      The word "Fingers" relates to body parts and is around the same length as "Chest," which was my previous clue. Since my number is 16, I'm suggesting it's in the middle range of the body, neither too high like "Hands" nor too low.
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (45) → YOURS
+      1. Reasoning: Their word 'Chest' suggests 8 because a chest typically has 8 ribs; my number is 45; so theirs is likely higher because 8 is much lower than 45.
+      2. Decision: YOURS
+    Qwen2.5-7B-Instruct (16) → MINE
+      1. Reasoning: [their words suggest ~5 because "Fingers" typically refers to the number 5 as a common approximation; my number is 16; so my number is clearly higher.]
+      2. Decision: MINE
+
+  Game 5  ✗  |  Meta-Llama-3.1-8B-Instruct=41  Qwen2.5-7B-Instruct=96
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (41) → "Mid"
+      The word "mid" represents my number because it falls in the middle of a typical range, implying it is a moderate value.
+    Qwen2.5-7B-Instruct (96) → "[blocked]"
+      The word "Mid" suggests a middle value, and since your number is 96, it's quite high, indicating it's closer to the upper end rather than the middle.
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (41) → "States"
+      The number 41 is associated with the number of states in the United States, which is a geographical concept that is distinct from the previous clue of a geographic location in the middle.
+    Qwen2.5-7B-Instruct (96) → "[blocked]"
+      The word "States" evoked thoughts of the United States, which has 50 states, and since my number is higher than 50, I'm suggesting it's above this midpoint.
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (41) → "Rural"
+      My secret number is associated with a US state that has a relatively small population.
+    Qwen2.5-7B-Instruct (96) → "[blocked]"
+      Rural areas often have smaller populations, which can be associated with lower numbers.
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (41) → MINE
+      1. Reasoning: Their words suggest ~50 because 'States' is a strong indicator of a middle number (the 50 United States), and 'Rural' might imply a number in the lower to middle range. 'Mid' from my previous clue further suggests a central value. Considering these hints, 50 seems a likely target. My number is 41; so MINE. 
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (96) → MINE
+      1. Reasoning: [their words suggest ~50 because "Mid" indicates around the middle of the range, which is roughly 50; my number is 96; so my number is clearly higher.]
+      2. Decision: MINE
+
+============================================================
+Condition               correct      agree  correct|agree
+------------------------------------------------------------
+  standard              1/5 (20.0%)     3/5 (60.0%)   33.3%
+============================================================

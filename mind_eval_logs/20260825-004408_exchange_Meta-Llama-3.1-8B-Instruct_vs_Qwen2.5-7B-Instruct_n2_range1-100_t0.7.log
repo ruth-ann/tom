@@ -1,0 +1,185 @@
+=== mind eval run ===
+timestamp : 20260825-004408
+model_a   : meta-llama/Meta-Llama-3.1-8B-Instruct
+model_b   : Qwen/Qwen2.5-7B-Instruct
+game      : exchange
+n_evals   : 2
+conditions: ['standard']
+num_range : 1–100
+temperature: 0.7
+seed      : None
+log       : mind_eval_logs/20260825-004408_exchange_Meta-Llama-3.1-8B-Instruct_vs_Qwen2.5-7B-Instruct_n2_range1-100_t0.7.log
+========================================
+
+Device: cuda | dtype: torch.bfloat16
+Loading meta-llama/Meta-Llama-3.1-8B-Instruct
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:00,  4.76it/s]Loading weights:   8%|7         | 22/291 [00:00<00:03, 84.96it/s]Loading weights:  14%|#4        | 41/291 [00:00<00:02, 122.12it/s]Loading weights:  21%|##        | 60/291 [00:00<00:01, 143.93it/s]Loading weights:  29%|##9       | 85/291 [00:00<00:01, 167.46it/s]Loading weights:  35%|###5      | 103/291 [00:00<00:01, 161.34it/s]Loading weights:  42%|####1     | 122/291 [00:00<00:01, 163.70it/s]Loading weights:  48%|####8     | 141/291 [00:00<00:00, 168.32it/s]Loading weights:  57%|#####7    | 166/291 [00:01<00:00, 185.55it/s]Loading weights:  64%|######3   | 185/291 [00:01<00:00, 163.88it/s]Loading weights:  70%|######9   | 203/291 [00:01<00:00, 163.41it/s]Loading weights:  76%|#######6  | 222/291 [00:01<00:00, 165.72it/s]Loading weights:  85%|########4 | 247/291 [00:01<00:00, 184.01it/s]Loading weights:  91%|#########1| 266/291 [00:01<00:00, 183.60it/s]Loading weights:  98%|#########7| 285/291 [00:01<00:00, 184.12it/s]Loading weights: 100%|##########| 291/291 [00:01<00:00, 162.71it/s]
+Loading Qwen/Qwen2.5-7B-Instruct
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<00:49,  6.85it/s]Loading weights:   1%|          | 2/339 [00:00<00:50,  6.67it/s]Loading weights:   8%|7         | 27/339 [00:00<00:03, 89.56it/s]Loading weights:  14%|#3        | 46/339 [00:00<00:02, 120.16it/s]Loading weights:  19%|#8        | 64/339 [00:00<00:02, 137.49it/s]Loading weights:  26%|##5       | 88/339 [00:00<00:01, 155.11it/s]Loading weights:  33%|###3      | 112/339 [00:00<00:01, 157.36it/s]Loading weights:  40%|####      | 136/339 [00:01<00:01, 166.08it/s]Loading weights:  47%|####6     | 159/339 [00:01<00:01, 173.09it/s]Loading weights:  54%|#####4    | 184/339 [00:01<00:00, 191.84it/s]Loading weights:  60%|######    | 204/339 [00:01<00:00, 184.70it/s]Loading weights:  66%|######5   | 223/339 [00:01<00:00, 169.18it/s]Loading weights:  72%|#######1  | 244/339 [00:01<00:00, 174.76it/s]Loading weights:  78%|#######7  | 263/339 [00:01<00:00, 178.52it/s]Loading weights:  83%|########3 | 282/339 [00:01<00:00, 169.05it/s]Loading weights:  90%|########9 | 304/339 [00:01<00:00, 175.27it/s]Loading weights:  97%|#########6| 328/339 [00:02<00:00, 187.02it/s]Loading weights: 100%|##########| 339/339 [00:02<00:00, 159.75it/s]
+A=Meta-Llama-3.1-8B-Instruct  B=Qwen2.5-7B-Instruct
+
+
+── condition: standard ──
+
+─────────────────────────────────────────────────────────────────
+  standard  |  eval 0  |  score=0/5  agree=1/5
+─────────────────────────────────────────────────────────────────
+
+  Game 1  ✗  |  Meta-Llama-3.1-8B-Instruct=15  Qwen2.5-7B-Instruct=62
+  ────────────────────────────────────────
+    Turn 1:  Meta-Llama-3.1-8B-Instruct → "Quincentennial"   Qwen2.5-7B-Instruct → "Summer"
+    Turn 2:  Meta-Llama-3.1-8B-Instruct → "Decade"   Qwen2.5-7B-Instruct → "Fahrenheit"
+    Turn 3:  Meta-Llama-3.1-8B-Instruct → "Century"   Qwen2.5-7B-Instruct → "Boiling"
+
+  Decision:
+    Meta-Llama-3.1-8B-Instruct (15) → MINE
+      1. Reasoning: Summer suggests 22 because the word "Summer" is the 3rd season in the sequence of the four seasons, and the number 3 is also the first digit in the number 22; Decade suggests 10 because a decade is a period of 10 years; Century suggests 100 because a century is a period of 100 years; my number is 15; therefore, THEIRS is likely lower than MINE.
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (62) → MINE
+      1. Reasoning: Their words suggest that they are using temperature and time-related terms to hint at a number. "Boiling" typically refers to 100 degrees Celsius or 212 degrees Fahrenheit, and "Century" is 100 years. Given that your secret number is 62, which is close to both boiling points in Celsius and half of a century, it seems they might be trying to hint at a number around 100 but giving a clue that it's lower. Therefore, their number is likely between 50 and 70.
+      2. Decision: MINE
+
+  Game 2  ≈  |  Meta-Llama-3.1-8B-Instruct=74  Qwen2.5-7B-Instruct=34
+  ────────────────────────────────────────
+    Turn 1:  Meta-Llama-3.1-8B-Instruct → "Spring"   Qwen2.5-7B-Instruct → "Midsummer"
+    Turn 2:  Meta-Llama-3.1-8B-Instruct → "April"   Qwen2.5-7B-Instruct → "Boiling"
+    Turn 3:  Meta-Llama-3.1-8B-Instruct → "Olympics"   Qwen2.5-7B-Instruct → "BoilingPoint"
+
+  Decision:
+    Meta-Llama-3.1-8B-Instruct (74) → YOURS
+      1. Reasoning: Midsummer suggests 21 because it refers to a season and in the Gregorian calendar, Midsummer is around the 21st day of June. However, considering Midsummer is more commonly associated with the summer solstice, it might point to the longest day of the year, which falls around June 20 or 21 in the Northern Hemisphere. My number is 74; therefore, THEIRS.
+      2. Decision: YOURS
+    Qwen2.5-7B-Instruct (34) → MINE
+      1. Reasoning: Their words suggest a pattern where the words are being converted into numerical values based on some system. In the first turn, "Midsummer" could be associated with the 6th month (June), and "Spring" is often associated with March, which is the 3rd month. The difference between these months is 3. In the second turn, "Boiling" might be related to the temperature at which water boils, which is around 100 degrees Celsius, and "April" is the 4th month, with a difference of 6. In the third turn, "BoilingPoint" could be linked to the boiling point again (100), and "Olympics" might be associated with the year 2008 (Beijing Olympics), which is 100 years after 1908. Given this pattern, we can infer that the numerical values are derived from months or significant years. My number is 34, and the differences in the patterns are 3, 6, and 100. If we consider the pattern of increasing differences, the next logical step would be to find a number that fits within the range of 1-100 and
+
+  Game 3  ✗  |  Meta-Llama-3.1-8B-Instruct=30  Qwen2.5-7B-Instruct=15
+  ────────────────────────────────────────
+    Turn 1:  Meta-Llama-3.1-8B-Instruct → "Month"   Qwen2.5-7B-Instruct → "Fifteen_days"
+    Turn 2:  Meta-Llama-3.1-8B-Instruct → "School"   Qwen2.5-7B-Instruct → "Quarantine"
+    Turn 3:  Meta-Llama-3.1-8B-Instruct → "Summer"   Qwen2.5-7B-Instruct → "Pregnancy"
+
+  Decision:
+    Meta-Llama-3.1-8B-Instruct (30) → YOURS
+      1. Reasoning: Fifteen_days suggests 15 because it directly translates to a number; their number is 15.
+      2. Decision: YOURS
+      
+      1. Reasoning: Quarantine could suggest a number based on the number of days or weeks, but Quarantine is typically 14 days; however, School might suggest the age or grade level, but 'school' usually starts at age 5 or 6, so it's a less clear indication; their number is likely lower than 15; their number is 14.
+      2. Decision: YOURS
+      
+      1. Reasoning: Pregnancy lasts approximately 9 months; their number is 9.
+      2. Decision: YOURS
+    Qwen2.5-7B-Instruct (15) → YOURS
+      1. Reasoning: Their words suggest that they are using a numerical system where each word corresponds to a specific number. From the first turn, "Fifteen_days" suggests 15, which matches your secret number. In the second turn, "Quarantine" could be associated with 30 (as quarantine often refers to a period of 14 days plus a few extra days), and in the third turn, "Pregnancy" might relate to 9 months, which is approximately 30 weeks or 30*7=210 days, but since they are giving a single number, it's more likely they are using a simpler system. Given these patterns, it seems they are using a system where significant life events or periods are mapped to numbers. Since "Fifteen_days" is directly 15, and "Month" is a general term that could reasonably map to 30, their number is likely 30. My number is 15; therefore, their number is higher.
+      2. Decision: YOURS
+
+  Game 4  ✗  |  Meta-Llama-3.1-8B-Instruct=32  Qwen2.5-7B-Instruct=24
+  ────────────────────────────────────────
+    Turn 1:  Meta-Llama-3.1-8B-Instruct → "Month"   Qwen2.5-7B-Instruct → "Easter"
+    Turn 2:  Meta-Llama-3.1-8B-Instruct → "Summer"   Qwen2.5-7B-Instruct → "Era"
+    Turn 3:  Meta-Llama-3.1-8B-Instruct → "Weeks"   Qwen2.5-7B-Instruct → "Boiling"
+
+  Decision:
+    Meta-Llama-3.1-8B-Instruct (32) → MINE
+      1. Reasoning: Easter suggests 4 because it is the fourth month of the year; my number is 32; therefore, theirs is likely lower.
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (24) → MINE
+      1. Reasoning: Their words suggest that they might be thinking of a number related to time or seasons. "Easter" could refer to the Easter holiday, which typically occurs in March or April, "Month" is a unit of time, "Era" can refer to a long period of time, and "Summer" is a season. "Boiling" might suggest a high temperature, and "Weeks" is another unit of time. Given these clues, a reasonable guess for their number could be around 3-5, as these are common durations associated with these terms (e.g., a month is roughly 30-31 days, a summer season lasts about 3 months, an era can span decades, and boiling water is around 100 degrees Celsius). My number is 24, which is significantly higher than any of these typical values. Therefore, their number is likely lower than mine.
+      2. Decision: MINE
+
+  Game 5  ✗  |  Meta-Llama-3.1-8B-Instruct=67  Qwen2.5-7B-Instruct=71
+  ────────────────────────────────────────
+    Turn 1:  Meta-Llama-3.1-8B-Instruct → "Decade"   Qwen2.5-7B-Instruct → "Retirement"
+    Turn 2:  Meta-Llama-3.1-8B-Instruct → "Sixties"   Qwen2.5-7B-Instruct → "Fahrenheit"
+    Turn 3:  Meta-Llama-3.1-8B-Instruct → "Birthday"   Qwen2.5-7B-Instruct → "Boiling"
+
+  Decision:
+    Meta-Llama-3.1-8B-Instruct (67) → YOURS
+      1. Reasoning: Decade suggests a unit of 10 years; retirement often occurs in the 60s, so they might be pointing to 60. Sixties suggest a number 60. Birthday can refer to the age of 60. However, since "birthday" can also refer to any age, we can look at another aspect - boiling point of water is 212 degrees Fahrenheit, which is 212; but, boiling point of water is 100 degrees Celsius, and "sixties" and "decade" also hint to the decade of the 1960s. I will use the 60s decade as the reference point and consider the word "retirement" again. Retirement is often associated with a certain age, typically 60, and possibly 65 or 67 in some countries, but in general, it is around 60-65 years old. Combining this with the decade "sixties", I will consider 60 as a strong candidate for their number. My number is 67; therefore, THEIRS.
+      
+      2. Decision: YOURS
+    Qwen2.5-7B-Instruct (71) → YOURS
+      1. Reasoning: Their words suggest that they are thinking of a number related to ages or temperatures. "Retirement" often occurs around age 65-70, "Decade" can refer to a period of 10 years, and "Fahrenheit" at "Boiling" is 212 degrees. "Sixties" directly points to the range of 60s, and "Birthday" could be any age but often refers to a significant milestone like 30, 40, etc. Combining these clues, their number likely falls within the 60s or early 70s. My number is 71; therefore, it is more likely closer to their range.
+      2. Decision: YOURS
+
+─────────────────────────────────────────────────────────────────
+  standard  |  eval 1  |  score=1/5  agree=3/5
+─────────────────────────────────────────────────────────────────
+
+  Game 1  ✗  |  Meta-Llama-3.1-8B-Instruct=19  Qwen2.5-7B-Instruct=39
+  ────────────────────────────────────────
+    Turn 1:  Meta-Llama-3.1-8B-Instruct → "Bicentennial"   Qwen2.5-7B-Instruct → "Spring"
+    Turn 2:  Meta-Llama-3.1-8B-Instruct → "Decade"   Qwen2.5-7B-Instruct → "Year"
+    Turn 3:  Meta-Llama-3.1-8B-Instruct → "Century"   Qwen2.5-7B-Instruct → "Fahrenheit"
+
+  Decision:
+    Meta-Llama-3.1-8B-Instruct (19) → MINE
+      1. Reasoning: Spring suggests 1 because it's the first season in a typical four-season calendar; Decade suggests 10 because it's a group of 10 years; Century suggests 100 because it's a group of 100 years. Since their words point to 1, 10, and 100, I'll look for a pattern or average. The numbers are 1, 10, and 100, which is an increase of 9, then 90. If this pattern continues, their next number would be 100 + 900 = 1000. However, since their words are related to units of time, I'll consider a more logical approach. A Bicentennial is a 200-year celebration, which is 2 times 100. This might indicate they're focusing on the multiplier. If that's the case, their numbers could be 1 (1x), 10 (10x), and 100 (100x). Their next number would be 1000, but I'll also consider other possible multipliers, like 2. If their numbers are 1 (1x), 10 (5x2), and 100 (10x10), then their next number could be 1000
+    Qwen2.5-7B-Instruct (39) → MINE
+      1. Reasoning: Their words suggest that they are using temperature scales and time periods to hint at a number. "Fahrenheit" is a temperature scale, and "Century" is a period of 100 years. The number 39 falls within the range of temperatures that can be measured in Fahrenheit (e.g., freezing point of water is 32°F and boiling point is 212°F). Since they chose "Fahrenheit" and "Century," it's possible they are narrowing down the number to something significant within these contexts. My number is 39; therefore, it could be a significant number in both temperature and time, such as a birthday or an anniversary.
+      2. Decision: MINE
+
+  Game 2  ✓  |  Meta-Llama-3.1-8B-Instruct=3  Qwen2.5-7B-Instruct=15
+  ────────────────────────────────────────
+    Turn 1:  Meta-Llama-3.1-8B-Instruct → "Teenage"   Qwen2.5-7B-Instruct → "Fifteen_days"
+    Turn 2:  Meta-Llama-3.1-8B-Instruct → "Winter"   Qwen2.5-7B-Instruct → "Fever"
+    Turn 3:  Meta-Llama-3.1-8B-Instruct → "[blocked]"   Qwen2.5-7B-Instruct → "Pregnancy"
+
+  Decision:
+    Meta-Llama-3.1-8B-Instruct (3) → YOURS
+      1. Reasoning: Fifteen_days suggests N = 15 because it directly states a number; my number is 3; therefore YOURS
+      2. Decision: YOURS
+    Qwen2.5-7B-Instruct (15) → MINE
+      1. Reasoning: Their words suggest that they are thinking of a number related to "Teenage," which typically refers to the age range of 13 to 19 years old. "Fifteen_days" could be interpreted as 15 days, and "Fever" might be associated with a temperature of around 100-102°F, which is often rounded to 100 for simplicity. However, "Pregnancy" is more complex and can vary widely, but if we consider the average duration of pregnancy, it's about 40 weeks or approximately 10 months, which could be roughly 100 days. Given these interpretations, their number seems to be around 15, 100, or somewhere in between. Since 15 is already given as the secret number, and it fits well within the context of "Teenage," I will assume their number is 15.
+      2. Decision: MINE
+
+  Game 3  ≈  |  Meta-Llama-3.1-8B-Instruct=70  Qwen2.5-7B-Instruct=91
+  ────────────────────────────────────────
+    Turn 1:  Meta-Llama-3.1-8B-Instruct → "Decade"   Qwen2.5-7B-Instruct → "Fahrenheit"
+    Turn 2:  Meta-Llama-3.1-8B-Instruct → "Spring"   Qwen2.5-7B-Instruct → "Boiling"
+    Turn 3:  Meta-Llama-3.1-8B-Instruct → "Summer"   Qwen2.5-7B-Instruct → "BoilingPoint"
+
+  Decision:
+    Meta-Llama-3.1-8B-Instruct (70) → MINE
+      1. Reasoning: Decade suggests a period of 10 years, but the word itself is often associated with a specific decade in temperature scales, like the Fahrenheit scale. Since the 1970s are often referred to as the decade of disco, I'll consider a midpoint of that decade, which is around 1970. However, another possible connection is the 1900s and the 2000s, but those decades don't have a clear midpoint. Another option is the Fahrenheit scale itself, where "decade" could imply a range of 10 degrees. Given this, I'll consider the word 'Decade' to suggest a range around 50 or 60, as a rough estimate, I'll choose 60.
+       My number is 70.
+      Therefore, MINE.
+      
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (91) → YOURS
+      1. Reasoning: Their words suggest that "Fahrenheit" refers to the temperature scale where water boils at 212 degrees, "Decade" could refer to a period of 10 years, "Boiling" likely points to 100 degrees Celsius, and "BoilingPoint" directly refers to the boiling point of water, which is 100 degrees Celsius. Given these clues, their number seems to be around 100, as it aligns with the boiling point of water. My number is 91; therefore, my number is lower than theirs.
+      2. Decision: YOURS
+
+  Game 4  ≈  |  Meta-Llama-3.1-8B-Instruct=90  Qwen2.5-7B-Instruct=2
+  ────────────────────────────────────────
+    Turn 1:  Meta-Llama-3.1-8B-Instruct → "Decade"   Qwen2.5-7B-Instruct → "Easter"
+    Turn 2:  Meta-Llama-3.1-8B-Instruct → "Nineties"   Qwen2.5-7B-Instruct → "Era"
+    Turn 3:  Meta-Llama-3.1-8B-Instruct → "Century"   Qwen2.5-7B-Instruct → "Fahrenheit"
+
+  Decision:
+    Meta-Llama-3.1-8B-Instruct (90) → YOURS
+      1. Reasoning: Easter suggests 33 because Easter is often associated with the resurrection of Jesus Christ, which occurred around 33 AD. However, this is a non-standard association, and a more common connection is Easter eggs and spring, which is often tied to the spring equinox around March 20-23. Another possibility is Easter being associated with the first Easter Sunday, which occurred in 33 AD, but since the holiday is celebrated around the same time every year, it's likely they are referring to the spring equinox, around 20-23. However, since their first word was 'Decade', I'll assume they are referring to a more general time frame. Decade is usually a 10-year period, but if I consider Easter, I might think of Easter eggs, and the first decade of the 20th century, which starts with the year 1900. This would make their number higher than mine, which is 90. 
+      2. Decision: YOURS
+    Qwen2.5-7B-Instruct (2) → MINE
+      1. Reasoning: Their words suggest that they are referring to specific time periods or numerical ranges. "Easter" could be associated with the Easter holiday, which typically falls between March 22 and April 25, but doesn't provide a clear numerical range. "Decade" suggests a period of 10 years, "Era" can refer to a long period of time, and "Nineties" refers to the years 1990-1999. "Fahrenheit" is a temperature scale, and "Century" is a period of 100 years. Given these associations, their number is likely within a specific range related to these time periods or scales. Since "Century" is the most specific in terms of a numerical range (100 years), their number is probably somewhere around 50-100. My number is 2, which is much lower than this range. Therefore, their number is likely higher than mine.
+      2. Decision: MINE
+
+  Game 5  ✗  |  Meta-Llama-3.1-8B-Instruct=20  Qwen2.5-7B-Instruct=96
+  ────────────────────────────────────────
+    Turn 1:  Meta-Llama-3.1-8B-Instruct → "Decade"   Qwen2.5-7B-Instruct → "Christmas"
+    Turn 2:  Meta-Llama-3.1-8B-Instruct → "Century"   Qwen2.5-7B-Instruct → "Fahrenheit"
+    Turn 3:  Meta-Llama-3.1-8B-Instruct → "Teenage"   Qwen2.5-7B-Instruct → "Boiling"
+
+  Decision:
+    Meta-Llama-3.1-8B-Instruct (20) → YOURS
+      1. Reasoning: Christmas suggests 25 because it's a holiday that typically takes place on December 25; my number is 20; therefore YOURS
+      
+      2. Decision: YOURS
+    Qwen2.5-7B-Instruct (96) → YOURS
+      1. Reasoning: Their words suggest that "Boiling" corresponds to 100 degrees Fahrenheit, and "Teenage" suggests a range of ages from 13 to 19. Given that their number is within the range 1-100, and considering "Boiling" points specifically to 100, it's reasonable to infer that their number is likely 100. My number is 96; therefore, my number is lower than theirs.
+      2. Decision: YOURS
+
+============================================================
+Condition               correct      agree  correct|agree
+------------------------------------------------------------
+  standard              1/10 (10.0%)     4/10 (40.0%)   25.0%
+============================================================

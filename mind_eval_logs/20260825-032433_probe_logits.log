@@ -1,0 +1,140 @@
+Device: cuda | dtype: torch.bfloat16
+
+Numbers: [5, 21, 38, 42, 66, 89, 93]
+Models: ['meta-llama/Llama-3.2-3B-Instruct', 'meta-llama/Llama-3.1-8B-Instruct', 'meta-llama/Llama-3.3-70B-Instruct', 'Qwen/Qwen2.5-3B-Instruct', 'Qwen/Qwen2.5-7B-Instruct', 'Qwen/Qwen3-32B', 'Qwen/Qwen2.5-72B-Instruct']
+
+  Loading meta-llama/Llama-3.2-3B-Instruct ...
+
+============================================================
+Model: Llama-3.2-3B-Instruct
+============================================================
+
+  n=  5:  Tips(2.58%)  things(2.42%)  Things(2.42%)  Ways(2.27%)  ways(1.38%)  Essential(1.29%)  Best(0.89%)  Reasons(0.84%)  Simple(0.71%)  Most(0.69%)  Common(0.61%)  Easy(0.59%)  Steps(0.54%)  Benefits(0.48%)  tips(0.46%)  Exc(0.39%)  reasons(0.37%)  Questions(0.37%)  Healthy(0.31%)  years(0.29%)
+
+  n= 21:  Savage(2.43%)  Questions(0.63%)  Dec(0.58%)  year(0.52%)  Best(0.52%)  Days(0.51%)  years(0.46%)  Things(0.41%)  Years(0.41%)  Day(0.38%)  questions(0.36%)  CFR(0.35%)  Reasons(0.32%)  Year(0.29%)  Ways(0.29%)  Tips(0.28%)  Aug(0.26%)  Burst(0.26%)  days(0.25%)  Mar(0.23%)
+
+  n= 38:  Special(1.37%)  years(1.17%)  Burst(0.73%)  year(0.50%)  killed(0.43%)  Years(0.41%)  CFR(0.38%)  minutes(0.37%)  Cal(0.36%)  min(0.30%)  points(0.29%)  people(0.28%)  patients(0.28%)  days(0.27%)  Awesome(0.26%)  arrested(0.23%)  special(0.19%)  items(0.19%)  posts(0.19%)  Degrees(0.17%)
+
+  n= 42:  years(0.91%)  CFR(0.83%)  USC(0.36%)  year(0.34%)  Years(0.31%)  inch(0.31%)  people(0.29%)  inches(0.27%)  results(0.22%)  Cal(0.22%)  days(0.20%)  Inspir(0.20%)  min(0.17%)  Year(0.15%)  miles(0.14%)  arrested(0.14%)  views(0.13%)  Days(0.13%)  minutes(0.12%)  weeks(0.11%)
+
+  n= 66:  years(0.63%)  year(0.47%)  Years(0.37%)  Cal(0.32%)  Days(0.29%)  days(0.27%)  Year(0.19%)  items(0.18%)  Items(0.18%)  people(0.16%)  views(0.16%)  results(0.14%)  miles(0.13%)  Questions(0.13%)  inch(0.12%)  acres(0.12%)  percent(0.11%)  questions(0.11%)  killed(0.11%)  Degrees(0.11%)
+
+  n= 89:  people(0.96%)  points(0.96%)  days(0.60%)  years(0.47%)  Cal(0.44%)  year(0.21%)  Points(0.21%)  miles(0.20%)  ers(0.19%)  items(0.19%)  pages(0.19%)  Main(0.18%)  results(0.18%)  posts(0.18%)  Days(0.17%)  patients(0.15%)  percent(0.14%)  North(0.14%)  students(0.13%)  views(0.13%)
+
+  n= 93:  points(4.15%)  Points(1.35%)  Decision(0.96%)  Cal(0.53%)  years(0.44%)  views(0.32%)  Years(0.24%)  results(0.20%)  percent(0.17%)  year(0.16%)  minutes(0.16%)  miles(0.16%)  items(0.14%)  Point(0.13%)  Days(0.12%)  people(0.11%)  posts(0.11%)  Questions(0.11%)  days(0.11%)  queries(0.11%)
+  Loading meta-llama/Llama-3.1-8B-Instruct ...
+
+============================================================
+Model: Llama-3.1-8B-Instruct
+============================================================
+
+  n=  5:  Ways(3.88%)  Things(2.83%)  things(2.21%)  Tips(2.21%)  Reasons(1.94%)  Best(1.72%)  ways(1.34%)  reasons(0.87%)  Simple(0.87%)  Key(0.72%)  Common(0.72%)  Benefits(0.67%)  Essential(0.67%)  Most(0.63%)  Steps(0.60%)  Easy(0.52%)  Questions(0.52%)  Signs(0.52%)  Days(0.49%)  tips(0.46%)
+
+  n= 21:  Savage(1.53%)  Mar(1.35%)  Sep(1.27%)  Jan(1.05%)  Apr(0.99%)  Dec(0.77%)  September(0.72%)  Best(0.72%)  Nov(0.68%)  March(0.68%)  Days(0.68%)  Aug(0.64%)  CFR(0.64%)  December(0.60%)  Jul(0.60%)  Feb(0.60%)  Oct(0.56%)  June(0.56%)  January(0.56%)  October(0.56%)
+
+  n= 38:  CFR(2.33%)  Burst(1.25%)  Cal(0.91%)  Best(0.85%)  years(0.52%)  year(0.50%)  min(0.38%)  results(0.38%)  views(0.34%)  USC(0.32%)  Years(0.31%)  Ill(0.28%)  Mich(0.25%)  posts(0.25%)  Special(0.25%)  minutes(0.25%)  Studios(0.25%)  killed(0.23%)  Awesome(0.22%)  projects(0.20%)
+
+  n= 42:  CFR(2.73%)  USC(1.46%)  years(0.59%)  year(0.49%)  min(0.45%)  Cal(0.28%)  Years(0.28%)  Best(0.27%)  Burst(0.23%)  results(0.22%)  Mich(0.20%)  percent(0.19%)  killed(0.19%)  days(0.18%)  views(0.18%)  posts(0.18%)  Ill(0.18%)  inch(0.16%)  Days(0.16%)  people(0.15%)
+
+  n= 66:  years(0.81%)  Wash(0.59%)  Ill(0.54%)  year(0.52%)  views(0.49%)  Cal(0.45%)  results(0.36%)  posts(0.33%)  Mich(0.28%)  percent(0.26%)  new(0.24%)  Years(0.23%)  days(0.22%)  people(0.20%)  Possible(0.20%)  Best(0.17%)  entries(0.17%)  pages(0.16%)  records(0.16%)  items(0.15%)
+
+  n= 89:  points(1.18%)  views(1.01%)  Cal(0.89%)  Ill(0.63%)  Wash(0.59%)  Mich(0.52%)  results(0.36%)  posts(0.33%)  year(0.32%)  years(0.31%)  percent(0.30%)  Points(0.24%)  new(0.23%)  Years(0.22%)  people(0.21%)  Possible(0.21%)  items(0.20%)  Year(0.16%)  min(0.15%)  days(0.14%)
+
+  n= 93:  Decision(25.00%)  points(4.93%)  Points(1.17%)  decision(0.37%)  Ill(0.35%)  Mich(0.34%)  views(0.24%)  Years(0.24%)  Answer(0.23%)  percent(0.21%)  Possible(0.21%)  Cal(0.19%)  year(0.15%)  years(0.15%)  POINT(0.14%)  posts(0.14%)  Point(0.13%)  Wash(0.13%)  Decision(0.13%)  min(0.12%)
+  Loading meta-llama/Llama-3.3-70B-Instruct ...
+
+============================================================
+Model: Llama-3.3-70B-Instruct
+============================================================
+
+  n=  5:  years(0.26%)  Best(0.24%)  New(0.16%)  Ways(0.16%)  year(0.14%)  Things(0.14%)  Tips(0.12%)  months(0.12%)  World(0.12%)  new(0.12%)  Questions(0.11%)  Per(0.10%)  ways(0.10%)  Most(0.10%)  Year(0.10%)  days(0.09%)  June(0.09%)  people(0.09%)  Day(0.09%)  National(0.08%)
+
+  n= 21:  June(0.22%)  year(0.19%)  years(0.19%)  January(0.19%)  Best(0.19%)  New(0.19%)  July(0.18%)  November(0.16%)  March(0.16%)  August(0.15%)  World(0.15%)  September(0.14%)  February(0.14%)  April(0.13%)  October(0.13%)  National(0.12%)  Year(0.12%)  Day(0.11%)  December(0.11%)  Jan(0.11%)
+
+  n= 38:  New(0.20%)  years(0.16%)  National(0.14%)  Best(0.14%)  World(0.13%)  year(0.11%)  new(0.10%)  Per(0.10%)  University(0.09%)  News(0.09%)  Community(0.09%)  people(0.08%)  Health(0.08%)  Women(0.08%)  Food(0.08%)  students(0.07%)  Summer(0.07%)  Home(0.07%)  June(0.07%)  State(0.07%)
+
+  n= 42:  New(0.19%)  years(0.18%)  Best(0.13%)  National(0.12%)  World(0.11%)  year(0.10%)  University(0.10%)  new(0.10%)  Per(0.10%)  Home(0.08%)  News(0.08%)  Community(0.08%)  people(0.08%)  Women(0.07%)  students(0.07%)  Annual(0.07%)  Day(0.07%)  Food(0.07%)  Year(0.07%)  Health(0.07%)
+
+  n= 66:  New(0.18%)  years(0.15%)  World(0.13%)  Best(0.12%)  new(0.11%)  National(0.10%)  University(0.09%)  Per(0.09%)  year(0.09%)  Community(0.09%)  News(0.08%)  Food(0.08%)  people(0.07%)  Women(0.07%)  Home(0.07%)  History(0.07%)  West(0.07%)  students(0.07%)  Global(0.07%)  House(0.07%)
+
+  n= 89:  New(0.18%)  Best(0.14%)  years(0.13%)  National(0.13%)  World(0.12%)  News(0.10%)  Per(0.10%)  new(0.09%)  year(0.09%)  Community(0.09%)  University(0.08%)  Global(0.08%)  Food(0.08%)  Church(0.08%)  Home(0.07%)  Women(0.07%)  June(0.07%)  Summer(0.07%)  Animal(0.07%)  West(0.07%)
+
+  n= 93:  New(0.19%)  years(0.18%)  Best(0.15%)  World(0.14%)  National(0.12%)  new(0.11%)  year(0.10%)  News(0.10%)  Per(0.10%)  University(0.09%)  Community(0.09%)  Global(0.08%)  Church(0.08%)  Women(0.08%)  Green(0.07%)  European(0.07%)  people(0.07%)  Annual(0.07%)  Summer(0.07%)  International(0.07%)
+  Loading Qwen/Qwen2.5-3B-Instruct ...
+
+============================================================
+Model: Qwen2.5-3B-Instruct
+============================================================
+
+  n=  5:  Ways(0.74%)  Tips(0.61%)  Replies(0.33%)  Reasons(0.24%)  Things(0.18%)  ways(0.16%)  years(0.14%)  Steps(0.11%)  tips(0.10%)  edition(0.09%)  people(0.07%)  Answers(0.06%)  min(0.06%)  men(0.05%)  Benefits(0.05%)  Signs(0.05%)  students(0.05%)  Best(0.05%)  things(0.05%)  reasons(0.04%)
+
+  n= 21:  September(0.29%)  March(0.20%)  January(0.19%)  February(0.19%)  August(0.16%)  October(0.16%)  June(0.15%)  July(0.15%)  November(0.15%)  Mar(0.14%)  December(0.14%)  April(0.14%)  日上午(0.14%)  men(0.11%)  CFR(0.10%)  people(0.09%)  terms(0.09%)  Jun(0.08%)  Nov(0.08%)  Jul(0.08%)
+
+  n= 38:  years(0.09%)  people(0.08%)  men(0.07%)  views(0.06%)  weeks(0.04%)  students(0.04%)  persons(0.03%)  CFR(0.03%)  terms(0.03%)  women(0.02%)  percent(0.02%)  liters(0.02%)  children(0.01%)  days(0.01%)  Weeks(0.01%)  Years(0.01%)  Answer(0.01%)  里面有(0.01%)  litres(0.01%)  year(0.01%)
+
+  n= 42:  men(0.48%)  students(0.48%)  people(0.26%)  years(0.14%)  children(0.12%)  days(0.07%)  boys(0.06%)  persons(0.06%)  views(0.06%)  percent(0.05%)  CFR(0.04%)  books(0.03%)  kids(0.03%)  Years(0.03%)  litres(0.03%)  pieces(0.03%)  workers(0.02%)  Pages(0.02%)  pages(0.02%)  liters(0.02%)
+
+  n= 66:  Tips(0.35%)  Ways(0.35%)  Replies(0.31%)  ways(0.11%)  Reasons(0.11%)  years(0.10%)  edition(0.09%)  Things(0.09%)  people(0.08%)  tips(0.07%)  Steps(0.06%)  men(0.05%)  things(0.04%)  日上午(0.04%)  min(0.04%)  Answers(0.04%)  views(0.03%)  points(0.03%)  days(0.03%)  months(0.03%)
+
+  n= 89:  views(0.08%)  percent(0.04%)  students(0.04%)  people(0.03%)  years(0.02%)  children(0.02%)  results(0.02%)  Answer(0.02%)  men(0.01%)  divided(0.01%)  terms(0.01%)  persons(0.01%)  里面有(0.01%)  questions(0.01%)  patients(0.01%)  According(0.01%)  CFR(0.01%)  days(0.01%)  Pages(0.01%)  liters(0.01%)
+
+  n= 93:  views(0.11%)  percent(0.03%)  results(0.02%)  people(0.02%)  students(0.02%)  Answer(0.02%)  questions(0.01%)  terms(0.01%)  years(0.01%)  Questions(0.01%)  divided(0.01%)  men(0.01%)  Question(0.01%)  points(0.01%)  persons(0.01%)  children(0.01%)  Pages(0.01%)  pages(0.01%)  Results(0.01%)  days(0.01%)
+  Loading Qwen/Qwen2.5-7B-Instruct ...
+
+============================================================
+Model: Qwen2.5-7B-Instruct
+============================================================
+
+  n=  5:  Ways(0.19%)  people(0.17%)  years(0.16%)  Tips(0.13%)  Things(0.10%)  ways(0.10%)  Steps(0.09%)  Replies(0.09%)  students(0.08%)  things(0.07%)  men(0.07%)  Reasons(0.07%)  friends(0.06%)  percent(0.05%)  points(0.05%)  Common(0.04%)  reasons(0.04%)  steps(0.04%)  times(0.04%)  Questions(0.03%)
+
+  n= 21:  September(0.12%)  日上午(0.12%)  April(0.10%)  January(0.10%)  October(0.10%)  March(0.09%)  July(0.09%)  February(0.09%)  Mar(0.08%)  日下午(0.08%)  August(0.08%)  November(0.08%)  people(0.07%)  Oct(0.07%)  Nov(0.07%)  June(0.07%)  CFR(0.06%)  December(0.05%)  Aug(0.05%)  Sep(0.05%)
+
+  n= 38:  men(0.11%)  views(0.11%)  weeks(0.06%)  people(0.03%)  children(0.03%)  years(0.03%)  liters(0.03%)  里面有(0.03%)  terms(0.03%)  students(0.03%)  persons(0.02%)  days(0.02%)  boys(0.02%)  women(0.01%)  CFR(0.01%)  Weeks(0.01%)  results(0.01%)  percent(0.01%)  Cal(0.01%)  minutes(0.01%)
+
+  n= 42:  men(0.25%)  students(0.15%)  people(0.14%)  rasp(0.12%)  children(0.09%)  persons(0.09%)  views(0.07%)  CFR(0.05%)  days(0.04%)  boys(0.03%)  years(0.03%)  terms(0.03%)  liters(0.02%)  里面有(0.02%)  kids(0.02%)  weeks(0.02%)  Cal(0.01%)  workers(0.01%)  results(0.01%)  hours(0.01%)
+
+  n= 66:  people(0.13%)  Ways(0.12%)  years(0.10%)  Replies(0.08%)  Tips(0.07%)  ways(0.06%)  students(0.06%)  men(0.06%)  Things(0.06%)  Steps(0.05%)  Reasons(0.05%)  friends(0.05%)  edition(0.04%)  months(0.03%)  things(0.03%)  days(0.03%)  hours(0.03%)  points(0.03%)  different(0.02%)  times(0.02%)
+
+  n= 89:  views(0.05%)  students(0.03%)  years(0.02%)  liters(0.01%)  people(0.01%)  days(0.01%)  里面有(0.01%)  divided(0.01%)  Answer(0.01%)  multiplied(0.01%)  times(0.01%)  Div(0.01%)  boys(0.01%)  men(0.00%)  Write(0.00%)  According(0.00%)  minus(0.00%)  questions(0.00%)  Replies(0.00%)  After(0.00%)
+
+  n= 93:  views(0.13%)  students(0.03%)  points(0.02%)  percent(0.02%)  results(0.02%)  Pages(0.01%)  Ill(0.01%)  里面有(0.01%)  pages(0.01%)  Cal(0.01%)  people(0.01%)  years(0.01%)  terms(0.01%)  men(0.01%)  days(0.01%)  children(0.01%)  Answer(0.01%)  boys(0.01%)  persons(0.01%)  year(0.01%)
+  Loading Qwen/Qwen3-32B ...
+
+============================================================
+Model: Qwen3-32B
+============================================================
+
+  n=  5:  times(0.21%)  times(0.08%)  mod(0.08%)  math(0.06%)  frac(0.06%)  cos(0.06%)  mod(0.05%)  sin(0.05%)  cdot(0.05%)  text(0.05%)  end(0.04%)  square(0.04%)  math(0.03%)  ref(0.03%)  Times(0.03%)  people(0.03%)  sqrt(0.03%)  ing(0.03%)  text(0.03%)  con(0.03%)
+
+  n= 21:  people(0.31%)  March(0.25%)  August(0.23%)  Mar(0.19%)  апреля(0.17%)  февраля(0.16%)  January(0.15%)  April(0.14%)  July(0.14%)  December(0.14%)  Apr(0.13%)  October(0.12%)  February(0.12%)  students(0.10%)  Jul(0.09%)  Feb(0.09%)  Jan(0.09%)  September(0.09%)  Nov(0.09%)  June(0.08%)
+
+  n= 38:  persons(0.22%)  children(0.17%)  men(0.17%)  people(0.14%)  Pages(0.10%)  rasp(0.10%)  years(0.09%)  views(0.07%)  students(0.06%)  women(0.05%)  percent(0.05%)  Cal(0.04%)  terms(0.04%)  weeks(0.04%)  boys(0.04%)  Ill(0.03%)  Years(0.03%)  kids(0.03%)  pages(0.03%)  liters(0.03%)
+
+  n= 42:  rasp(2.49%)  men(0.52%)  persons(0.52%)  children(0.34%)  students(0.32%)  people(0.26%)  Pages(0.12%)  percent(0.09%)  views(0.07%)  CFR(0.07%)  boys(0.05%)  years(0.05%)  kids(0.05%)  terms(0.05%)  pages(0.05%)  inches(0.05%)  days(0.05%)  Cal(0.04%)  liters(0.04%)  patients(0.04%)
+
+  n= 66:  times(0.15%)  mod(0.06%)  times(0.05%)  math(0.05%)  text(0.05%)  ing(0.04%)  mod(0.04%)  cos(0.04%)  cdot(0.04%)  end(0.04%)  square(0.03%)  sin(0.03%)  people(0.03%)  frac(0.03%)  ref(0.03%)  over(0.03%)  divided(0.03%)  Times(0.03%)  decimal(0.02%)  math(0.02%)
+
+  n= 89:  views(0.14%)  persons(0.11%)  students(0.10%)  Ill(0.10%)  percent(0.09%)  people(0.08%)  Cal(0.07%)  patients(0.06%)  divided(0.06%)  years(0.05%)  Mich(0.05%)  Pages(0.05%)  rasp(0.05%)  year(0.04%)  times(0.04%)  terms(0.04%)  pages(0.04%)  men(0.04%)  plus(0.03%)  feet(0.03%)
+
+  n= 93:  views(0.14%)  Ill(0.14%)  students(0.10%)  people(0.06%)  percent(0.06%)  points(0.06%)  persons(0.05%)  Wis(0.04%)  Pages(0.04%)  Cal(0.04%)  year(0.03%)  years(0.03%)  children(0.03%)  rasp(0.03%)  search(0.03%)  Mich(0.03%)  divided(0.03%)  pages(0.02%)  Views(0.02%)  men(0.02%)
+  Loading Qwen/Qwen2.5-72B-Instruct ...
+
+============================================================
+Model: Qwen2.5-72B-Instruct
+============================================================
+
+  n=  5:  Tips(0.31%)  Ways(0.31%)  years(0.25%)  men(0.20%)  Replies(0.20%)  people(0.16%)  students(0.16%)  Things(0.12%)  Steps(0.11%)  ways(0.11%)  Reasons(0.10%)  friends(0.09%)  things(0.07%)  Common(0.06%)  reasons(0.06%)  tips(0.06%)  edition(0.06%)  percent(0.05%)  Questions(0.05%)  times(0.05%)
+
+  n= 21:  years(0.21%)  January(0.17%)  men(0.16%)  July(0.16%)  October(0.15%)  people(0.14%)  students(0.13%)  March(0.12%)  December(0.11%)  November(0.10%)  September(0.10%)  August(0.09%)  February(0.09%)  April(0.08%)  days(0.08%)  Mar(0.07%)  June(0.07%)  views(0.06%)  日上午(0.06%)  Days(0.05%)
+
+  n= 38:  men(0.10%)  persons(0.08%)  views(0.07%)  people(0.06%)  children(0.05%)  terms(0.04%)  weeks(0.04%)  Pages(0.04%)  years(0.03%)  CFR(0.02%)  questions(0.02%)  boys(0.02%)  days(0.01%)  liters(0.01%)  Weeks(0.01%)  women(0.01%)  Answer(0.01%)  times(0.01%)  percent(0.01%)  students(0.01%)
+
+  n= 42:  years(0.20%)  men(0.20%)  people(0.16%)  students(0.15%)  days(0.06%)  views(0.05%)  July(0.05%)  October(0.05%)  January(0.05%)  Replies(0.04%)  March(0.04%)  Ways(0.04%)  friends(0.04%)  December(0.04%)  November(0.04%)  hours(0.04%)  September(0.04%)  February(0.04%)  times(0.03%)  August(0.03%)
+
+  n= 66:  Replies(0.29%)  people(0.22%)  men(0.20%)  years(0.18%)  students(0.17%)  Ways(0.13%)  Tips(0.12%)  friends(0.07%)  edition(0.06%)  Things(0.05%)  boys(0.05%)  ways(0.05%)  months(0.04%)  points(0.04%)  hours(0.04%)  Steps(0.04%)  times(0.04%)  Reasons(0.04%)  Common(0.03%)  birds(0.03%)
+
+  n= 89:  views(0.08%)  people(0.08%)  persons(0.04%)  里面有(0.04%)  students(0.03%)  paper(0.03%)  results(0.02%)  liters(0.02%)  children(0.02%)  terms(0.01%)  Answer(0.01%)  years(0.01%)  men(0.01%)  percent(0.01%)  plus(0.01%)  Pages(0.01%)  minus(0.01%)  days(0.01%)  Ill(0.01%)  divided(0.01%)
+
+  n= 93:  views(0.14%)  Answer(0.04%)  persons(0.03%)  students(0.03%)  terms(0.03%)  Pages(0.03%)  Ill(0.02%)  children(0.02%)  percent(0.02%)  results(0.02%)  questions(0.02%)  liters(0.02%)  people(0.02%)  years(0.02%)  里面有(0.01%)  points(0.01%)  pages(0.01%)  Cal(0.01%)  days(0.01%)  Points(0.01%)
+
+Done.

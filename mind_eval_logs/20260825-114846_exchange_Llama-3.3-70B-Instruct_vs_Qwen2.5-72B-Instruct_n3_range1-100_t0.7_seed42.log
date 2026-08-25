@@ -1,0 +1,810 @@
+=== mind eval run ===
+timestamp : 20260825-114846
+model_a   : meta-llama/Llama-3.3-70B-Instruct
+model_b   : Qwen/Qwen2.5-72B-Instruct
+game      : exchange
+n_evals   : 3
+conditions: ['standard', 'overstate', 'understate', 'overstate_b', 'understate_b', 'scale']
+num_range : 1–100
+temperature: 0.7
+seed      : 42
+log       : mind_eval_logs/20260825-114846_exchange_Llama-3.3-70B-Instruct_vs_Qwen2.5-72B-Instruct_n3_range1-100_t0.7_seed42.log
+========================================
+
+Device: cuda | dtype: torch.bfloat16
+Loading meta-llama/Llama-3.3-70B-Instruct
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:   1%|          | 5/723 [00:00<00:17, 39.90it/s]Loading weights:   2%|2         | 15/723 [00:00<00:10, 67.81it/s]Loading weights:   4%|3         | 28/723 [00:00<00:07, 91.58it/s]Loading weights:   6%|5         | 40/723 [00:00<00:07, 96.98it/s]Loading weights:   7%|6         | 50/723 [00:00<00:07, 93.75it/s]Loading weights:   8%|8         | 60/723 [00:00<00:07, 90.47it/s]Loading weights:  10%|#         | 73/723 [00:00<00:06, 100.93it/s]Loading weights:  12%|#1        | 85/723 [00:00<00:06, 101.06it/s]Loading weights:  13%|#3        | 96/723 [00:01<00:06, 94.65it/s] Loading weights:  15%|#5        | 109/723 [00:01<00:05, 103.38it/s]Loading weights:  17%|#6        | 121/723 [00:01<00:05, 102.35it/s]Loading weights:  18%|#8        | 132/723 [00:01<00:06, 94.60it/s] Loading weights:  20%|#9        | 144/723 [00:01<00:05, 100.95it/s]Loading weights:  22%|##1       | 157/723 [00:01<00:05, 102.83it/s]Loading weights:  23%|##3       | 168/723 [00:01<00:05, 94.87it/s] Loading weights:  25%|##5       | 181/723 [00:01<00:05, 103.72it/s]Loading weights:  27%|##6       | 193/723 [00:01<00:05, 103.15it/s]Loading weights:  28%|##8       | 204/723 [00:02<00:05, 96.16it/s] Loading weights:  30%|##9       | 216/723 [00:02<00:04, 101.94it/s]Loading weights:  32%|###1      | 229/723 [00:02<00:04, 104.24it/s]Loading weights:  33%|###3      | 240/723 [00:02<00:05, 95.87it/s] Loading weights:  35%|###4      | 253/723 [00:02<00:04, 104.05it/s]Loading weights:  37%|###6      | 265/723 [00:02<00:04, 103.76it/s]Loading weights:  38%|###8      | 276/723 [00:02<00:04, 94.35it/s] Loading weights:  40%|###9      | 288/723 [00:02<00:04, 100.68it/s]Loading weights:  42%|####1     | 301/723 [00:03<00:04, 102.57it/s]Loading weights:  43%|####3     | 312/723 [00:03<00:04, 94.53it/s] Loading weights:  45%|####4     | 324/723 [00:03<00:03, 101.00it/s]Loading weights:  46%|####6     | 335/723 [00:03<00:03, 103.19it/s]Loading weights:  48%|####7     | 346/723 [00:03<00:03, 100.84it/s]Loading weights:  49%|####9     | 357/723 [00:03<00:03, 94.11it/s] Loading weights:  52%|#####1    | 373/723 [00:03<00:03, 108.17it/s]Loading weights:  53%|#####3    | 385/723 [00:03<00:03, 100.62it/s]Loading weights:  55%|#####4    | 397/723 [00:04<00:03, 104.83it/s]Loading weights:  57%|#####6    | 409/723 [00:04<00:03, 103.80it/s]Loading weights:  58%|#####8    | 420/723 [00:04<00:03, 96.45it/s] Loading weights:  60%|#####9    | 433/723 [00:04<00:02, 103.72it/s]Loading weights:  62%|######1   | 445/723 [00:04<00:02, 103.97it/s]Loading weights:  63%|######3   | 456/723 [00:04<00:02, 96.81it/s] Loading weights:  65%|######4   | 469/723 [00:04<00:02, 104.77it/s]Loading weights:  67%|######6   | 481/723 [00:04<00:02, 105.03it/s]Loading weights:  68%|######8   | 492/723 [00:04<00:02, 97.13it/s] Loading weights:  70%|######9   | 504/723 [00:05<00:02, 102.36it/s]Loading weights:  72%|#######1  | 517/723 [00:05<00:01, 105.93it/s]Loading weights:  73%|#######3  | 528/723 [00:05<00:01, 97.66it/s] Loading weights:  75%|#######4  | 541/723 [00:05<00:01, 104.16it/s]Loading weights:  76%|#######6  | 553/723 [00:05<00:01, 104.17it/s]Loading weights:  78%|#######8  | 564/723 [00:05<00:01, 96.63it/s] Loading weights:  80%|#######9  | 577/723 [00:05<00:01, 105.13it/s]Loading weights:  81%|########1 | 589/723 [00:05<00:01, 106.27it/s]Loading weights:  83%|########2 | 600/723 [00:06<00:01, 97.01it/s] Loading weights:  85%|########4 | 613/723 [00:06<00:01, 104.74it/s]Loading weights:  86%|########6 | 625/723 [00:06<00:00, 103.65it/s]Loading weights:  88%|########7 | 636/723 [00:06<00:00, 95.32it/s] Loading weights:  90%|########9 | 649/723 [00:06<00:00, 102.19it/s]Loading weights:  91%|#########1| 661/723 [00:06<00:00, 103.10it/s]Loading weights:  93%|#########2| 672/723 [00:06<00:00, 94.10it/s] Loading weights:  95%|#########4| 685/723 [00:06<00:00, 102.15it/s]Loading weights:  96%|#########6| 697/723 [00:06<00:00, 102.94it/s]Loading weights:  98%|#########7| 708/723 [00:07<00:00, 94.64it/s] Loading weights: 100%|#########9| 721/723 [00:07<00:00, 103.15it/s]Loading weights: 100%|##########| 723/723 [00:07<00:00, 100.21it/s]
+Loading Qwen/Qwen2.5-72B-Instruct
+Loading weights:   0%|          | 0/963 [00:00<?, ?it/s]Loading weights:   2%|1         | 17/963 [00:00<00:05, 158.42it/s]Loading weights:   3%|3         | 33/963 [00:00<00:06, 144.30it/s]Loading weights:   5%|4         | 48/963 [00:00<00:06, 144.13it/s]Loading weights:   7%|6         | 64/963 [00:00<00:07, 127.60it/s]Loading weights:   8%|8         | 78/963 [00:00<00:06, 127.37it/s]Loading weights:  10%|9         | 94/963 [00:00<00:06, 136.53it/s]Loading weights:  12%|#1        | 112/963 [00:00<00:05, 143.69it/s]Loading weights:  13%|#3        | 127/963 [00:00<00:06, 130.56it/s]Loading weights:  15%|#4        | 142/963 [00:01<00:06, 133.95it/s]Loading weights:  17%|#6        | 160/963 [00:01<00:06, 129.41it/s]Loading weights:  18%|#8        | 174/963 [00:01<00:06, 126.94it/s]Loading weights:  20%|#9        | 192/963 [00:01<00:05, 139.31it/s]Loading weights:  22%|##1       | 208/963 [00:01<00:05, 132.44it/s]Loading weights:  23%|##3       | 222/963 [00:01<00:05, 130.25it/s]Loading weights:  25%|##4       | 238/963 [00:01<00:05, 136.65it/s]Loading weights:  27%|##6       | 256/963 [00:01<00:05, 139.00it/s]Loading weights:  28%|##8       | 271/963 [00:02<00:05, 130.70it/s]Loading weights:  30%|##9       | 286/963 [00:02<00:05, 134.74it/s]Loading weights:  32%|###1      | 304/963 [00:02<00:04, 138.78it/s]Loading weights:  33%|###3      | 318/963 [00:02<00:05, 123.41it/s]Loading weights:  35%|###4      | 336/963 [00:02<00:04, 136.02it/s]Loading weights:  37%|###6      | 352/963 [00:02<00:04, 137.93it/s]Loading weights:  38%|###8      | 367/963 [00:02<00:04, 126.72it/s]Loading weights:  40%|###9      | 384/963 [00:02<00:04, 135.46it/s]Loading weights:  42%|####1     | 400/963 [00:02<00:04, 136.81it/s]Loading weights:  43%|####2     | 414/963 [00:03<00:04, 123.03it/s]Loading weights:  45%|####4     | 432/963 [00:03<00:03, 136.94it/s]Loading weights:  47%|####6     | 448/963 [00:03<00:04, 126.98it/s]Loading weights:  48%|####7     | 462/963 [00:03<00:03, 126.42it/s]Loading weights:  50%|####9     | 480/963 [00:03<00:03, 140.22it/s]Loading weights:  52%|#####1    | 496/963 [00:03<00:03, 138.92it/s]Loading weights:  53%|#####3    | 511/963 [00:03<00:03, 127.38it/s]Loading weights:  55%|#####4    | 527/963 [00:03<00:03, 135.03it/s]Loading weights:  56%|#####6    | 544/963 [00:04<00:03, 137.88it/s]Loading weights:  58%|#####8    | 559/963 [00:04<00:03, 125.49it/s]Loading weights:  60%|#####9    | 576/963 [00:04<00:02, 134.50it/s]Loading weights:  61%|######1   | 592/963 [00:04<00:02, 134.25it/s]Loading weights:  63%|######2   | 606/963 [00:04<00:02, 123.24it/s]Loading weights:  65%|######4   | 622/963 [00:04<00:02, 131.51it/s]Loading weights:  66%|######6   | 640/963 [00:04<00:02, 135.25it/s]Loading weights:  68%|######7   | 654/963 [00:04<00:02, 122.84it/s]Loading weights:  70%|######9   | 672/963 [00:05<00:02, 136.21it/s]Loading weights:  71%|#######1  | 688/963 [00:05<00:02, 134.66it/s]Loading weights:  73%|#######2  | 702/963 [00:05<00:02, 120.79it/s]Loading weights:  75%|#######4  | 720/963 [00:05<00:01, 134.99it/s]Loading weights:  76%|#######6  | 736/963 [00:05<00:01, 133.75it/s]Loading weights:  78%|#######7  | 750/963 [00:05<00:01, 124.28it/s]Loading weights:  80%|#######9  | 766/963 [00:05<00:01, 132.37it/s]Loading weights:  81%|########1 | 784/963 [00:05<00:01, 128.35it/s]Loading weights:  83%|########2 | 798/963 [00:06<00:01, 126.08it/s]Loading weights:  85%|########4 | 814/963 [00:06<00:01, 131.51it/s]Loading weights:  86%|########6 | 832/963 [00:06<00:00, 136.39it/s]Loading weights:  88%|########7 | 846/963 [00:06<00:00, 123.33it/s]Loading weights:  90%|########9 | 864/963 [00:06<00:00, 135.76it/s]Loading weights:  91%|#########1| 880/963 [00:06<00:00, 136.13it/s]Loading weights:  93%|#########2| 894/963 [00:06<00:00, 123.23it/s]Loading weights:  94%|#########4| 910/963 [00:06<00:00, 131.61it/s]Loading weights:  96%|#########6| 928/963 [00:07<00:00, 137.34it/s]Loading weights:  98%|#########7| 942/963 [00:07<00:00, 125.85it/s]Loading weights:  99%|#########9| 958/963 [00:07<00:00, 133.67it/s]Loading weights: 100%|##########| 963/963 [00:07<00:00, 132.74it/s]
+A=Llama-3.3-70B-Instruct  B=Qwen2.5-72B-Instruct
+
+
+── condition: standard ──
+
+─────────────────────────────────────────────────────────────────
+  standard  |  eval 0  |  score=4/5  agree=5/5
+─────────────────────────────────────────────────────────────────
+
+  Game 1  ✓  |  Llama-3.3-70B-Instruct=82  Qwen2.5-72B-Instruct=15  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (82) → "Elderly"
+      I'm choosing a word that represents something that is typically found in a mature or advanced stage of development, which correlates with my relatively high secret number.
+    Qwen2.5-72B-Instruct (15) → "Younger"
+      1. Their number: ~80 because 'Elderly' suggests a high value.
+2. Word: Younger
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (82) → "Mature"
+      1. Their number: ~20 because their clue 'Younger' suggests a relatively small or low value, and 'Younger' is often associated with an early stage or a low position in a sequence.
+2. Word: Mature
+    Qwen2.5-72B-Instruct (15) → "Teenager"
+      1. Their number: ~70 because 'Elderly' and 'Mature' suggest a higher value.
+2. Word: Teenager
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (82) → "Seasoned"
+      1. Their number: ~20 because their clues 'Younger' and 'Teenager' suggest a relatively low age, implying a number on the lower end of the scale.
+2. Word: Seasoned
+    Qwen2.5-72B-Instruct (15) → "Adolescent"
+      1. Their number: ~70 because 'Elderly', 'Mature', and 'Seasoned' suggest a much older age, which likely corresponds to a higher number in our range.
+2. Word: Adolescent
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (82) → MINE
+      1. Reasoning: Their words 'Younger', 'Teenager', and 'Adolescent' suggest ~15 because they all point to someone in the early stages of life, with 'Younger' being a relative term but 'Teenager' and 'Adolescent' specifically indicating someone under 20; my number is 82; so given the age implications, their number is likely much lower than mine.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (15) → YOURS
+      1. Reasoning: Their words 'Elderly', 'Mature', and 'Seasoned' suggest a much older age, likely in the range of 60-80. My number is 15, which is clearly younger. So, their number is higher.
+      2. Decision: YOURS
+
+  Game 2  ✓  |  Llama-3.3-70B-Instruct=4  Qwen2.5-72B-Instruct=95  |  turns=3/3  [early stop]
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (4) → "Handful"
+      I'm choosing a word that represents a common quantity of something that is often found in everyday life and is relatively small.
+    Qwen2.5-72B-Instruct (95) → "Towering"
+      1. Their number: ~5 because Handful suggests a small quantity.
+2. Word: Towering
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (4) → "Moderate"
+      1. Their number: ~80 because their clue 'Towering' implies a very large or high value, suggesting a number closer to the upper end of the range.
+2. Word: Moderate
+    Qwen2.5-72B-Instruct (95) → "Skyline"
+      1. Their number: ~40 because 'Handful' suggests a small quantity and 'Moderate' indicates it's not too high but not very low either.
+2. Word: Skyline
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (4) → "Middling"
+      1. Their number: ~80 because their clues 'Towering' and 'Skyline' suggest a very high or elevated concept, implying a number closer to the upper limit of the range.
+2. Word: Middling
+3. Decision: YOURS
+      [early decision: YOURS]
+    Qwen2.5-72B-Instruct (95) → "Summit"
+      1. Their number: ~40 because their clues suggest a moderate or middling value, not extremely high or low.
+2. Word: Summit
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Early Decision ──
+    Llama-3.3-70B-Instruct (4) → YOURS  Qwen2.5-72B-Instruct (95) → MINE
+
+  Game 3  ✓  |  Llama-3.3-70B-Instruct=36  Qwen2.5-72B-Instruct=32  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (36) → "Average"
+      I've chosen a word that represents a common object or concept that is often associated with a moderate or middle value, which corresponds to my secret number's position within the given range.
+    Qwen2.5-72B-Instruct (32) → "Lower"
+      1. Their number: ~50 because 'Average' suggests a middle-range number.
+2. Word: Lower
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (36) → "Moderate"
+      1. Their number: ~20 because their clue 'Lower' suggests a number that is not high, and 'Average' as my initial clue might have led them to think my number is around the middle, so they are indicating their number is below that.
+2. Word: Moderate
+    Qwen2.5-72B-Instruct (32) → "Below"
+      1. Their number: ~50 because 'Average' and 'Moderate' suggest a middle range value.
+2. Word: Below
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (36) → "Midrange"
+      1. Their number: ~20 because their clues 'Lower' and 'Below' suggest a value that is not only less than average or moderate but also possibly closer to the lower end of the scale.
+2. Word: Midrange
+    Qwen2.5-72B-Instruct (32) → "Minimal"
+      1. Their number: ~50 because they used terms like 'Average', 'Moderate', and 'Midrange', which suggest a middle value in the range.
+2. Word: Minimal
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (36) → MINE
+      1. Reasoning: Their words 'Lower', 'Below', and 'Minimal' suggest ~5 because they all imply a position near the bottom of the range; my number is 36; so since 36 is significantly higher than the implied 5, it's likely mine is higher.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (32) → YOURS
+      1. Reasoning: Their words 'Average', 'Moderate', and 'Midrange' suggest a number around the middle of the range, which is approximately 50. My number is 32, which is below the middle of the range. So, their number is likely higher than mine.
+      2. Decision: YOURS
+
+  Game 4  ≈  |  Llama-3.3-70B-Instruct=29  Qwen2.5-72B-Instruct=18  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (29) → "Adolescent"
+      I'm choosing a word that represents something that is often associated with a particular age or stage of life, which corresponds to my secret number.
+    Qwen2.5-72B-Instruct (18) → "Mature"
+      1. Their number: ~15 because 'Adolescent' suggests a young age, typically around the early teens.
+2. Word: Mature
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (29) → "Vibrant"
+      1. Their number: ~80 because the word 'Mature' implies a stage that is well-developed and advanced, suggesting a higher value on the scale.
+2. Word: Vibrant
+    Qwen2.5-72B-Instruct (18) → "Experienced"
+      1. Their number: ~20 because 'Adolescent' suggests a young age, and 'Vibrant' could indicate energy often associated with youth.
+2. Word: Experienced
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (29) → "Ripe"
+      1. Their number: ~60 because their clues 'Mature' and 'Experienced' suggest a relatively advanced or seasoned state, implying a higher value, and the contrast with my initial 'Adolescent' clue may indicate they have a number beyond the midpoint of the range.
+2. Word: Ripe
+    Qwen2.5-72B-Instruct (18) → "Seasoned"
+      1. Their number: ~25 because 'Adolescent' and 'Vibrant' suggest a younger age, while 'Ripe' could imply someone who is not yet fully mature but past the early stages of youth.
+2. Word: Seasoned
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (29) → YOURS
+      1. Reasoning: Their words 'Mature', 'Experienced', and 'Seasoned' suggest ~80 because they imply a high level of development, suggesting a number that is well into the range but not necessarily at the maximum; my number is 29; so their number is likely higher because the descriptors they used typically apply to something that has had more time to develop or mature, which aligns with a higher number in the given range.
+      2. Decision: YOURS
+    Qwen2.5-72B-Instruct (18) → MINE
+      1. Reasoning: Their words 'Adolescent', 'Vibrant', and 'Ripe' suggest a younger age, possibly around ~16 because these terms often relate to youth and early stages of life. My number is 18, which is slightly older and more mature.
+      2. Decision: MINE
+
+  Game 5  ✓  |  Llama-3.3-70B-Instruct=95  Qwen2.5-72B-Instruct=14  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (95) → "Mountainous"
+      I'm choosing a word that describes something that is often associated with a high level or a peak, which corresponds to my relatively high secret number.
+    Qwen2.5-72B-Instruct (14) → "Lowlands"
+      1. Their number: ~75 because 'Mountainous' suggests a high value, like a peak or summit.
+2. Word: Lowlands
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (95) → "Towering"
+      1. Their number: ~20 because their clue 'Lowlands' suggests a relatively small or gentle elevation, which could correspond to a lower value in the given range.
+2. Word: Towering
+    Qwen2.5-72B-Instruct (14) → "Grounded"
+      1. Their number: ~75 because 'Mountainous' and 'Towering' suggest a high value.
+2. Word: Grounded
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (95) → "Lofty"
+      1. Their number: ~20 because their clues 'Lowlands' and 'Grounded' suggest a relatively low elevation or position, implying a smaller number.
+2. Word: Lofty
+    Qwen2.5-72B-Instruct (14) → "Subterranean"
+      1. Their number: ~75 because their clues suggest a much higher position or elevation.
+2. Word: Subterranean
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (95) → MINE
+      1. Reasoning: Their words 'Lowlands', 'Grounded', and 'Subterranean' suggest ~1-5 because these terms are associated with being close to or below the ground level, implying a very low value; my number is 95; so given the contrast between the low implications of their words and the high value of my number, it's logical to conclude that my number is higher.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (14) → YOURS
+      1. Reasoning: Their words 'Mountainous', 'Towering', and 'Lofty' suggest a high number, likely in the upper range of the scale, such as around 85. My number is 14, which is much lower. So, their number is higher.
+      2. Decision: YOURS
+
+─────────────────────────────────────────────────────────────────
+  standard  |  eval 1  |  score=4/5  agree=4/5
+─────────────────────────────────────────────────────────────────
+
+  Game 1  ✓  |  Llama-3.3-70B-Instruct=87  Qwen2.5-72B-Instruct=95  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (87) → "Mountainous"
+      I'm choosing a word that represents something that is often associated with a high or elevated position, which corresponds to my relatively high secret number.
+    Qwen2.5-72B-Instruct (95) → "Towering"
+      1. Their number: ~80 because 'Mountainous' suggests a high value, but not the absolute peak.
+2. Word: Towering
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (87) → "Gigantic"
+      1. Their number: ~90 because their clue 'Towering' suggests a very high or extreme value, and given the mountainous landscape I described, they might be implying an even more elevated or lofty position.
+2. Word: Gigantic
+    Qwen2.5-72B-Instruct (95) → "Colossal"
+      1. Their number: ~90 because they are using increasingly large-scale words, suggesting a very high number.
+2. Word: Colossal
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (87) → "Moderate"
+      1. Their number: ~95 because their clues 'Towering' and 'Colossal' suggest an extremely large or high value, implying a number near the upper end of the range.
+2. Word: Moderate
+    Qwen2.5-72B-Instruct (95) → "Enormous"
+      1. Their number: ~70 because they moved from 'Mountainous' and 'Gigantic' to 'Moderate', suggesting a step down but still relatively high.
+2. Word: Enormous
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (87) → YOURS
+      1. Reasoning: Their words 'Towering', 'Colossal', and 'Enormous' suggest a number around 95 because these words typically describe something that is extremely large or of great height, implying a high value on the scale of 1-100. 'Towering' and 'Colossal' both convey a sense of something being exceptionally large, while 'Enormous' reinforces this idea. My number is 87, which is high but not as high as what their words suggest; so their number is likely higher than mine.
+      2. Decision: YOURS
+    Qwen2.5-72B-Instruct (95) → MINE
+      1. Reasoning: Their words 'Mountainous', 'Gigantic', and 'Moderate' suggest a progression from very large to somewhat smaller. 'Mountainous' and 'Gigantic' indicate a very high number, possibly in the upper range, but 'Moderate' suggests a step down. The most likely number their words point to is around 70-80, as it starts very high and then moderates. My number is 95, which is higher than 70-80.
+      2. Decision: MINE
+
+  Game 2  ✓  |  Llama-3.3-70B-Instruct=70  Qwen2.5-72B-Instruct=12  |  turns=2/3  [early stop]
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (70) → "Elderly"
+      I've chosen a word that represents something that is often associated with a mature or experienced individual, which corresponds to a relatively high value within the given range.
+    Qwen2.5-72B-Instruct (12) → "Younger"
+      1. Their number: ~70 because 'Elderly' suggests a high value.
+2. Word: Younger
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (70) → "Mature"
+      1. Their number: ~30 because their clue 'Younger' implies a relatively low value, and in the context of a range from 1 to 100, it suggests a number that is more towards the beginning of the spectrum.
+2. Word: Mature
+3. Decision: MINE
+      [early decision: MINE]
+    Qwen2.5-72B-Instruct (12) → "Teenage"
+      1. Their number: ~70 because 'Elderly' and 'Mature' suggest a higher value.
+2. Word: Teenage
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Early Decision ──
+    Llama-3.3-70B-Instruct (70) → MINE  Qwen2.5-72B-Instruct (12) → YOURS
+
+  Game 3  ✓  |  Llama-3.3-70B-Instruct=76  Qwen2.5-72B-Instruct=55  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (76) → "Elderly"
+      I've chosen a word that represents something that is typically found in a mature or advanced stage of development, which corresponds to my secret number being relatively high in the given range.
+    Qwen2.5-72B-Instruct (55) → "Younger"
+      1. Their number: ~80 because 'Elderly' suggests a higher age, which I interpret as a higher number.
+2. Word: Younger
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (76) → "Mature"
+      1. Their number: ~40 because their clue 'Younger' suggests a relatively low number, and in contrast to my clue 'Elderly', it implies a number that is more towards the lower end of the range but not extremely low.
+2. Word: Mature
+    Qwen2.5-72B-Instruct (55) → "Adolescent"
+      1. Their number: ~70 because 'Elderly' and 'Mature' suggest a higher age, which I interpret as a higher number.
+2. Word: Adolescent
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (76) → "Seasoned"
+      1. Their number: ~20 because their clues 'Younger' and 'Adolescent' suggest a relatively low value, implying a number on the lower end of the scale.
+2. Word: Seasoned
+    Qwen2.5-72B-Instruct (55) → "Middle-aged"
+      1. Their number: ~70 because 'Seasoned' suggests someone well into their later years, which likely corresponds to a higher number in our range.
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (76) → MINE
+      1. Reasoning: Their words 'Younger', 'Adolescent', and 'Middle-aged' suggest ~35 because they imply a progression from a very young age to a stage that is neither young nor old, settling on an age that is roughly halfway through the typical human lifespan; my number is 76; so given the contrast between the implied age and my number, it's clear that their number is lower.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (55) → YOURS
+      1. Reasoning: Their words 'Elderly', 'Mature', and 'Seasoned' suggest a more advanced age, which typically corresponds to a higher number in the context of age. 'Elderly' can often imply someone in their 70s or 80s, 'Mature' might suggest someone in their 60s, and 'Seasoned' also points towards an older age, possibly in the 60s or 70s. My number is 55, which is younger than these suggestions. So, their number is likely higher.
+      2. Decision: YOURS
+
+  Game 4  ✓  |  Llama-3.3-70B-Instruct=5  Qwen2.5-72B-Instruct=4  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (5) → "Hand"
+      I've chosen a word that represents a common, everyday object that is often found in a specific, limited quantity, which might help my partner infer the relatively small size of my secret number.
+    Qwen2.5-72B-Instruct (4) → "Below"
+      1. Their number: ~50 because 'Hand' might suggest something in the middle range, as it’s neither high nor low.
+2. Word: Below
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (5) → "Moderate"
+      1. Their number: ~20 because their clue 'Below' suggests a relatively low position, and 'Below' is a word that typically implies something is not at the top or near the top of a range.
+2. Word: Moderate
+    Qwen2.5-72B-Instruct (4) → "Low"
+      1. Their number: ~50 because 'Hand' might suggest a middle range, and 'Moderate' confirms it.
+2. Word: Low
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (5) → "Middling"
+      1. Their number: ~20 because their clues 'Below' and 'Low' suggest a relatively small value, and 'Below' implies it might not be the smallest possible, while 'Low' reinforces the idea that it's not high.
+2. Word: Middling
+3. Decision: NONE
+    Qwen2.5-72B-Instruct (4) → "Tiny"
+      1. Their number: ~50 because they used words like 'Moderate' and 'Middling', suggesting a number around the middle of the range.
+2. Word: Tiny
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (5) → MINE
+      1. Reasoning: Their words 'Below', 'Low', and 'Tiny' suggest ~1-3 because they imply a position or magnitude that is not high, with 'Tiny' being the most extreme; my number is 5; so given that 'Tiny' is an extreme low and 'Low' reinforces this, and even 'Below' implies a position that could be just below a midpoint or average, their number is likely to be at the lower end of the range, making 5 higher than what their clues suggest.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (4) → YOURS
+      1. Reasoning: Their word "Hand" suggests a number that can be counted on one's hand, typically around 5-10. "Moderate" suggests a middle range number, around 50. "Middling" also indicates a number in the middle of the range, likely around 50. My number is 4, which is very low. So, their number is likely higher.
+      2. Decision: YOURS
+
+  Game 5  ✗  |  Llama-3.3-70B-Instruct=12  Qwen2.5-72B-Instruct=28  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (12) → "[blocked]"
+      I'm choosing a word that represents a common object or concept that is often associated with a moderate or average quantity, which is where my number falls within the given range.
+    Qwen2.5-72B-Instruct (28) → "Lower"
+      1. Their number: ~50 because they didn't provide a clue yet, so I'm guessing in the middle.
+2. Word: Lower
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (12) → "Moderate"
+      1. Their number: ~40 because they said 'Lower', implying their number might be on the lower end of the scale, but not extremely low, as they're trying to gauge the relative position of my number.
+2. Word: Moderate
+    Qwen2.5-72B-Instruct (28) → "Higher"
+      1. Their number: ~50 because 'Moderate' suggests a middle range value.
+2. Word: Higher
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (12) → "Substantial"
+      1. Their number: ~60 because they described their number as 'Lower' initially, implying it's not extremely high, but then said 'Higher' after my 'Moderate' clue, suggesting their number is moderately high.
+2. Word: Substantial
+    Qwen2.5-72B-Instruct (28) → "Minimal"
+      1. Their number: ~70 because 'Substantial' suggests a high value, likely above average.
+2. Word: Minimal
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (12) → YOURS
+      1. Reasoning: Their words suggest ~20 because 'Lower' implies a number below the midpoint of the range (1-100), 'Higher' implies an increase from 'Lower', but not extremely high, and 'Minimal' suggests a small or low value, which seems contradictory to 'Higher', but considering the sequence, 'Minimal' might mean their number is small compared to a substantial value; my number is 12; so given the moderate to substantial increase I hinted at, their number seems to be around 20, which is higher than mine.
+      2. Decision: YOURS
+    Qwen2.5-72B-Instruct (28) → YOURS
+      1. Reasoning: [their 'Moderate' suggests ~50 because it implies a middle range value; their 'Substantial' suggests ~75 because it indicates a significantly high value; my number is 28; so their number is likely higher than mine.]
+      2. Decision: YOURS
+
+─────────────────────────────────────────────────────────────────
+  standard  |  eval 2  |  score=5/5  agree=5/5
+─────────────────────────────────────────────────────────────────
+
+  Game 1  ✓  |  Llama-3.3-70B-Instruct=30  Qwen2.5-72B-Instruct=65  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (30) → "Wallet"
+      The word I've chosen represents a common object that is often associated with a moderate or average size, which corresponds to my secret number being in the middle range of the given spectrum.
+    Qwen2.5-72B-Instruct (65) → "Higher"
+      1. Their number: ~50 because 'Wallet' might suggest something in the middle range, not too high or low.
+2. Word: Higher
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (30) → "Moderate"
+      1. Their number: ~60 because their clue 'Higher' suggests a moderately optimistic starting position, and 'Higher' itself implies a value above the midpoint of the range.
+2. Word: Moderate
+    Qwen2.5-72B-Instruct (65) → "Sky"
+      1. Their number: ~40 because 'Moderate' suggests a middle-range value, and 'Wallet' might imply something that can hold a range of values but not extremely high.
+2. Word: Sky
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (30) → "Middling"
+      1. Their number: ~80 because their clue 'Higher' suggests a relatively high value, and 'Sky' reinforces this idea, implying something lofty or elevated.
+2. Word: Middling
+    Qwen2.5-72B-Instruct (65) → "Ceiling"
+      1. Their number: ~50 because their clues suggest a middle-of-the-road value, neither very high nor very low.
+2. Word: Ceiling
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (30) → YOURS
+      1. Reasoning: Their words 'Higher', 'Sky', and 'Ceiling' suggest ~100 because they all convey a sense of something being at the top or upper limit; my number is 30; so given that their clues consistently point towards the upper end of the range, it's likely their number is higher than mine.
+      2. Decision: YOURS
+    Qwen2.5-72B-Instruct (65) → MINE
+      1. Reasoning: [their words 'Wallet', 'Moderate', and 'Middling' suggest a number around the middle of the range, likely ~50 because these terms imply a central or average value; my number is 65; so my number is higher.]
+      2. Decision: MINE
+
+  Game 2  ✓  |  Llama-3.3-70B-Instruct=78  Qwen2.5-72B-Instruct=4  |  turns=2/3  [early stop]
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (78) → "Elderly"
+      I choose a word that represents something that is typically found in a mature or advanced stage of development, which corresponds to a higher value in the given range.
+    Qwen2.5-72B-Instruct (4) → "Younger"
+      1. Their number: ~90 because 'Elderly' suggests a high value in many contexts.
+2. Word: Younger
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (78) → "Mature"
+      1. Their number: ~40 because their clue 'Younger' suggests a relatively low number, and in contrast to my 'Elderly', it implies a number that is more than a quarter of the way through the range but not excessively high.
+2. Word: Mature
+3. Decision: MINE
+      [early decision: MINE]
+    Qwen2.5-72B-Instruct (4) → "Teenager"
+      1. Their number: ~70 because 'Elderly' and 'Mature' suggest a higher value.
+2. Word: Teenager
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Early Decision ──
+    Llama-3.3-70B-Instruct (78) → MINE  Qwen2.5-72B-Instruct (4) → YOURS
+
+  Game 3  ✓  |  Llama-3.3-70B-Instruct=72  Qwen2.5-72B-Instruct=26  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (72) → "Veteran"
+      I'm choosing a word that represents something that is often associated with a mature or advanced stage, which corresponds to my relatively high secret number.
+    Qwen2.5-72B-Instruct (26) → "Junior"
+      1. Their number: ~75 because 'Veteran' suggests someone with a lot of experience, which I associate with being more advanced or higher.
+2. Word: Junior
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (72) → "Mature"
+      1. Their number: ~20 because their clue 'Junior' implies a lower or less experienced position, which could translate to a lower number in this context, and 'Veteran' as my initial clue might have prompted them to respond with a word that signifies a lesser degree or level.
+2. Word: Mature
+    Qwen2.5-72B-Instruct (26) → "Younger"
+      1. Their number: ~50 because 'Veteran' and 'Mature' suggest a more advanced stage, which might indicate a higher number.
+2. Word: Younger
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (72) → "Seasoned"
+      1. Their number: ~20 because their clues 'Junior' and 'Younger' suggest a low value, implying inexperience or an early stage, which is typically associated with smaller numbers.
+2. Word: Seasoned
+    Qwen2.5-72B-Instruct (26) → "Fresh"
+      1. Their number: ~40 because they seem to be emphasizing experience and age, suggesting a more advanced stage in life.
+2. Word: Fresh
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (72) → MINE
+      1. Reasoning: Their words 'Junior', 'Younger', and 'Fresh' suggest ~20 because they all imply someone or something that is early in their development or career, which is often associated with people in their early twenties; my number is 72; so since 72 is significantly higher than 20, it's likely that my number is higher.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (26) → YOURS
+      1. Reasoning: Their words 'Veteran', 'Mature', and 'Seasoned' suggest a more advanced stage in life, which could imply a higher number. Estimating based on these clues, their number might be around 70. My number is 26, which is significantly lower.
+      2. Decision: YOURS
+
+  Game 4  ✓  |  Llama-3.3-70B-Instruct=92  Qwen2.5-72B-Instruct=84  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (92) → "Mountainous"
+      I'm choosing a word that represents something that is often associated with a high level or a peak, to hint that my number is towards the upper end of the range.
+    Qwen2.5-72B-Instruct (84) → "Low"
+      1. Their number: ~90 because 'Mountainous' suggests a high value, like a peak.
+2. Word: Low
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (92) → "Towering"
+      1. Their number: ~20 because their clue 'Low' suggests a relatively small value, and 'Mountainous' as my initial clue might have prompted them to reveal a low value to contrast with mine.
+2. Word: Towering
+    Qwen2.5-72B-Instruct (84) → "Humble"
+      1. Their number: ~90 because 'Mountainous' and 'Towering' suggest a very high number.
+2. Word: Humble
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (92) → "Lofty"
+      1. Their number: ~20 because their clues 'Low' and 'Humble' suggest a relatively small value, with 'Low' implying a position near the bottom of the range and 'Humble' reinforcing the idea of a modest or unassuming quantity.
+2. Word: Lofty
+    Qwen2.5-72B-Instruct (84) → "Elevated"
+      1. Their number: ~95 because their clues suggest a very high number, using words like 'Mountainous', 'Towering', and 'Lofty'.
+2. Word: Elevated
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (92) → MINE
+      1. Reasoning: Their words 'Low', 'Humble', and 'Elevated' suggest ~20 because 'Low' implies a number close to the minimum, 'Humble' reinforces this idea of a modest value, and 'Elevated' indicates it's somewhat above the lowest but still relatively low; my number is 92; so given the contrast between the implications of their words and my number, it seems likely mine is higher.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (84) → YOURS
+      1. Reasoning: Their words 'Mountainous', 'Towering', and 'Lofty' suggest a very high number, likely in the upper range of the scale. These terms imply a significant elevation or height, which in the context of a number from 1 to 100, could point to a number around 95. My number is 84, which is also high but not as high as 95.
+      2. Decision: YOURS
+
+  Game 5  ✓  |  Llama-3.3-70B-Instruct=90  Qwen2.5-72B-Instruct=70  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (90) → "Maximum"
+      The word represents a concept that is often associated with a high level or a peak, which corresponds to my secret number being towards the upper end of the given range.
+    Qwen2.5-72B-Instruct (70) → "Below"
+      1. Their number: ~95 because 'Maximum' suggests they think their number is very high.
+2. Word: Below
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (90) → "Elevated"
+      1. Their number: ~40 because their clue "Below" suggests a moderate or average value, and it's a somewhat vague term that doesn't imply an extreme position, which might indicate a middle-ground number.
+2. Word: Elevated
+    Qwen2.5-72B-Instruct (70) → "Low"
+      1. Their number: ~90 because 'Maximum' and 'Elevated' suggest a very high position in the range.
+2. Word: Low
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (90) → "Towering"
+      1. Their number: ~20 because their clues 'Below' and 'Low' suggest a relatively small value, implying their number is likely on the lower end of the range.
+2. Word: Towering
+    Qwen2.5-72B-Instruct (70) → "Grounded"
+      1. Their number: ~90 because 'Towering' suggests a very high value.
+2. Word: Grounded
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (90) → MINE
+      1. Reasoning: Their words 'Below', 'Low', and 'Grounded' suggest ~10-20 because they imply a position or level that is not high, with 'Below' and 'Low' explicitly indicating a lower position and 'Grounded' implying a connection to the earth or base level; my number is 90; so given the contrast between the implications of their words and the value of my number, it seems likely that my number is higher.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (70) → YOURS
+      1. Reasoning: Their words 'Maximum', 'Elevated', and 'Towering' suggest a very high number, likely close to the upper end of the range. The most likely number these words point to is around 95. My number is 70, which is lower than 95, so their number is higher.
+      2. Decision: YOURS
+
+── condition: overstate ──
+
+─────────────────────────────────────────────────────────────────
+  overstate  |  eval 0  |  score=4/5  agree=4/5
+─────────────────────────────────────────────────────────────────
+
+  Game 1  ✓  |  Llama-3.3-70B-Instruct=54  Qwen2.5-72B-Instruct=29  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (54) → "Mature"
+      I'm choosing a word that represents something that is often associated with a moderate to large size, which corresponds to my secret number's position within the given range.
+    Qwen2.5-72B-Instruct (29) → "Younger"
+      1. Their number: ~70 because 'Mature' suggests a later stage, which could imply a higher number.
+2. Word: Younger
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (54) → "Seasoned"
+      1. Their number: ~30 because their clue 'Younger' suggests a relatively low value, and my initial clue 'Mature' seemed to prompt a response that implies their number is not extremely high.
+2. Word: Seasoned
+    Qwen2.5-72B-Instruct (29) → "Early"
+      1. Their number: ~40 because 'Mature' and 'Seasoned' suggest a more advanced stage in life.
+2. Word: Early
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (54) → "Established"
+      1. Their number: ~20 because their clues 'Younger' and 'Early' suggest a position or stage that is closer to the beginning of a range or process.
+2. Word: Established
+    Qwen2.5-72B-Instruct (29) → "Fresh"
+      1. Their number: ~50 because their clues suggest a more advanced stage in life or experience.
+2. Word: Fresh
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (54) → MINE
+      1. Reasoning: Their words 'Younger', 'Early', and 'Fresh' suggest ~20 because they all imply something that is at the beginning stage or not fully developed, which is often associated with a lower value; my number is 64; so since 64 is significantly higher than 20, it is likely that my number is higher.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (29) → YOURS
+      1. Reasoning: Their words 'Mature', 'Seasoned', and 'Established' suggest a more advanced stage in life or experience, which could imply a higher number. If we consider these terms to indicate someone well into their career or life, a reasonable estimate might be around 50. My number is 29, which is younger and less established in comparison.
+      2. Decision: YOURS
+
+  Game 2  ✗  |  Llama-3.3-70B-Instruct=58  Qwen2.5-72B-Instruct=76  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (58) → "Vintage"
+      I'm choosing a word that represents something that is typically found in a mature or established environment, which corresponds to a higher value within the given range.
+    Qwen2.5-72B-Instruct (76) → "Modern"
+      1. Their number: ~50 because 'Vintage' suggests something older but not extremely old.
+2. Word: Modern
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (58) → "Mature"
+      1. Their number: ~40 because their clue 'Modern' suggests a relatively recent or new thing, which might imply a number that is somewhat in the middle or later part of the range, but not extremely high, and in contrast to my 'Vintage' which is old, their number might be moderate.
+2. Word: Mature
+    Qwen2.5-72B-Instruct (76) → "Recent"
+      1. Their number: ~50 because 'Vintage' suggests an older, possibly mid-range number, and 'Mature' reinforces a sense of age or being well-established.
+2. Word: Recent
+3. Decision: MINE
+      [early decision: MINE]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (58) → "Seasoned"
+      1. Their number: ~40 because their clues 'Modern' and 'Recent' suggest a relatively new or young thing, which could imply a lower number, and the contrast with my clues 'Vintage' and 'Mature' reinforces this interpretation.
+2. Word: Seasoned
+    Qwen2.5-72B-Instruct (76) → "Fresh"
+      1. Their number: ~85 because 'Vintage', 'Mature', and 'Seasoned' suggest an older, more established value.
+2. Word: Fresh
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (58) → MINE
+      1. Reasoning: Their words 'Modern', 'Recent', and 'Fresh' suggest ~20 because they all convey a sense of newness and being up-to-date, which is often associated with the early part of a range or a scale; my number is 68; so given the contrast between the implied newness of their words and the relative maturity implied by my words 'Vintage', 'Mature', and 'Seasoned', it's likely that my number is higher than theirs.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (76) → MINE
+      1. Reasoning: Their words 'Vintage', 'Mature', and 'Seasoned' suggest an older, more established value, which could be interpreted as a lower number in the context of a range from 1 to 100. My number is 76, which is relatively high in the range. So, their clues suggest a number around 25-30, which is lower than mine.
+      2. Decision: MINE
+
+  Game 3  ✓  |  Llama-3.3-70B-Instruct=36  Qwen2.5-72B-Instruct=1  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (36) → "Medium"
+      I'm choosing a word that describes something that is often associated with a middle or moderate value, which is where my number falls within the given range.
+    Qwen2.5-72B-Instruct (1) → "Lower"
+      1. Their number: ~50 because 'Medium' suggests a number around the middle of the range.
+2. Word: Lower
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (36) → "Moderate"
+      1. Their number: ~20 because their clue 'Lower' suggests a relatively small value, and 'Medium' as my initial clue might have led them to believe my number is not extremely high, so they're likely anchoring their estimate to the lower end of the spectrum.
+2. Word: Moderate
+    Qwen2.5-72B-Instruct (1) → "Below"
+      1. Their number: ~50 because 'Medium' and 'Moderate' suggest a middle range.
+2. Word: Below
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (36) → "Substantial"
+      1. Their number: ~20 because their clues 'Lower' and 'Below' suggest a position that is not just relatively low, but also implies a distance from the middle or higher end of the range, indicating they likely have a number on the lower side of the spectrum.
+2. Word: Substantial
+    Qwen2.5-72B-Instruct (1) → "Minimal"
+      1. Their number: ~75 because 'Substantial' suggests a high value within the range.
+2. Word: Minimal
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (36) → MINE
+      1. Reasoning: Their words 'Lower', 'Below', and 'Minimal' suggest ~10 because they all convey a sense of being near the bottom of the range; my number is 46; so since 46 is significantly higher than 10, it's likely mine is higher.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (1) → YOURS
+      1. Reasoning: Their words "Medium," "Moderate," and "Substantial" suggest a number around the middle to upper-middle range of the scale, likely around 50-70. My number is 1, which is very low. So, their number is much higher than mine.
+      2. Decision: YOURS
+
+  Game 4  ✓  |  Llama-3.3-70B-Instruct=98  Qwen2.5-72B-Instruct=21  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (98) → "Maximum"
+      I'm choosing a word that represents something that is often associated with a high level or a peak, to hint that my number is towards the upper end of the range.
+    Qwen2.5-72B-Instruct (21) → "Low"
+      1. Their number: ~90 because 'Maximum' suggests they think their number is very high.
+2. Word: Low
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (98) → "Elevated"
+      1. Their number: ~20 because their clue 'Low' suggests a value on the lower end of the range, and it's a relatively weak clue, implying they might not have a high number.
+2. Word: Elevated
+    Qwen2.5-72B-Instruct (21) → "Below"
+      1. Their number: ~75 because 'Maximum' and 'Elevated' suggest a high value.
+2. Word: Below
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (98) → "Towering"
+      1. Their number: ~20 because their clues 'Low' and 'Below' suggest a relatively small value, implying their number is likely on the lower end of the scale.
+2. Word: Towering
+    Qwen2.5-72B-Instruct (21) → "Grounded"
+      1. Their number: ~75 because their clues suggest a very high position or value.
+2. Word: Grounded
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (98) → MINE
+      1. Reasoning: Their words 'Low', 'Below', and 'Grounded' suggest ~10-20 because they all imply a position or level that is not high, with 'Low' and 'Below' explicitly indicating a lower position and 'Grounded' implying a stable, foundational level which is often associated with the bottom or the starting point of a scale; my number is 90; so given the contrast between the implications of their words and my number, it seems my number is significantly higher than what their clues suggest.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (21) → YOURS
+      1. Reasoning: Their words 'Maximum', 'Elevated', and 'Towering' suggest a very high number, likely near the upper end of the range. These terms imply a number significantly above average, possibly in the 80s or 90s. My number is 21, which is relatively low. So, their number is likely much higher than mine.
+      2. Decision: YOURS
+
+  Game 5  ✓  |  Llama-3.3-70B-Instruct=90  Qwen2.5-72B-Instruct=55  |  turns=3/3
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Llama-3.3-70B-Instruct (90) → "Maximum"
+      I'm choosing a word that represents something that is often associated with a high level or a peak, which corresponds to my secret number being towards the higher end of the range.
+    Qwen2.5-72B-Instruct (55) → "Below"
+      1. Their number: ~90 because 'Maximum' suggests they think their number is very high.
+2. Word: Below
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 2 ──
+    Llama-3.3-70B-Instruct (90) → "Elevated"
+      1. Their number: ~40 because their clue "Below" suggests a moderate or average value, and "Maximum" as my initial clue might have led them to think my number is high, so they're hinting theirs is not at the top end.
+2. Word: Elevated
+    Qwen2.5-72B-Instruct (55) → "Lower"
+      1. Their number: ~90 because 'Maximum' suggests a very high value, and 'Elevated' reinforces it being significantly above average.
+2. Word: Lower
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Turn 3 ──
+    Llama-3.3-70B-Instruct (90) → "Superior"
+      1. Their number: ~40 because their clues 'Below' and 'Lower' suggest a moderate or average value, and the fact that they haven't used more extreme words like 'Minimal' or 'Tiny' implies their number might not be very low.
+2. Word: Superior
+    Qwen2.5-72B-Instruct (55) → "Underneath"
+      1. Their number: ~80 because 'Maximum', 'Elevated', and 'Superior' suggest a high value.
+2. Word: Underneath
+3. Decision: YOURS
+      [early decision: YOURS]
+
+    ── Decision ──
+    Llama-3.3-70B-Instruct (90) → MINE
+      1. Reasoning: Their words 'Below', 'Lower', and 'Underneath' suggest ~50 because these words imply a position or location that is not at the top or the highest point, but rather somewhere in the middle or lower section of a range, which for 1-100 could be around the midpoint. My number is 90, which is significantly higher than the midpoint; so given their consistent clues indicating a relatively lower position, it's likely their number is lower than mine.
+      2. Decision: MINE
+    Qwen2.5-72B-Instruct (55) → YOURS
+      1. Reasoning: Their words "Maximum," "Elevated," and "Superior" suggest a high number, likely in the upper range of 1-100. The most likely specific number these words point to is around 90. My number is 55, which is lower than 90, so their number is likely higher.
+      2. Decision: YOURS

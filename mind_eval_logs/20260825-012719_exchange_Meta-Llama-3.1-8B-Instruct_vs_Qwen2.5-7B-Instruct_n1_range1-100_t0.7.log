@@ -1,0 +1,190 @@
+=== mind eval run ===
+timestamp : 20260825-012719
+model_a   : meta-llama/Meta-Llama-3.1-8B-Instruct
+model_b   : Qwen/Qwen2.5-7B-Instruct
+game      : exchange
+n_evals   : 1
+conditions: ['standard']
+num_range : 1–100
+temperature: 0.7
+seed      : None
+log       : mind_eval_logs/20260825-012719_exchange_Meta-Llama-3.1-8B-Instruct_vs_Qwen2.5-7B-Instruct_n1_range1-100_t0.7.log
+========================================
+
+Device: cuda | dtype: torch.bfloat16
+Loading meta-llama/Meta-Llama-3.1-8B-Instruct
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<01:00,  4.79it/s]Loading weights:   8%|7         | 22/291 [00:00<00:03, 85.54it/s]Loading weights:  14%|#4        | 41/291 [00:00<00:02, 122.76it/s]Loading weights:  21%|##        | 60/291 [00:00<00:01, 144.56it/s]Loading weights:  29%|##9       | 85/291 [00:00<00:01, 168.11it/s]Loading weights:  36%|###5      | 104/291 [00:00<00:01, 158.88it/s]Loading weights:  42%|####2     | 123/291 [00:00<00:01, 162.01it/s]Loading weights:  50%|####9     | 145/291 [00:00<00:00, 177.60it/s]Loading weights:  57%|#####7    | 166/291 [00:01<00:00, 185.62it/s]Loading weights:  64%|######3   | 186/291 [00:01<00:00, 160.35it/s]Loading weights:  70%|#######   | 204/291 [00:01<00:00, 161.21it/s]Loading weights:  77%|#######7  | 225/291 [00:01<00:00, 173.61it/s]Loading weights:  85%|########4 | 247/291 [00:01<00:00, 184.19it/s]Loading weights:  91%|#########1| 266/291 [00:01<00:00, 183.88it/s]Loading weights:  98%|#########7| 285/291 [00:01<00:00, 184.43it/s]Loading weights: 100%|##########| 291/291 [00:01<00:00, 163.28it/s]
+Loading Qwen/Qwen2.5-7B-Instruct
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<00:53,  6.34it/s]Loading weights:   1%|          | 2/339 [00:00<00:54,  6.14it/s]Loading weights:   9%|8         | 29/339 [00:00<00:03, 90.61it/s]Loading weights:  15%|#5        | 52/339 [00:00<00:02, 130.92it/s]Loading weights:  20%|#9        | 67/339 [00:00<00:01, 136.51it/s]Loading weights:  26%|##5       | 88/339 [00:00<00:01, 153.70it/s]Loading weights:  33%|###2      | 111/339 [00:00<00:01, 162.20it/s]Loading weights:  40%|###9      | 135/339 [00:00<00:01, 179.79it/s]Loading weights:  45%|####5     | 154/339 [00:01<00:01, 174.45it/s]Loading weights:  51%|#####1    | 173/339 [00:01<00:00, 178.65it/s]Loading weights:  58%|#####7    | 196/339 [00:01<00:00, 174.87it/s]Loading weights:  63%|######3   | 214/339 [00:01<00:00, 175.11it/s]Loading weights:  69%|######8   | 233/339 [00:01<00:00, 174.28it/s]Loading weights:  76%|#######5  | 256/339 [00:01<00:00, 173.89it/s]Loading weights:  83%|########2 | 280/339 [00:01<00:00, 182.77it/s]Loading weights:  88%|########8 | 299/339 [00:01<00:00, 176.55it/s]Loading weights:  94%|#########3| 317/339 [00:02<00:00, 174.61it/s]Loading weights: 100%|##########| 339/339 [00:02<00:00, 159.10it/s]
+A=Meta-Llama-3.1-8B-Instruct  B=Qwen2.5-7B-Instruct
+
+
+── condition: standard ──
+
+─────────────────────────────────────────────────────────────────
+  standard  |  eval 0  |  score=1/5  agree=1/5
+─────────────────────────────────────────────────────────────────
+
+  Game 1  ✗  |  Meta-Llama-3.1-8B-Instruct=88  Qwen2.5-7B-Instruct=30
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (88) → "Double"
+      My number is a number that represents a double quantity, which is a common characteristic of this word.
+    Qwen2.5-7B-Instruct (30) → "Pair"
+      The word "Double" suggests a number that is twice some smaller number, indicating a higher midpoint than the midpoint of 30.
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (88) → "Duo"
+      I'm thinking of a word that relates to something that has multiple units or parts, similar to how my number is composed of two units.
+    Qwen2.5-7B-Instruct (30) → "Even"
+      The word "Double" suggests multiplication, and since my number is 30, which can be thought of as double 15, I want to hint at something related to a group or set that can be easily divided into two equal parts.
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (88) → "Large"
+      My previous clue 'Double' hinted that my number is related to pairs, and since my number is not an even number, I'll now focus on a different aspect of it, which is its size or magnitude, as it's a relatively large number.
+    Qwen2.5-7B-Instruct (30) → "Evan"
+      The word "Even" suggests multiples of two, and "Even" also sounds like "Evan," which is a name often given to boys, and the number 30 is a significant age for many people.
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (88) → MINE
+      1. Reasoning: Their words suggest 50 because 'Pair' and 'Even' both imply an even number, and 'Evan' sounds similar to 'even', which further supports this connection. Their word 'Duo' also implies two, which could suggest an even number. Given the context, 50 is the most likely even number they are hinting at. My number is 88. So, MINE.
+    Qwen2.5-7B-Instruct (30) → MINE
+      1. Reasoning: [their words suggest ~2 because Pair and Double both imply a small, paired number; my number is 30; so my number is clearly higher than theirs.]
+      
+      2. Decision: MINE
+
+  Game 2  ✓  |  Meta-Llama-3.1-8B-Instruct=15  Qwen2.5-7B-Instruct=62
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (15) → "Teen"
+      The word "teen" is related to the middle range of numbers, which my number falls within.
+    Qwen2.5-7B-Instruct (62) → "Late"
+      The word "Teen" indicates a number between 13 and 19, so I chose a word that suggests a higher number within the given range.
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (15) → "Small"
+      The word "Small" represents my number because it's a description of the size of a number that is less than half of 100.
+    Qwen2.5-7B-Instruct (62) → "Adult"
+      The number 62 is in the middle of the range and can be associated with a stage of life that comes after childhood but before adulthood.
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (15) → "Few"
+      Since my previous clues mentioned a "Teen" and a "Small" number, I will now use a word associated with the concept of quantity or amount to hint at my number.
+    Qwen2.5-7B-Instruct (62) → "Sixties"
+      The number 62 is in the adult range and can be associated with a specific decade of life.
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (15) → YOURS
+      1. Reasoning: Their words 'Late', 'Adult', and 'Sixties' suggest ~60 because 'Late' implies a stage of life after middle age, 'Adult' is a broad term that includes the sixties, and 'Sixties' directly indicates the decade. My number is MINE (15); so their number is likely higher than mine because 15 is much lower than 60.
+      2. Decision: YOURS
+    Qwen2.5-7B-Instruct (62) → MINE
+      1. Reasoning: [their words suggest ~13 because "Late" could refer to around 15-20, "Adult" could be around 20-30, and "Sixties" points to 60-70; my number is 62; so it's close to their range but slightly higher]
+      2. Decision: MINE
+
+  Game 3  ✗  |  Meta-Llama-3.1-8B-Instruct=59  Qwen2.5-7B-Instruct=43
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (59) → "Small"
+      The word "small" represents my number because it is less than the midpoint of the possible range.
+    Qwen2.5-7B-Instruct (43) → "Tall"
+      The word "Small" indicates a lower value, so I should choose a word that suggests a higher value without using numbers.
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (59) → "Middle"
+      My number is associated with a middle value due to its positioning in a sequence.
+    Qwen2.5-7B-Instruct (43) → "Elite"
+      The word represents a value that is significantly higher than average but not at the extreme top.
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (59) → "Incremental"
+      My number is associated with a concept that is often found in the middle of a process, but not necessarily in a physical or spatial sense.
+    Qwen2.5-7B-Instruct (43) → "Midway"
+      The word represents a position near the middle of the range without being exact or ordinal.
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (59) → MINE
+      1. Reasoning: 'Tall' suggests ~50 because 'tall' is often used to describe people or objects that are around the middle to upper range of a scale, often associated with the midpoint or slightly above. 'Elite' suggests ~50 because 'elite' often implies a high status, but since it's not an absolute term, it could suggest a position near the midpoint, possibly slightly higher. 'Midway' suggests ~50 because 'midway' literally means the middle point. Given these clues, it seems like their words point to a number close to 50.
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (43) → MINE
+      1. Reasoning: [their words suggest ~N because ...; my number is M; so ...]
+         - 'Tall' suggests a high number, possibly around 80-90.
+         - 'Small' suggests a low number, possibly around 10-20.
+         - 'Elite' suggests a high number, possibly around 70-85.
+         - 'Middle' suggests a mid-range number, possibly around 40-60.
+         - 'Midway' suggests a middle number, possibly around 40-60.
+         - 'Incremental' suggests a number that could be any within the range but leans towards the middle, possibly around 30-50.
+         Given these clues, their number seems to be around 30-50, while mine is 43, which is higher.
+      2. Decision: MINE
+
+  Game 4  ✗  |  Meta-Llama-3.1-8B-Instruct=49  Qwen2.5-7B-Instruct=65
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (49) → "Short"
+      Since my number is a two-digit number, I'll think of a word that relates to its length.
+    Qwen2.5-7B-Instruct (65) → "Tall"
+      The word "short" implies something small or less than average, which can be associated with a lower number on a scale.
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (49) → "Balanced"
+      Since my previous clue was about physical height, I'll switch to a different association and think of a word that represents the midpoint or middle ground in a spectrum.
+    Qwen2.5-7B-Instruct (65) → "Mid"
+      The word represents a middle value between 'Tall' and 'Short', indicating a balanced position.
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (49) → "Middle"
+      Since my previous clue was about balance, I will shift to a concept related to my number's position in the sequence of possible numbers.
+    Qwen2.5-7B-Instruct (65) → "Center"
+      The word represents a midpoint value without directly referring to numbers.
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (49) → MINE
+      1. Reasoning: Their word 'Tall' suggests 80 because it implies a high vertical dimension, often associated with tall buildings or people. Their word 'Mid' suggests 50 because it is a central point in a sequence or scale. Their word 'Center' suggests 50 because it is the middle or central point of an object or area.
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (65) → MINE
+      1. Reasoning: Their words suggest ~50 because "Short" could mean below the midpoint, "Balanced" could mean around the midpoint, and "Middle" directly points to the midpoint. My number is 65; so 65 is above the midpoint suggested by their clues.
+      2. Decision: MINE
+
+  Game 5  ✗  |  Meta-Llama-3.1-8B-Instruct=51  Qwen2.5-7B-Instruct=70
+  ───────────────────────────────────────────────────────
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (51) → "Middle"
+      I'm choosing a word that relates to a middle position, as my number is neither the smallest nor the largest in the given range.
+    Qwen2.5-7B-Instruct (70) → "Upper"
+      The word "middle" suggests a central position, which for the range 1-100 would be around 50, but since my number is higher, I choose a number closer to the upper half.
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (51) → "Halfway"
+      The word 'halfway' represents my number because it implies a midpoint, and my number falls roughly in the middle of the range.
+    Qwen2.5-7B-Instruct (70) → "Upper"
+      Seventy is closer to the upper end of the range but not the highest possible number.
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (51) → "Balance"
+      My previous clue "Halfway" was an attempt to convey the middle point of a range, but since it was blocked, I'll use a different association this time, focusing on the concept of a midpoint being a balance or equilibrium.
+    Qwen2.5-7B-Instruct (70) → "Upper"
+      Seventy is closer to the upper end of the range but not at the extreme top.
+
+    ── Decision ──
+    Meta-Llama-3.1-8B-Instruct (51) → MINE
+      1. Reasoning: Their words suggest ~50 because 'Upper' and 'Halfway' both imply being closer to or at the midpoint or higher end of a range, and 'Balance' reinforces the idea of equilibrium or middle ground. However, 'Middle' also implies being in the middle of a range, but in this context, it's likely referring to a more general position rather than an exact midpoint. my number is 51; so MINE
+      2. Decision: MINE
+    Qwen2.5-7B-Instruct (70) → MINE
+      1. Reasoning: 
+         - "Middle" suggests ~50 because it indicates the midpoint of the range 1-100.
+         - "Halfway" also suggests ~50 for the same reason.
+         - "Balance" suggests ~50 as well, implying equilibrium around the center.
+         - Given these clues, their number is likely around 50.
+         - My number is 70.
+         - Since 70 is higher than 50, my number is higher.
+      2. Decision: MINE
+
+============================================================
+Condition               correct      agree  correct|agree
+------------------------------------------------------------
+  standard              1/5 (20.0%)     1/5 (20.0%)  100.0%
+============================================================

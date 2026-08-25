@@ -1,0 +1,62 @@
+=== mind eval run ===
+timestamp : 20260825-001001
+model_a   : meta-llama/Meta-Llama-3.1-8B-Instruct
+model_b   : Qwen/Qwen2.5-7B-Instruct
+game      : exchange
+n_evals   : 2
+conditions: ['standard']
+num_range : 1–100
+temperature: 0.7
+seed      : None
+log       : mind_eval_logs/20260825-001001_exchange_Meta-Llama-3.1-8B-Instruct_vs_Qwen2.5-7B-Instruct_n2_range1-100_t0.7.log
+========================================
+
+Device: cuda | dtype: torch.bfloat16
+Loading meta-llama/Meta-Llama-3.1-8B-Instruct
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<00:32,  9.01it/s]Loading weights:   1%|          | 2/291 [00:00<00:32,  8.78it/s]Loading weights:   8%|7         | 23/291 [00:00<00:02, 91.56it/s]Loading weights:  14%|#4        | 42/291 [00:00<00:01, 127.91it/s]Loading weights:  23%|##3       | 67/291 [00:00<00:01, 163.78it/s]Loading weights:  30%|##9       | 86/291 [00:00<00:01, 161.81it/s]Loading weights:  36%|###5      | 104/291 [00:00<00:01, 161.74it/s]Loading weights:  42%|####2     | 123/291 [00:00<00:01, 164.01it/s]Loading weights:  50%|####9     | 145/291 [00:00<00:00, 179.63it/s]Loading weights:  57%|#####7    | 166/291 [00:01<00:00, 187.16it/s]Loading weights:  64%|######3   | 185/291 [00:01<00:00, 164.40it/s]Loading weights:  70%|######9   | 203/291 [00:01<00:00, 163.90it/s]Loading weights:  76%|#######6  | 222/291 [00:01<00:00, 166.14it/s]Loading weights:  85%|########4 | 247/291 [00:01<00:00, 184.53it/s]Loading weights:  91%|#########1| 266/291 [00:01<00:00, 184.21it/s]Loading weights:  98%|#########7| 285/291 [00:01<00:00, 184.72it/s]Loading weights: 100%|##########| 291/291 [00:01<00:00, 162.82it/s]
+Loading Qwen/Qwen2.5-7B-Instruct
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<00:55,  6.11it/s]Loading weights:   1%|          | 2/339 [00:00<00:52,  6.36it/s]Loading weights:   8%|8         | 28/339 [00:00<00:03, 89.19it/s]Loading weights:  15%|#5        | 52/339 [00:00<00:02, 133.76it/s]Loading weights:  20%|##        | 68/339 [00:00<00:01, 141.40it/s]Loading weights:  26%|##6       | 89/339 [00:00<00:01, 157.23it/s]Loading weights:  33%|###3      | 112/339 [00:00<00:01, 164.48it/s]Loading weights:  40%|####      | 136/339 [00:00<00:01, 181.66it/s]Loading weights:  46%|####5     | 155/339 [00:01<00:01, 175.58it/s]Loading weights:  51%|#####1    | 173/339 [00:01<00:00, 176.74it/s]Loading weights:  58%|#####7    | 196/339 [00:01<00:00, 183.02it/s]Loading weights:  63%|######3   | 215/339 [00:01<00:00, 174.12it/s]Loading weights:  69%|######8   | 233/339 [00:01<00:00, 170.81it/s]Loading weights:  76%|#######5  | 256/339 [00:01<00:00, 181.34it/s]Loading weights:  81%|########1 | 275/339 [00:01<00:00, 176.50it/s]Loading weights:  86%|########6 | 293/339 [00:01<00:00, 171.08it/s]Loading weights:  93%|#########3| 316/339 [00:02<00:00, 179.52it/s]Loading weights:  99%|#########8| 334/339 [00:02<00:00, 175.21it/s]Loading weights: 100%|##########| 339/339 [00:02<00:00, 159.63it/s]
+A=Meta-Llama-3.1-8B-Instruct  B=Qwen2.5-7B-Instruct
+
+
+── condition: standard ──
+
+  standard     eval   0  score=1/5  agree=2/5
+    game 1: A= 36 B= 28  exchange: [[blocked]/Pregnancy]  [Month/Pregnancy]  [Adolescence/Prenatal]  → A:YOURS B:MINE  ≈
+      A reasoning: 1. Reasoning: The given words in the exchange are related to stages of human development, and the numbers associated wit
+      B reasoning: 1. Reasoning: The word "Month" in Turn 2 suggests a time frame related to pregnancy, and "Adolescence" in Turn 3 indicat
+    game 2: A=  1 B= 88  exchange: [Century/Olympic]  [Winter/Eon]  [Month/Era]  → A:MINE B:MINE  ✗
+      A reasoning: 1. Reasoning: Based on the word exchange pattern, it seems that the words are being replaced with words that are related
+      B reasoning: 1. Reasoning: The words are being exchanged in a way that suggests a progression from larger to smaller time periods, an
+    game 3: A= 61 B= 75  exchange: [[blocked]/Spring]  [[blocked]/Fahrenheit]  [Sixtyfive/Boiling]  → A:YOURS B:MINE  ✓
+      A reasoning: 1. Reasoning: Based on the word exchange, 'Sixtyfive' is higher than 'Spring' and 'Fahrenheit' is higher than 'Sixtyfive
+      B reasoning: 1. Reasoning: The words "Fahrenheit" and "Boiling" suggest a temperature context, and since the secret number is 75, whi
+    game 4: A= 21 B= 57  exchange: [Adult/Fahrenheit]  [Major/Boiling]  [Birthday/Boiling]  → A:MINE B:MINE  ✗
+      A reasoning: 1. Reasoning: In the word exchange, "Birthday" is associated with the higher number in the previous turn, and since "Bir
+      B reasoning: 1. Reasoning: The words exchanged seem to be related to temperature and age concepts, but there's no clear numerical pat
+    game 5: A= 16 B= 81  exchange: [Decade/Spring]  [Quintet/Year]  [Fortnight/Fahrenheit]  → A:MINE B:MINE  ✗
+      A reasoning: 1. Reasoning: The words 'Decade' and 'Spring' have 6 letters, 'Quintet' has 7 letters, and 'Fortnight' has 8 letters, su
+      B reasoning: 1. Reasoning: The pattern seems to be exchanging words that relate to units of time or measurement, but there's no clear
+
+  standard     eval   1  score=1/5  agree=4/5
+    game 1: A= 57 B= 42  exchange: [Decade/Answer]  [Age/Eon]  [Century/Dinosaur]  → A:YOURS B:MINE  ≈
+      A reasoning: 1. Reasoning: Since the words are getting progressively larger in scale (Decade to Age to Century), it suggests that the
+      B reasoning: 1. Reasoning: The pattern suggests that "you" refers to a smaller unit of time than "them." Since 42 is closer to a deca
+    game 2: A= 99 B= 94  exchange: [Century/Fahrenheit]  [Heatwave/Boiling]  [Thermometer/Boiling]  → A:YOURS B:MINE  ≈
+      A reasoning: 1. Reasoning: Based on the word exchange, the word "Boiling" is associated with higher temperatures, and the word "Heatw
+      B reasoning: 1. Reasoning: The exchanges suggest temperature-related terms, and my secret number 94 is higher than their last term "T
+    game 3: A= 74 B= 43  exchange: [[blocked]/Midsummer]  [Meteorite/Boiling]  [Lunar/BoilingPoint]  → A:MINE B:MINE  ✗
+      A reasoning: 1. Reasoning: The pattern of the word exchange seems to be related to the number of letters in the words, with 'Midsumme
+      B reasoning: 1. Reasoning: The words exchanged seem to be related to temperature and celestial bodies, but there's no clear numerical
+    game 4: A= 22 B= 63  exchange: [[blocked]/Summer]  [Decade/Fahrenheit]  [[blocked]/Fahrenheit]  → A:YOURS B:MINE  ✓
+      A reasoning: 1. Reasoning: Based on the word exchange, "Summer" and "Fahrenheit" are related to temperature, suggesting that the othe
+      B reasoning: 1. Reasoning: The words exchanged do not provide any direct numerical clues, but the pattern of responses suggests a blo
+    game 5: A=100 B= 25  exchange: [Decade/QuarterCentury]  [Billionth/Marathon]  [Century/Centennial]  → A:YOURS B:MINE  ≈
+      A reasoning: 1. Reasoning: Since you used 'Decade' (10) and then 'Billionth' (1/1,000,000,000), which is less than 1, and then 'Centu
+      B reasoning: 1. Reasoning: The pattern suggests that "you" refers to something larger or more significant than "them." Since 25 is a 
+
+============================================================
+Condition               correct      agree  correct|agree
+------------------------------------------------------------
+  standard              2/10 (20.0%)     6/10 (60.0%)   33.3%
+============================================================

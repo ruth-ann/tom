@@ -1,0 +1,353 @@
+=== mind eval run ===
+timestamp : 20260824-235047
+model_a   : meta-llama/Meta-Llama-3.1-8B-Instruct
+model_b   : Qwen/Qwen2.5-7B-Instruct
+game      : iterative
+n_evals   : 2
+conditions: ['standard']
+num_range : 1–100
+temperature: 0.7
+log       : mind_eval_logs/20260824-235047_iterative_Meta-Llama-3.1-8B-Instruct_vs_Qwen2.5-7B-Instruct_n2_range1-100_t0.7.log
+========================================
+
+Device: cuda | dtype: torch.bfloat16
+Loading meta-llama/Meta-Llama-3.1-8B-Instruct
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   1%|          | 2/291 [00:00<00:29,  9.73it/s]Loading weights:   8%|7         | 22/291 [00:00<00:03, 85.48it/s]Loading weights:  14%|#4        | 42/291 [00:00<00:02, 122.18it/s]Loading weights:  23%|##3       | 67/291 [00:00<00:01, 159.50it/s]Loading weights:  30%|##9       | 86/291 [00:00<00:01, 159.68it/s]Loading weights:  36%|###5      | 104/291 [00:00<00:01, 160.94it/s]Loading weights:  42%|####2     | 123/291 [00:00<00:01, 164.24it/s]Loading weights:  51%|#####     | 148/291 [00:00<00:00, 182.45it/s]Loading weights:  57%|#####7    | 167/291 [00:01<00:00, 184.40it/s]Loading weights:  64%|######3   | 186/291 [00:01<00:00, 162.68it/s]Loading weights:  70%|#######   | 204/291 [00:01<00:00, 163.40it/s]Loading weights:  78%|#######7  | 226/291 [00:01<00:00, 177.15it/s]Loading weights:  85%|########5 | 248/291 [00:01<00:00, 182.55it/s]Loading weights:  92%|#########1| 267/291 [00:01<00:00, 184.02it/s]Loading weights: 100%|##########| 291/291 [00:01<00:00, 165.43it/s]
+Loading Qwen/Qwen2.5-7B-Instruct
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<00:59,  5.72it/s]Loading weights:   1%|          | 2/339 [00:00<00:54,  6.21it/s]Loading weights:   9%|8         | 29/339 [00:00<00:03, 91.46it/s]Loading weights:  15%|#5        | 52/339 [00:00<00:02, 125.35it/s]Loading weights:  22%|##2       | 76/339 [00:00<00:01, 155.19it/s]Loading weights:  27%|##7       | 93/339 [00:00<00:01, 158.76it/s]Loading weights:  33%|###3      | 113/339 [00:00<00:01, 166.09it/s]Loading weights:  40%|####      | 136/339 [00:00<00:01, 181.00it/s]Loading weights:  46%|####5     | 155/339 [00:01<00:01, 175.47it/s]Loading weights:  51%|#####1    | 173/339 [00:01<00:00, 168.10it/s]Loading weights:  58%|#####8    | 197/339 [00:01<00:00, 179.94it/s]Loading weights:  64%|######3   | 216/339 [00:01<00:00, 179.89it/s]Loading weights:  69%|######9   | 235/339 [00:01<00:00, 171.09it/s]Loading weights:  76%|#######5  | 257/339 [00:01<00:00, 178.26it/s]Loading weights:  82%|########2 | 279/339 [00:01<00:00, 171.47it/s]Loading weights:  90%|########9 | 304/339 [00:01<00:00, 168.22it/s]Loading weights:  97%|#########6| 328/339 [00:02<00:00, 181.75it/s]Loading weights: 100%|##########| 339/339 [00:02<00:00, 160.06it/s]
+A=Meta-Llama-3.1-8B-Instruct  B=Qwen2.5-7B-Instruct
+
+
+── condition: standard ──
+
+──────────────────────────────────────────────────────────────────────
+  STANDARD  |  eval 0  |  mean_final_error=22.4  mean_turns=3.0
+──────────────────────────────────────────────────────────────────────
+
+  Game 1  |  n=78  |  turns=3  |  final_error=70
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: February is a month with 28 days in a non-leap year.
+      2. Word: February
+    → clue: February
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: February is the second month of the year, which directly points to the number 2.
+      2. Number: 2
+    → guess: 2
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number 78 is the number of years in the life of a human that is considered a common retirement age in the United States.
+      2. Word: pension
+    → clue: pension
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "pension" might be associated with the number 8, as it is often linked to the eighth month of the year, August, which starts with the letter 'A'.
+      2. Number: 8
+    → guess: 8
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The number 78 is the number of keys on a standard piano keyboard.
+      2. Piano
+    → clue: Piano
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "February" (2nd month), "pension" (often associated with age 65), and "Piano" (88 keys on a full-size piano) suggest that the number might be 8, as it's a common number found in these associations.
+      2. Number: 8
+    → guess: 8
+
+  Game 2  |  n=44  |  turns=3  |  final_error=40
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: 44 is the number of American states that border the Atlantic Ocean.
+      2. Coast
+    → clue: Coast
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The word "Coast" often brings to mind beaches, which are typically associated with numbers like 34 due to the popular TV show "Baywatch," which aired for many seasons and was set on a beach.
+      2. Number: 34
+    → guess: 34
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: April is the fourth month of the year, and it has 30 days in most years and 31 days in leap years, but April has exactly 30 days in some years and 31 days in others, but April has 30 days in a non-leap year and 31 days in a leap year is not the clue we are looking for. However,  April  is not our clue, we are looking for a number that is always 44.
+      2. Word: Term
+    → clue: Term
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The word "Term" could refer to a specific term in mathematics or a term in a sequence, which often starts from 1. Given the previous clue "Coast," which might be associated with a position like first on a beach, the number 1 seems to fit both clues well.
+      2. Number: 1
+    → guess: 1
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number of days in the month of April.
+      2. April
+    → clue: April
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "Coast," "Term," and "April" might be pointing to the number 4, as "coast" can have four letters, "term" can refer to the fourth season (spring), and April is the fourth month of the year.
+      2. Number: 4
+    → guess: 4
+
+  Game 3  |  n=98  |  turns=3  |  final_error=2
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number of days in the month of August.
+      2. Word: August
+    → clue: August
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: August is the 8th month of the year, which directly corresponds to the number 8.
+      2. Number: 8
+    → guess: 8
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number 98 is the number of days in the month of February in a leap year.
+      2. Word: February
+    → clue: February
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "August" and "February" are being associated with the same number, which likely refers to the number of days in each month. August has 31 days and February typically has 28 or 29 days, so the most fitting number would be 31.
+      2. Number: 31
+    → guess: 31
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The number 98 appears as the Fahrenheit temperature at which water boils at sea level.
+      2. Boil
+    → clue: Boil
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "August" (8th month), "February" (28 or 29 days), and "Boil" (temperature around 100 degrees Celsius) all point to the number 100.
+      2. Number: 100
+    → guess: 100
+
+  Game 4  |  n=14  |  turns=3  |  final_error=0
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: This number represents the minimum number of days required for a human to be considered a teenager.
+      2. Word: Sixteen
+    → clue 'Sixteen' BLOCKED
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The number 14 appears as the number of days in the second month of the year.
+      2. February
+    → clue: February
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: February is the second month of the year, which directly points to the number 2.
+      2. Number: 2
+    → guess: 2
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: Valentine's Day falls on the 14th of February.
+      2. Word: Holiday
+    → clue: Holiday
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "Holiday" combined with "February" likely points to Valentine's Day, which is on February 14th.
+      2. Number: 14
+    → guess: 14
+
+  Game 5  |  n=30  |  turns=3  |  final_error=0
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: This number is the number of days in the month of April.
+      2. Word: April
+    → clue: April
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: April is the fourth month of the year, which directly corresponds to the number 4.
+      2. Number: 4
+    → guess: 4
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. April is the month with 30 days.
+      2. Days
+    → clue: Days
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "Days" might be referring to the number of days in a week, which is 7.
+      2. Number: 7
+    → guess: 7
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. April has 30 days in some months, and the number 30 appears as a quantity of days in the month of April is not correct in this case, but the number does appear as a quantity of days in the month of April's adjacent month, the month of June's neighbor, the month of April's neighbor, April is not the only month that has this property but April's neighbor does not have 30 days, however, another month, its neighbor, does.
+      2. June
+    → clue: June
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "April" and "Days" might be hinting at the number of days in each month, with April having 30 days and the word "Days" suggesting a count, leading to the number 30.
+      2. Number: 30
+    → guess: 30
+
+──────────────────────────────────────────────────────────────────────
+  STANDARD  |  eval 1  |  mean_final_error=39.2  mean_turns=2.6
+──────────────────────────────────────────────────────────────────────
+
+  Game 1  |  n=28  |  turns=2  |  final_error=0
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      2. Reasoning: February has 28 days in a standard non-leap year.
+      2. Word: February
+    → clue: February
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: February is the second month of the year, which directly points to the number 2.
+      2. Number: 2
+    → guess: 2
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The number of days in the month of February in a leap year is 29, but in a non-leap year, it is 28.
+      2. Days
+    → clue: Days
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "Days" in relation to "February" likely points to the number of days in February, which can vary depending on whether it's a leap year (29 days) or not (28 days). Since the range is 1-100, the most fitting number would be 28.
+      2. Number: 28
+    → guess: 28
+
+  Game 2  |  n=49  |  turns=3  |  final_error=46
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: This number is the number of days in the month of March.
+      2. Word: March
+    → clue: March
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: March is the third month of the year, which directly corresponds to the number 3.
+      2. Number: 3
+    → guess: 3
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: 49 is the number of US states that border the Atlantic Ocean.
+      2. Word: Coast
+    → clue: Coast
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "March" and "Coast" might be pointing to the number 3 because March is the 3rd month of the year, and coast is often associated with the third letter "C" in many mnemonic systems.
+      2. Number: 3
+    → guess: 3
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number 49 is the number of United States presidents who have been born in the United States.
+      2. Word: Domestic
+    → clue: Domestic
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "March," "Coast," and "Domestic" might be pointing to the number 3 because March has 3 letters, the word "Coast" can be associated with the third letter of the alphabet (C), and "Domestic" has the third letter 't'.
+      2. Number: 3
+    → guess: 3
+
+  Game 3  |  n=74  |  turns=3  |  final_error=72
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: February is the only month with 28 days in common years and 29 days in leap years, but when it's a leap year, it has 29 days, which is exactly 74 days after the 1st of the year, if you count every day sequentially.
+      2. Word: February
+    → clue: February
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: February is the second month of the year, which directly points to the number 2.
+      2. Number: 2
+    → guess: 2
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The number 74 is the number of years that the Viking explorer Leif Erikson lived.
+      2. Leif
+    → clue: Leif
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: Leif Erikson Day is celebrated on October 9th, and February is associated with the second month of the year. The common number here could be 2, as it relates to both months.
+      2. Number: 2
+    → guess: 2
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The number 74 is the number of years it took the Viking explorer Leif Erikson to reach North America, but that's not a new association, so let's use another one.  The year 74 is also a year in the Anno Domini era when the Roman Emperor Vespasian died.
+      2. Vespasian
+    → clue: Vespasian
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "February" (2nd month), "Leif" (explorer who landed in North America around 1000 AD, often associated with the number 2), and "Vespasian" (Roman Emperor from 79-81 AD, whose name can be linked to the number 2 through historical or cultural associations) all point to the number 2.
+      2. Number: 2
+    → guess: 2
+
+  Game 4  |  n=100  |  turns=2  |  final_error=0
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The month of February has this many days.
+      2. 28
+    → clue '28' BLOCKED
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The number of centimeters in a meter is often divided into 100 equal parts.
+      2. Centi
+    → clue: Centi
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The word "Centi" is related to the metric prefix for one-hundredth (1/100), which points to the number 100 as it represents the concept of a whole unit.
+      2. Number: 100
+    → guess: 100
+
+  Game 5  |  n=79  |  turns=3  |  final_error=78
+
+    ── Turn 1 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number 79 is the atomic number of gold.
+      2. Gold
+    → clue: Gold
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The word "Gold" often refers to the precious metal gold, which is associated with wealth and value. A common number linked to wealth or high value is 88, as it is considered lucky in many cultures.
+      2. Number: 88
+    → guess: 88
+
+    ── Turn 2 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. The number 79 is the atomic number of gold, but for this clue, I'll associate it with a different fact: 79 is the number of days in February, which is a common month.
+      2. February
+    → clue: February
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clue "February" might be associated with the number 2, as it is the second month of the year.
+      2. Number: 2
+    → guess: 2
+
+    ── Turn 3 ──
+    Meta-Llama-3.1-8B-Instruct (A):
+      1. Reasoning: The number 79 is the atomic mass of gold, which is the same as the clue given in the first turn.
+      2. Word: Gold
+    → clue: Gold
+
+    Qwen2.5-7B-Instruct (B):
+      1. Reasoning: The clues "Gold" and "February" might be pointing to the number 1, as February is the first month of the year that contains the letter 'G' in "Gold."
+      2. Number: 1
+    → guess: 1
+
+=================================================================
+Condition              mean_final_error   mean_turns    games
+-----------------------------------------------------------------
+  standard                         30.8          2.8       10
+=================================================================

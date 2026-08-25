@@ -1,0 +1,89 @@
+=== mind eval run ===
+timestamp : 20260825-002010
+model_a   : meta-llama/Meta-Llama-3.1-8B-Instruct
+model_b   : Qwen/Qwen2.5-7B-Instruct
+game      : exchange
+n_evals   : 2
+conditions: ['standard']
+num_range : 1–100
+temperature: 0.7
+seed      : None
+log       : mind_eval_logs/20260825-002010_exchange_Meta-Llama-3.1-8B-Instruct_vs_Qwen2.5-7B-Instruct_n2_range1-100_t0.7.log
+========================================
+
+Device: cuda | dtype: torch.bfloat16
+Loading meta-llama/Meta-Llama-3.1-8B-Instruct
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   1%|          | 2/291 [00:00<00:30,  9.56it/s]Loading weights:   8%|7         | 22/291 [00:00<00:03, 84.03it/s]Loading weights:  14%|#4        | 41/291 [00:00<00:02, 121.77it/s]Loading weights:  21%|##        | 60/291 [00:00<00:01, 143.56it/s]Loading weights:  29%|##9       | 85/291 [00:00<00:01, 167.33it/s]Loading weights:  35%|###5      | 103/291 [00:00<00:01, 161.37it/s]Loading weights:  42%|####1     | 122/291 [00:00<00:01, 163.63it/s]Loading weights:  48%|####8     | 141/291 [00:00<00:00, 168.26it/s]Loading weights:  57%|#####7    | 166/291 [00:01<00:00, 185.56it/s]Loading weights:  64%|######3   | 185/291 [00:01<00:00, 163.86it/s]Loading weights:  70%|######9   | 203/291 [00:01<00:00, 163.52it/s]Loading weights:  76%|#######6  | 222/291 [00:01<00:00, 165.70it/s]Loading weights:  85%|########4 | 247/291 [00:01<00:00, 183.95it/s]Loading weights:  91%|#########1| 266/291 [00:01<00:00, 183.60it/s]Loading weights:  98%|#########7| 285/291 [00:01<00:00, 184.17it/s]Loading weights: 100%|##########| 291/291 [00:01<00:00, 162.85it/s]
+Loading Qwen/Qwen2.5-7B-Instruct
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<00:49,  6.84it/s]Loading weights:   1%|          | 2/339 [00:00<00:50,  6.69it/s]Loading weights:   8%|8         | 28/339 [00:00<00:03, 87.77it/s]Loading weights:  15%|#5        | 51/339 [00:00<00:02, 129.03it/s]Loading weights:  19%|#9        | 66/339 [00:00<00:02, 135.13it/s]Loading weights:  26%|##6       | 89/339 [00:00<00:01, 158.50it/s]Loading weights:  33%|###3      | 112/339 [00:00<00:01, 174.33it/s]Loading weights:  38%|###8      | 130/339 [00:00<00:01, 174.43it/s]Loading weights:  44%|####3     | 149/339 [00:01<00:01, 170.40it/s]Loading weights:  51%|#####     | 172/339 [00:01<00:00, 181.22it/s]Loading weights:  56%|#####6    | 191/339 [00:01<00:00, 180.48it/s]Loading weights:  62%|######1   | 210/339 [00:01<00:00, 163.61it/s]Loading weights:  69%|######8   | 233/339 [00:01<00:00, 173.79it/s]Loading weights:  76%|#######5  | 256/339 [00:01<00:00, 183.14it/s]Loading weights:  81%|########1 | 275/339 [00:01<00:00, 177.92it/s]Loading weights:  86%|########6 | 293/339 [00:01<00:00, 172.23it/s]Loading weights:  93%|#########3| 316/339 [00:02<00:00, 180.18it/s]Loading weights:  99%|#########8| 335/339 [00:02<00:00, 180.11it/s]Loading weights: 100%|##########| 339/339 [00:02<00:00, 159.68it/s]
+A=Meta-Llama-3.1-8B-Instruct  B=Qwen2.5-7B-Instruct
+
+
+── condition: standard ──
+
+  standard     eval   0  score=1/5  agree=2/5
+    game 1: A= 14 B= 13  exchange: [Decade/Election]  [Fortnight/Olympic]  [Month/Fahrenheit]  → A:MINE B:YOURS  ✓
+      A: 1. Reasoning: Election suggests a time frame related to voting, typically held every 4 years, but it could also imply a general sense of a long period. Decade, on the other hand, is a 10-year period. Considering the context, it seems Decade is a more specific and fixed unit of time, so I'll use that as the basis. My number is 14; Decade is 10, so my number is higher.
+      A: 2. Decision: MINE
+      B: 1. Reasoning: Their words suggest that each word corresponds to a numerical value or a range that can help deduce a specific number. "Election" could refer to a specific event or cycle, which often happens every 4 years, so we might consider 4. "Olympic" games occur every 4 years as well, reinforcing the 4-year cycle. "Fahrenheit" is a temperature scale where the freezing point of water is 32 and the boiling point is 212, but since we need a single number, we might consider the midpoint, which is 124/2 = 62. The numbers 4, 4, and 62 don't directly give us a clear number, but if we consider the context of the game and the range 1-100, we might look for a number that fits within these cycles or midpoints. Given the range, a reasonable guess based on the words provided would be around 50. My number is 13; therefore, it seems lower than their suggested number.
+      B: 2. Decision: YOURS
+    game 2: A= 47 B= 12  exchange: [School/Summer]  [Decade/Summer]  [Century/Fahrenheit]  → A:YOURS B:YOURS  ✗
+      A: 1. Reasoning: Summer suggests 80 because summer is the third season in the sequence of the four seasons (winter, spring, summer, autumn), and the word "summer" is the third word in the given sequence (School, Summer, Decade). Since the word "Decade" implies a 10-year period, it can be inferred that the sequence is related to a 10-based system. Therefore, summer being the third in this system would point to 80. However, the word "Century" implies a 100-year period, suggesting that the system could be 10-based, but also allowing for a 100-based system. If we consider the word "Century" as the 10th item in a 100-based system, it would suggest that the sequence is counting in tens, and "Summer" being the second item would point to 20. Given these possibilities, I will consider the lower estimate of 20.
+      A: My number is 47; therefore, YOURS.
+      A: 
+      A: 2. Decision: YOURS
+      B: 1. Reasoning: Their words suggest that "Summer" could refer to a season lasting approximately 3 months, "Decade" could refer to a period of 10 years, and "Century" could refer to a period of 100 years. Given these approximations, their number is likely to be around 10 or 100. My number is 12, which is closer to 10 than to 100. Therefore, their number is more likely to be 10 or 100 rather than 12.
+      B: 2. Decision: YOURS
+    game 3: A=  6 B= 27  exchange: [Week/Eon]  [Decade/Era]  [Millennium/Fahrenheit]  → A:YOURS B:YOURS  ✗
+      A: 1. Reasoning: Eon suggests a very long period of time, often associated with geological ages, which can be millions or even billions of years. Given the context, it's likely they're thinking of a large number, possibly in the range of millions or billions. Millennium is a more specific and shorter time frame, which could be in the thousands. Decade is a relatively short period, around 10 years. Considering these options, their words point to a large number, likely in the millions or billions. However, Decade being the second choice suggests it's not extremely high, possibly in the lower range of the millions. My number is 6. Therefore, I think THEIRS is higher.
+      A: 
+      A: 2. Decision: YOURS
+      B: 1. Reasoning: Their words suggest that "Fahrenheit" points to 212 (the boiling point of water), "Millennium" points to 1000, and there seems to be a pattern where the numbers are significant in common contexts. Given these clues, a reasonable estimate for their number could be around 250-300, as it fits within the range and aligns with the significance of the numbers mentioned. My number is 27, which is significantly lower than their estimated range. Therefore, my number is likely lower than theirs.
+      B: 2. Decision: YOURS
+    game 4: A= 88 B= 74  exchange: [Quadrant/[blocked]]  [Decade/Era]  [Celsius/Fahrenheit]  → A:YOURS B:MINE  ≈
+      A: 1. Reasoning: [blocked] suggests a restriction or limit, possibly related to a numerical boundary. Since the range is 1-100, [blocked] could imply that their number is close to the lower or upper limit. Given the context, I'll consider the midpoint (50) as a possible reference point. However, [blocked] could also imply a number that "blocks" or is close to a specific number, like 0 or 100. Considering all possibilities, I'll assume their number is closer to the lower limit. Their number is likely to be less than 50.
+      A: My number is 88; therefore, YOURS
+      A: 
+      A: 2. Decision: YOURS
+      B: 1. Reasoning: Their words suggest that they are using a system of measurement or categorization. "Quadrant" suggests a division into four parts, while "Decade" suggests a ten-year period. "Fahrenheit" and "Celsius" are temperature scales, with Fahrenheit having a range from -459.67 to 100 degrees and Celsius from -273.15 to 100 degrees. Given these clues, their number could be related to a significant temperature or a number that fits within a common range for both scales. A reasonable guess based on these clues would be around 21°C (70°F), which is a comfortable room temperature. My number is 74; therefore, it is likely higher than their number.
+      B: 2. Decision: MINE
+    game 5: A= 23 B= 58  exchange: [Teenage/Spring]  [Weeks/Summer]  [Months/Fahrenheit]  → A:YOURS B:YOURS  ✗
+      A: 1. Reasoning: Spring suggests 3 because it's the third season in the sequence of seasons. Weeks suggests 4 because there are approximately 4 weeks in a month. Months suggests 12 because there are 12 months in a year. My number is 23; therefore, YOURS.
+      A: 
+      A: 2. Decision: YOURS
+      B: 1. Reasoning: Their words suggest that "Spring" corresponds to 58, "Summer" to a warmer temperature, and "Fahrenheit" to a scale where temperatures can vary widely. Since "Spring" is associated with 58, which is a moderate temperature, "Summer" would likely be a higher temperature on the same scale, possibly around 70-80°F. "Fahrenheit" as a scale doesn't directly give a number but suggests a range. Given these clues, their number seems to be around 75-80°F, which is higher than 58. My number is 58.
+      B: 2. Decision: YOURS
+
+  standard     eval   1  score=2/5  agree=2/5
+    game 1: A= 34 B= 97  exchange: [Decade/Prime]  [Century/Boiling]  [Era/Fahrenheit]  → A:YOURS B:MINE  ✓
+      A: 1. Reasoning: Prime suggests a number that is a prime number; my number is 34; therefore, I think their number is likely higher since 34 is not a prime number.
+      A: 2. Decision: YOURS
+      B: 1. Reasoning: Their words suggest that each word represents a significant milestone or division in time or temperature. "Prime" could refer to a prime number, which is a natural number greater than 1 that has no positive divisors other than 1 and itself. "Boiling" likely refers to the boiling point of water, which is 100 degrees Celsius or 212 degrees Fahrenheit. "Fahrenheit" directly points to the scale used for measuring temperature. Given these clues, we can infer that their number might be related to a significant number on the Fahrenheit scale or a prime number close to a well-known temperature. Since 97 is a prime number and also a temperature on the Fahrenheit scale (the highest recorded temperature in the United States), it fits both clues. My number is 97; therefore, it seems likely that their number is also 97.
+      B: 2. Decision: MINE
+    game 2: A=100 B= 31  exchange: [Century/Prime]  [Decade/Eon]  [Millennium/Fahrenheit]  → A:MINE B:MINE  ✗
+      A: 1. Reasoning: Their words suggest 10 because 'Century' is a 100-year period, 'Decade' is a 10-year period, and 'Millennium' is a 1000-year period; however, 'Prime' and 'Fahrenheit' don't give clear numerical clues. However, 'Prime' is a term often associated with numbers and 'Fahrenheit' might hint at a number like 212, the boiling point in Fahrenheit. Nevertheless, considering the overall pattern, I'll estimate their numbers based on the clear numerical clues: 10 for 'Prime' and 100 for 'Fahrenheit' doesn't fit, but 212 doesn't fit the pattern; so I'll take a middle ground; my number is 100; therefore, MINE
+      A: 2. Decision: MINE
+      B: 1. Reasoning: Their words suggest that "you='Fahrenheit'" and "them='Millennium'" might be hinting at a scale or a time period. Fahrenheit is a temperature scale ranging from -459.67°F to around 1000°F for very high temperatures. A millennium is a period of 1000 years. Given that their number is between 1 and 100, it's more likely they are referring to a smaller, more precise value within these scales. Since my number is 31, which is closer to the midpoint of 1-100, I would consider if 31 fits within a meaningful context for both scales. For Fahrenheit, 31°F is a cold temperature but still within the range. For a millennium, 31 could represent a fraction of a millennium (31/1000 = 0.031), which is a small but significant portion. Both interpretations suggest that 31 is a plausible number.
+      B: 2. Decision: MINE
+    game 3: A= 26 B= 51  exchange: [[blocked]/Fetal]  [Meteor/Pregnancy]  [Gestation/Fahrenheit]  → A:YOURS B:YOURS  ✗
+      A: 1. Reasoning: Fetal suggests a stage of pregnancy, typically around 6-8 weeks; Pregnancy has a duration of approximately 40 weeks; therefore, my number is YOURS.
+      A: 2. Decision: YOURS
+      B: 1. Reasoning: Their words suggest a pattern where each word points to a numerical value or concept related to the context of the words used. "Fetal" could relate to the stage of pregnancy, which might be around 8-12 weeks, "Pregnancy" itself is about 40 weeks, "Fahrenheit" is a temperature scale, and "Gestation" also relates to pregnancy duration. Given these clues, the numbers seem to be around the duration of pregnancy. My number is 51, which is close to the midpoint of a typical pregnancy (about 40 weeks). Their last word, "Gestation," further confirms this context. Therefore, their number likely falls within the range of a typical pregnancy duration.
+      B: 2. Decision: YOURS
+    game 4: A= 14 B= 81  exchange: [Week/Spring]  [Fortnight/Fahrenheit]  [Holiday/Boiling]  → A:MINE B:MINE  ✗
+      A: 1. Reasoning: Spring suggests 1 because it's the first season of the year; Fortnight suggests 14 because it's a period of 14 days; Holiday suggests 14 because many holidays, like Valentine's Day, occur on the 14th day of a month. Their numbers are 1, 14, and 14; my number is 14; therefore MINE.
+      A: 
+      A: 2. Decision: MINE
+      B: 1. Reasoning: Their words suggest that "Spring" corresponds to 81, "Fahrenheit" to 14 (since 32 + 14 = 46 and 46 + 35 = 81), and "Boiling" to 100 (as water boils at 100°C). However, "Week" and "Fortnight" do not directly provide numerical values but could imply multiples or units of time. Since "Holiday" is not a direct numerical term, we need to infer a pattern. Given the numbers 81 and 14, and knowing that 81 is significantly larger than 14, it suggests a large range or a specific significant number. My number is 81; therefore, it is more likely that their number is also 81 based on the given terms.
+      B: 2. Decision: MINE
+    game 5: A= 22 B= 84  exchange: [Decade/Olympic]  [Century/Summer]  [[blocked]/Olympics]  → A:YOURS B:MINE  ✓
+      A: 1. Reasoning: Olympic suggests a large-scale event, and Olympics is a specific event held every 4 years. Their choice of words might indicate that they are thinking of a number related to a specific event or cycle. Their word 'Summer' likely refers to the Summer Olympics, which are held every 4 years. Based on these words, their number might be 4; my number is 22; therefore, YOURS.
+      A: 2. Decision: YOURS
+      B: 1. Reasoning: Their words suggest that they are referring to significant events or time periods related to the Olympics. "Olympics" is a key term, and "Decade" and "Century" are time frames. The number 84 could be associated with a specific Olympic event or year. Notably, 1984 was a significant year for the Summer Olympics, held in Los Angeles. Given the pattern of using terms related to the Olympics and time frames, it's reasonable to infer that their number might be connected to a notable Olympic event or year within a decade or century. Since 1984 is a specific and significant year in Olympic history, and considering the range of 1-100, it's plausible that their number is 84. My number is 84; therefore, our numbers are the same.
+      B: 2. Decision: MINE
+
+============================================================
+Condition               correct      agree  correct|agree
+------------------------------------------------------------
+  standard              3/10 (30.0%)     4/10 (40.0%)   75.0%
+============================================================
