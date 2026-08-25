@@ -25,44 +25,6 @@ Model: Llama-3.2-3B-Instruct
   Loading meta-llama/Llama-3.1-8B-Instruct ...
 
 ============================================================
-Model: Llama-3.1-8B-Instruct
-============================================================
-
-  n=  5:  Ways(3.88%)  Things(2.83%)  things(2.21%)  Tips(2.21%)  Reasons(1.94%)  Best(1.72%)  ways(1.34%)  reasons(0.87%)  Simple(0.87%)  Key(0.72%)  Common(0.72%)  Benefits(0.67%)  Essential(0.67%)  Most(0.63%)  Steps(0.60%)  Easy(0.52%)  Questions(0.52%)  Signs(0.52%)  Days(0.49%)  tips(0.46%)
-
-  n= 21:  Savage(1.53%)  Mar(1.35%)  Sep(1.27%)  Jan(1.05%)  Apr(0.99%)  Dec(0.77%)  September(0.72%)  Best(0.72%)  Nov(0.68%)  March(0.68%)  Days(0.68%)  Aug(0.64%)  CFR(0.64%)  December(0.60%)  Jul(0.60%)  Feb(0.60%)  Oct(0.56%)  June(0.56%)  January(0.56%)  October(0.56%)
-
-  n= 38:  CFR(2.33%)  Burst(1.25%)  Cal(0.91%)  Best(0.85%)  years(0.52%)  year(0.50%)  min(0.38%)  results(0.38%)  views(0.34%)  USC(0.32%)  Years(0.31%)  Ill(0.28%)  Mich(0.25%)  posts(0.25%)  Special(0.25%)  minutes(0.25%)  Studios(0.25%)  killed(0.23%)  Awesome(0.22%)  projects(0.20%)
-
-  n= 42:  CFR(2.73%)  USC(1.46%)  years(0.59%)  year(0.49%)  min(0.45%)  Cal(0.28%)  Years(0.28%)  Best(0.27%)  Burst(0.23%)  results(0.22%)  Mich(0.20%)  percent(0.19%)  killed(0.19%)  days(0.18%)  views(0.18%)  posts(0.18%)  Ill(0.18%)  inch(0.16%)  Days(0.16%)  people(0.15%)
-
-  n= 66:  years(0.81%)  Wash(0.59%)  Ill(0.54%)  year(0.52%)  views(0.49%)  Cal(0.45%)  results(0.36%)  posts(0.33%)  Mich(0.28%)  percent(0.26%)  new(0.24%)  Years(0.23%)  days(0.22%)  people(0.20%)  Possible(0.20%)  Best(0.17%)  entries(0.17%)  pages(0.16%)  records(0.16%)  items(0.15%)
-
-  n= 89:  points(1.18%)  views(1.01%)  Cal(0.89%)  Ill(0.63%)  Wash(0.59%)  Mich(0.52%)  results(0.36%)  posts(0.33%)  year(0.32%)  years(0.31%)  percent(0.30%)  Points(0.24%)  new(0.23%)  Years(0.22%)  people(0.21%)  Possible(0.21%)  items(0.20%)  Year(0.16%)  min(0.15%)  days(0.14%)
-
-  n= 93:  Decision(25.00%)  points(4.93%)  Points(1.17%)  decision(0.37%)  Ill(0.35%)  Mich(0.34%)  views(0.24%)  Years(0.24%)  Answer(0.23%)  percent(0.21%)  Possible(0.21%)  Cal(0.19%)  year(0.15%)  years(0.15%)  POINT(0.14%)  posts(0.14%)  Point(0.13%)  Wash(0.13%)  Decision(0.13%)  min(0.12%)
-  Loading meta-llama/Llama-3.3-70B-Instruct ...
-
-============================================================
-Model: Llama-3.3-70B-Instruct
-============================================================
-
-  n=  5:  years(0.26%)  Best(0.24%)  New(0.16%)  Ways(0.16%)  year(0.14%)  Things(0.14%)  Tips(0.12%)  months(0.12%)  World(0.12%)  new(0.12%)  Questions(0.11%)  Per(0.10%)  ways(0.10%)  Most(0.10%)  Year(0.10%)  days(0.09%)  June(0.09%)  people(0.09%)  Day(0.09%)  National(0.08%)
-
-  n= 21:  June(0.22%)  year(0.19%)  years(0.19%)  January(0.19%)  Best(0.19%)  New(0.19%)  July(0.18%)  November(0.16%)  March(0.16%)  August(0.15%)  World(0.15%)  September(0.14%)  February(0.14%)  April(0.13%)  October(0.13%)  National(0.12%)  Year(0.12%)  Day(0.11%)  December(0.11%)  Jan(0.11%)
-
-  n= 38:  New(0.20%)  years(0.16%)  National(0.14%)  Best(0.14%)  World(0.13%)  year(0.11%)  new(0.10%)  Per(0.10%)  University(0.09%)  News(0.09%)  Community(0.09%)  people(0.08%)  Health(0.08%)  Women(0.08%)  Food(0.08%)  students(0.07%)  Summer(0.07%)  Home(0.07%)  June(0.07%)  State(0.07%)
-
-  n= 42:  New(0.19%)  years(0.18%)  Best(0.13%)  National(0.12%)  World(0.11%)  year(0.10%)  University(0.10%)  new(0.10%)  Per(0.10%)  Home(0.08%)  News(0.08%)  Community(0.08%)  people(0.08%)  Women(0.07%)  students(0.07%)  Annual(0.07%)  Day(0.07%)  Food(0.07%)  Year(0.07%)  Health(0.07%)
-
-  n= 66:  New(0.18%)  years(0.15%)  World(0.13%)  Best(0.12%)  new(0.11%)  National(0.10%)  University(0.09%)  Per(0.09%)  year(0.09%)  Community(0.09%)  News(0.08%)  Food(0.08%)  people(0.07%)  Women(0.07%)  Home(0.07%)  History(0.07%)  West(0.07%)  students(0.07%)  Global(0.07%)  House(0.07%)
-
-  n= 89:  New(0.18%)  Best(0.14%)  years(0.13%)  National(0.13%)  World(0.12%)  News(0.10%)  Per(0.10%)  new(0.09%)  year(0.09%)  Community(0.09%)  University(0.08%)  Global(0.08%)  Food(0.08%)  Church(0.08%)  Home(0.07%)  Women(0.07%)  June(0.07%)  Summer(0.07%)  Animal(0.07%)  West(0.07%)
-
-  n= 93:  New(0.19%)  years(0.18%)  Best(0.15%)  World(0.14%)  National(0.12%)  new(0.11%)  year(0.10%)  News(0.10%)  Per(0.10%)  University(0.09%)  Community(0.09%)  Global(0.08%)  Church(0.08%)  Women(0.08%)  Green(0.07%)  European(0.07%)  people(0.07%)  Annual(0.07%)  Summer(0.07%)  International(0.07%)
-  Loading Qwen/Qwen2.5-3B-Instruct ...
-
-============================================================
 Model: Qwen2.5-3B-Instruct
 ============================================================
 
@@ -101,6 +63,25 @@ Model: Qwen2.5-7B-Instruct
   Loading Qwen/Qwen3-32B ...
 
 ============================================================
+Model: Llama-3.1-8B-Instruct
+============================================================
+
+  n=  5:  Ways(3.88%)  Things(2.83%)  things(2.21%)  Tips(2.21%)  Reasons(1.94%)  Best(1.72%)  ways(1.34%)  reasons(0.87%)  Simple(0.87%)  Key(0.72%)  Common(0.72%)  Benefits(0.67%)  Essential(0.67%)  Most(0.63%)  Steps(0.60%)  Easy(0.52%)  Questions(0.52%)  Signs(0.52%)  Days(0.49%)  tips(0.46%)
+
+  n= 21:  Savage(1.53%)  Mar(1.35%)  Sep(1.27%)  Jan(1.05%)  Apr(0.99%)  Dec(0.77%)  September(0.72%)  Best(0.72%)  Nov(0.68%)  March(0.68%)  Days(0.68%)  Aug(0.64%)  CFR(0.64%)  December(0.60%)  Jul(0.60%)  Feb(0.60%)  Oct(0.56%)  June(0.56%)  January(0.56%)  October(0.56%)
+
+  n= 38:  CFR(2.33%)  Burst(1.25%)  Cal(0.91%)  Best(0.85%)  years(0.52%)  year(0.50%)  min(0.38%)  results(0.38%)  views(0.34%)  USC(0.32%)  Years(0.31%)  Ill(0.28%)  Mich(0.25%)  posts(0.25%)  Special(0.25%)  minutes(0.25%)  Studios(0.25%)  killed(0.23%)  Awesome(0.22%)  projects(0.20%)
+
+  n= 42:  CFR(2.73%)  USC(1.46%)  years(0.59%)  year(0.49%)  min(0.45%)  Cal(0.28%)  Years(0.28%)  Best(0.27%)  Burst(0.23%)  results(0.22%)  Mich(0.20%)  percent(0.19%)  killed(0.19%)  days(0.18%)  views(0.18%)  posts(0.18%)  Ill(0.18%)  inch(0.16%)  Days(0.16%)  people(0.15%)
+
+  n= 66:  years(0.81%)  Wash(0.59%)  Ill(0.54%)  year(0.52%)  views(0.49%)  Cal(0.45%)  results(0.36%)  posts(0.33%)  Mich(0.28%)  percent(0.26%)  new(0.24%)  Years(0.23%)  days(0.22%)  people(0.20%)  Possible(0.20%)  Best(0.17%)  entries(0.17%)  pages(0.16%)  records(0.16%)  items(0.15%)
+
+  n= 89:  points(1.18%)  views(1.01%)  Cal(0.89%)  Ill(0.63%)  Wash(0.59%)  Mich(0.52%)  results(0.36%)  posts(0.33%)  year(0.32%)  years(0.31%)  percent(0.30%)  Points(0.24%)  new(0.23%)  Years(0.22%)  people(0.21%)  Possible(0.21%)  items(0.20%)  Year(0.16%)  min(0.15%)  days(0.14%)
+
+  n= 93:  Decision(25.00%)  points(4.93%)  Points(1.17%)  decision(0.37%)  Ill(0.35%)  Mich(0.34%)  views(0.24%)  Years(0.24%)  Answer(0.23%)  percent(0.21%)  Possible(0.21%)  Cal(0.19%)  year(0.15%)  years(0.15%)  POINT(0.14%)  posts(0.14%)  Point(0.13%)  Wash(0.13%)  Decision(0.13%)  min(0.12%)
+  Loading meta-llama/Llama-3.3-70B-Instruct ...
+
+============================================================
 Model: Qwen3-32B
 ============================================================
 
@@ -118,6 +99,25 @@ Model: Qwen3-32B
 
   n= 93:  views(0.14%)  Ill(0.14%)  students(0.10%)  people(0.06%)  percent(0.06%)  points(0.06%)  persons(0.05%)  Wis(0.04%)  Pages(0.04%)  Cal(0.04%)  year(0.03%)  years(0.03%)  children(0.03%)  rasp(0.03%)  search(0.03%)  Mich(0.03%)  divided(0.03%)  pages(0.02%)  Views(0.02%)  men(0.02%)
   Loading Qwen/Qwen2.5-72B-Instruct ...
+
+============================================================
+Model: Llama-3.3-70B-Instruct
+============================================================
+
+  n=  5:  years(0.26%)  Best(0.24%)  New(0.16%)  Ways(0.16%)  year(0.14%)  Things(0.14%)  Tips(0.12%)  months(0.12%)  World(0.12%)  new(0.12%)  Questions(0.11%)  Per(0.10%)  ways(0.10%)  Most(0.10%)  Year(0.10%)  days(0.09%)  June(0.09%)  people(0.09%)  Day(0.09%)  National(0.08%)
+
+  n= 21:  June(0.22%)  year(0.19%)  years(0.19%)  January(0.19%)  Best(0.19%)  New(0.19%)  July(0.18%)  November(0.16%)  March(0.16%)  August(0.15%)  World(0.15%)  September(0.14%)  February(0.14%)  April(0.13%)  October(0.13%)  National(0.12%)  Year(0.12%)  Day(0.11%)  December(0.11%)  Jan(0.11%)
+
+  n= 38:  New(0.20%)  years(0.16%)  National(0.14%)  Best(0.14%)  World(0.13%)  year(0.11%)  new(0.10%)  Per(0.10%)  University(0.09%)  News(0.09%)  Community(0.09%)  people(0.08%)  Health(0.08%)  Women(0.08%)  Food(0.08%)  students(0.07%)  Summer(0.07%)  Home(0.07%)  June(0.07%)  State(0.07%)
+
+  n= 42:  New(0.19%)  years(0.18%)  Best(0.13%)  National(0.12%)  World(0.11%)  year(0.10%)  University(0.10%)  new(0.10%)  Per(0.10%)  Home(0.08%)  News(0.08%)  Community(0.08%)  people(0.08%)  Women(0.07%)  students(0.07%)  Annual(0.07%)  Day(0.07%)  Food(0.07%)  Year(0.07%)  Health(0.07%)
+
+  n= 66:  New(0.18%)  years(0.15%)  World(0.13%)  Best(0.12%)  new(0.11%)  National(0.10%)  University(0.09%)  Per(0.09%)  year(0.09%)  Community(0.09%)  News(0.08%)  Food(0.08%)  people(0.07%)  Women(0.07%)  Home(0.07%)  History(0.07%)  West(0.07%)  students(0.07%)  Global(0.07%)  House(0.07%)
+
+  n= 89:  New(0.18%)  Best(0.14%)  years(0.13%)  National(0.13%)  World(0.12%)  News(0.10%)  Per(0.10%)  new(0.09%)  year(0.09%)  Community(0.09%)  University(0.08%)  Global(0.08%)  Food(0.08%)  Church(0.08%)  Home(0.07%)  Women(0.07%)  June(0.07%)  Summer(0.07%)  Animal(0.07%)  West(0.07%)
+
+  n= 93:  New(0.19%)  years(0.18%)  Best(0.15%)  World(0.14%)  National(0.12%)  new(0.11%)  year(0.10%)  News(0.10%)  Per(0.10%)  University(0.09%)  Community(0.09%)  Global(0.08%)  Church(0.08%)  Women(0.08%)  Green(0.07%)  European(0.07%)  people(0.07%)  Annual(0.07%)  Summer(0.07%)  International(0.07%)
+  Loading Qwen/Qwen2.5-3B-Instruct ...
 
 ============================================================
 Model: Qwen2.5-72B-Instruct

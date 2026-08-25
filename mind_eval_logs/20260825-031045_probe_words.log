@@ -67,128 +67,6 @@ Model: Llama-3.2-3B-Instruct
   Loading meta-llama/Llama-3.1-8B-Instruct ...
 
 ============================================================
-Model: Llama-3.1-8B-Instruct
-============================================================
-
-  Number: 5
-  ----------------------------------------
-    1. Fingers - This word represents the number 5 because it is the number of fingers on a typical human hand.
-    2. Senses - This word represents the number 5 because there are five traditional senses in the human body: sight, sound, touch, taste, and smell.
-    3. Fives - This word represents the number 5 because it is a common way to refer to the number itself.
-    4. Fingerspelling - This word represents the number 5 because it is a method of spelling words using hand gestures, often using five fingers for each letter.
-    5. Fivesome - This word represents the number 5 because it refers to a group of five people or things.
-
-  Number: 21
-  ----------------------------------------
-    1. Birthday - This number is often associated with birthday celebrations, typically occurring on the 21st year of life.
-    2. Legal - In many countries, 21 is the age of majority, marking the transition to adulthood and the acquisition of legal rights.
-    3. Party - The age of 21 is often a time for celebration, and parties are a common way to mark this milestone.
-    4. Adult - This number signifies the transition from adolescence to adulthood, marking a significant life stage.
-    5. License - In many places, 21 is the minimum age for obtaining a driver's license, a rite of passage for young adults.
-
-  Number: 38
-  ----------------------------------------
-    1. Decade - This number is often associated with a decade, as it marks the midpoint of a ten-year period.
-    2. Age - Thirty-eight is a common age for many people, representing a stage of life.
-    3. Years - This number represents a significant amount of time, often used to measure the duration of events or relationships.
-    4. Milestone - Thirty-eight is often seen as a milestone birthday, marking a significant point in one's life.
-    5. Score - Thirty-eight is a score that can be achieved in various games, such as bowling or golf, representing a moderate level of success.
-
-  Number: 42
-  ----------------------------------------
-    1. Cosmic - This number is often associated with the concept of the universe and the infinite, which is often referred to as cosmic in nature.
-    2. Answer - In popular culture, 42 is famously known as the "Answer to the Ultimate Question of Life, the Universe, and Everything" in Douglas Adams' science fiction series "The Hitchhiker's Guide to the Galaxy."
-    3. Lucky - In many cultures, 42 is considered a lucky number due to its association with various auspicious events and outcomes.
-    4. Average - The number 42 is often used as a neutral or average value in various contexts, such as the average number of people in a group or the average score in a game.
-    5. Bizarre - The number 42 has a somewhat unusual and unexpected significance in popular culture, making it a bizarre and memorable number.
-
-  Number: 66
-  ----------------------------------------
-    1. Diamond - This gemstone is often associated with the number 66 due to its 66 facets in a traditional round brilliant cut.
-    2. Two-thirds - This fraction is a direct mathematical representation of the number 66, being two out of three equal parts.
-    3. Harmony - The number 66 is often seen as a symbol of balance and harmony in various cultures and spiritual practices.
-    4. Speed - The number 66 is a common speed limit on highways in many countries, representing a moderate and safe pace.
-    5. Double - The number 66 can be seen as a double of the number 33, representing a doubling or multiplication of a unit.
-
-  Number: 89
-  ----------------------------------------
-    1. Lucky - This number is often considered lucky in many cultures due to its unique properties and the fact that it is often associated with good fortune.
-    2. Prime - 89 is a prime number, meaning it can only be divided by 1 and itself, making it a fundamental and unique number in mathematics.
-    3. Rare - The number 89 is relatively rare in the decimal system, as it is a prime number and does not have many factors.
-    4. Cosmic - The number 89 is often associated with the cosmos and the universe, as it is the atomic number of actinium, a radioactive element found in the universe.
-    5. Special - The number 89 is often considered special due to its unique properties and the fact that it is not a common number in everyday life.
-
-  Number: 93
-  ----------------------------------------
-    1. Diamond - Diamonds are often associated with luxury and high-end quality, which is fitting for a number that is close to 100, a high-end value.
-    2. Prime - 93 is a prime number, making it a fundamental and essential part of mathematics.
-    3. Rare - With only 93 elements in the periodic table, it's a relatively small and exclusive group.
-    4. Hot - 93 degrees Fahrenheit is often considered hot, making it a temperature associated with warmth and heat.
-    5. Lucky - In some cultures, 93 is considered a lucky number due to its unique properties and characteristics.
-  Loading meta-llama/Llama-3.3-70B-Instruct ...
-
-============================================================
-Model: Llama-3.3-70B-Instruct
-============================================================
-
-  Number: 5
-  ----------------------------------------
-    1. Hand - This represents the number because a typical human hand has five fingers.
-    2. Senses - This represents the number because humans are often said to have five traditional senses: sight, sound, touch, taste, and smell.
-    3. Points - This represents the number because a star is often depicted with five points, a common symbolic shape.
-    4. Fingers - This represents the number because a complete hand typically has five fingers, making it a natural association.
-    5. Star - This represents the number because many stars, especially those used symbolically, are drawn with five distinct points.
-
-  Number: 21
-  ----------------------------------------
-    1. Majority - This word represents the given number because it is often associated with the age of majority, a significant life milestone.
-    2. Legal - This word is linked to the number because it is the age at which many laws consider an individual to be a legal adult.
-    3. Adult - This word represents the number as it signifies the transition from adolescence to adulthood in many cultures.
-    4. Voting - This word is associated with the number because it is the age at which citizens in many countries gain the right to participate in elections.
-    5. Independence - This word represents the number as it often marks a time of newfound freedom and autonomy for young adults.
-
-  Number: 38
-  ----------------------------------------
-    1. Maturity - This word represents the given number because it is often associated with a stage of life where one has gained significant experience and wisdom, which is typically acquired around this age.
-    2. Prime - This word represents the given number because it is a term used to describe a stage of life or a period of peak physical or mental condition, often linked to this age range.
-    3. Established - This word represents the given number because at this stage, individuals often have established their careers, families, and social status, indicating a sense of stability and security.
-    4. Seasoned - This word represents the given number because it implies a high level of expertise and experience, which is typically acquired after many years of practice and dedication, often corresponding to this age.
-    5. Balance - This word represents the given number because it is a stage of life where individuals often strive to balance their personal and professional responsibilities, having gained enough experience to navigate life's challenges effectively.
-
-  Number: 42
-  ----------------------------------------
-    1. Answer - This word represents the given number because it is famously known as the "Answer to the Ultimate Question of Life, the Universe, and Everything" in Douglas Adams' science fiction series.
-    2. Douglas - This word is associated with the number because Douglas Adams, the author of "The Hitchhiker's Guide to the Galaxy", chose it as the answer to the ultimate question.
-    3. Science - This word is linked to the number due to its appearance in science fiction, particularly in the context of Adams' book, which is a comedic science fiction series.
-    4. Mysterious - This word represents the number because it has become a cultural phenomenon, often symbolizing a mysterious or elusive answer to life's biggest questions.
-    5. Cosmic - This word is associated with the number as it is often used to describe the vastness and complexity of the universe, which is a central theme in "The Hitchhiker's Guide to the Galaxy" series.
-
-  Number: 66
-  ----------------------------------------
-    1. Highway - This word represents the number because a famous American road, often referenced in music and literature, is associated with a similar numerical designation.
-    2. Retirement - This word represents the number because it is often considered the age at which people stop working and begin receiving pension benefits.
-    3. Route - This word represents the number because it is reminiscent of a well-known road that spans across the United States, evoking a sense of travel and adventure.
-    4. Senior - This word represents the number because it is an age often associated with senior citizenship and the accompanying privileges and discounts.
-    5. Vintage - This word represents the number because it is an age that can be associated with classic or retro items, such as cars or music, that are highly valued for their nostalgic appeal.
-
-  Number: 89
-  ----------------------------------------
-    1. Vintage - This word represents the given number because it evokes a sense of age and nostalgia, suggesting something that has been around for a long time, much like an item that has survived for nearly a century.
-    2. Prime - This word represents the given number because it is a mathematical concept that is closely related to the number, as it is a prime number itself, having only two distinct factors.
-    3. Maturity - This word represents the given number because it implies a sense of development and growth, suggesting that something or someone has reached a high level of sophistication and experience.
-    4. Rarity - This word represents the given number because it is a relatively uncommon number, not being a round or easily divisible number, making it stand out as unique and special.
-    5. Sophistication - This word represents the given number because it conveys a sense of refinement and elegance, suggesting that something or someone has reached a high level of cultural or intellectual development.
-
-  Number: 93
-  ----------------------------------------
-    1. Vintage - This word represents the given number because it evokes a sense of age and nostalgia, suggesting something that has been around for a long time.
-    2. Maturity - This word is associated with the number because it implies a high level of development and experience, which is often acquired over a significant period.
-    3. Seniority - This word represents the number as it connotes a sense of priority and respect that comes with having been around for a long time.
-    4. Wisdom - This word is linked to the number because it suggests a deep understanding and insight that is often gained through extensive experience and age.
-    5. Antiquity - This word is associated with the number as it implies a sense of great age and historical significance, suggesting something that has endured for a long time.
-  Loading Qwen/Qwen2.5-3B-Instruct ...
-
-============================================================
 Model: Qwen2.5-3B-Instruct
 ============================================================
 
@@ -311,6 +189,67 @@ Model: Qwen2.5-7B-Instruct
   Loading Qwen/Qwen3-32B ...
 
 ============================================================
+Model: Llama-3.1-8B-Instruct
+============================================================
+
+  Number: 5
+  ----------------------------------------
+    1. Fingers - This word represents the number 5 because it is the number of fingers on a typical human hand.
+    2. Senses - This word represents the number 5 because there are five traditional senses in the human body: sight, sound, touch, taste, and smell.
+    3. Fives - This word represents the number 5 because it is a common way to refer to the number itself.
+    4. Fingerspelling - This word represents the number 5 because it is a method of spelling words using hand gestures, often using five fingers for each letter.
+    5. Fivesome - This word represents the number 5 because it refers to a group of five people or things.
+
+  Number: 21
+  ----------------------------------------
+    1. Birthday - This number is often associated with birthday celebrations, typically occurring on the 21st year of life.
+    2. Legal - In many countries, 21 is the age of majority, marking the transition to adulthood and the acquisition of legal rights.
+    3. Party - The age of 21 is often a time for celebration, and parties are a common way to mark this milestone.
+    4. Adult - This number signifies the transition from adolescence to adulthood, marking a significant life stage.
+    5. License - In many places, 21 is the minimum age for obtaining a driver's license, a rite of passage for young adults.
+
+  Number: 38
+  ----------------------------------------
+    1. Decade - This number is often associated with a decade, as it marks the midpoint of a ten-year period.
+    2. Age - Thirty-eight is a common age for many people, representing a stage of life.
+    3. Years - This number represents a significant amount of time, often used to measure the duration of events or relationships.
+    4. Milestone - Thirty-eight is often seen as a milestone birthday, marking a significant point in one's life.
+    5. Score - Thirty-eight is a score that can be achieved in various games, such as bowling or golf, representing a moderate level of success.
+
+  Number: 42
+  ----------------------------------------
+    1. Cosmic - This number is often associated with the concept of the universe and the infinite, which is often referred to as cosmic in nature.
+    2. Answer - In popular culture, 42 is famously known as the "Answer to the Ultimate Question of Life, the Universe, and Everything" in Douglas Adams' science fiction series "The Hitchhiker's Guide to the Galaxy."
+    3. Lucky - In many cultures, 42 is considered a lucky number due to its association with various auspicious events and outcomes.
+    4. Average - The number 42 is often used as a neutral or average value in various contexts, such as the average number of people in a group or the average score in a game.
+    5. Bizarre - The number 42 has a somewhat unusual and unexpected significance in popular culture, making it a bizarre and memorable number.
+
+  Number: 66
+  ----------------------------------------
+    1. Diamond - This gemstone is often associated with the number 66 due to its 66 facets in a traditional round brilliant cut.
+    2. Two-thirds - This fraction is a direct mathematical representation of the number 66, being two out of three equal parts.
+    3. Harmony - The number 66 is often seen as a symbol of balance and harmony in various cultures and spiritual practices.
+    4. Speed - The number 66 is a common speed limit on highways in many countries, representing a moderate and safe pace.
+    5. Double - The number 66 can be seen as a double of the number 33, representing a doubling or multiplication of a unit.
+
+  Number: 89
+  ----------------------------------------
+    1. Lucky - This number is often considered lucky in many cultures due to its unique properties and the fact that it is often associated with good fortune.
+    2. Prime - 89 is a prime number, meaning it can only be divided by 1 and itself, making it a fundamental and unique number in mathematics.
+    3. Rare - The number 89 is relatively rare in the decimal system, as it is a prime number and does not have many factors.
+    4. Cosmic - The number 89 is often associated with the cosmos and the universe, as it is the atomic number of actinium, a radioactive element found in the universe.
+    5. Special - The number 89 is often considered special due to its unique properties and the fact that it is not a common number in everyday life.
+
+  Number: 93
+  ----------------------------------------
+    1. Diamond - Diamonds are often associated with luxury and high-end quality, which is fitting for a number that is close to 100, a high-end value.
+    2. Prime - 93 is a prime number, making it a fundamental and essential part of mathematics.
+    3. Rare - With only 93 elements in the periodic table, it's a relatively small and exclusive group.
+    4. Hot - 93 degrees Fahrenheit is often considered hot, making it a temperature associated with warmth and heat.
+    5. Lucky - In some cultures, 93 is considered a lucky number due to its unique properties and characteristics.
+  Loading meta-llama/Llama-3.3-70B-Instruct ...
+
+============================================================
 Model: Qwen3-32B
 ============================================================
 
@@ -370,6 +309,67 @@ Model: Qwen3-32B
     4. Momentum - It suggests a high number that is still just below a round figure, continuing forward.  
     5. Resilience - 93 embodies endurance, being so close to 100 yet still strong and substantial.
   Loading Qwen/Qwen2.5-72B-Instruct ...
+
+============================================================
+Model: Llama-3.3-70B-Instruct
+============================================================
+
+  Number: 5
+  ----------------------------------------
+    1. Hand - This represents the number because a typical human hand has five fingers.
+    2. Senses - This represents the number because humans are often said to have five traditional senses: sight, sound, touch, taste, and smell.
+    3. Points - This represents the number because a star is often depicted with five points, a common symbolic shape.
+    4. Fingers - This represents the number because a complete hand typically has five fingers, making it a natural association.
+    5. Star - This represents the number because many stars, especially those used symbolically, are drawn with five distinct points.
+
+  Number: 21
+  ----------------------------------------
+    1. Majority - This word represents the given number because it is often associated with the age of majority, a significant life milestone.
+    2. Legal - This word is linked to the number because it is the age at which many laws consider an individual to be a legal adult.
+    3. Adult - This word represents the number as it signifies the transition from adolescence to adulthood in many cultures.
+    4. Voting - This word is associated with the number because it is the age at which citizens in many countries gain the right to participate in elections.
+    5. Independence - This word represents the number as it often marks a time of newfound freedom and autonomy for young adults.
+
+  Number: 38
+  ----------------------------------------
+    1. Maturity - This word represents the given number because it is often associated with a stage of life where one has gained significant experience and wisdom, which is typically acquired around this age.
+    2. Prime - This word represents the given number because it is a term used to describe a stage of life or a period of peak physical or mental condition, often linked to this age range.
+    3. Established - This word represents the given number because at this stage, individuals often have established their careers, families, and social status, indicating a sense of stability and security.
+    4. Seasoned - This word represents the given number because it implies a high level of expertise and experience, which is typically acquired after many years of practice and dedication, often corresponding to this age.
+    5. Balance - This word represents the given number because it is a stage of life where individuals often strive to balance their personal and professional responsibilities, having gained enough experience to navigate life's challenges effectively.
+
+  Number: 42
+  ----------------------------------------
+    1. Answer - This word represents the given number because it is famously known as the "Answer to the Ultimate Question of Life, the Universe, and Everything" in Douglas Adams' science fiction series.
+    2. Douglas - This word is associated with the number because Douglas Adams, the author of "The Hitchhiker's Guide to the Galaxy", chose it as the answer to the ultimate question.
+    3. Science - This word is linked to the number due to its appearance in science fiction, particularly in the context of Adams' book, which is a comedic science fiction series.
+    4. Mysterious - This word represents the number because it has become a cultural phenomenon, often symbolizing a mysterious or elusive answer to life's biggest questions.
+    5. Cosmic - This word is associated with the number as it is often used to describe the vastness and complexity of the universe, which is a central theme in "The Hitchhiker's Guide to the Galaxy" series.
+
+  Number: 66
+  ----------------------------------------
+    1. Highway - This word represents the number because a famous American road, often referenced in music and literature, is associated with a similar numerical designation.
+    2. Retirement - This word represents the number because it is often considered the age at which people stop working and begin receiving pension benefits.
+    3. Route - This word represents the number because it is reminiscent of a well-known road that spans across the United States, evoking a sense of travel and adventure.
+    4. Senior - This word represents the number because it is an age often associated with senior citizenship and the accompanying privileges and discounts.
+    5. Vintage - This word represents the number because it is an age that can be associated with classic or retro items, such as cars or music, that are highly valued for their nostalgic appeal.
+
+  Number: 89
+  ----------------------------------------
+    1. Vintage - This word represents the given number because it evokes a sense of age and nostalgia, suggesting something that has been around for a long time, much like an item that has survived for nearly a century.
+    2. Prime - This word represents the given number because it is a mathematical concept that is closely related to the number, as it is a prime number itself, having only two distinct factors.
+    3. Maturity - This word represents the given number because it implies a sense of development and growth, suggesting that something or someone has reached a high level of sophistication and experience.
+    4. Rarity - This word represents the given number because it is a relatively uncommon number, not being a round or easily divisible number, making it stand out as unique and special.
+    5. Sophistication - This word represents the given number because it conveys a sense of refinement and elegance, suggesting that something or someone has reached a high level of cultural or intellectual development.
+
+  Number: 93
+  ----------------------------------------
+    1. Vintage - This word represents the given number because it evokes a sense of age and nostalgia, suggesting something that has been around for a long time.
+    2. Maturity - This word is associated with the number because it implies a high level of development and experience, which is often acquired over a significant period.
+    3. Seniority - This word represents the number as it connotes a sense of priority and respect that comes with having been around for a long time.
+    4. Wisdom - This word is linked to the number because it suggests a deep understanding and insight that is often gained through extensive experience and age.
+    5. Antiquity - This word is associated with the number as it implies a sense of great age and historical significance, suggesting something that has endured for a long time.
+  Loading Qwen/Qwen2.5-3B-Instruct ...
 
 ============================================================
 Model: Qwen2.5-72B-Instruct
